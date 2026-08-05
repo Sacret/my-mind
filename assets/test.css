@@ -1,0 +1,47 @@
+/**
+ * Страницы входных тестов. Подключается ПОСЛЕ lesson.css.
+ *
+ * Базу страницы — кегль, ширину .wrap, размеры заголовков — НЕ трогает:
+ * основа должна быть одинаковой на всех страницах проекта.
+ * Здесь только то, чего больше нигде нет: липкая нижняя панель и блок результата.
+ */
+
+/* шапка теста отделена линией: у уроков ту же роль играет <hr> */
+header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 8px; }
+
+/* заголовок раздела вопросов */
+.cat-title {
+  margin: 36px 0 4px; font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); font-weight: 600;
+}
+
+/* отметка «угадала» под вариантами */
+.unsure {
+  margin: 8px 0 0 34px; font-size: 13px; color: var(--muted);
+  display: inline-flex; gap: 7px; cursor: pointer;
+}
+
+/* липкая панель с прогрессом и кнопкой проверки;
+   запаса снизу у .wrap (100px) хватает, чтобы она не перекрывала текст */
+.bar {
+  position: fixed; left: 0; right: 0; bottom: 0; background: var(--card);
+  border-top: 1px solid var(--line); padding: 12px 20px;
+  display: flex; gap: 14px; align-items: center; justify-content: center;
+}
+.count { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+
+/* блок результата */
+#result { margin-top: 28px; }
+.score { font-size: 40px; font-weight: 700; letter-spacing: -.03em; }
+#result td { padding: 6px 0; }
+#result td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+.btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+details.raw { margin-top: 16px; }
+details.raw summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+textarea {
+  width: 100%; min-height: 220px; margin-top: 12px; padding: 12px;
+  font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--card); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 8px; resize: vertical;
+}

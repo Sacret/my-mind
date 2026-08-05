@@ -1,0 +1,307 @@
+---
+title: Повторение
+out: review/index.html
+css: assets/review.css
+crumb: · повторение
+js: storage, srs
+---
+<div class="wrap">
+
+  {{crumb}}
+  <h1>Карточки</h1>
+  <p class="lead">Короткая тренировка перед новым уроком. Карточка возвращается тем позже, чем увереннее ты её вспоминаешь; ошибка возвращает её в начало.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div id="session">
+    <div class="card">
+      <div class="tag" id="card-tag"></div>
+      <div class="side" id="card-front"></div>
+      <div id="back-wrap" class="hidden">
+        <hr class="divider">
+        <div class="side back" id="card-back"></div>
+      </div>
+    </div>
+
+    <div class="actions" id="show-row">
+      <button id="show">Показать ответ</button>
+    </div>
+
+    <div class="grades hidden" id="grade-row">
+      <button class="again" id="g-again">Не вспомнила</button>
+      <button class="hard" id="g-hard">С трудом</button>
+      <button id="g-easy">Легко</button>
+    </div>
+
+    <p class="queue" id="queue"></p>
+  </div>
+
+  <div id="empty" class="done-screen hidden">
+    <div class="big">✓</div>
+    <h2 id="empty-title">На сегодня всё</h2>
+    <p class="lead" id="empty-text"></p>
+  </div>
+
+  <hr>
+  <h2>Сколько за день</h2>
+  <p class="lead sm">
+    Нагрузка сама выходит на плато: закреплённая карточка возвращается раз в 35 дней.
+    Лимиты нужны для стартового наплыва — чтобы новые темы открывались порциями, а не все разом.
+  </p>
+  <div class="limits">
+    <label>Новых в день
+      <input type="number" id="lim-new" min="0" max="100" step="1">
+    </label>
+    <label>Всего в день
+      <input type="number" id="lim-max" min="1" max="200" step="1">
+    </label>
+    <button class="ghost" id="save-limits">Сохранить</button>
+  </div>
+
+  <hr>
+  <div class="actions">
+    <button class="ghost" id="export">Выгрузить в Anki (CSV)</button>
+    <button class="ghost" id="reset">Сбросить прогресс карточек</button>
+  </div>
+  <p class="lead xs">
+    <a href="{{root}}index.html">← к оглавлению</a>
+  </p>
+
+</div>
+
+{{scripts}}
+<script src="cards.js"></script>
+<script>
+const KEY = "srs:v1";
+const KEY_SETTINGS = "srs:settings";
+const KEY_DAILY = "srs:daily";
+
+const LESSON_TITLES = {
+  "general-logic-syllogisms": "Кванторы и силлогизмы",
+  "general-logic-word-problems": "Задачи в словах",
+  "general-math-probability": "Вероятность",
+  "general-math-quadratic": "Квадратные уравнения",
+  "general-stats-averages": "Статистика",
+  "general-chem-everyday": "Химия вокруг",
+  "general-music-basics": "Музыка",
+  "general-cinema-language": "Кино как язык",
+  "work-fundamentals-big-o": "O-нотация",
+  "work-fundamentals-data-structures": "Структуры данных",
+  "work-js-event-loop": "Event loop",
+  "work-js-arrays-mutation": "Мутации и иммутабельность"
+};
+
+let srs = {};
+let settings = SRS.DEFAULTS;
+let daily = { date: SRS.today(), done: 0, fresh: 0 };
+let plan = null;
+let queue = [];
+let current = null;
+const countedToday = new Set();   // карточка увеличивает счётчик один раз, даже если вернулась
+
+const saveSrs = () => Store.set(KEY, srs);
+const saveDaily = () => Store.set(KEY_DAILY, daily);
+
+// Урок пройден? Карточки незакрытых тем в оборот не берутся.
+function lessonDone(id) {
+  const st = Store.get("lesson:" + id);
+  return !!(st && st.completed);
+}
+const unlocked = () => CARDS.filter(c => lessonDone(c.lesson));
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function buildQueue() {
+  plan = SRS.plan(unlocked(), srs, settings, daily);
+  // просроченные идут первыми, новые — следом
+  queue = shuffle(plan.due.slice()).concat(shuffle(plan.fresh.slice()));
+}
+
+function renderStats() {
+  const open = unlocked().length;
+  const learned = unlocked().filter(c => srs[c.id] && srs[c.id].box >= 3).length;
+  const el = document.getElementById("stats");
+  el.textContent = "";
+
+  const cells = [
+    ["Осталось сегодня", queue.length],
+    ["Открыто карточек", open + " из " + CARDS.length],
+    ["Закрепилось", learned]
+  ];
+  if (plan && plan.deferredDue > 0) cells.push(["Перенесено на завтра", plan.deferredDue]);
+
+  cells.forEach(([label, val]) => {
+    const d = document.createElement("div");
+    d.append(Object.assign(document.createElement("b"), { textContent: String(val) }),
+             Object.assign(document.createElement("span"), { textContent: label }));
+    el.append(d);
+  });
+}
+
+function showEmpty() {
+  document.getElementById("session").classList.add("hidden");
+  document.getElementById("empty").classList.remove("hidden");
+
+  const open = unlocked().length;
+  const title = document.getElementById("empty-title");
+  const text = document.getElementById("empty-text");
+
+  if (open === 0) {
+    title.textContent = "Карточек пока нет";
+    text.textContent = "Карточки открываются по мере прохождения уроков. Пройди любой урок — и они появятся здесь.";
+    return;
+  }
+  title.textContent = "На сегодня всё";
+
+  const parts = [];
+  if (plan && plan.deferredDue > 0) {
+    parts.push("Дневной лимит исчерпан: " + plan.deferredDue + " карточек перенесено на завтра.");
+  } else if (plan && plan.waitingNew > 0) {
+    parts.push("Новые открываются порциями по " + settings.newPerDay + " в день, в очереди ещё " + plan.waitingNew + ".");
+  } else {
+    const nextDue = unlocked().map(c => srs[c.id] && srs[c.id].due).filter(Boolean).sort()[0];
+    if (nextDue && nextDue > SRS.today()) {
+      parts.push("Следующее повторение — " + nextDue.split("-").reverse().join(".") + ".");
+    }
+  }
+  parts.push("Можно идти к новому уроку.");
+  text.textContent = parts.join(" ");
+}
+
+function next() {
+  renderStats();
+  if (!queue.length) { showEmpty(); return; }
+  current = queue[0];
+
+  const tag = document.getElementById("card-tag");
+  tag.textContent = LESSON_TITLES[current.lesson] || current.lesson;
+  if (!srs[current.id]) {
+    const badge = document.createElement("span");
+    badge.className = "new";
+    badge.textContent = "  · новая";
+    tag.append(badge);
+  }
+
+  document.getElementById("card-front").textContent = current.front;
+  document.getElementById("card-back").textContent = current.back;
+  document.getElementById("back-wrap").classList.add("hidden");
+  document.getElementById("grade-row").classList.add("hidden");
+  document.getElementById("show-row").classList.remove("hidden");
+  document.getElementById("queue").textContent = "осталось в сессии: " + queue.length;
+}
+
+function grade(kind) {
+  const card = current;
+  const wasNew = !srs[card.id];
+  const st = srs[card.id] || { box: 0 };
+
+  if (!countedToday.has(card.id)) {
+    countedToday.add(card.id);
+    daily.done += 1;
+    if (wasNew) daily.fresh += 1;
+  }
+
+  if (kind === "again") {
+    st.box = 0;
+    st.due = SRS.today();
+    srs[card.id] = st;
+    queue.shift();
+    queue.push(card);              // вернётся в конце этой же сессии
+  } else {
+    st.box = Math.min(SRS.INTERVALS.length - 1, st.box + (kind === "easy" ? 2 : 1));
+    st.due = SRS.nextDue(st.box);  // интервал с разбросом ±15%
+    srs[card.id] = st;
+    queue.shift();
+  }
+
+  saveSrs();
+  saveDaily();
+  next();
+}
+
+document.getElementById("show").addEventListener("click", () => {
+  document.getElementById("back-wrap").classList.remove("hidden");
+  document.getElementById("show-row").classList.add("hidden");
+  document.getElementById("grade-row").classList.remove("hidden");
+});
+document.getElementById("g-again").addEventListener("click", () => grade("again"));
+document.getElementById("g-hard").addEventListener("click", () => grade("hard"));
+document.getElementById("g-easy").addEventListener("click", () => grade("easy"));
+
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT") return;
+  const backShown = !document.getElementById("back-wrap").classList.contains("hidden");
+  if (e.code === "Space") { e.preventDefault(); if (!backShown) document.getElementById("show").click(); return; }
+  if (!backShown || !queue.length) return;
+  if (e.key === "1") grade("again");
+  if (e.key === "2") grade("hard");
+  if (e.key === "3") grade("easy");
+});
+
+document.getElementById("save-limits").addEventListener("click", (ev) => {
+  settings = SRS.settingsFrom({
+    newPerDay: document.getElementById("lim-new").value,
+    maxPerDay: document.getElementById("lim-max").value
+  });
+  Store.set(KEY_SETTINGS, settings);
+  document.getElementById("lim-new").value = settings.newPerDay;
+  document.getElementById("lim-max").value = settings.maxPerDay;
+  const btn = ev.currentTarget;
+  btn.textContent = "Сохранено ✓";
+  setTimeout(() => { btn.textContent = "Сохранить"; }, 1500);
+
+  document.getElementById("empty").classList.add("hidden");
+  document.getElementById("session").classList.remove("hidden");
+  buildQueue();
+  next();
+});
+
+document.getElementById("export").addEventListener("click", async (ev) => {
+  const rows = CARDS.map(c =>
+    [c.front, c.back, (LESSON_TITLES[c.lesson] || c.lesson).replace(/\s+/g, "_")]
+      .map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")
+  );
+  const text = rows.join("\n");
+  const name = "my-mind-cards.csv";
+  if (window.showSaveFilePicker) {
+    try {
+      const h = await window.showSaveFilePicker({ suggestedName: name,
+        types: [{ description: "CSV для Anki", accept: { "text/csv": [".csv"] } }] });
+      const w = await h.createWritable(); await w.write(text); await w.close();
+      ev.currentTarget.textContent = "Сохранено ✓"; return;
+    } catch (err) { if (err && err.name === "AbortError") return; }
+  }
+  const url = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
+  const a = document.createElement("a"); a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
+  ev.currentTarget.textContent = "Скачано ✓";
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Сбросить интервалы всех карточек? Уроки не пострадают.")) return;
+  srs = {};
+  daily = { date: SRS.today(), done: 0, fresh: 0 };
+  countedToday.clear();
+  saveSrs(); saveDaily();
+  document.getElementById("empty").classList.add("hidden");
+  document.getElementById("session").classList.remove("hidden");
+  buildQueue();
+  next();
+});
+
+Store.ready().then(() => {
+  srs = Store.get(KEY) || {};
+  settings = SRS.settingsFrom(Store.get(KEY_SETTINGS));
+  daily = SRS.dailyFrom(Store.get(KEY_DAILY));
+  document.getElementById("lim-new").value = settings.newPerDay;
+  document.getElementById("lim-max").value = settings.maxPerDay;
+  buildQueue();
+  next();
+});
+</script>

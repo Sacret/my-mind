@@ -1,0 +1,317 @@
+---
+title: Входной тест · Разработка и React
+out: work/test-01-baseline.html
+crumb: · тест
+body: track-work
+css: assets/test.css
+js: storage
+---
+<div class="wrap">
+  <header>
+    {{crumb}}
+    <h1>Входной тест · Разработка и React</h1>
+    <p class="lead">50 вопросов: основы программирования и алгоритмы, JavaScript, HTML/CSS, React, инструменты.
+    Не гугли и не запускай код — смысл в честном срезе. Не знаешь — угадай и отметь «не уверен».</p>
+  </header>
+
+  <div id="quiz"></div>
+  <div id="result"></div>
+</div>
+
+<div class="bar">
+  <span class="count" id="count"></span>
+  <button id="submit">Проверить</button>
+  <button class="ghost" id="reset">Сбросить</button>
+</div>
+
+{{scripts}}
+<script>
+const TEST_ID = "work-baseline-01";
+const Q = [
+  // ОСНОВЫ
+  {c:"Основы программирования", t:"Сложность бинарного поиска в отсортированном массиве:", o:["O(1)","O(log n)","O(n)","O(n log n)"], a:1, e:"Каждый шаг делит диапазон пополам."},
+  {c:"Основы программирования", t:"Какая структура данных работает по принципу FIFO (первым пришёл — первым вышел)?", o:["Стек","Очередь","Дерево","Хеш-таблица"], a:1, e:"Стек — LIFO, очередь — FIFO."},
+  {c:"Основы программирования", t:"Сложность доступа к элементу массива по индексу:", o:["O(1)","O(log n)","O(n)","O(n²)"], a:0, e:"Адрес вычисляется арифметикой: база + индекс · размер."},
+  {c:"Основы программирования", t:"Какой HTTP-метод НЕ является идемпотентным?", o:["GET","PUT","DELETE","POST"], a:3, e:"Повторный POST создаёт новый ресурс; GET/PUT/DELETE при повторе дают то же состояние."},
+  {c:"Основы программирования", t:"У какого алгоритма сортировки O(n log n) даже в худшем случае?", o:["Быстрая сортировка (quicksort)","Сортировка слиянием (merge sort)","Пузырьком","Вставками"], a:1, e:"У quicksort худший случай O(n²), у merge sort — всегда O(n log n)."},
+  {c:"Основы программирования", t:"Коллизия в хеш-таблице — это когда:", o:["два разных ключа дают одинаковый хеш","хеш-функция возвращает null","таблица переполнена","ключ не найден"], a:0, e:"Решается цепочками или открытой адресацией."},
+  {c:"Основы программирования", t:"Самая частая причина переполнения стека (stack overflow):", o:["утечка памяти","бесконечная или слишком глубокая рекурсия","большой массив в куче","слишком много потоков"], a:1, e:"Каждый вызов кладёт кадр на стек ограниченного размера."},
+  {c:"Основы программирования", t:"Чистая функция (pure function) — это функция, которая:", o:["не принимает аргументов","при одних и тех же аргументах всегда возвращает один результат и не имеет побочных эффектов","работает быстрее обычной","объявлена через const"], a:1, e:"Такие функции легко тестировать и кешировать."},
+  {c:"Основы программирования", t:"Команда Git для создания новой ветки и переключения на неё:", o:["git branch new","git checkout -b new","git merge new","git reset new"], a:1, e:"Современный аналог: git switch -c new."},
+  {c:"Основы программирования", t:"«Stateless» в REST означает, что:", o:["сервер не хранит никаких данных","каждый запрос содержит всю информацию, нужную для его обработки","нет базы данных","используется только GET"], a:1, e:"Сервер не хранит контекст сессии между запросами."},
+  {c:"Основы программирования", t:"Главное отличие процесса от потока (thread):", o:["поток всегда быстрее","у процессов отдельное адресное пространство, потоки внутри процесса делят память","поток может быть только один","процессы не могут обмениваться данными"], a:1, e:"Отсюда и гонки данных между потоками."},
+  {c:"Основы программирования", t:"Сложность двух вложенных циклов по n элементам:", o:["O(n)","O(n log n)","O(n²)","O(2ⁿ)"], a:2, e:"n итераций внешнего × n внутреннего."},
+
+  // JAVASCRIPT
+  {c:"JavaScript", t:"typeof null возвращает:", o:['"null"','"object"','"undefined"','"number"'], a:1, e:"Известный баг языка, сохранён ради обратной совместимости."},
+  {c:"JavaScript", t:"Результат выражения 0.1 + 0.2 === 0.3:", o:["true","false","TypeError","NaN"], a:1, e:"Числа с плавающей точкой IEEE 754: 0.1 + 0.2 = 0.30000000000000004."},
+  {c:"JavaScript", t:"Чем let отличается от var?", o:["let работает быстрее","let имеет блочную область видимости и временную мёртвую зону (TDZ)","var нельзя переопределить","отличий нет"], a:1, e:"var — функциональная область видимости и подъём со значением undefined."},
+  {c:"JavaScript", t:"Что выведется и в каком порядке?\n\nsetTimeout(() => console.log('A'), 0);\nPromise.resolve().then(() => console.log('B'));\nconsole.log('C');", code:true, o:["A B C","C A B","C B A","B C A"], a:2, e:"Синхронный код → микрозадачи (промисы) → макрозадачи (setTimeout)."},
+  {c:"JavaScript", t:"this внутри стрелочной функции:", o:["всегда undefined","берётся из внешней (лексической) области видимости","всегда указывает на window","задаётся только через call/apply"], a:1, e:"У стрелок нет своего this, его нельзя переопределить через bind."},
+  {c:"JavaScript", t:"Замыкание (closure) — это:", o:["функция без аргументов","функция вместе с сохранённой ссылкой на своё лексическое окружение","способ глубокого копирования объекта","приватный метод класса"], a:1, e:"Поэтому внутренняя функция помнит переменные внешней после её завершения."},
+  {c:"JavaScript", t:"const arr = [1, 2, 3]; arr.push(4); — что произойдёт?", code:true, o:["TypeError: Assignment to constant variable","массив станет [1, 2, 3, 4]","ничего не изменится","arr станет undefined"], a:1, e:"const запрещает переприсваивание ссылки, но не мутацию объекта."},
+  {c:"JavaScript", t:"Метод Array.prototype.map:", o:["изменяет исходный массив","возвращает новый массив той же длины","возвращает первый подходящий элемент","возвращает число"], a:1, e:"Мутирующие методы — push, splice, sort, reverse."},
+  {c:"JavaScript", t:"Что вернёт a?.b?.c, если a === null?", code:true, o:["TypeError","undefined","null","false"], a:1, e:"Опциональная цепочка прерывает вычисление и даёт undefined."},
+  {c:"JavaScript", t:"Отличие == от ===:", o:["отличий нет","== приводит типы перед сравнением, === сравнивает и тип, и значение","=== медленнее","== работает только с числами"], a:1, e:"По умолчанию всегда используй ===."},
+  {c:"JavaScript", t:"Promise.allSettled отличается от Promise.all тем, что:", o:["выполняется быстрее","не отклоняется при ошибке одного из промисов, а возвращает статусы всех","принимает максимум два промиса","возвращает первый выполнившийся"], a:1, e:"Promise.all падает целиком на первой ошибке (fail-fast)."},
+  {c:"JavaScript", t:"Функцию, объявленную как function foo() {}, можно вызвать до строки объявления, потому что:", o:["JS выполняет файл дважды","объявления функций поднимаются (hoisting) вместе с телом","браузер кеширует функции","это ошибка, вызвать нельзя"], a:1, e:"У function expression и стрелок такого поведения нет."},
+  {c:"JavaScript", t:"Debounce — это приём, который:", o:["ограничивает вызов функции не чаще одного раза в N мс","откладывает вызов до паузы в N мс после последнего события","повторяет вызов при ошибке","кеширует результат функции"], a:1, e:"Первый вариант — это throttle."},
+  {c:"JavaScript", t:"Что делает spread-оператор в вызове f(...arr)?", code:true, o:["собирает аргументы в массив","разворачивает массив в список аргументов","делает глубокую копию объекта","создаёт генератор"], a:1, e:"Сбор аргументов в массив — это rest-параметр function f(...args)."},
+  {c:"JavaScript", t:"Что вернёт JSON.stringify({ a: undefined, b: 1 })?", code:true, o:['{"a":undefined,"b":1}','{"b":1}','{"a":null,"b":1}',"выбросит ошибку"], a:1, e:"undefined, функции и символы в объектах отбрасываются (в массивах становятся null)."},
+
+  // HTML И CSS
+  {c:"HTML и CSS", t:"В flex-контейнере свойство justify-content выравнивает элементы:", o:["по поперечной оси","по главной оси","по базовой линии текста","по сетке grid"], a:1, e:"По поперечной оси выравнивает align-items."},
+  {c:"HTML и CSS", t:"Какой селектор имеет наибольшую специфичность?", o:[".class",'#id',"тег","* (универсальный)"], a:1, e:"Порядок: inline-стиль → id → класс/атрибут/псевдокласс → тег."},
+  {c:"HTML и CSS", t:"box-sizing: border-box означает, что в width включаются:", o:["только контент","контент + padding + border","контент + margin","всё, включая margin"], a:1, e:"Значение по умолчанию content-box учитывает только контент."},
+  {c:"HTML и CSS", t:"Семантический тег для основной навигации:", o:['<div class="nav">',"<nav>","<aside>","<header>"], a:1, e:"Помогает скринридерам и поисковикам понять структуру."},
+  {c:"HTML и CSS", t:"position: absolute позиционирует элемент относительно:", o:["окна браузера","ближайшего предка с position, отличным от static","прямого родителя всегда","всего документа"], a:1, e:"Относительно окна — это position: fixed."},
+  {c:"HTML и CSS", t:"z-index влияет на порядок наложения:", o:["у любых элементов","у элементов с position, отличным от static, а также у flex/grid-элементов","только у display: block","только внутри body"], a:1, e:"Ещё важен контекст наложения: transform, opacity < 1, filter создают новый."},
+
+  // REACT
+  {c:"React", t:"JSX компилируется в:", o:["строку HTML","вызовы React.createElement (или jsx() из нового runtime)","Web Components","шаблон Handlebars"], a:1, e:"Поэтому JSX — это обычные выражения JavaScript."},
+  {c:"React", t:"Правила хуков требуют вызывать их:", o:["внутри условий и циклов","только на верхнем уровне компонента или другого хука","в любом месте кода","только в классовых компонентах"], a:1, e:"React сопоставляет хуки по порядку вызова между рендерами."},
+  {c:"React", t:"useEffect(() => { ... }, []) выполнится:", code:true, o:["на каждый рендер","один раз после монтирования","только при размонтировании","никогда"], a:1, e:"Пустой массив зависимостей = эффект не переподписывается."},
+  {c:"React", t:"Зачем нужен проп key в списках?", o:["для стилизации элементов","чтобы React сопоставлял элементы между рендерами при реконсиляции","для сортировки массива","это обязательный id в DOM"], a:1, e:"Индекс массива как key ломает состояние при вставках и удалениях."},
+  {c:"React", t:"Как надёжно увеличить счётчик, если обновления могут группироваться?", o:["setCount(count + 1)","setCount(prev => prev + 1)","count++","this.setState({ count })"], a:1, e:"Функциональная форма читает актуальное значение, а не замкнутое."},
+  {c:"React", t:"Чем useMemo отличается от useCallback?", o:["useMemo кеширует вычисленное значение, useCallback — саму функцию","useCallback работает быстрее","useMemo работает только с числами","отличий нет"], a:0, e:"useCallback(fn, d) — это по сути useMemo(() => fn, d)."},
+  {c:"React", t:"Почему нельзя мутировать состояние напрямую, например state.push(x)?", code:true, o:["React сравнивает ссылки и может не заметить изменение, не перерисовав компонент","это синтаксическая ошибка","массивы в JS иммутабельны","мутация ломает TypeScript"], a:0, e:"Нужно создавать новый массив/объект: setItems([...items, x])."},
+  {c:"React", t:"Controlled input — это поле ввода, у которого:", o:["есть ref","значение хранится в state React и передаётся через value + onChange","нет обработчика onChange","задан только defaultValue"], a:1, e:"Uncontrolled хранит значение в самом DOM и читается через ref."},
+  {c:"React", t:"Context в React нужен, чтобы:", o:["всегда заменять Redux","передавать данные вглубь дерева без прокидывания пропсов через все уровни","ускорить рендеринг","заменить хуки"], a:1, e:"Изменение значения контекста перерисовывает всех потребителей."},
+  {c:"React", t:"React.memo:", o:["кеширует результат любой функции","предотвращает повторный рендер компонента, если пропсы не изменились (поверхностное сравнение)","мемоизирует хуки","создаёт портал"], a:1, e:"Бесполезен, если в пропсах каждый раз новый объект или функция."},
+  {c:"React", t:"Компонент перерисовывается, когда:", o:["изменился его state или пропсы либо перерисовался родитель","только при изменении state","при каждом движении мыши","при изменении любой переменной в файле"], a:0, e:"Обычная переменная вне state не вызывает рендер вообще."},
+  {c:"React", t:"useRef используют, чтобы:", o:["хранить изменяемое значение между рендерами без перерисовки и/или получить доступ к DOM-узлу","заменить useState","подписаться на события","создать контекст"], a:0, e:"Изменение ref.current не вызывает повторный рендер."},
+  {c:"React", t:"Функция, возвращаемая из useEffect, — это:", o:["обработчик ошибок","cleanup: выполняется перед следующим запуском эффекта и при размонтировании","код, который выполняется первым","обязательно async-функция"], a:1, e:"Там отписываются от событий, таймеров и запросов."},
+  {c:"React", t:"«Поднятие состояния» (lifting state up) — это:", o:["перенос state в ближайшего общего родителя двух компонентов","использование Context","мемоизация компонента","хранение состояния в URL"], a:0, e:"Базовый способ синхронизировать два соседних компонента."},
+  {c:"React", t:"В StrictMode (dev-режим, React 18+) компонент при монтировании:", o:["не запускает эффекты","монтируется, размонтируется и монтируется снова — чтобы выявить проблемы с очисткой","запускает эффекты дважды и в продакшене","рендерится синхронно"], a:1, e:"В продакшен-сборке этого двойного вызова нет."},
+
+  // ИНСТРУМЕНТЫ
+  {c:"Инструменты и веб", t:"Tree shaking — это:", o:["удаление неиспользуемого кода из итогового бандла","минификация имён переменных","оптимизация дерева DOM","ленивая загрузка изображений"], a:0, e:"Работает благодаря статичности ES-модулей (import/export)."},
+  {c:"Инструменты и веб", t:"CORS контролирует:", o:["скорость запросов","может ли страница с одного origin делать запросы к другому origin","шифрование трафика","политику кеширования"], a:1, e:"Разрешение выдаёт сервер заголовками Access-Control-Allow-*."}
+];
+
+const KEY = "quiz:" + TEST_ID;
+let state = {};
+let checked = false;
+
+const quizEl = document.getElementById("quiz");
+const resultEl = document.getElementById("result");
+const countEl = document.getElementById("count");
+const submitEl = document.getElementById("submit");
+
+function save() { Store.set(KEY, state); }
+
+function updateCount() {
+  const done = Q.filter((_, i) => state["a" + i] !== undefined).length;
+  countEl.textContent = done + " / " + Q.length;
+  submitEl.disabled = checked ? false : done < Q.length;
+  submitEl.textContent = checked ? "Пересдать" : "Проверить";
+}
+
+function render() {
+  quizEl.textContent = "";
+  let lastCat = null;
+  Q.forEach((q, i) => {
+    if (q.c !== lastCat) {
+      lastCat = q.c;
+      const h = document.createElement("div");
+      h.className = "cat-title";
+      h.textContent = q.c;
+      quizEl.appendChild(h);
+    }
+    const card = document.createElement("div");
+    card.className = "q";
+    card.id = "q" + i;
+
+    const head = document.createElement("div");
+    head.className = "q-head";
+    const num = document.createElement("span");
+    num.className = "q-num";
+    num.textContent = (i + 1) + ".";
+    const txt = document.createElement("span");
+    txt.className = "q-text" + (q.code ? " code" : "");
+    txt.textContent = q.t;
+    head.append(num, txt);
+    card.appendChild(head);
+
+    q.o.forEach((opt, j) => {
+      const lab = document.createElement("label");
+      lab.className = "opt";
+      const inp = document.createElement("input");
+      inp.type = "radio";
+      inp.name = "q" + i;
+      inp.checked = state["a" + i] === j;
+      inp.disabled = checked;
+      inp.addEventListener("change", () => { state["a" + i] = j; save(); updateCount(); });
+      const span = document.createElement("span");
+      span.textContent = opt;
+      lab.append(inp, span);
+      card.appendChild(lab);
+    });
+
+    const unsure = document.createElement("label");
+    unsure.className = "unsure";
+    const ub = document.createElement("input");
+    ub.type = "checkbox";
+    ub.checked = !!state["u" + i];
+    ub.disabled = checked;
+    ub.addEventListener("change", () => { state["u" + i] = ub.checked; save(); });
+    const us = document.createElement("span");
+    us.textContent = "не уверен, угадал(а)";
+    unsure.append(ub, us);
+    card.appendChild(unsure);
+
+    if (checked) {
+      const given = state["a" + i];
+      const ok = given === q.a;
+      card.classList.add(ok ? "right" : "wrong");
+      const v = document.createElement("div");
+      v.className = "verdict " + (ok ? "ok" : "no");
+      v.textContent = ok ? "Верно" : "Неверно. Правильный ответ: " + q.o[q.a];
+      card.appendChild(v);
+      const e = document.createElement("div");
+      e.className = "exp";
+      e.textContent = q.e;
+      card.appendChild(e);
+    }
+
+    quizEl.appendChild(card);
+  });
+  updateCount();
+}
+
+function grade() {
+  const cats = {};
+  const wrong = [], unsure = [];
+  let score = 0;
+  Q.forEach((q, i) => {
+    cats[q.c] = cats[q.c] || { ok: 0, total: 0 };
+    cats[q.c].total++;
+    if (state["a" + i] === q.a) { score++; cats[q.c].ok++; }
+    else wrong.push({ n: i + 1, c: q.c, t: q.t });
+    if (state["u" + i]) unsure.push(i + 1);
+  });
+  return { score, cats, wrong, unsure };
+}
+
+function showResult() {
+  const r = grade();
+  resultEl.textContent = "";
+
+  const s = document.createElement("div");
+  s.className = "score";
+  s.textContent = r.score + " / " + Q.length + "  (" + Math.round(r.score / Q.length * 100) + "%)";
+  resultEl.appendChild(s);
+
+  const table = document.createElement("table");
+  Object.keys(r.cats).forEach(c => {
+    const tr = document.createElement("tr");
+    const a = document.createElement("td"); a.textContent = c;
+    const b = document.createElement("td"); b.textContent = r.cats[c].ok + " / " + r.cats[c].total;
+    tr.append(a, b);
+    table.appendChild(tr);
+  });
+  resultEl.appendChild(table);
+
+  const hint = document.createElement("p");
+  hint.className = "lead xs";
+  hint.textContent = "Результат уже сохранён — при запущенном сервере он лежит в data/state.json. Файл ниже нужен, только если хочется читаемой копии или архива попытки.";
+  resultEl.appendChild(hint);
+
+  const lines = [];
+  lines.push("TEST: " + TEST_ID);
+  lines.push("SCORE: " + r.score + "/" + Q.length + " (" + Math.round(r.score / Q.length * 100) + "%)");
+  lines.push("BY CATEGORY:");
+  Object.keys(r.cats).forEach(c => lines.push("  " + c + ": " + r.cats[c].ok + "/" + r.cats[c].total));
+  lines.push("WRONG (" + r.wrong.length + "):");
+  r.wrong.forEach(w => lines.push("  #" + w.n + " [" + w.c + "] " + w.t.split("\n")[0]));
+  lines.push("GUESSED / UNSURE: " + (r.unsure.length ? r.unsure.join(", ") : "нет"));
+  lines.push("ANSWERS: " + Q.map((_, i) => state["a" + i]).join(""));
+
+  const report = lines.join("\n");
+  const fileName = TEST_ID + "__" + new Date().toISOString().slice(0, 10) + ".txt";
+
+  const row = document.createElement("div");
+  row.className = "btnrow";
+
+  const saveBtn = document.createElement("button");
+  saveBtn.textContent = "Сохранить отчёт в файл";
+  saveBtn.addEventListener("click", async () => {
+    // Chrome/Edge: диалог «Сохранить как» — можно выбрать любую папку
+    if (window.showSaveFilePicker) {
+      try {
+        const handle = await window.showSaveFilePicker({
+          suggestedName: fileName,
+          types: [{ description: "Отчёт по тесту", accept: { "text/plain": [".txt"] } }]
+        });
+        const writable = await handle.createWritable();
+        await writable.write(report);
+        await writable.close();
+        saveBtn.textContent = "Сохранено ✓";
+        return;
+      } catch (err) {
+        if (err && err.name === "AbortError") return; // пользователь закрыл диалог
+        // иначе — падаем в обычное скачивание ниже
+      }
+    }
+    const url = URL.createObjectURL(new Blob([report], { type: "text/plain;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    URL.revokeObjectURL(url);
+    saveBtn.textContent = "Скачано в «Загрузки» ✓";
+  });
+  row.appendChild(saveBtn);
+
+  const copy = document.createElement("button");
+  copy.className = "ghost";
+  copy.textContent = "Скопировать";
+  copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(report).then(
+      () => { copy.textContent = "Скопировано ✓"; },
+      () => { copy.textContent = "Не вышло — скопируй из блока ниже"; }
+    );
+  });
+  row.appendChild(copy);
+  resultEl.appendChild(row);
+
+  const details = document.createElement("details");
+  details.className = "raw";
+  const summary = document.createElement("summary");
+  summary.textContent = "Показать текст отчёта";
+  details.appendChild(summary);
+  const ta = document.createElement("textarea");
+  ta.readOnly = true;
+  ta.value = report;
+  details.appendChild(ta);
+  resultEl.appendChild(details);
+
+  resultEl.scrollIntoView({ behavior: "smooth" });
+}
+
+submitEl.addEventListener("click", () => {
+  if (checked) {
+    checked = false;
+    resultEl.textContent = "";
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    checked = true;
+    render();
+    showResult();
+  }
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Стереть все ответы?")) return;
+  state = {};
+  checked = false;
+  save();
+  resultEl.textContent = "";
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// поднимаем сохранённые ответы (с сервера или из localStorage), затем рисуем
+Store.ready().then(() => { state = Store.get(KEY) || {}; render(); });
+</script>

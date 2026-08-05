@@ -1,0 +1,306 @@
+<!doctype html>
+<!-- Файл собран автоматически из src/pages/dashboard.html
+     Правьте источник и запускайте npm run build — здешние правки затрутся. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>my-mind — программа обучения</title>
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/lesson.css">
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="crumb"><a class="home" href="index.html"><img class="mark" src="assets/icon.svg" alt="">my-mind</a></div>
+  <h1>Программа обучения</h1>
+  <p class="lead">Оглавление и прогресс. Статусы читаются из хранилища браузера — того же, куда уроки пишут результаты.</p>
+
+  <div class="meter"><span id="meter-fill"></span></div>
+  <p class="summary" id="summary"></p>
+  <p class="summary" id="storage-mode"></p>
+
+  <div id="review-box" class="next hidden">
+    <div class="crumb">Повторение</div>
+    <div id="review-body"></div>
+  </div>
+
+  <div id="next-box" class="next hidden">
+    <div class="crumb">Следующий шаг</div>
+    <div id="next-body"></div>
+  </div>
+
+  <div id="tracks"></div>
+
+  <div class="note err hidden" id="storage-warning">
+    <b>Статусы пустые, хотя уроки ты проходил?</b>
+    Значит браузер изолирует хранилище между локальными файлами — так делают Firefox и Safari при открытии по <code>file://</code>.
+    Прогресс внутри самого урока при этом сохраняется нормально, просто эта страница его не видит.
+    Лечится открытием уроков в Chrome — либо просто скажи Claude, что прошёл урок, и он отметит вручную.
+  </div>
+
+  <div class="actions">
+    <button id="save">Сохранить прогресс в файл</button>
+    <button class="ghost" id="refresh">Обновить</button>
+  </div>
+
+  <hr>
+  <h2>Тесты</h2>
+  <p>Входные тесты можно перепройти позже, чтобы сравнить результат с первым разом.</p>
+  <ul>
+    <li><a href="general/test-01-baseline.html">Общая эрудиция — входной тест</a> (пройден 04.08.2026: 40/50)</li>
+    <li><a href="work/test-01-baseline.html">Разработка и React — входной тест</a> (пройден 04.08.2026: 34/50)</li>
+  </ul>
+
+</div>
+
+<script src="assets/storage.js"></script>
+<script src="assets/srs.js"></script>
+<script src="review/cards.js"></script>
+<script>
+// Реестр уроков. Пополняется по мере появления новых.
+const LESSONS = [
+  { track: "general", id: "general-logic-syllogisms",  title: "Кванторы и силлогизмы",
+    sub: "закрывает вопрос #48 теста", href: "general/logic/lesson-01-syllogisms.html", total: 8 },
+  { track: "general", id: "general-logic-word-problems", title: "Задачи в словах: перевод в уравнения",
+    sub: "закрывает вопрос #50 теста", href: "general/logic/lesson-02-word-problems.html", total: 8 },
+  { track: "general", id: "general-math-probability",  title: "Вероятность и приём «хотя бы один»",
+    sub: "закрывает вопрос #5 теста", href: "general/math/lesson-01-probability.html", total: 7 },
+  { track: "general", id: "general-math-quadratic",    title: "Квадратные уравнения и знаки корней",
+    sub: "закрывает вопрос #7 теста", href: "general/math/lesson-02-quadratic.html", total: 8 },
+  { track: "general", id: "general-stats-averages",   title: "Среднее, медиана и обман выборки",
+    sub: "новая область: статистика", href: "general/statistics/lesson-01-averages.html", total: 8 },
+  { track: "general", id: "general-chem-everyday",    title: "Химия вокруг: почему мыло моет",
+    sub: "новая область: химия", href: "general/chemistry/lesson-01-everyday.html", total: 8 },
+  { track: "general", id: "general-music-basics",     title: "Музыка изнутри: из чего она сделана",
+    sub: "новая область: музыка", href: "general/music/lesson-01-how-music-works.html", total: 8 },
+  { track: "general", id: "general-cinema-language",  title: "Кино как язык: монтаж, кадр, свет",
+    sub: "новая область: кино", href: "general/cinema/lesson-01-film-language.html", total: 8 },
+  { track: "work",    id: "work-fundamentals-big-o",   title: "Сложность алгоритмов: O-нотация",
+    sub: "закрывает вопросы #1, #3, #5, #12 теста", href: "work/fundamentals/lesson-01-big-o.html", total: 8 },
+  { track: "work",    id: "work-fundamentals-data-structures", title: "Структуры данных: что выбрать под задачу",
+    sub: "закрывает вопросы #2, #6 теста", href: "work/fundamentals/lesson-02-data-structures.html", total: 8 },
+  { track: "work",    id: "work-js-event-loop",        title: "Event loop: микрозадачи и макрозадачи",
+    sub: "закрывает вопрос #16 теста", href: "work/javascript/lesson-01-event-loop.html", total: 7 },
+  { track: "work",    id: "work-js-arrays-mutation",   title: "Мутации, ссылки и иммутабельность",
+    sub: "закрывает вопросы #20, #40 теста", href: "work/javascript/lesson-02-arrays-mutation.html", total: 8 }
+];
+
+const TRACK_NAMES = { general: "Общее развитие", work: "Профессия" };
+
+// Название области выводим из папки урока — так оно не разъедется с крошкой на самой странице.
+const AREAS = {
+  "general/logic": "Логика",
+  "general/math": "Математика",
+  "general/statistics": "Статистика",
+  "general/chemistry": "Химия",
+  "general/music": "Музыка",
+  "general/cinema": "Кино",
+  "work/fundamentals": "Основы",
+  "work/javascript": "JavaScript"
+};
+const areaOf = (href) => AREAS[href.split("/").slice(0, 2).join("/")] || "";
+
+function readState(id) {
+  return Store.get("lesson:" + id);
+}
+
+function showStorageMode() {
+  const el = document.getElementById("storage-mode");
+  el.textContent = Store.mode() === "server"
+    ? "Прогресс хранится в файле data/state.json — он общий для всех браузеров на этой машине."
+    : "Прогресс хранится в этом браузере. Чтобы он лежал в файле, запусти: node server.mjs";
+}
+
+function fmtDate(iso) {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-");
+  return d + "." + m + "." + y.slice(2);
+}
+
+function build() {
+  const tracks = document.getElementById("tracks");
+  tracks.textContent = "";
+  let done = 0, anyState = false;
+
+  Object.keys(TRACK_NAMES).forEach(tr => {
+    const items = LESSONS.filter(l => l.track === tr);
+    if (!items.length) return;
+
+    const box = document.createElement("div");
+    box.className = "track" + (tr === "work" ? " track-work" : "");
+    const h = document.createElement("h2");
+    h.textContent = TRACK_NAMES[tr];
+    box.append(h);
+
+    items.forEach(l => {
+      const st = readState(l.id);
+      if (st) anyState = true;
+      const complete = st && st.completed && st.lastScore === l.total;
+      if (complete) done++;
+
+      const a = document.createElement("a");
+      a.className = "panel row";
+      a.href = l.href;
+
+      const mark = document.createElement("span");
+      mark.className = "tick" + (complete ? " done" : (st && st.completed ? " partial" : ""));
+      mark.textContent = complete ? "✓" : (st && st.completed ? "!" : "");
+      a.append(mark);
+
+      const main = document.createElement("span");
+      main.className = "row-main";
+      const t = document.createElement("div");
+      t.className = "row-title";
+      const area = areaOf(l.href);
+      if (area) {
+        t.append(Object.assign(document.createElement("span"), {
+          className: "row-area", textContent: area
+        }));
+      }
+      t.append(document.createTextNode(l.title));
+      const s = document.createElement("div");
+      s.className = "row-sub";
+      s.textContent = l.sub;
+      main.append(t, s);
+      a.append(main);
+
+      const score = document.createElement("span");
+      score.className = "row-score";
+      if (st && st.completed) {
+        const b = document.createElement("b");
+        b.textContent = st.lastScore + " / " + l.total;
+        score.append(b, document.createElement("br"),
+          Object.assign(document.createElement("span"), { textContent: fmtDate(st.date) }));
+      } else {
+        score.textContent = "—";
+      }
+      a.append(score);
+
+      box.append(a);
+    });
+
+    tracks.append(box);
+  });
+
+  const pct = Math.round(done / LESSONS.length * 100);
+  document.getElementById("meter-fill").style.width = pct + "%";
+  const sum = document.getElementById("summary");
+  sum.textContent = "";
+  sum.append(Object.assign(document.createElement("b"), { textContent: done + " из " + LESSONS.length }),
+             document.createTextNode(" уроков закрыто полностью"));
+
+  document.getElementById("storage-warning").classList.toggle("hidden", anyState);
+
+  // блок повторения: сколько карточек ждёт сегодня
+  const rb = document.getElementById("review-box");
+  const rbody = document.getElementById("review-body");
+  rbody.textContent = "";
+  if (window.CARDS && window.SRS) {
+    const srs = Store.get("srs:v1") || {};
+    const settings = SRS.settingsFrom(Store.get("srs:settings"));
+    const daily = SRS.dailyFrom(Store.get("srs:daily"));
+    const open = CARDS.filter(c => { const st = readState(c.lesson); return st && st.completed; });
+    const p = SRS.plan(open, srs, settings, daily);
+
+    const a = document.createElement("a");
+    a.href = "review/index.html";
+    a.textContent = "Открыть карточки";
+
+    if (!open.length) {
+      rbody.append(document.createTextNode("Карточки откроются после первого пройденного урока."));
+    } else if (p.session.length) {
+      rbody.append(document.createTextNode("На сегодня: "));
+      rbody.append(Object.assign(document.createElement("b"), { textContent: p.session.length }));
+      rbody.append(document.createTextNode(
+        " карточек — " + p.due.length + " на повторение, " + p.fresh.length + " новых. "), a);
+      if (p.deferredDue + p.waitingNew > 0) {
+        rbody.append(document.createElement("br"));
+        rbody.append(Object.assign(document.createElement("span"), {
+          className: "row-sub",
+          textContent: "В очереди на следующие дни: " + (p.deferredDue + p.waitingNew) +
+                       " · лимиты " + settings.newPerDay + " новых и " + settings.maxPerDay + " всего в день"
+        }));
+      }
+    } else {
+      rbody.append(document.createTextNode("На сегодня всё повторено. "), a);
+    }
+    rb.classList.remove("hidden");
+  }
+
+  // подсказка со следующим уроком
+  const next = LESSONS.find(l => {
+    const st = readState(l.id);
+    return !(st && st.completed && st.lastScore === l.total);
+  });
+  const nb = document.getElementById("next-box");
+  const body = document.getElementById("next-body");
+  body.textContent = "";
+  if (next) {
+    const st = readState(next.id);
+    const a = document.createElement("a");
+    a.href = next.href;
+    a.textContent = next.title;
+    body.append(a);
+    body.append(document.createTextNode(
+      st && st.completed ? " — пройден на " + st.lastScore + " из " + next.total + ", стоит перечитать разделы по ошибкам и повторить."
+                         : " — ещё не начат."));
+    nb.classList.remove("hidden");
+  } else {
+    body.textContent = "Все уроки закрыты. Попроси Claude сделать следующую партию по очереди из README.";
+    nb.classList.remove("hidden");
+  }
+
+  return { done };
+}
+
+function report() {
+  const lines = ["PROGRESS " + new Date().toISOString().slice(0, 10), ""];
+  Object.keys(TRACK_NAMES).forEach(tr => {
+    lines.push(TRACK_NAMES[tr].toUpperCase());
+    LESSONS.filter(l => l.track === tr).forEach(l => {
+      const st = readState(l.id);
+      const status = st && st.completed
+        ? st.lastScore + "/" + l.total + "  " + (st.date || "")
+        : "не пройден";
+      lines.push("  " + l.id.padEnd(30) + status + "   " + l.title);
+    });
+    lines.push("");
+  });
+  return lines.join("\n");
+}
+
+document.getElementById("save").addEventListener("click", async (ev) => {
+  const btn = ev.currentTarget;
+  const text = report();
+  const name = "progress__" + new Date().toISOString().slice(0, 10) + ".txt";
+  if (window.showSaveFilePicker) {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: name,
+        types: [{ description: "Прогресс обучения", accept: { "text/plain": [".txt"] } }]
+      });
+      const w = await handle.createWritable();
+      await w.write(text);
+      await w.close();
+      btn.textContent = "Сохранено ✓";
+      return;
+    } catch (err) {
+      if (err && err.name === "AbortError") return;
+    }
+  }
+  const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
+  btn.textContent = "Скачано в «Загрузки» ✓";
+});
+
+document.getElementById("refresh").addEventListener("click", () => build());
+window.addEventListener("focus", () => build());
+Store.ready().then(() => { build(); showStorageMode(); });
+</script>
+</body>
+</html>

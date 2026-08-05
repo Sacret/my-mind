@@ -1,0 +1,127 @@
+---
+title: Перенос прогресса в файл
+out: migrate.html
+crumb: · перенос
+---
+<div class="wrap">
+
+{{crumb}}
+<h1>Перенос прогресса из браузера в файл</h1>
+<p class="lead">
+  Прогресс, накопленный до появления сервера, лежит в хранилище браузера под адресом <code>file://</code>.
+  Страницы с <code>http://localhost</code> его не видят — для браузера это разные источники.
+  Эта страница переносит данные оттуда в <code>data/state.json</code>.
+</p>
+
+<div class="note err" id="wrong-origin">
+  <b>Открой эту страницу двойным кликом по файлу</b>, а не через localhost.
+  Сейчас адрес начинается с <code id="proto"></code>, а данные лежат под <code>file://</code> —
+  отсюда их не достать. Закрой вкладку и открой <code>migrate.html</code> из папки в Finder.
+</div>
+
+<div id="main" class="hidden">
+  <h2>Найдено в этом браузере</h2>
+  <div id="list"></div>
+
+  <div class="actions">
+    <button id="send">Перенести на сервер</button>
+    <button class="ghost" id="download">Сохранить копию в файл</button>
+  </div>
+  <p class="status" id="status"></p>
+  <p class="lead xs">
+    Сервер должен быть запущен: <code>npm start</code>. Перенос ничего не удаляет —
+    данные в браузере остаются на месте, а на сервере дополняют уже имеющиеся.
+  </p>
+</div>
+
+<div id="nothing" class="hidden">
+  <div class="note">
+    <b>В этом браузере ничего не найдено.</b>
+    Возможно, ты занималась в другом браузере — открой <code>migrate.html</code> там.
+  </div>
+</div>
+
+<hr>
+<p class="lead xs"><a href="index.html">← к оглавлению</a></p>
+
+</div>
+
+<script>
+const PREFIXES = ["lesson:", "quiz:", "srs:"];
+const SERVER = "http://localhost:4173/api/merge";
+
+function collect() {
+  const out = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || !PREFIXES.some((p) => k.startsWith(p))) continue;
+      try { out[k] = JSON.parse(localStorage.getItem(k)); } catch (_) {}
+    }
+  } catch (_) {}
+  return out;
+}
+
+const data = collect();
+const keys = Object.keys(data);
+const isFile = location.protocol === "file:";
+
+document.getElementById("proto").textContent = location.protocol + "//";
+document.getElementById("wrong-origin").classList.toggle("hidden", isFile);
+
+if (isFile) {
+  if (!keys.length) {
+    document.getElementById("nothing").classList.remove("hidden");
+  } else {
+    document.getElementById("main").classList.remove("hidden");
+    const list = document.getElementById("list");
+    keys.sort().forEach((k) => {
+      const v = data[k] || {};
+      const div = document.createElement("div");
+      div.className = "panel";
+      let desc = k;
+      if (k.startsWith("lesson:")) {
+        desc = "Урок " + k.slice(7) + (v.completed ? " — пройден, " + v.lastScore + " баллов, " + (v.date || "") : " — начат");
+      } else if (k.startsWith("quiz:")) {
+        const answered = Object.keys(v).filter((x) => x.startsWith("a")).length;
+        desc = "Тест " + k.slice(5) + " — отвечено " + answered;
+      } else if (k === "srs:v1") {
+        desc = "Карточки — интервалов сохранено: " + Object.keys(v).length;
+      }
+      div.append(Object.assign(document.createElement("b"), { className: "tnum", textContent: desc }));
+      list.append(div);
+    });
+  }
+}
+
+document.getElementById("send").addEventListener("click", async () => {
+  const st = document.getElementById("status");
+  st.className = "status";
+  st.textContent = "Отправляю…";
+  try {
+    const res = await fetch(SERVER, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const r = await res.json();
+    st.className = "status ok";
+    st.textContent = "Готово: перенесено " + r.received + " записей, из них новых " + r.added +
+      ". Всего на сервере " + r.total + ". Можно открывать localhost:4173.";
+  } catch (err) {
+    st.className = "status err";
+    st.textContent = "Не вышло: " + err.message +
+      ". Проверь, что сервер запущен (npm start) и работает на порту 4173.";
+  }
+});
+
+document.getElementById("download").addEventListener("click", () => {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "my-mind-localstorage.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+</script>

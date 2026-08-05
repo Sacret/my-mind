@@ -1,0 +1,47 @@
+/**
+ * Оглавление (index.html). Подключается после lesson.css.
+ * Общая поверхность карточек берётся из класса .panel, здесь — только раскладка.
+ */
+
+.track { margin: 40px 0 0; }
+.track h2 {
+  margin-bottom: 4px; color: var(--accent);
+  font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+}
+
+/* строка урока: .panel даёт фон и рамку, .row — раскладку */
+a.row {
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none; color: inherit;
+}
+a.row:hover { border-color: var(--accent); }
+
+/* кружок статуса слева: пусто / галочка / восклицательный знак */
+.tick {
+  flex: none; width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--line); display: grid; place-items: center;
+  font-size: 13px; font-weight: 700; color: #fff; line-height: 16px;
+}
+.tick.done { background: var(--ok); border-color: var(--ok); }
+.tick.partial { background: transparent; border-color: var(--accent); color: var(--accent); }
+
+.row-main { flex: 1 1 auto; min-width: 0; }
+.row-title { font-weight: 600; }
+/* название области перед заголовком урока */
+.row-area { color: var(--accent); }
+.row-area::after { content: " · "; color: var(--muted); font-weight: 400; }
+.row-sub { color: var(--muted); font-size: 14px; }
+.row-score { flex: none; font-variant-numeric: tabular-nums; font-size: 15px; color: var(--muted); text-align: right; }
+.row-score b { color: var(--fg); }
+
+/* полоса общего прогресса */
+.meter { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; margin: 14px 0 6px; }
+/* стартовая ширина — ноль: заполнение проставит скрипт, иначе полоса мигнёт полной */
+.meter span { display: block; width: 0; height: 100%; background: var(--ok); border-radius: 99px; transition: width .4s; }
+.summary { font-size: 15px; color: var(--muted); }
+.summary b { color: var(--fg); font-size: 17px; }
+#storage-mode { font-size: 13px; }
+
+/* блоки «Повторение» и «Следующий шаг» */
+.next { border: 1px dashed var(--line); border-radius: 10px; padding: 14px 16px; margin: 24px 0 0; }
+.next .crumb { font-size: 12px; }

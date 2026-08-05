@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4.5 4 55 55">
+  <title>my-mind</title>
+  <style>
+    .head { fill: #e5833e; }
+    .leaf { fill: #63b182; }
+    .stem { stroke: #4e9a6b; }
+    .ink  { fill: #3a2416; }
+    .line { stroke: #3a2416; }
+    .blush { fill: #c85f2b; opacity: .5; }
+    @media (prefers-color-scheme: dark) {
+      .head { fill: #f09a5f; }
+      .leaf { fill: #74c294; }
+      .stem { stroke: #5fae7c; }
+    }
+  </style>
+
+  <!-- росток -->
+  <path class="stem" d="M32 22 V13" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <path class="leaf" d="M32 14c0-6.5 4.6-10 10.5-10C42.5 10.5 38.4 14 32 14z"/>
+  <path class="leaf" d="M32 17c-.4-5-4-7.8-8.6-7.8 0 4.8 3.2 7.6 8.6 7.8z"/>
+
+  <!-- голова: скруглённый квадрат, чтобы читался персонаж, а не фрукт -->
+  <rect class="head" x="10" y="21" width="44" height="38" rx="13"/>
+
+  <!-- румянец -->
+  <ellipse class="blush" cx="17.5" cy="44" rx="4.2" ry="3"/>
+  <ellipse class="blush" cx="46.5" cy="44" rx="4.2" ry="3"/>
+
+  <!-- глаза -->
+  <circle class="ink" cx="24" cy="36" r="3.4"/>
+  <circle class="ink" cx="40" cy="36" r="3.4"/>
+
+  <!-- улыбка -->
+  <path class="line" d="M25.5 46c3.6 4.4 9.4 4.4 13 0" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

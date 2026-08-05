@@ -1,0 +1,42 @@
+/**
+ * Страница карточек (review/index.html). Подключается после lesson.css.
+ */
+
+/* сама карточка крупнее обычной плашки: держит высоту и центрирует содержимое */
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 28px 26px; margin: 20px 0; min-height: 190px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.card .side { white-space: pre-wrap; font-size: 19px; line-height: 1.6; }
+.card .side.back { font-size: 17px; }
+.card .tag {
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.card .tag .new { color: var(--accent); font-weight: 700; }
+.divider { border: 0; border-top: 1px dashed var(--line); margin: 20px 0; }
+
+/* три кнопки оценки */
+.grades { display: flex; gap: 10px; flex-wrap: wrap; }
+.grades button { flex: 1 1 auto; min-width: 130px; }
+button.again { background: transparent; color: var(--bad); border-color: var(--bad); }
+button.hard  { background: transparent; color: var(--fg); border-color: var(--line); }
+
+.queue { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; margin-top: 14px; }
+
+/* счётчики над карточкой */
+.stats { display: flex; gap: 22px; flex-wrap: wrap; margin: 18px 0 0; font-size: 15px; }
+.stats div b { display: block; font-size: 24px; letter-spacing: -.02em; }
+.stats div span { color: var(--muted); }
+
+.done-screen { text-align: center; padding: 30px 0; }
+.done-screen .big { font-size: 46px; }
+
+/* настройка дневных лимитов */
+.limits { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-end; margin-top: 14px; }
+.limits label { font-size: 14px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+.limits input {
+  font: inherit; font-size: 16px; width: 96px; padding: 7px 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+}

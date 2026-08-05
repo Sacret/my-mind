@@ -1,0 +1,13 @@
+{
+  "name": "my-mind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Личная программа обучения: уроки, тесты и карточки для повторения",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node build.mjs --check",
+    "start": "node build.mjs && node server.mjs",
+    "lan": "node build.mjs && node server.mjs --lan"
+  }
+}

@@ -1,0 +1,331 @@
+<!doctype html>
+<!-- Файл собран автоматически из src/pages/general-test-01-baseline.html
+     Правьте источник и запускайте npm run build — здешние правки затрутся. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Входной тест · Общая эрудиция</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icon.svg">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="stylesheet" href="../assets/lesson.css">
+<link rel="stylesheet" href="../assets/test.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a class="home" href="../index.html"><img class="mark" src="../assets/icon.svg" alt="">my-mind</a><span>· тест</span></div>
+    <h1>Входной тест · Общая эрудиция</h1>
+    <p class="lead">50 вопросов: математика, наука и астрономия, русский, английский, искусство, кино, история и география, логика.
+    Не гугли — смысл в честном срезе. Если не знаешь — угадай и отметь «не уверен».</p>
+  </header>
+
+  <div id="quiz"></div>
+  <div id="result"></div>
+</div>
+
+<div class="bar">
+  <span class="count" id="count"></span>
+  <button id="submit">Проверить</button>
+  <button class="ghost" id="reset">Сбросить</button>
+</div>
+
+<script src="../assets/storage.js"></script>
+<script>
+const TEST_ID = "general-baseline-01";
+const Q = [
+  // МАТЕМАТИКА
+  {c:"Математика", t:"Чему равно 7! (факториал семи)?", o:["720","5040","40320","4900"], a:1, e:"1·2·3·4·5·6·7 = 5040."},
+  {c:"Математика", t:"Производная функции sin(x) равна:", o:["cos(x)","−cos(x)","−sin(x)","tan(x)"], a:0, e:"(sin x)′ = cos x."},
+  {c:"Математика", t:"Сумма внутренних углов выпуклого шестиугольника:", o:["540°","720°","900°","1080°"], a:1, e:"(n−2)·180° = 4·180° = 720°."},
+  {c:"Математика", t:"Какое из чисел иррациональное?", o:["22/7","0,333… (3 в периоде)","√2","−5"], a:2, e:"√2 нельзя представить дробью p/q; остальные — рациональные."},
+  {c:"Математика", t:"Монету бросают дважды. Вероятность выпадения хотя бы одного орла:", o:["1/2","1/4","2/3","3/4"], a:3, e:"1 − P(нет орлов) = 1 − 1/4 = 3/4."},
+  {c:"Математика", t:"log₂(1024) =", o:["8","10","12","1024"], a:1, e:"2¹⁰ = 1024."},
+  {c:"Математика", t:"Корни уравнения x² − 5x + 6 = 0:", o:["1 и 6","2 и 3","−2 и −3","0 и 5"], a:1, e:"По теореме Виета: сумма 5, произведение 6."},
+  {c:"Математика", t:"Тождество Эйлера: e^(iπ) + 1 = ?", o:["0","1","i","−1"], a:0, e:"e^(iπ) = −1, поэтому сумма равна 0."},
+
+  // НАУКА И АСТРОНОМИЯ
+  {c:"Наука и астрономия", t:"Световой год — это:", o:["время, за которое свет доходит от Солнца до Земли","расстояние, которое свет проходит за год","год на планете с быстрым вращением","единица яркости звезды"], a:1, e:"Единица расстояния ≈ 9,46 трлн км."},
+  {c:"Наука и астрономия", t:"Ближайшая к Солнцу звезда (кроме самого Солнца):", o:["Сириус","Альфа Центавра A","Проксима Центавра","Бетельгейзе"], a:2, e:"Красный карлик на расстоянии ≈ 4,24 светового года."},
+  {c:"Наука и астрономия", t:"Самая горячая планета Солнечной системы:", o:["Меркурий","Венера","Марс","Юпитер"], a:1, e:"≈ 460 °C из-за мощного парникового эффекта, хотя Меркурий ближе к Солнцу."},
+  {c:"Наука и астрономия", t:"Возраст Вселенной по современным оценкам:", o:["4,5 млрд лет","13,8 млрд лет","100 млрд лет","1 трлн лет"], a:1, e:"4,5 млрд — возраст Земли и Солнечной системы."},
+  {c:"Наука и астрономия", t:"Красное смещение в спектрах далёких галактик означает, что:", o:["галактики нагреваются","Вселенная расширяется","свет «стареет» в пути","галактики приближаются к нам"], a:1, e:"Закон Хаббла: чем дальше галактика, тем быстрее она удаляется."},
+  {c:"Наука и астрономия", t:"Единица измерения силы в системе СИ:", o:["джоуль","ватт","ньютон","паскаль"], a:2, e:"Джоуль — энергия, ватт — мощность, паскаль — давление."},
+  {c:"Наука и астрономия", t:"В молекуле ДНК аденин образует пару с:", o:["гуанином","цитозином","тимином","урацилом"], a:2, e:"A–T и G–C. Урацил заменяет тимин в РНК."},
+  {c:"Наука и астрономия", t:"Химическая формула поваренной соли:", o:["KCl","NaCl","NaHCO₃","CaCO₃"], a:1, e:"NaHCO₃ — сода, CaCO₃ — мел."},
+
+  // РУССКИЙ ЯЗЫК
+  {c:"Русский язык", t:"В каком слове ударение поставлено верно?", o:["тОрты","красивЕе","звОнит","катАлог"], a:0, e:"Верно: тОрты, красИвее, звонИт, каталОг."},
+  {c:"Русский язык", t:"Выберите верное написание:", o:["в течении года","в течение года","в течении и года","втечение года"], a:1, e:"«В течение» со значением времени — предлог, пишется с «е»."},
+  {c:"Русский язык", t:"В каком предложении нет ошибки?", o:["Он хочет учится.","Он учиться в школе.","Он хочет учиться.","Он учится хочет."], a:2, e:"«Что делать?» → учиться (с мягким знаком)."},
+  {c:"Русский язык", t:"Сколько падежей в современном русском литературном языке?", o:["3","6","7","12"], a:1, e:"Именительный, родительный, дательный, винительный, творительный, предложный."},
+  {c:"Русский язык", t:"Выберите литературный вариант:", o:["ихний дом","их дом","ихий дом","евошний дом"], a:1, e:"«Ихний» — просторечие, нормы нет."},
+  {c:"Русский язык", t:"Кто написал роман «Мастер и Маргарита»?", o:["Ф. Достоевский","М. Булгаков","Л. Толстой","А. Чехов"], a:1, e:"Булгаков писал роман с 1928 по 1940 год."},
+
+  // АНГЛИЙСКИЙ ЯЗЫК
+  {c:"Английский язык", t:"If I ___ you, I would apologise.", o:["was","were","am","be"], a:1, e:"Second conditional: were для всех лиц."},
+  {c:"Английский язык", t:"I ___ in London since 2019.", o:["live","lived","have lived","am living"], a:2, e:"Since + точка отсчёта → Present Perfect."},
+  {c:"Английский язык", t:"He is ___ honest man.", o:["a","an","the","— (без артикля)"], a:1, e:"Артикль по звуку: honest начинается с гласного звука."},
+  {c:"Английский язык", t:"Идиома «to bite the bullet» означает:", o:["промолчать","стойко принять неприятное и сделать это","есть на бегу","совершить ошибку"], a:1, e:"Букв. «закусить пулю» — терпеть боль без наркоза."},
+  {c:"Английский язык", t:"Синоним слова «ubiquitous»:", o:["rare","omnipresent","ancient","fragile"], a:1, e:"Ubiquitous = вездесущий, повсеместный."},
+  {c:"Английский язык", t:"She suggested ___ a break.", o:["to take","taking","take","took"], a:1, e:"После suggest используется герундий."},
+
+  // ИСКУССТВО
+  {c:"Искусство", t:"Кто написал картину «Звёздная ночь»?", o:["Клод Моне","Винсент Ван Гог","Поль Сезанн","Эдвард Мунк"], a:1, e:"1889 год, написана в лечебнице Сен-Реми."},
+  {c:"Искусство", t:"Сальвадор Дали — представитель:", o:["импрессионизма","кубизма","сюрреализма","барокко"], a:2, e:"Сюрреализм — искусство сновидений и бессознательного."},
+  {c:"Искусство", t:"Картина «Герника» принадлежит кисти:", o:["Пабло Пикассо","Хуана Миро","Диего Риверы","Марка Шагала"], a:0, e:"1937 год, отклик на бомбардировку баскского города."},
+  {c:"Искусство", t:"Цикл концертов «Времена года» написал:", o:["И. С. Бах","А. Вивальди","В. А. Моцарт","Й. Гайдн"], a:1, e:"Четыре скрипичных концерта, ок. 1725 года."},
+  {c:"Искусство", t:"Импрессионизм получил своё название по картине:", o:["«Кувшинки»","«Впечатление. Восходящее солнце»","«Завтрак на траве»","«Бульвар Капуцинок»"], a:1, e:"Моне, 1872. Критик высмеял её — и название прижилось."},
+  {c:"Искусство", t:"Мраморный «Давид» (1504) — работа:", o:["Донателло","Микеланджело","Бернини","Рафаэля"], a:1, e:"Флоренция, высота более 5 метров."},
+  {c:"Искусство", t:"Эрмитаж находится в городе:", o:["Москва","Санкт-Петербург","Казань","Нижний Новгород"], a:1, e:"Основан Екатериной II в 1764 году."},
+
+  // КИНО
+  {c:"Кино", t:"Режиссёр фильма «Криминальное чтиво»:", o:["Мартин Скорсезе","Квентин Тарантино","Дэвид Финчер","братья Коэн"], a:1, e:"1994 год, «Золотая пальмовая ветвь» в Каннах."},
+  {c:"Кино", t:"«Начало» и «Интерстеллар» снял:", o:["Ридли Скотт","Кристофер Нолан","Дени Вильнёв","Стивен Спилберг"], a:1, e:"Нолан также снял трилогию о Бэтмене и «Оппенгеймера»."},
+  {c:"Кино", t:"«Сталкер» и «Солярис» — фильмы режиссёра:", o:["Сергея Эйзенштейна","Андрея Тарковского","Никиты Михалкова","Алексея Германа"], a:1, e:"Оба сняты по книгам: Стругацких и Лема."},
+  {c:"Кино", t:"Фраза «Я сделаю ему предложение, от которого он не сможет отказаться» — из фильма:", o:["«Славные парни»","«Крёстный отец»","«Лицо со шрамом»","«Казино»"], a:1, e:"Коппола, 1972, реплика Вито Корлеоне."},
+  {c:"Кино", t:"Первый «Оскар» за лучший фильм (1929) получила лента:", o:["«Крылья»","«Унесённые ветром»","«Броненосец Потёмкин»","«Гражданин Кейн»"], a:0, e:"«Wings» — немой фильм о лётчиках Первой мировой."},
+
+  // ИСТОРИЯ И ГЕОГРАФИЯ
+  {c:"История и география", t:"В каком году пала Берлинская стена?", o:["1985","1989","1991","1993"], a:1, e:"9 ноября 1989 года; СССР распался в 1991."},
+  {c:"История и география", t:"Первый человек в космосе:", o:["Алексей Леонов","Юрий Гагарин","Нил Армстронг","Герман Титов"], a:1, e:"12 апреля 1961 года. Леонов — первый выход в открытый космос."},
+  {c:"История и география", t:"Эпоха Возрождения зародилась в:", o:["Франции","Италии","Нидерландах","Германии"], a:1, e:"XIV век, Флоренция и другие города-государства."},
+  {c:"История и география", t:"Поводом к началу Первой мировой войны стало:", o:["вторжение в Польшу","убийство эрцгерцога Франца Фердинанда","затопление «Лузитании»","Октябрьская революция"], a:1, e:"Сараево, 28 июня 1914 года."},
+  {c:"История и география", t:"Столица Австралии:", o:["Сидней","Мельбурн","Канберра","Перт"], a:2, e:"Город построен как компромисс между Сиднеем и Мельбурном."},
+  {c:"История и география", t:"Высочайшая вершина мира над уровнем моря:", o:["К2","Эверест","Килиманджаро","Монблан"], a:1, e:"8849 м, Гималаи."},
+  {c:"История и география", t:"Монгольскую империю основал:", o:["Тамерлан","Чингисхан","Батый","Аттила"], a:1, e:"Начало XIII века; Батый — его внук."},
+
+  // ЛОГИКА
+  {c:"Логика", t:"Все коты — млекопитающие. Некоторые млекопитающие чёрные. Следовательно:", o:["все коты чёрные","некоторые коты чёрные","ни один кот не чёрный","из посылок вывод о цвете котов не следует"], a:3, e:"Классическая ошибка: «некоторые M — B» ничего не говорит о подмножестве котов."},
+  {c:"Логика", t:"Продолжите ряд: 2, 3, 5, 8, 12, 17, …", o:["21","22","23","24"], a:2, e:"Разности растут: +1, +2, +3, +4, +5, значит +6 → 23."},
+  {c:"Логика", t:"У Пети столько же братьев, сколько сестёр. У его сестры Маши братьев вдвое больше, чем сестёр. Сколько всего детей в семье?", o:["5","6","7","8"], a:2, e:"4 мальчика и 3 девочки: у Пети 3 брата и 3 сестры, у Маши 4 брата и 2 сестры."}
+];
+
+const KEY = "quiz:" + TEST_ID;
+let state = {};
+let checked = false;
+
+const quizEl = document.getElementById("quiz");
+const resultEl = document.getElementById("result");
+const countEl = document.getElementById("count");
+const submitEl = document.getElementById("submit");
+
+function save() { Store.set(KEY, state); }
+
+function updateCount() {
+  const done = Q.filter((_, i) => state["a" + i] !== undefined).length;
+  countEl.textContent = done + " / " + Q.length;
+  submitEl.disabled = checked ? false : done < Q.length;
+  submitEl.textContent = checked ? "Пересдать" : "Проверить";
+}
+
+function render() {
+  quizEl.textContent = "";
+  let lastCat = null;
+  Q.forEach((q, i) => {
+    if (q.c !== lastCat) {
+      lastCat = q.c;
+      const h = document.createElement("div");
+      h.className = "cat-title";
+      h.textContent = q.c;
+      quizEl.appendChild(h);
+    }
+    const card = document.createElement("div");
+    card.className = "q";
+    card.id = "q" + i;
+
+    const head = document.createElement("div");
+    head.className = "q-head";
+    const num = document.createElement("span");
+    num.className = "q-num";
+    num.textContent = (i + 1) + ".";
+    const txt = document.createElement("span");
+    txt.className = "q-text";
+    txt.textContent = q.t;
+    head.append(num, txt);
+    card.appendChild(head);
+
+    q.o.forEach((opt, j) => {
+      const lab = document.createElement("label");
+      lab.className = "opt";
+      const inp = document.createElement("input");
+      inp.type = "radio";
+      inp.name = "q" + i;
+      inp.checked = state["a" + i] === j;
+      inp.disabled = checked;
+      inp.addEventListener("change", () => { state["a" + i] = j; save(); updateCount(); });
+      const span = document.createElement("span");
+      span.textContent = opt;
+      lab.append(inp, span);
+      card.appendChild(lab);
+    });
+
+    const unsure = document.createElement("label");
+    unsure.className = "unsure";
+    const ub = document.createElement("input");
+    ub.type = "checkbox";
+    ub.checked = !!state["u" + i];
+    ub.disabled = checked;
+    ub.addEventListener("change", () => { state["u" + i] = ub.checked; save(); });
+    const us = document.createElement("span");
+    us.textContent = "не уверен, угадал(а)";
+    unsure.append(ub, us);
+    card.appendChild(unsure);
+
+    if (checked) {
+      const given = state["a" + i];
+      const ok = given === q.a;
+      card.classList.add(ok ? "right" : "wrong");
+      const v = document.createElement("div");
+      v.className = "verdict " + (ok ? "ok" : "no");
+      v.textContent = ok ? "Верно" : "Неверно. Правильный ответ: " + q.o[q.a];
+      card.appendChild(v);
+      const e = document.createElement("div");
+      e.className = "exp";
+      e.textContent = q.e;
+      card.appendChild(e);
+    }
+
+    quizEl.appendChild(card);
+  });
+  updateCount();
+}
+
+function grade() {
+  const cats = {};
+  const wrong = [], unsure = [];
+  let score = 0;
+  Q.forEach((q, i) => {
+    cats[q.c] = cats[q.c] || { ok: 0, total: 0 };
+    cats[q.c].total++;
+    if (state["a" + i] === q.a) { score++; cats[q.c].ok++; }
+    else wrong.push({ n: i + 1, c: q.c, t: q.t });
+    if (state["u" + i]) unsure.push(i + 1);
+  });
+  return { score, cats, wrong, unsure };
+}
+
+function showResult() {
+  const r = grade();
+  resultEl.textContent = "";
+
+  const s = document.createElement("div");
+  s.className = "score";
+  s.textContent = r.score + " / " + Q.length + "  (" + Math.round(r.score / Q.length * 100) + "%)";
+  resultEl.appendChild(s);
+
+  const table = document.createElement("table");
+  Object.keys(r.cats).forEach(c => {
+    const tr = document.createElement("tr");
+    const a = document.createElement("td"); a.textContent = c;
+    const b = document.createElement("td"); b.textContent = r.cats[c].ok + " / " + r.cats[c].total;
+    tr.append(a, b);
+    table.appendChild(tr);
+  });
+  resultEl.appendChild(table);
+
+  const hint = document.createElement("p");
+  hint.className = "lead xs";
+  hint.textContent = "Результат уже сохранён — при запущенном сервере он лежит в data/state.json. Файл ниже нужен, только если хочется читаемой копии или архива попытки.";
+  resultEl.appendChild(hint);
+
+  const lines = [];
+  lines.push("TEST: " + TEST_ID);
+  lines.push("SCORE: " + r.score + "/" + Q.length + " (" + Math.round(r.score / Q.length * 100) + "%)");
+  lines.push("BY CATEGORY:");
+  Object.keys(r.cats).forEach(c => lines.push("  " + c + ": " + r.cats[c].ok + "/" + r.cats[c].total));
+  lines.push("WRONG (" + r.wrong.length + "):");
+  r.wrong.forEach(w => lines.push("  #" + w.n + " [" + w.c + "] " + w.t));
+  lines.push("GUESSED / UNSURE: " + (r.unsure.length ? r.unsure.join(", ") : "нет"));
+  lines.push("ANSWERS: " + Q.map((_, i) => state["a" + i]).join(""));
+
+  const report = lines.join("\n");
+  const fileName = TEST_ID + "__" + new Date().toISOString().slice(0, 10) + ".txt";
+
+  const row = document.createElement("div");
+  row.className = "btnrow";
+
+  const saveBtn = document.createElement("button");
+  saveBtn.textContent = "Сохранить отчёт в файл";
+  saveBtn.addEventListener("click", async () => {
+    // Chrome/Edge: диалог «Сохранить как» — можно выбрать любую папку
+    if (window.showSaveFilePicker) {
+      try {
+        const handle = await window.showSaveFilePicker({
+          suggestedName: fileName,
+          types: [{ description: "Отчёт по тесту", accept: { "text/plain": [".txt"] } }]
+        });
+        const writable = await handle.createWritable();
+        await writable.write(report);
+        await writable.close();
+        saveBtn.textContent = "Сохранено ✓";
+        return;
+      } catch (err) {
+        if (err && err.name === "AbortError") return; // пользователь закрыл диалог
+        // иначе — падаем в обычное скачивание ниже
+      }
+    }
+    const url = URL.createObjectURL(new Blob([report], { type: "text/plain;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    URL.revokeObjectURL(url);
+    saveBtn.textContent = "Скачано в «Загрузки» ✓";
+  });
+  row.appendChild(saveBtn);
+
+  const copy = document.createElement("button");
+  copy.className = "ghost";
+  copy.textContent = "Скопировать";
+  copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(report).then(
+      () => { copy.textContent = "Скопировано ✓"; },
+      () => { copy.textContent = "Не вышло — скопируй из блока ниже"; }
+    );
+  });
+  row.appendChild(copy);
+  resultEl.appendChild(row);
+
+  const details = document.createElement("details");
+  details.className = "raw";
+  const summary = document.createElement("summary");
+  summary.textContent = "Показать текст отчёта";
+  details.appendChild(summary);
+  const ta = document.createElement("textarea");
+  ta.readOnly = true;
+  ta.value = report;
+  details.appendChild(ta);
+  resultEl.appendChild(details);
+
+  resultEl.scrollIntoView({ behavior: "smooth" });
+}
+
+submitEl.addEventListener("click", () => {
+  if (checked) {
+    checked = false;
+    resultEl.textContent = "";
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    checked = true;
+    render();
+    showResult();
+  }
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Стереть все ответы?")) return;
+  state = {};
+  checked = false;
+  save();
+  resultEl.textContent = "";
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// поднимаем сохранённые ответы (с сервера или из localStorage), затем рисуем
+Store.ready().then(() => { state = Store.get(KEY) || {}; render(); });
+</script>
+</body>
+</html>
