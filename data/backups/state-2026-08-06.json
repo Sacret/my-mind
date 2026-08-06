@@ -207,7 +207,7 @@
     },
     "syl-6": {
       "box": 1,
-      "due": "2026-08-07"
+      "due": "2026-08-06"
     },
     "syl-2": {
       "box": 2,
@@ -230,8 +230,8 @@
       "due": "2026-08-08"
     },
     "prob-7": {
-      "box": 2,
-      "due": "2026-08-09"
+      "box": 1,
+      "due": "2026-08-06"
     },
     "prob-5": {
       "box": 2,
@@ -239,7 +239,7 @@
     },
     "prob-8": {
       "box": 1,
-      "due": "2026-08-07"
+      "due": "2026-08-06"
     },
     "prob-6": {
       "box": 2,
@@ -258,57 +258,17 @@
       "due": "2026-08-08"
     },
     "bigo-2": {
-      "box": 3,
-      "due": "2026-08-13"
+      "box": 1,
+      "due": "2026-08-06"
     },
     "bigo-4": {
       "box": 2,
       "due": "2026-08-08"
-    },
-    "bigo-8": {
-      "box": 2,
-      "due": "2026-08-09"
-    },
-    "loop-2": {
-      "box": 1,
-      "due": "2026-08-07"
-    },
-    "loop-1": {
-      "box": 1,
-      "due": "2026-08-07"
-    },
-    "bigo-6": {
-      "box": 2,
-      "due": "2026-08-09"
-    },
-    "loop-4": {
-      "box": 2,
-      "due": "2026-08-09"
-    },
-    "bigo-9": {
-      "box": 1,
-      "due": "2026-08-07"
-    },
-    "bigo-5": {
-      "box": 1,
-      "due": "2026-08-07"
-    },
-    "bigo-10": {
-      "box": 2,
-      "due": "2026-08-09"
-    },
-    "bigo-7": {
-      "box": 2,
-      "due": "2026-08-09"
-    },
-    "loop-3": {
-      "box": 1,
-      "due": "2026-08-07"
     }
   },
   "srs:daily": {
-    "date": "2026-08-06",
-    "done": 14,
+    "date": "2026-08-05",
+    "done": 15,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -362,44 +322,5 @@
     "lastScore": 8,
     "completed": true,
     "date": "2026-08-05"
-  },
-  "lesson:general-stats-averages": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 2,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "completed": true,
-    "date": "2026-08-06"
-  },
-  "lesson:work-fundamentals-data-structures": {
-    "a0": 1,
-    "a1": 0,
-    "a2": 1,
-    "a3": 2,
-    "a4": 1,
-    "a5": 2,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "completed": true,
-    "date": "2026-08-06"
-  },
-  "lesson:general-cinema-language": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "completed": true,
-    "date": "2026-08-06"
   }
 }

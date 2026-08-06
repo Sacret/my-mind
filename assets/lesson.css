@@ -108,7 +108,7 @@ label.opt input { margin-top: 6px; flex: none; accent-color: var(--accent); }
 .verdict.no { color: var(--bad); }
 .exp { color: var(--muted); font-size: 15px; margin: 4px 0 0 34px; }
 
-.actions { display: flex; gap: 12px; align-items: center; margin-top: 20px; flex-wrap: wrap; }
+.actions { display: flex; gap: 12px; align-items: center; margin: 20px 0 10px; flex-wrap: wrap; }
 button {
   font: inherit; font-size: 16px; font-weight: 600; padding: 9px 20px; border-radius: 8px;
   border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer;
@@ -118,3 +118,13 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .quiz-score { font-size: 16px; font-weight: 600; }
 .quiz-score .muted { color: var(--muted); font-weight: 400; }
 .done-badge { color: var(--ok); font-size: 14px; font-weight: 600; }
+
+/* возврат на оглавление внизу урока */
+.back { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); }
+.back a {
+  display: inline-block; font: inherit; font-size: 16px; font-weight: 600;
+  padding: 9px 20px; border-radius: 8px; text-decoration: none;
+  border: 1px solid var(--accent); background: transparent; color: var(--accent);
+}
+.back a:hover { background: var(--accent); color: #fff; }
+.back a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

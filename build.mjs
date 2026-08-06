@@ -10,6 +10,7 @@
  * Доступные подстановки внутри источника:
  *   {{root}}     — путь к корню проекта относительно страницы ("", "../", "../../")
  *   {{crumb}}    — строка навигации с иконкой и ссылкой на оглавление
+ *   {{back}}     — кнопка «Назад» на оглавление внизу страницы
  *   {{scripts}}  — теги <script> из параметра js
  */
 import fs from "node:fs";
@@ -51,6 +52,10 @@ function crumbHtml(root, tail) {
   return '<div class="crumb">' + link + (tail ? "<span>" + tail + "</span>" : "") + "</div>";
 }
 
+function backHtml(root) {
+  return '<div class="back"><a href="' + root + 'index.html">← Назад</a></div>';
+}
+
 function scriptsHtml(root, list) {
   if (!list) return "";
   return list
@@ -86,6 +91,7 @@ function render(layout, source, file) {
 
   const html = rest
     .replace(/\{\{crumb\}\}/g, crumbHtml(root, meta.crumb || ""))
+    .replace(/\{\{back\}\}/g, backHtml(root))
     .replace(/\{\{scripts\}\}/g, scriptsHtml(root, meta.js))
     .replace(/\{\{root\}\}/g, root)
     .trimEnd();

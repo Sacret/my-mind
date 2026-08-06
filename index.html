@@ -78,6 +78,14 @@ const LESSONS = [
     sub: "новая область: музыка", href: "general/music/lesson-01-how-music-works.html", total: 8 },
   { track: "general", id: "general-cinema-language",  title: "Кино как язык: монтаж, кадр, свет",
     sub: "новая область: кино", href: "general/cinema/lesson-01-film-language.html", total: 8 },
+  { track: "general", id: "general-finance-basics",   title: "Сложный процент, риск и инфляция",
+    sub: "новая область: финансы", href: "general/finance/lesson-01-money-basics.html", total: 8 },
+  { track: "general", id: "general-brain-memory",     title: "Память, сон и внимание",
+    sub: "новая область: мозг", href: "general/brain/lesson-01-memory-sleep.html", total: 8 },
+  { track: "general", id: "general-bio-evolution",    title: "Эволюция как алгоритм",
+    sub: "закрывает вопрос #15 теста", href: "general/biology/lesson-01-evolution.html", total: 8 },
+  { track: "general", id: "general-astro-scale",      title: "Астрономия: масштабы и ближайшие соседи",
+    sub: "закрывает вопрос #10 теста", href: "general/astronomy/lesson-01-scale.html", total: 8 },
   { track: "work",    id: "work-fundamentals-big-o",   title: "Сложность алгоритмов: O-нотация",
     sub: "закрывает вопросы #1, #3, #5, #12 теста", href: "work/fundamentals/lesson-01-big-o.html", total: 8 },
   { track: "work",    id: "work-fundamentals-data-structures", title: "Структуры данных: что выбрать под задачу",
@@ -85,7 +93,15 @@ const LESSONS = [
   { track: "work",    id: "work-js-event-loop",        title: "Event loop: микрозадачи и макрозадачи",
     sub: "закрывает вопрос #16 теста", href: "work/javascript/lesson-01-event-loop.html", total: 7 },
   { track: "work",    id: "work-js-arrays-mutation",   title: "Мутации, ссылки и иммутабельность",
-    sub: "закрывает вопросы #20, #40 теста", href: "work/javascript/lesson-02-arrays-mutation.html", total: 8 }
+    sub: "закрывает вопросы #20, #40 теста", href: "work/javascript/lesson-02-arrays-mutation.html", total: 8 },
+  { track: "work",    id: "work-js-types-coercion",    title: "Типы, приведение и тихие потери данных",
+    sub: "закрывает вопросы #13, #21, #27 теста", href: "work/javascript/lesson-03-types-coercion.html", total: 8 },
+  { track: "work",    id: "work-web-http-rest",        title: "HTTP и REST: методы, коды, CORS",
+    sub: "закрывает вопросы #4, #10 теста", href: "work/web/lesson-01-http-rest.html", total: 8 },
+  { track: "work",    id: "work-css-layout-specificity", title: "Оси флексбокса и специфичность",
+    sub: "закрывает вопросы #28, #29 теста", href: "work/css/lesson-01-flexbox-specificity.html", total: 8 },
+  { track: "work",    id: "work-react-state-context",  title: "React: состояние, поднятие и Context",
+    sub: "закрывает вопрос #47 теста", href: "work/react/lesson-01-state-context.html", total: 8 }
 ];
 
 const TRACK_NAMES = { general: "Общее развитие", work: "Профессия" };
@@ -98,8 +114,15 @@ const AREAS = {
   "general/chemistry": "Химия",
   "general/music": "Музыка",
   "general/cinema": "Кино",
+  "general/finance": "Финансы",
+  "general/brain": "Мозг",
+  "general/biology": "Биология",
+  "general/astronomy": "Астрономия",
   "work/fundamentals": "Основы",
-  "work/javascript": "JavaScript"
+  "work/javascript": "JavaScript",
+  "work/web": "Веб",
+  "work/css": "CSS",
+  "work/react": "React"
 };
 const areaOf = (href) => AREAS[href.split("/").slice(0, 2).join("/")] || "";
 

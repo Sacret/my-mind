@@ -1,0 +1,196 @@
+<!doctype html>
+<!-- Файл собран автоматически из src/pages/work-javascript-types-coercion.html
+     Правьте источник и запускайте npm run build — здешние правки затрутся. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Типы, приведение и тихие потери данных</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/icon.svg">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="stylesheet" href="../../assets/lesson.css">
+</head>
+<body class="track-work">
+<div class="wrap">
+
+<div class="crumb"><a class="home" href="../../index.html"><img class="mark" src="../../assets/icon.svg" alt="">my-mind</a><span>· Работа · JavaScript · Урок 3</span></div>
+<h1>Типы, приведение и тихие потери данных</h1>
+<p class="lead">Три ошибки в тесте были из одной семьи: <code>typeof null</code>, что вернёт <code>a?.b?.c</code> и что сделает <code>JSON.stringify</code> с <code>undefined</code>. Общее у них то, что язык не падает с ошибкой, а молча отдаёт не то, что ждёшь. Такие баги ищутся дольше всех.</p>
+
+<hr>
+
+<h2>Восемь типов и одна историческая ошибка</h2>
+<p>В JavaScript семь примитивов — <code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>bigint</code>, <code>symbol</code> — и всё остальное: объекты, а вместе с ними массивы, функции, <code>Date</code>, <code>Map</code>.</p>
+<p>Проверить тип позволяет <code>typeof</code>, и вот его полная таблица:</p>
+<table>
+  <tr><th>Выражение</th><th>Результат</th><th>Комментарий</th></tr>
+  <tr><td><code>typeof 42</code></td><td>"number"</td><td></td></tr>
+  <tr><td><code>typeof "a"</code></td><td>"string"</td><td></td></tr>
+  <tr><td><code>typeof true</code></td><td>"boolean"</td><td></td></tr>
+  <tr><td><code>typeof undefined</code></td><td>"undefined"</td><td></td></tr>
+  <tr><td><code>typeof null</code></td><td><strong>"object"</strong></td><td>баг языка</td></tr>
+  <tr><td><code>typeof []</code></td><td>"object"</td><td>массив — это объект</td></tr>
+  <tr><td><code>typeof {}</code></td><td>"object"</td><td></td></tr>
+  <tr><td><code>typeof function(){}</code></td><td><strong>"function"</strong></td><td>единственное исключение</td></tr>
+  <tr><td><code>typeof NaN</code></td><td>"number"</td><td>«не число» имеет тип число</td></tr>
+</table>
+<p><code>typeof null === "object"</code> — не логика, а ошибка первой реализации 1995 года. Внутри значения помечались тегом, и у объектов тег был <code>000</code>; <code>null</code> представлялся нулевым указателем, то есть тоже сплошными нулями. Исправить это уже нельзя: слишком много кода на такое поведение опирается.</p>
+<p>Практический вывод — проверять на <code>null</code> нужно напрямую:</p>
+<pre><code>// не работает
+if (typeof x === "object") { /* сюда попадёт и null */ }
+
+// работает
+if (x === null) { … }
+if (x !== null && typeof x === "object") { /* настоящий объект */ }
+Array.isArray(x)          // единственный честный способ отличить массив</code></pre>
+
+<h2>null и undefined — разные вещи</h2>
+<p><strong><code>undefined</code></strong> — «значения тут нет и никогда не задавали». Его отдаёт язык: необъявленное поле объекта, аргумент, который не передали, функция без <code>return</code>.</p>
+<p><strong><code>null</code></strong> — «здесь намеренно пусто». Его ставит программист.</p>
+<p>Правило по умолчанию: <code>null</code> пишешь ты, <code>undefined</code> пишет язык. Смешивать их в собственных структурах данных не стоит — тогда проверка «пусто ли» превращается в гадание.</p>
+
+<h2>== против ===</h2>
+<p><code>===</code> сравнивает без приведения: разные типы — сразу <code>false</code>. <code>==</code> сначала приводит операнды к общему типу, и правила приведения довольно причудливы:</p>
+<pre><code>0 == "0"          // true   — строка стала числом
+0 == ""           // true   — пустая строка стала нулём
+0 == false        // true   — false стал нулём
+"" == false       // true
+null == undefined // true   — специальное правило
+null == 0         // false  — а вот тут никакого приведения нет
+NaN == NaN        // false  — NaN не равен ничему, включая себя</code></pre>
+<div class="note">
+  <b>Правило.</b> Всегда <code>===</code>. Единственное осмысленное исключение — <code>x == null</code>: это компактная проверка «<code>null</code> или <code>undefined</code>» разом, и она безопасна, потому что ни с чем другим <code>null</code> нестрого не равен.
+</div>
+<p>Отдельно про <code>NaN</code>: раз он не равен себе, сравнением его не поймать. Ловят функцией <code>Number.isNaN(x)</code>. Глобальная <code>isNaN(x)</code> — другая: она сначала приводит аргумент к числу, поэтому <code>isNaN("привет")</code> даёт <code>true</code>, хотя строка — не <code>NaN</code>.</p>
+
+<h2>Ложные значения: их ровно шесть</h2>
+<pre><code>false   0   ""   null   undefined   NaN</code></pre>
+<p>Всё остальное истинно. Из этого вытекают две регулярные ловушки:</p>
+<pre><code>Boolean("0")    // true  — непустая строка
+Boolean([])     // true  — пустой массив истинен
+Boolean({})     // true
+[] == false     // true  — а вот при == приведение даёт другой ответ</code></pre>
+<p>Последняя строка выглядит как противоречие, но противоречия нет: <code>if ([])</code> приводит массив к булеву значению по правилу «объект всегда истинен», а <code>[] == false</code> приводит обе стороны к числу — <code>[]</code> становится <code>""</code>, затем <code>0</code>. Это ровно тот случай, ради которого <code>==</code> и не используют.</p>
+
+<h2>|| и ?? — разница в одной строчке</h2>
+<p><code>||</code> отдаёт правый операнд, если левый <em>ложный</em>. <code>??</code> — только если левый <code>null</code> или <code>undefined</code>.</p>
+<pre><code>const count = props.count || 10;   // передали 0 → получили 10, баг
+const count = props.count ?? 10;   // передали 0 → получили 0
+
+const name = props.name || "Гость"; // передали "" → "Гость"
+const name = props.name ?? "Гость"; // передали "" → пустая строка</code></pre>
+<p>Значение по умолчанию почти всегда должно ставиться через <code>??</code>: ноль, пустая строка и <code>false</code> — это данные, а не отсутствие данных. Исключение — когда пустую строку действительно хочется считать «не задано».</p>
+
+<h2>Опциональная цепочка ?.</h2>
+<p><code>a?.b</code> означает: если <code>a</code> — <code>null</code> или <code>undefined</code>, вернуть <code>undefined</code>, иначе взять <code>b</code>. Ключевой момент: <strong>возвращается всегда <code>undefined</code></strong>, даже если слева был <code>null</code>.</p>
+<pre><code>const a = null;
+a?.b?.c    // undefined, НЕ null</code></pre>
+<p>Причина в том, что «свойства нет» язык всегда обозначает через <code>undefined</code> — <code>?.</code> просто не делает исключения из этого правила.</p>
+<p>Второй ключевой момент — <strong>короткое замыкание</strong>: как только слева оказалось пусто, остаток цепочки не вычисляется вообще.</p>
+<pre><code>user?.profile.avatar.url
+// user есть, profile нет → TypeError:
+// ?. защитил только один шаг, дальше идёт обычный доступ
+
+user?.profile?.avatar?.url    // безопасно на каждом шаге
+
+obj.method?.()      // вызов, только если метод существует
+arr?.[0]            // индекс, только если массив существует
+onChange?.(value)   // частый приём для необязательных колбэков</code></pre>
+<div class="note err">
+  <b>Чего <code>?.</code> не делает.</b> Он не защищает от пустого результата дальше по коду. <code>const n = user?.name.length</code> упадёт, если <code>user</code> есть, а <code>name</code> нет. И он не заменяет проверку данных: если <code>undefined</code> утекает в разметку, ты увидишь не ошибку, а пустое место — искать такое сложнее.
+</div>
+
+<h2>JSON.stringify молча теряет данные</h2>
+<p>JSON — формат беднее, чем объектная модель JavaScript. Всё, чему в нём нет соответствия, выбрасывается без единого предупреждения:</p>
+<pre><code>JSON.stringify({ a: undefined, b: 1 })   // '{"b":1}'   — ключа a просто нет
+JSON.stringify({ f: () => 1, b: 1 })     // '{"b":1}'   — функции выброшены
+JSON.stringify([1, undefined, 2])        // '[1,null,2]' — в массиве становится null
+JSON.stringify({ d: new Date() })        // дата стала строкой
+JSON.stringify({ n: NaN, i: Infinity })  // '{"n":null,"i":null}'
+JSON.stringify(new Map([["a", 1]]))      // '{}'  — Map и Set пустеют
+JSON.stringify({ big: 10n })             // TypeError — BigInt не сериализуется</code></pre>
+<p>Разница между объектом и массивом здесь не случайна. У объекта ключ можно просто не писать — структура останется валидной. В массиве позиции нумерованные, выкинуть элемент нельзя, не сдвинув остальные, поэтому дыру затыкают <code>null</code>.</p>
+<p>Отсюда следствие для популярного приёма глубокого копирования <code>JSON.parse(JSON.stringify(obj))</code>: он работает только для данных, которые и так пришли из JSON. Дата после такого копирования станет строкой, <code>Map</code> опустеет, поля с <code>undefined</code> исчезнут, а циклическая ссылка бросит <code>TypeError</code>. Для честной копии есть <code>structuredClone(obj)</code>.</p>
+
+<h2>Числа: одна ловушка, которую надо знать в лицо</h2>
+<pre><code>0.1 + 0.2 === 0.3        // false
+0.1 + 0.2                // 0.30000000000000004</code></pre>
+<p>Все числа в JavaScript — двоичные с плавающей точкой (IEEE 754). Дробь <code>0.1</code> в двоичной системе бесконечна ровно так же, как <code>1/3</code> в десятичной, поэтому хранится с округлением. Это не баг языка, так же ведут себя Python, Java и C.</p>
+<p>Практика: деньги считают в копейках целыми числами, а сравнивают дроби через допуск — <code>Math.abs(a - b) &lt; 1e-9</code>.</p>
+
+<div class="note">
+  <b>Что уносим с собой.</b> <code>typeof null === "object"</code> — историческая ошибка, массив ловится только через <code>Array.isArray</code>. Сравнение — всегда <code>===</code>, кроме идиомы <code>x == null</code>. Ложных значений шесть, <code>"0"</code> и <code>[]</code> в их число не входят. Значения по умолчанию — через <code>??</code>, иначе ноль и пустая строка потеряются. <code>?.</code> всегда возвращает <code>undefined</code> и защищает ровно тот шаг, где стоит. <code>JSON.stringify</code> выбрасывает <code>undefined</code> и функции, а в массиве заменяет их на <code>null</code>.
+</div>
+
+<h2 class="quiz-head">Проверь себя</h2>
+<div id="quiz"></div>
+
+<div class="back"><a href="../../index.html">← Назад</a></div>
+
+</div>
+<script src="../../assets/storage.js"></script>
+<script src="../../assets/lesson.js"></script>
+<script>
+initQuiz("work-js-types-coercion", [
+  {
+    t: "Что вернёт typeof null?",
+    o: ['"null"', '"object"', '"undefined"', 'TypeError'],
+    a: 1,
+    e: "Ошибка первой реализации языка: null представлялся нулевым указателем, а тег объекта — нулями. Исправить нельзя из-за обратной совместимости."
+  },
+  {
+    t: "const a = null;\nЧто вернёт a?.b?.c ?",
+    code: true,
+    o: ["null", "undefined", "TypeError", "пустой объект"],
+    a: 1,
+    e: "Опциональная цепочка всегда возвращает undefined — отсутствие свойства язык обозначает именно так, даже если слева был null."
+  },
+  {
+    t: "Что вернёт JSON.stringify({ a: undefined, b: 1 })?",
+    code: true,
+    o: ['{"a":undefined,"b":1}', '{"a":null,"b":1}', '{"b":1}', 'TypeError'],
+    a: 2,
+    e: "undefined и функции выбрасываются из объекта целиком, вместе с ключом. А вот в массиве на их месте появился бы null."
+  },
+  {
+    t: "Что вернёт JSON.stringify([1, undefined, 2])?",
+    code: true,
+    o: ["[1,2]", "[1,null,2]", "[1,undefined,2]", "TypeError"],
+    a: 1,
+    e: "В массиве позиции нумерованные: выкинуть элемент нельзя, не сдвинув остальные, поэтому дыру закрывает null."
+  },
+  {
+    t: "props.count равен 0. Что запишется в count при const count = props.count || 10?",
+    code: true,
+    o: ["0", "10", "undefined", "NaN"],
+    a: 1,
+    e: "Ноль — ложное значение, || отдаёт правый операнд. Для значений по умолчанию нужен ??, который срабатывает только на null и undefined."
+  },
+  {
+    t: "Какое из значений НЕ является ложным (falsy)?",
+    o: ['""', '"0"', 'NaN', '0'],
+    a: 1,
+    e: "Ложных значений ровно шесть: false, 0, \"\", null, undefined, NaN. Строка \"0\" непустая, а значит истинна — как и [] и {}."
+  },
+  {
+    t: "Какое выражение вернёт false?",
+    code: true,
+    o: ["null == undefined", "0 == \"0\"", "null == 0", "\"\" == false"],
+    a: 2,
+    e: "null нестрого равен только undefined — специальное правило без приведения к числу. Остальные три приводятся к 0 и совпадают."
+  },
+  {
+    t: "Почему JSON.parse(JSON.stringify(obj)) — ненадёжное глубокое копирование?",
+    o: [
+      "работает медленно на больших объектах",
+      "теряет undefined, функции, Map и превращает Date в строку",
+      "копирует только верхний уровень",
+      "меняет порядок ключей"
+    ],
+    a: 1,
+    e: "Копия проходит через формат беднее объектной модели JS. Циклическая ссылка вдобавок бросит TypeError. Честная копия — structuredClone(obj)."
+  }
+]);
+</script>
+</body>
+</html>
