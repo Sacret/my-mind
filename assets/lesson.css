@@ -2,6 +2,8 @@
   --bg: #fbfaf7; --fg: #1c1b19; --muted: #6b6862; --line: #e2ded6;
   --card: #ffffff; --accent: #b4531f; --ok: #2f7a4d; --bad: #b3322c;
   --codebg: #f3f0ea;
+  /* нажатие затемняет акцент на светлой теме и подсвечивает на тёмной */
+  --press-hover: brightness(.92); --press-active: brightness(.84);
 }
 /* синий акцент рабочего трека: и на всей странице, и на отдельном блоке */
 body.track-work, .track-work {
@@ -12,6 +14,7 @@ body.track-work, .track-work {
     --bg: #161513; --fg: #ecebe7; --muted: #9a958c; --line: #302e2a;
     --card: #1f1e1b; --accent: #e0834b; --ok: #6fbf8e; --bad: #e2726b;
     --codebg: #232220;
+    --press-hover: brightness(1.12); --press-active: brightness(1.24);
   }
   body.track-work, .track-work { --accent: #5aa9c4; }
 }
@@ -112,8 +115,15 @@ label.opt input { margin-top: 6px; flex: none; accent-color: var(--accent); }
 button {
   font: inherit; font-size: 16px; font-weight: 600; padding: 9px 20px; border-radius: 8px;
   border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer;
+  transition: background .15s, color .15s, filter .15s;
 }
 button.ghost { background: transparent; color: var(--accent); }
+button:hover:not(:disabled) { filter: var(--press-hover); }
+button:active:not(:disabled) { filter: var(--press-active); }
+/* прозрачная кнопка заливается акцентом, как ссылка «Назад» */
+button.ghost:hover:not(:disabled) { background: var(--accent); color: #fff; filter: none; }
+button.ghost:active:not(:disabled) { background: var(--accent); color: #fff; filter: var(--press-active); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 button:disabled { opacity: .45; cursor: not-allowed; }
 .quiz-score { font-size: 16px; font-weight: 600; }
 .quiz-score .muted { color: var(--muted); font-weight: 400; }
@@ -125,6 +135,8 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   display: inline-block; font: inherit; font-size: 16px; font-weight: 600;
   padding: 9px 20px; border-radius: 8px; text-decoration: none;
   border: 1px solid var(--accent); background: transparent; color: var(--accent);
+  transition: background .15s, color .15s, filter .15s;
 }
 .back a:hover { background: var(--accent); color: #fff; }
+.back a:active { background: var(--accent); color: #fff; filter: var(--press-active); }
 .back a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
