@@ -76,7 +76,7 @@ npm run check      # ничего не писать, только провери
 ```
 my-mind/
 ├── src/layout.html              # общий каркас страниц — правится здесь
-├── src/pages/                   # источники страниц (17 файлов)
+├── src/pages/                   # источники страниц (27 файлов)
 ├── build.mjs                    # сборщик, без зависимостей
 ├── server.mjs                   # локальный сервер, без зависимостей
 ├── data/state.json              # ВЕСЬ прогресс (создаётся при первом запуске)
@@ -93,7 +93,8 @@ my-mind/
 │   ├── results/                 # архив: отчёт о входном тесте
 │   ├── logic/  math/            # уроки по областям
 │   ├── statistics/  chemistry/
-│   └── music/  cinema/
+│   ├── music/  cinema/
+│   └── russian/  english/
 └── work/                        # профессия
     ├── test-01-baseline.html
     ├── results/                 # архив: отчёт о входном тесте
@@ -113,6 +114,8 @@ my-mind/
 | [general/chemistry/lesson-01-everyday.html](general/chemistry/lesson-01-everyday.html) | Химия вокруг: почему мыло моет | новая область | ✅ 05.08 — 8/8 |
 | [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | — |
 | [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | — |
+| [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | — |
+| [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | #8 из очереди | — |
 | [work/fundamentals/lesson-01-big-o.html](work/fundamentals/lesson-01-big-o.html) | Сложность алгоритмов, O-нотация | #1, #3, #5, #12 | ✅ 04.08 — 8/8 |
 | [work/fundamentals/lesson-02-data-structures.html](work/fundamentals/lesson-02-data-structures.html) | Структуры данных: что выбрать под задачу | #2, #6 | — |
 | [work/javascript/lesson-01-event-loop.html](work/javascript/lesson-01-event-loop.html) | Event loop, микро- и макрозадачи | #16 | ✅ 04.08 — 7/7 |
@@ -144,12 +147,11 @@ my-mind/
 **Общее — добор по входному тесту**
 6. Единицы СИ: что измеряется в ньютонах, джоулях, ваттах, паскалях
 7. Астрономия: ближайшие звёзды, расстояния, устройство Солнечной системы
-8. Английский: Present Perfect против Past Simple
-9. Биология: ДНК, РНК, комплементарность
+8. Биология: ДНК, РНК, комплементарность
 
 ## Повторение карточками
 
-`review/index.html` — интервальные повторения по уже пройденным темам, 101 карточка.
+`review/index.html` — интервальные повторения по уже пройденным темам, 181 карточка.
 
 - Карточка открывается только после прохождения соответствующего урока.
 - Оценка «Легко» отодвигает карточку дальше, «Не вспомнила» возвращает в конец текущей сессии.
