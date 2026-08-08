@@ -82,10 +82,14 @@ const LESSONS = [
     sub: "новая область: финансы", href: "general/finance/lesson-01-money-basics.html", total: 8 },
   { track: "general", id: "general-brain-memory",     title: "Память, сон и внимание",
     sub: "новая область: мозг", href: "general/brain/lesson-01-memory-sleep.html", total: 8 },
+  { track: "general", id: "general-anatomy-body",     title: "Как устроено тело",
+    sub: "новая область: анатомия", href: "general/anatomy/lesson-01-body.html", total: 8 },
   { track: "general", id: "general-bio-evolution",    title: "Эволюция как алгоритм",
     sub: "закрывает вопрос #15 теста", href: "general/biology/lesson-01-evolution.html", total: 8 },
   { track: "general", id: "general-astro-scale",      title: "Астрономия: масштабы и ближайшие соседи",
     sub: "закрывает вопрос #10 теста", href: "general/astronomy/lesson-01-scale.html", total: 8 },
+  { track: "general", id: "general-religion-history", title: "Как возникали и расходились религии",
+    sub: "новая область: история религий", href: "general/religion/lesson-01-history.html", total: 8 },
   { track: "general", id: "general-russian-commas",    title: "Запятая: где она обязательна, а где лишняя",
     sub: "новая область: русский язык", href: "general/russian/lesson-01-commas.html", total: 8 },
   { track: "general", id: "general-english-present-perfect", title: "Present Perfect против Past Simple",
@@ -105,7 +109,9 @@ const LESSONS = [
   { track: "work",    id: "work-css-layout-specificity", title: "Оси флексбокса и специфичность",
     sub: "закрывает вопросы #28, #29 теста", href: "work/css/lesson-01-flexbox-specificity.html", total: 8 },
   { track: "work",    id: "work-react-state-context",  title: "React: состояние, поднятие и Context",
-    sub: "закрывает вопрос #47 теста", href: "work/react/lesson-01-state-context.html", total: 8 }
+    sub: "закрывает вопрос #47 теста", href: "work/react/lesson-01-state-context.html", total: 8 },
+  { track: "work",    id: "work-history-programming",  title: "Откуда взялись абстракции",
+    sub: "новая область: история отрасли", href: "work/history/lesson-01-programming.html", total: 8 }
 ];
 
 const TRACK_NAMES = { general: "Общее развитие", work: "Профессия" };
@@ -120,15 +126,18 @@ const AREAS = {
   "general/cinema": "Кино",
   "general/finance": "Финансы",
   "general/brain": "Мозг",
+  "general/anatomy": "Анатомия",
   "general/biology": "Биология",
   "general/astronomy": "Астрономия",
+  "general/religion": "Религии",
   "general/russian": "Русский язык",
   "general/english": "Английский",
   "work/fundamentals": "Основы",
   "work/javascript": "JavaScript",
   "work/web": "Веб",
   "work/css": "CSS",
-  "work/react": "React"
+  "work/react": "React",
+  "work/history": "История"
 };
 const areaOf = (href) => AREAS[href.split("/").slice(0, 2).join("/")] || "";
 

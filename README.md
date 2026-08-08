@@ -76,7 +76,7 @@ npm run check      # ничего не писать, только провери
 ```
 my-mind/
 ├── src/layout.html              # общий каркас страниц — правится здесь
-├── src/pages/                   # источники страниц (27 файлов)
+├── src/pages/                   # источники страниц (30 файлов)
 ├── build.mjs                    # сборщик, без зависимостей
 ├── server.mjs                   # локальный сервер, без зависимостей
 ├── data/state.json              # ВЕСЬ прогресс (создаётся при первом запуске)
@@ -88,38 +88,63 @@ my-mind/
 │   ├── dashboard.css            # оглавление
 │   ├── review.css               # карточки
 │   └── test.css                 # страницы входных тестов
-├── general/                     # общее развитие
+├── general/                     # общее развитие, 16 уроков
 │   ├── test-01-baseline.html    # входной тест, 50 вопросов
 │   ├── results/                 # архив: отчёт о входном тесте
 │   ├── logic/  math/            # уроки по областям
 │   ├── statistics/  chemistry/
 │   ├── music/  cinema/
+│   ├── finance/  brain/
+│   ├── anatomy/  biology/
+│   ├── astronomy/  religion/
 │   └── russian/  english/
-└── work/                        # профессия
+└── work/                        # профессия, 9 уроков
     ├── test-01-baseline.html
     ├── results/                 # архив: отчёт о входном тесте
-    ├── fundamentals/
-    └── javascript/
+    ├── fundamentals/            # сложность, структуры данных
+    ├── javascript/              # event loop, мутации, типы
+    ├── web/  css/  react/
+    └── history/                 # как появлялись абстракции
 ```
 
 ## Уроки
 
+Сделано 25 уроков, из них пройдено на максимум 16.
+
+**Общее развитие**
+
 | Урок | Тема | Закрывает вопросы теста | Пройден |
 |------|------|--------------------------|---------|
 | [general/logic/lesson-01-syllogisms.html](general/logic/lesson-01-syllogisms.html) | Кванторы и силлогизмы | #48 | ✅ 04.08 — 8/8 |
-| [general/logic/lesson-02-word-problems.html](general/logic/lesson-02-word-problems.html) | Задачи в словах: перевод в уравнения | #50 | — |
+| [general/logic/lesson-02-word-problems.html](general/logic/lesson-02-word-problems.html) | Задачи в словах: перевод в уравнения | #50 | ✅ 05.08 — 8/8 |
 | [general/math/lesson-01-probability.html](general/math/lesson-01-probability.html) | Вероятность, «хотя бы один» | #5 | ✅ 04.08 — 7/7 |
-| [general/math/lesson-02-quadratic.html](general/math/lesson-02-quadratic.html) | Квадратные уравнения и знаки корней | #7 | — |
-| [general/statistics/lesson-01-averages.html](general/statistics/lesson-01-averages.html) | Среднее, медиана и обман выборки | новая область | — |
+| [general/math/lesson-02-quadratic.html](general/math/lesson-02-quadratic.html) | Квадратные уравнения и знаки корней | #7 | ✅ 05.08 — 8/8 |
+| [general/statistics/lesson-01-averages.html](general/statistics/lesson-01-averages.html) | Среднее, медиана и обман выборки | новая область | ✅ 06.08 — 8/8 |
 | [general/chemistry/lesson-01-everyday.html](general/chemistry/lesson-01-everyday.html) | Химия вокруг: почему мыло моет | новая область | ✅ 05.08 — 8/8 |
-| [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | — |
-| [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | — |
+| [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | ✅ 05.08 — 8/8 |
+| [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | ✅ 06.08 — 8/8 |
+| [general/finance/lesson-01-money-basics.html](general/finance/lesson-01-money-basics.html) | Сложный процент, риск и инфляция | новая область | ✅ 07.08 — 8/8 |
+| [general/brain/lesson-01-memory-sleep.html](general/brain/lesson-01-memory-sleep.html) | Память, сон и внимание | новая область | ✅ 07.08 — 8/8 |
+| [general/anatomy/lesson-01-body.html](general/anatomy/lesson-01-body.html) | Как устроено тело: кровь, дыхание, пищеварение | новая область | — |
+| [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
+| [general/biology/lesson-01-evolution.html](general/biology/lesson-01-evolution.html) | Эволюция как алгоритм | #15 | — |
+| [general/religion/lesson-01-history.html](general/religion/lesson-01-history.html) | Как возникали и расходились религии | новая область | — |
 | [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | — |
-| [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | #8 из очереди | — |
+| [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | пробел из очереди | — |
+
+**Профессия**
+
+| Урок | Тема | Закрывает вопросы теста | Пройден |
+|------|------|--------------------------|---------|
 | [work/fundamentals/lesson-01-big-o.html](work/fundamentals/lesson-01-big-o.html) | Сложность алгоритмов, O-нотация | #1, #3, #5, #12 | ✅ 04.08 — 8/8 |
-| [work/fundamentals/lesson-02-data-structures.html](work/fundamentals/lesson-02-data-structures.html) | Структуры данных: что выбрать под задачу | #2, #6 | — |
+| [work/fundamentals/lesson-02-data-structures.html](work/fundamentals/lesson-02-data-structures.html) | Структуры данных: что выбрать под задачу | #2, #6 | ✅ 06.08 — 8/8 |
 | [work/javascript/lesson-01-event-loop.html](work/javascript/lesson-01-event-loop.html) | Event loop, микро- и макрозадачи | #16 | ✅ 04.08 — 7/7 |
-| [work/javascript/lesson-02-arrays-mutation.html](work/javascript/lesson-02-arrays-mutation.html) | Мутации, ссылки и иммутабельность | #20, #40 | — |
+| [work/javascript/lesson-02-arrays-mutation.html](work/javascript/lesson-02-arrays-mutation.html) | Мутации, ссылки и иммутабельность | #20, #40 | ✅ 07.08 — 8/8 |
+| [work/javascript/lesson-03-types-coercion.html](work/javascript/lesson-03-types-coercion.html) | Типы, приведение и тихие потери данных | #13, #21, #27 | ✅ 08.08 — 8/8 |
+| [work/web/lesson-01-http-rest.html](work/web/lesson-01-http-rest.html) | HTTP и REST: методы, коды, CORS | #4, #10 | — |
+| [work/css/lesson-01-flexbox-specificity.html](work/css/lesson-01-flexbox-specificity.html) | Оси флексбокса и специфичность | #28, #29 | — |
+| [work/react/lesson-01-state-context.html](work/react/lesson-01-state-context.html) | React: состояние, поднятие и Context | #47 | — |
+| [work/history/lesson-01-programming.html](work/history/lesson-01-programming.html) | История программирования: откуда взялись абстракции | новая область | — |
 
 Каждый урок — одна HTML-страница: разбор темы, затем блок «Проверь себя».
 Ответы и результат сохраняются в `data/state.json` (или в localStorage, если сервер не запущен),
@@ -127,34 +152,29 @@ my-mind/
 
 ## Очередь следующих уроков
 
-Порядок — по величине пробела во входном тесте.
+Сначала — то, что уже написано, но ещё не пройдено: анатомия, история религий, биология,
+русский, английский, HTTP и REST, CSS, React, история программирования.
+Новые уроки имеет смысл заказывать, когда эти девять закрыты.
+
+Дальше по величине пробела во входном тесте.
 
 **Работа**
-1. Типы и приведение: `typeof null`, `==` против `===`, `JSON.stringify`, `?.` и `??`
-2. HTTP и REST: методы, идемпотентность, stateless, коды ответов, CORS
-3. CSS: оси флексбокса и специфичность селекторов
-4. React: поднятие состояния, Context, когда что применять
-5. debounce и throttle
-6. Сборка: бандлеры, tree shaking, code splitting
+1. debounce и throttle
+2. Сборка: бандлеры, tree shaking, code splitting
 
-**Общее — выбранные области (батч 2)**
+**Общее**
 1. Байесовское мышление: как обновлять убеждения, ошибка базовой ставки
-2. Личные финансы: сложный процент, диверсификация, налоги
-3. Эволюция: естественный отбор как алгоритм
-4. Как работает мозг: память, сон, внимание
-5. Архитектура: как смотреть на здание и читать эпоху
-
-**Общее — добор по входному тесту**
-6. Единицы СИ: что измеряется в ньютонах, джоулях, ваттах, паскалях
-7. Астрономия: ближайшие звёзды, расстояния, устройство Солнечной системы
-8. Биология: ДНК, РНК, комплементарность
+2. Архитектура: как смотреть на здание и читать эпоху
+3. Единицы СИ: что измеряется в ньютонах, джоулях, ваттах, паскалях
 
 ## Повторение карточками
 
-`review/index.html` — интервальные повторения по уже пройденным темам, 181 карточка.
+`review/index.html` — интервальные повторения по уже пройденным темам, 205 карточек на 25 уроков.
+Открыто 133 — остальные ждут, пока будут пройдены их уроки.
 
 - Карточка открывается только после прохождения соответствующего урока.
-- Оценка «Легко» отодвигает карточку дальше, «Не вспомнила» возвращает в конец текущей сессии.
+- Три оценки: «Легко» перепрыгивает через коробку, «С трудом» двигает на одну,
+  «Не вспомнила» обнуляет коробку и возвращает карточку в конец текущей сессии.
 - Интервалы по коробкам: 1 → 3 → 7 → 16 → 35 дней, с разбросом ±15%,
   чтобы карточки одного урока не возвращались одним комком.
 - Дневные лимиты (меняются внизу страницы карточек): по умолчанию **10 новых** и **40 всего**.
@@ -210,7 +230,10 @@ my-mind/
 | 2026-08-04 | general-baseline-01 | 40/50 (80%) | сильные: русский, искусство, история; слабые: логика 1/3, математика 5/8 |
 | 2026-08-04 | work-baseline-01 | 34/50 (68%) | React 13/15, но 25 вопросов из 50 угаданы; основы CS — главный пробел |
 | 2026-08-04 | уроки 1–4 | 4/4 на максимум | 8/8, 7/7, 8/8, 7/7 — сложность следующей партии поднята |
-| 2026-08-05 | химия, урок 1 | 8/8 | первый урок из новых областей |
+| 2026-08-05 | химия, музыка, логика 2, математика 2 | 4 × 8/8 | первые уроки из новых областей |
+| 2026-08-06 | статистика, кино, структуры данных | 3 × 8/8 | — |
+| 2026-08-07 | финансы, мозг, мутации в JS | 3 × 8/8 | — |
+| 2026-08-08 | астрономия, типы и приведение | 2 × 8/8 | 16 уроков из 22 закрыто на максимум |
 
 Таблицу «Пройден» выше и этот журнал заполняет Claude по данным из `data/state.json` —
 специально ничего сохранять и присылать не нужно.
