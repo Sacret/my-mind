@@ -24,6 +24,13 @@ a.row:hover { border-color: var(--accent); }
 }
 .tick.done { background: var(--ok); border-color: var(--ok); }
 .tick.partial { background: transparent; border-color: var(--accent); color: var(--accent); }
+.tick.lock { border-color: transparent; font-size: 14px; }
+
+/* урок-продолжение, пока не закрыт предыдущий: строка не ссылка и не нажимается */
+.row.locked { background: transparent; border-style: dashed; }
+.row.locked .row-title { font-weight: 500; color: var(--muted); }
+.row.locked .row-score { font-style: italic; }
+.row-lock { font-size: 14px; color: var(--accent); margin-top: 2px; }
 
 .row-main { flex: 1 1 auto; min-width: 0; }
 .row-title { font-weight: 600; }

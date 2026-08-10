@@ -58,61 +58,10 @@
 
 <script src="assets/storage.js"></script>
 <script src="assets/srs.js"></script>
+<script src="assets/lessons.js"></script>
 <script src="review/cards.js"></script>
 <script>
-// Реестр уроков. Пополняется по мере появления новых.
-const LESSONS = [
-  { track: "general", id: "general-logic-syllogisms",  title: "Кванторы и силлогизмы",
-    sub: "закрывает вопрос #48 теста", href: "general/logic/lesson-01-syllogisms.html", total: 8 },
-  { track: "general", id: "general-logic-word-problems", title: "Задачи в словах: перевод в уравнения",
-    sub: "закрывает вопрос #50 теста", href: "general/logic/lesson-02-word-problems.html", total: 8 },
-  { track: "general", id: "general-math-probability",  title: "Вероятность и приём «хотя бы один»",
-    sub: "закрывает вопрос #5 теста", href: "general/math/lesson-01-probability.html", total: 7 },
-  { track: "general", id: "general-math-quadratic",    title: "Квадратные уравнения и знаки корней",
-    sub: "закрывает вопрос #7 теста", href: "general/math/lesson-02-quadratic.html", total: 8 },
-  { track: "general", id: "general-stats-averages",   title: "Среднее, медиана и обман выборки",
-    sub: "новая область: статистика", href: "general/statistics/lesson-01-averages.html", total: 8 },
-  { track: "general", id: "general-chem-everyday",    title: "Химия вокруг: почему мыло моет",
-    sub: "новая область: химия", href: "general/chemistry/lesson-01-everyday.html", total: 8 },
-  { track: "general", id: "general-music-basics",     title: "Музыка изнутри: из чего она сделана",
-    sub: "новая область: музыка", href: "general/music/lesson-01-how-music-works.html", total: 8 },
-  { track: "general", id: "general-cinema-language",  title: "Кино как язык: монтаж, кадр, свет",
-    sub: "новая область: кино", href: "general/cinema/lesson-01-film-language.html", total: 8 },
-  { track: "general", id: "general-finance-basics",   title: "Сложный процент, риск и инфляция",
-    sub: "новая область: финансы", href: "general/finance/lesson-01-money-basics.html", total: 8 },
-  { track: "general", id: "general-brain-memory",     title: "Память, сон и внимание",
-    sub: "новая область: мозг", href: "general/brain/lesson-01-memory-sleep.html", total: 8 },
-  { track: "general", id: "general-anatomy-body",     title: "Как устроено тело",
-    sub: "новая область: анатомия", href: "general/anatomy/lesson-01-body.html", total: 8 },
-  { track: "general", id: "general-bio-evolution",    title: "Эволюция как алгоритм",
-    sub: "закрывает вопрос #15 теста", href: "general/biology/lesson-01-evolution.html", total: 8 },
-  { track: "general", id: "general-astro-scale",      title: "Астрономия: масштабы и ближайшие соседи",
-    sub: "закрывает вопрос #10 теста", href: "general/astronomy/lesson-01-scale.html", total: 8 },
-  { track: "general", id: "general-religion-history", title: "Как возникали и расходились религии",
-    sub: "новая область: история религий", href: "general/religion/lesson-01-history.html", total: 8 },
-  { track: "general", id: "general-russian-commas",    title: "Запятая: где она обязательна, а где лишняя",
-    sub: "новая область: русский язык", href: "general/russian/lesson-01-commas.html", total: 8 },
-  { track: "general", id: "general-english-present-perfect", title: "Present Perfect против Past Simple",
-    sub: "закрывает пробел из очереди README", href: "general/english/lesson-01-present-perfect.html", total: 8 },
-  { track: "work",    id: "work-fundamentals-big-o",   title: "Сложность алгоритмов: O-нотация",
-    sub: "закрывает вопросы #1, #3, #5, #12 теста", href: "work/fundamentals/lesson-01-big-o.html", total: 8 },
-  { track: "work",    id: "work-fundamentals-data-structures", title: "Структуры данных: что выбрать под задачу",
-    sub: "закрывает вопросы #2, #6 теста", href: "work/fundamentals/lesson-02-data-structures.html", total: 8 },
-  { track: "work",    id: "work-js-event-loop",        title: "Event loop: микрозадачи и макрозадачи",
-    sub: "закрывает вопрос #16 теста", href: "work/javascript/lesson-01-event-loop.html", total: 7 },
-  { track: "work",    id: "work-js-arrays-mutation",   title: "Мутации, ссылки и иммутабельность",
-    sub: "закрывает вопросы #20, #40 теста", href: "work/javascript/lesson-02-arrays-mutation.html", total: 8 },
-  { track: "work",    id: "work-js-types-coercion",    title: "Типы, приведение и тихие потери данных",
-    sub: "закрывает вопросы #13, #21, #27 теста", href: "work/javascript/lesson-03-types-coercion.html", total: 8 },
-  { track: "work",    id: "work-web-http-rest",        title: "HTTP и REST: методы, коды, CORS",
-    sub: "закрывает вопросы #4, #10 теста", href: "work/web/lesson-01-http-rest.html", total: 8 },
-  { track: "work",    id: "work-css-layout-specificity", title: "Оси флексбокса и специфичность",
-    sub: "закрывает вопросы #28, #29 теста", href: "work/css/lesson-01-flexbox-specificity.html", total: 8 },
-  { track: "work",    id: "work-react-state-context",  title: "React: состояние, поднятие и Context",
-    sub: "закрывает вопрос #47 теста", href: "work/react/lesson-01-state-context.html", total: 8 },
-  { track: "work",    id: "work-history-programming",  title: "Откуда взялись абстракции",
-    sub: "новая область: история отрасли", href: "work/history/lesson-01-programming.html", total: 8 }
-];
+// Реестр уроков живёт в assets/lessons.js — он общий для оглавления, карточек и самих уроков.
 
 const TRACK_NAMES = { general: "Общее развитие", work: "Профессия" };
 
@@ -176,16 +125,18 @@ function build() {
     items.forEach(l => {
       const st = readState(l.id);
       if (st) anyState = true;
-      const complete = st && st.completed && st.lastScore === l.total;
+      const complete = Lessons.isDone(l.id);
       if (complete) done++;
+      // урок-продолжение: пока не закрыт предыдущий, строка не кликается
+      const locked = Lessons.lockOf(l.id);
 
-      const a = document.createElement("a");
-      a.className = "panel row";
-      a.href = l.href;
+      const a = document.createElement(locked ? "div" : "a");
+      a.className = "panel row" + (locked ? " locked" : "");
+      if (!locked) a.href = l.href;
 
       const mark = document.createElement("span");
-      mark.className = "tick" + (complete ? " done" : (st && st.completed ? " partial" : ""));
-      mark.textContent = complete ? "✓" : (st && st.completed ? "!" : "");
+      mark.className = "tick" + (locked ? " lock" : complete ? " done" : (st && st.completed ? " partial" : ""));
+      mark.textContent = locked ? "🔒" : complete ? "✓" : (st && st.completed ? "!" : "");
       a.append(mark);
 
       const main = document.createElement("span");
@@ -203,11 +154,20 @@ function build() {
       s.className = "row-sub";
       s.textContent = l.sub;
       main.append(t, s);
+      if (locked) {
+        main.append(Object.assign(document.createElement("div"), {
+          className: "row-lock",
+          textContent: "Откроется, когда «" + locked.title + "» будет пройден на " +
+                       locked.total + " из " + locked.total
+        }));
+      }
       a.append(main);
 
       const score = document.createElement("span");
       score.className = "row-score";
-      if (st && st.completed) {
+      if (locked) {
+        score.textContent = "закрыт";
+      } else if (st && st.completed) {
         const b = document.createElement("b");
         b.textContent = st.lastScore + " / " + l.total;
         score.append(b, document.createElement("br"),
@@ -268,11 +228,8 @@ function build() {
     rb.classList.remove("hidden");
   }
 
-  // подсказка со следующим уроком
-  const next = LESSONS.find(l => {
-    const st = readState(l.id);
-    return !(st && st.completed && st.lastScore === l.total);
-  });
+  // подсказка со следующим уроком: заблокированные пропускаем, до них очередь не дошла
+  const next = LESSONS.find(l => !Lessons.isDone(l.id) && !Lessons.lockOf(l.id));
   const nb = document.getElementById("next-box");
   const body = document.getElementById("next-body");
   body.textContent = "";
@@ -300,9 +257,11 @@ function report() {
     lines.push(TRACK_NAMES[tr].toUpperCase());
     LESSONS.filter(l => l.track === tr).forEach(l => {
       const st = readState(l.id);
+      const locked = Lessons.lockOf(l.id);
       const status = st && st.completed
         ? st.lastScore + "/" + l.total + "  " + (st.date || "")
-        : "не пройден";
+        : locked ? "закрыт до " + locked.id
+                 : "не пройден";
       lines.push("  " + l.id.padEnd(30) + status + "   " + l.title);
     });
     lines.push("");

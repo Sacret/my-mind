@@ -3,10 +3,48 @@
  * В уроке: <div id="quiz"></div> и вызов initQuiz("lesson-id", [ {t, o, a, e, code?}, ... ])
  *   t — текст вопроса, o — варианты, a — индекс верного, e — объяснение, code — моноширинный вопрос.
  * Ответы и факт прохождения хранятся в localStorage.
+ *
+ * Если в реестре (assets/lessons.js) у урока задан needs, а предыдущий урок темы ещё
+ * не закрыт, страница не открывается: разбор скрывается, вместо вопросов — ссылка туда,
+ * откуда нужно начать. Для этого разметку урока заворачивают в <div id="lesson-body">.
  */
 function initQuiz(lessonId, questions) {
   // Store сначала поднимает состояние: с сервера, если он запущен, иначе из localStorage
-  Store.ready().then(() => startQuiz(lessonId, questions));
+  Store.ready().then(() => {
+    const locked = window.Lessons ? Lessons.lockOf(lessonId) : null;
+    if (locked) lockLesson(locked);
+    else startQuiz(lessonId, questions);
+  });
+}
+
+/** Путь к корню проекта берём из крошки — она есть на каждой странице. */
+function pageRoot() {
+  const home = document.querySelector(".crumb a.home");
+  const href = home ? home.getAttribute("href") : "";
+  return href.replace(/index\.html$/, "");
+}
+
+/** Урок ещё закрыт: прячем разбор и вопросы, объясняем, что пройти раньше. */
+function lockLesson(prev) {
+  const body = document.getElementById("lesson-body");
+  if (body) body.classList.add("hidden");
+  const head = document.querySelector(".quiz-head");
+  if (head) head.classList.add("hidden");
+
+  const box = document.createElement("div");
+  box.className = "note err";
+  box.append(Object.assign(document.createElement("b"), { textContent: "Урок пока закрыт." }));
+  box.append(document.createTextNode(
+    " Он продолжает предыдущий и без него читается вхолостую. Откроется, когда «" +
+    prev.title + "» будет пройден на максимум — " + prev.total + " из " + prev.total + "."));
+  box.append(document.createElement("br"));
+
+  const a = document.createElement("a");
+  a.href = pageRoot() + prev.href;
+  a.textContent = "Начать с урока «" + prev.title + "» →";
+  box.append(a);
+
+  document.getElementById("quiz").append(box);
 }
 
 function startQuiz(lessonId, questions) {

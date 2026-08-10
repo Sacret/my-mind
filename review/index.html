@@ -78,39 +78,15 @@
 
 <script src="../assets/storage.js"></script>
 <script src="../assets/srs.js"></script>
+<script src="../assets/lessons.js"></script>
 <script src="cards.js"></script>
 <script>
 const KEY = "srs:v1";
 const KEY_SETTINGS = "srs:settings";
 const KEY_DAILY = "srs:daily";
 
-const LESSON_TITLES = {
-  "general-logic-syllogisms": "Кванторы и силлогизмы",
-  "general-logic-word-problems": "Задачи в словах",
-  "general-math-probability": "Вероятность",
-  "general-math-quadratic": "Квадратные уравнения",
-  "general-stats-averages": "Статистика",
-  "general-chem-everyday": "Химия вокруг",
-  "general-music-basics": "Музыка",
-  "general-cinema-language": "Кино как язык",
-  "general-finance-basics": "Финансы",
-  "general-brain-memory": "Память и сон",
-  "general-anatomy-body": "Как устроено тело",
-  "general-bio-evolution": "Эволюция",
-  "general-astro-scale": "Астрономия",
-  "general-religion-history": "История религий",
-  "general-russian-commas": "Запятая",
-  "general-english-present-perfect": "Present Perfect",
-  "work-fundamentals-big-o": "O-нотация",
-  "work-fundamentals-data-structures": "Структуры данных",
-  "work-js-event-loop": "Event loop",
-  "work-js-arrays-mutation": "Мутации и иммутабельность",
-  "work-js-types-coercion": "Типы и приведение",
-  "work-web-http-rest": "HTTP и REST",
-  "work-css-layout-specificity": "Флексбокс и специфичность",
-  "work-react-state-context": "React: состояние",
-  "work-history-programming": "История программирования"
-};
+// Имя урока для тега на карточке берём из общего реестра assets/lessons.js
+const lessonTitle = (id) => Lessons.title(id);
 
 let srs = {};
 let settings = SRS.DEFAULTS;
@@ -201,7 +177,7 @@ function next() {
   current = queue[0];
 
   const tag = document.getElementById("card-tag");
-  tag.textContent = LESSON_TITLES[current.lesson] || current.lesson;
+  tag.textContent = lessonTitle(current.lesson);
   if (!srs[current.id]) {
     const badge = document.createElement("span");
     badge.className = "new";
@@ -285,7 +261,7 @@ document.getElementById("save-limits").addEventListener("click", (ev) => {
 
 document.getElementById("export").addEventListener("click", async (ev) => {
   const rows = CARDS.map(c =>
-    [c.front, c.back, (LESSON_TITLES[c.lesson] || c.lesson).replace(/\s+/g, "_")]
+    [c.front, c.back, lessonTitle(c.lesson).replace(/\s+/g, "_")]
       .map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")
   );
   const text = rows.join("\n");
