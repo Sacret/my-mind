@@ -16,7 +16,7 @@
 
   <div class="crumb"><a class="home" href="index.html"><img class="mark" src="assets/icon.svg" alt="">my-mind</a></div>
   <h1>Программа обучения</h1>
-  <p class="lead">Оглавление и прогресс. Статусы читаются из хранилища браузера — того же, куда уроки пишут результаты.</p>
+  <p class="lead">Оглавление и прогресс. Статусы читаются из того же хранилища, куда уроки пишут результаты.</p>
 
   <div class="meter"><span id="meter-fill"></span></div>
   <p class="summary" id="summary"></p>
@@ -80,7 +80,7 @@ const AREAS = {
   "general/astronomy": "Астрономия",
   "general/religion": "Религии",
   "general/russian": "Русский язык",
-  "general/english": "Английский",
+  "general/english": "Английский язык",
   "general/photography": "Фотография",
   "work/fundamentals": "Основы",
   "work/javascript": "JavaScript",
@@ -191,7 +191,9 @@ function build() {
   sum.append(Object.assign(document.createElement("b"), { textContent: done + " из " + LESSONS.length }),
              document.createTextNode(" уроков закрыто полностью"));
 
-  document.getElementById("storage-warning").classList.toggle("hidden", anyState);
+  // предупреждение про изоляцию localStorage имеет смысл только без сервера
+  document.getElementById("storage-warning")
+    .classList.toggle("hidden", anyState || Store.mode() === "server");
 
   // блок повторения: сколько карточек ждёт сегодня
   const rb = document.getElementById("review-box");
