@@ -47,6 +47,23 @@
   </div>
 
   <hr>
+  <h2>Календарь</h2>
+  <p class="lead sm">Год по дням: чем темнее клетка, тем больше уроков закрыто в этот день.</p>
+  <div class="cal" id="cal">
+    <div class="cal-scroll">
+      <div class="cal-inner">
+        <div class="cal-months" id="cal-months"></div>
+        <div class="cal-body">
+          <div class="cal-wd" id="cal-wd"></div>
+          <div class="cal-grid" id="cal-grid" role="img" aria-label="Календарь пройденных уроков за год"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cal-tip" id="cal-tip"></div>
+  </div>
+  <p class="cal-legend" id="cal-legend"></p>
+
+  <hr>
   <h2>Тесты</h2>
   <p>Входные тесты можно перепройти позже, чтобы сравнить результат с первым разом.</p>
   <ul>
@@ -80,7 +97,7 @@ const AREAS = {
   "general/astronomy": "Астрономия",
   "general/religion": "Религии",
   "general/russian": "Русский язык",
-  "general/english": "Английский язык",
+  "general/english": "Английский",
   "general/photography": "Фотография",
   "work/fundamentals": "Основы",
   "work/javascript": "JavaScript",
@@ -251,8 +268,161 @@ function build() {
     nb.classList.remove("hidden");
   }
 
+  buildCalendar();
+
   return { done };
 }
+
+// ——— календарь прохождения: год по дням, как на гитхабе ———
+
+// в подписях над столбцами месяц сокращаем — колонка шириной в клетку
+const CAL_MONTHS = ["янв", "фев", "мар", "апр", "май", "июн",
+                    "июл", "авг", "сен", "окт", "ноя", "дек"];
+const CAL_MONTHS_OF = ["января", "февраля", "марта", "апреля", "мая", "июня",
+                       "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+const CAL_WD = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+const CAL_WD_SHOWN = [0, 2, 4, 6];       // подписываем понедельник, среду, пятницу и воскресенье
+
+// локальная дата в вид 2026-08-11 — тот же формат, в котором уроки пишут st.date
+const isoOf = (d) => d.getFullYear() + "-" +
+  String(d.getMonth() + 1).padStart(2, "0") + "-" +
+  String(d.getDate()).padStart(2, "0");
+
+const addDays = (d, n) => { const c = new Date(d); c.setDate(c.getDate() + n); return c; };
+const mondayIndex = (d) => (d.getDay() + 6) % 7;   // 0 — понедельник, 6 — воскресенье
+
+function plural(n, one, few, many) {
+  const t = n % 10, h = n % 100;
+  if (t === 1 && h !== 11) return one;
+  if (t >= 2 && t <= 4 && (h < 12 || h > 14)) return few;
+  return many;
+}
+
+function humanDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return d + " " + CAL_MONTHS_OF[m - 1] + " " + y;
+}
+
+// уровень заливки: 0 — пусто, дальше по числу уроков за день
+function calLevel(n) {
+  if (!n) return 0;
+  return Math.min(n, 4);
+}
+
+function lessonsPerDay() {
+  const counts = {};
+  LESSONS.forEach(l => {
+    const st = readState(l.id);
+    // в хранилище лежит только дата последнего прохождения — по ней и считаем
+    if (st && st.completed && st.date) counts[st.date] = (counts[st.date] || 0) + 1;
+  });
+  return counts;
+}
+
+function buildCalendar() {
+  const grid = document.getElementById("cal-grid");
+  const monthsRow = document.getElementById("cal-months");
+  const wd = document.getElementById("cal-wd");
+  if (!grid) return;
+
+  const counts = lessonsPerDay();
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  // ровно год назад, отступив назад до понедельника — чтобы столбцы были целыми неделями
+  const yearAgo = addDays(new Date(today.getFullYear() - 1, today.getMonth(), today.getDate()), 1);
+  const start = addDays(yearAgo, -mondayIndex(yearAgo));
+  const end = addDays(today, 6 - mondayIndex(today));   // добираем текущую неделю до воскресенья
+
+  wd.textContent = "";
+  CAL_WD.forEach((name, i) => {
+    wd.append(Object.assign(document.createElement("span"), {
+      textContent: CAL_WD_SHOWN.includes(i) ? name : ""
+    }));
+  });
+
+  grid.textContent = "";
+  monthsRow.textContent = "";
+
+  let week = 0, total = 0, activeDays = 0, lastLabel = -99, lastMonth = -1;
+  for (let d = new Date(start); d <= end; d = addDays(d, 1)) {
+    const iso = isoOf(d);
+    const future = d > today;
+    const n = future ? 0 : (counts[iso] || 0);
+    if (n) { total += n; activeDays++; }
+
+    const cell = document.createElement("div");
+    cell.className = "cal-cell" + (future ? " cal-empty" : " lvl-" + calLevel(n));
+    if (!future) { cell.dataset.d = iso; cell.dataset.n = n; }
+    grid.append(cell);
+
+    // подпись месяца ставим над той неделей, где месяц сменился, но не теснее чем раз в три столбца
+    if (mondayIndex(d) === 6) {
+      if (d.getMonth() !== lastMonth) {
+        if (week - lastLabel >= 3) {
+          const label = document.createElement("span");
+          label.textContent = CAL_MONTHS[d.getMonth()];
+          label.style.gridColumnStart = week + 1;
+          monthsRow.append(label);
+          lastLabel = week;
+        }
+        lastMonth = d.getMonth();
+      }
+      week++;
+    }
+  }
+
+  monthsRow.style.gridTemplateColumns = "repeat(" + week + ", var(--cell))";
+
+  const legend = document.getElementById("cal-legend");
+  legend.textContent = "";
+  legend.append(document.createTextNode(
+    total + " " + plural(total, "урок", "урока", "уроков") + " за год · " +
+    activeDays + " " + plural(activeDays, "день", "дня", "дней") + " с занятиями"));
+  const scale = document.createElement("span");
+  scale.className = "cal-scale";
+  scale.append(Object.assign(document.createElement("i"), { textContent: "меньше" }));
+  [0, 1, 2, 3, 4].forEach(lv => {
+    scale.append(Object.assign(document.createElement("span"), { className: "cal-cell lvl-" + lv }));
+  });
+  scale.append(Object.assign(document.createElement("i"), { textContent: "больше" }));
+  legend.append(scale);
+}
+
+// тултип: живёт вне прокручиваемой области, поэтому координаты считаем от .cal
+(function calTooltip() {
+  const wrap = document.getElementById("cal");
+  const grid = document.getElementById("cal-grid");
+  const tip = document.getElementById("cal-tip");
+  if (!wrap || !grid || !tip) return;
+
+  const hide = () => tip.classList.remove("on");
+
+  function show(cell) {
+    const n = Number(cell.dataset.n) || 0;
+    tip.textContent = (n ? n + " " + plural(n, "урок", "урока", "уроков") : "уроков нет") +
+                      " · " + humanDate(cell.dataset.d);
+    tip.classList.add("on");
+    const r = cell.getBoundingClientRect();
+    const w = wrap.getBoundingClientRect();
+    const half = tip.offsetWidth / 2;
+    const x = r.left - w.left + r.width / 2;
+    tip.style.left = Math.min(Math.max(x, half), w.width - half) + "px";
+    tip.style.top = (r.top - w.top - 8) + "px";
+  }
+
+  grid.addEventListener("mouseover", (ev) => {
+    const cell = ev.target.closest(".cal-cell");
+    if (cell && cell.dataset.d) show(cell); else hide();
+  });
+  grid.addEventListener("mouseleave", hide);
+  // на тач-экранах наведения нет — показываем по касанию
+  grid.addEventListener("click", (ev) => {
+    const cell = ev.target.closest(".cal-cell");
+    if (cell && cell.dataset.d) show(cell);
+  });
+  document.addEventListener("scroll", hide, true);
+})();
 
 function report() {
   const lines = ["PROGRESS " + new Date().toISOString().slice(0, 10), ""];
