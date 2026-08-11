@@ -1,0 +1,23 @@
+/**
+ * Уроки со снимками. Подключается после lesson.css.
+ * Базовые правила страницы (body, .wrap, h1, .lead) здесь не трогаются.
+ */
+
+.shot { margin: 26px 0; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border-radius: 8px; border: 1px solid var(--line); background: var(--codebg);
+}
+.shot figcaption { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
+.shot figcaption b { color: var(--fg); font-weight: 600; }
+/* у чёрных кадров рамка только мешает */
+.shot.dark img { border-color: transparent; background: #000; }
+
+/* два снимка рядом; на узком экране — друг под другом */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
+.pair .shot { margin: 0; }
+@media (max-width: 620px) { .pair { grid-template-columns: 1fr; } }
+
+/* список кадров, которые показать нельзя — только ссылкой */
+ul.linked li { margin: 10px 0; }
+ul.linked .who { color: var(--muted); }
