@@ -45,6 +45,8 @@ window.LESSONS = [
     sub: "закрывает пробел из очереди README", href: "general/english/lesson-01-present-perfect.html", total: 8 },
   { track: "general", id: "general-photo-greatest",    title: "Величайшие фотографии: как кадр становится документом", short: "Величайшие фотографии",
     sub: "новая область: фотография", href: "general/photography/lesson-01-great-photographs.html", total: 8 },
+  { track: "general", id: "general-lit-pushkin",       title: "Феномен Пушкина: почему он центр русской литературы", short: "Феномен Пушкина",
+    sub: "новая область: литература", href: "general/literature/lesson-01-pushkin.html", total: 8 },
   { track: "work",    id: "work-fundamentals-big-o",   title: "Сложность алгоритмов: O-нотация", short: "O-нотация",
     sub: "закрывает вопросы #1, #3, #5, #12 теста", href: "work/fundamentals/lesson-01-big-o.html", total: 8 },
   { track: "work",    id: "work-fundamentals-data-structures", title: "Структуры данных: что выбрать под задачу", short: "Структуры данных",
