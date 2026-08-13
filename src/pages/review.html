@@ -9,7 +9,7 @@ js: storage, srs, lessons
 
   {{crumb}}
   <h1>Карточки</h1>
-  <p class="lead">Короткая тренировка перед новым уроком. Карточка возвращается тем позже, чем увереннее ты её вспоминаешь; ошибка возвращает её в начало.</p>
+  <p class="lead">Короткая тренировка перед новым уроком. Карточка возвращается тем позже, чем увереннее ты её вспоминаешь; ошибка возвращает её в начало. Промах в уроке и ответ с отметкой «угадала» тоже приходят сюда карточкой — с нулевой коробки.</p>
 
   <div class="stats" id="stats"></div>
 
@@ -18,7 +18,6 @@ js: storage, srs, lessons
       <div class="tag" id="card-tag"></div>
       <div class="side" id="card-front"></div>
       <div id="back-wrap" class="hidden">
-        <hr class="divider">
         <div class="side back" id="card-back"></div>
       </div>
     </div>
@@ -70,7 +69,7 @@ js: storage, srs, lessons
 {{scripts}}
 <script src="cards.js"></script>
 <script>
-const KEY = "srs:v1";
+const KEY = SRS.KEY;
 const KEY_SETTINGS = "srs:settings";
 const KEY_DAILY = "srs:daily";
 
@@ -93,7 +92,9 @@ function lessonDone(id) {
   const st = Store.get("lesson:" + id);
   return !!(st && st.completed);
 }
-const unlocked = () => CARDS.filter(c => lessonDone(c.lesson));
+// колода = рукописные карточки (cards.js) плюс сделанные из промахов в уроках
+const deck = () => SRS.deck(CARDS);
+const unlocked = () => deck().filter(c => lessonDone(c.lesson));
 
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -117,7 +118,7 @@ function renderStats() {
 
   const cells = [
     ["Осталось сегодня", queue.length],
-    ["Открыто карточек", open + " из " + CARDS.length],
+    ["Открыто карточек", open + " из " + deck().length],
     ["Закрепилось", learned]
   ];
   if (plan && plan.deferredDue > 0) cells.push(["Перенесено на завтра", plan.deferredDue]);
@@ -173,8 +174,16 @@ function next() {
     badge.textContent = "  · новая";
     tag.append(badge);
   }
+  if (current.auto) {
+    const badge = document.createElement("span");
+    badge.className = "from-miss";
+    badge.textContent = current.src === "unsure" ? "  · угадано в уроке" : "  · ошибка в уроке";
+    tag.append(badge);
+  }
 
-  document.getElementById("card-front").textContent = current.front;
+  const front = document.getElementById("card-front");
+  front.textContent = current.front;
+  front.classList.toggle("code", !!current.code);   // вопрос с кодом остаётся моноширинным
   document.getElementById("card-back").textContent = current.back;
   document.getElementById("back-wrap").classList.add("hidden");
   document.getElementById("grade-row").classList.add("hidden");
@@ -193,21 +202,14 @@ function grade(kind) {
     if (wasNew) daily.fresh += 1;
   }
 
-  if (kind === "again") {
-    st.box = 0;
-    st.due = SRS.today();
-    srs[card.id] = st;
-    queue.shift();
-    queue.push(card);              // вернётся в конце этой же сессии
-  } else {
-    st.box = Math.min(SRS.INTERVALS.length - 1, st.box + (kind === "easy" ? 2 : 1));
-    st.due = SRS.nextDue(st.box);  // интервал с разбросом ±15%
-    srs[card.id] = st;
-    queue.shift();
-  }
+  // коробки, интервал с разбросом ±15% и счётчики провалов — всё в SRS.applyGrade
+  srs[card.id] = SRS.applyGrade(st, kind);
+  queue.shift();
+  if (kind === "again") queue.push(card);   // вернётся в конце этой же сессии
 
   saveSrs();
   saveDaily();
+  SRS.logGrade(kind);                       // журнал по дням: из него доля «не вспомнила»
   next();
 }
 
@@ -249,7 +251,7 @@ document.getElementById("save-limits").addEventListener("click", (ev) => {
 });
 
 document.getElementById("export").addEventListener("click", async (ev) => {
-  const rows = CARDS.map(c =>
+  const rows = deck().map(c =>
     [c.front, c.back, lessonTitle(c.lesson).replace(/\s+/g, "_")]
       .map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")
   );

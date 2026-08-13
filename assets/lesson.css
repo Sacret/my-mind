@@ -108,11 +108,18 @@ label.opt {
 }
 label.opt:hover { background: rgba(127,127,127,.09); }
 label.opt input { margin-top: 6px; flex: none; accent-color: var(--accent); }
+/* отметка «угадала» под вариантами — и в уроках, и во входных тестах */
+.unsure {
+  margin: 8px 0 0 34px; font-size: 13px; color: var(--muted);
+  display: inline-flex; gap: 7px; cursor: pointer;
+}
 .q.right { border-color: var(--ok); }
 .q.wrong { border-color: var(--bad); }
+.q.guessed { border-color: var(--accent); }
 .verdict { margin: 10px 0 0 34px; font-size: 15px; }
 .verdict.ok { color: var(--ok); font-weight: 600; }
 .verdict.no { color: var(--bad); }
+.verdict.meh { color: var(--accent); }
 .exp { color: var(--muted); font-size: 15px; margin: 4px 0 0 34px; }
 
 .actions { display: flex; gap: 12px; align-items: center; margin: 20px 0 10px; flex-wrap: wrap; }

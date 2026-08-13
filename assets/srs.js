@@ -6,6 +6,15 @@ window.SRS = (function () {
   // Интервалы в днях по коробкам. Ошибка возвращает карточку в коробку 0.
   const INTERVALS = [0, 1, 3, 7, 16, 35];
 
+  const KEY = "srs:v1";           // коробка и дата следующего показа по каждой карточке
+  const KEY_AUTO = "cards:auto";  // карточки, сделанные из промахов в уроках
+  const KEY_LOG = "srs:log";      // по дням: сколько оценок и сколько из них «не вспомнила»
+
+  const LEECH = 3;                // столько провалов — и карточка считается залипшей
+  const LOG_DAYS = 60;            // столько дней держим в журнале
+  const RATE_DAYS = 14;           // за столько дней считаем долю «не вспомнила»
+  const FORECAST_DAYS = 7;        // на столько дней вперёд строим прогноз нагрузки
+
   const DEFAULTS = {
     newPerDay: 10,   // сколько НОВЫХ карточек открывать за день
     maxPerDay: 40    // потолок карточек за день всего
@@ -73,5 +82,127 @@ window.SRS = (function () {
     };
   }
 
-  return { INTERVALS, DEFAULTS, today, nextDue, settingsFrom, dailyFrom, plan };
+  /**
+   * Карточки, сделанные из промахов в уроках. Лежат отдельно от рукописных
+   * (review/cards.js) — те правятся руками, эти появляются сами.
+   */
+  function autoCards() {
+    const stored = (window.Store && Store.get(KEY_AUTO)) || {};
+    return Object.keys(stored).map((id) => Object.assign({ id: id, auto: true }, stored[id]));
+  }
+
+  /** Полная колода: рукописные карточки плюс сделанные из промахов. */
+  function deck(base) {
+    return (base || []).concat(autoCards());
+  }
+
+  /**
+   * Промах в уроке: вопрос становится карточкой и уходит в коробку 0.
+   * Ключ карточки — урок и номер вопроса, поэтому повторный промах по тому же
+   * вопросу не плодит дубли, а просто возвращает карточку в начало.
+   */
+  function noteMisses(cards) {
+    if (!cards || !cards.length || !window.Store) return;
+    const auto = Store.get(KEY_AUTO) || {};
+    const boxes = Store.get(KEY) || {};
+    cards.forEach((c) => {
+      auto[c.id] = {
+        lesson: c.lesson, front: c.front, back: c.back,
+        code: !!c.code, src: c.src, date: today()
+      };
+      boxes[c.id] = { box: 0, due: today() };
+    });
+    Store.set(KEY_AUTO, auto);
+    Store.set(KEY, boxes);
+  }
+
+  /**
+   * Оценка карточки: куда её двигать. Здесь же копятся счётчики, по которым
+   * дашборд считает залипшие карточки, — seen (сколько раз спрашивали)
+   * и lapses (сколько раз не вспомнилась).
+   */
+  function applyGrade(entry, kind) {
+    const st = Object.assign({ box: 0, seen: 0, lapses: 0 }, entry || {});
+    st.seen = (st.seen || 0) + 1;
+    if (kind === "again") {
+      st.lapses = (st.lapses || 0) + 1;
+      st.box = 0;
+      st.due = today();
+    } else {
+      st.box = Math.min(INTERVALS.length - 1, st.box + (kind === "easy" ? 2 : 1));
+      st.due = nextDue(st.box);
+    }
+    return st;
+  }
+
+  /** Дневной журнал оценок: из него берётся доля «не вспомнила». */
+  function logGrade(kind) {
+    if (!window.Store) return;
+    const log = Store.get(KEY_LOG) || {};
+    const day = log[today()] || { done: 0, again: 0 };
+    day.done += 1;
+    if (kind === "again") day.again += 1;
+    log[today()] = day;
+
+    const keep = Object.keys(log).sort().slice(-LOG_DAYS);
+    const trimmed = {};
+    keep.forEach((d) => { trimmed[d] = log[d]; });
+    Store.set(KEY_LOG, trimmed);
+  }
+
+  const addDays = (iso, n) => {
+    const [y, m, d] = iso.split("-").map(Number);
+    const dt = new Date(y, m - 1, d + n);
+    return dt.getFullYear() + "-" + String(dt.getMonth() + 1).padStart(2, "0") +
+           "-" + String(dt.getDate()).padStart(2, "0");
+  };
+
+  /**
+   * Сводка для дашборда: по каким коробкам разложены карточки, сколько их придёт
+   * в ближайшие дни, как часто ответ не вспоминается и какие карточки залипли.
+   * Прогноз показывает, сколько карточек созреет, — дневные лимиты могут растянуть
+   * этот объём на несколько дней.
+   */
+  function stats(cards, srs, log) {
+    const t = today();
+    const seen = cards.filter((c) => srs[c.id]);
+
+    const boxes = INTERVALS.map((_, i) => ({
+      box: i,
+      days: INTERVALS[i],
+      count: seen.filter((c) => (srs[c.id].box || 0) === i).length
+    }));
+
+    const forecast = [];
+    for (let i = 0; i < FORECAST_DAYS; i++) {
+      const date = addDays(t, i);
+      // всё просроченное сваливается на сегодня — оно уже ждёт
+      const count = seen.filter((c) => (i === 0 ? srs[c.id].due <= date : srs[c.id].due === date)).length;
+      forecast.push({ date: date, count: count });
+    }
+
+    const days = Object.keys(log || {}).sort().slice(-RATE_DAYS);
+    let done = 0, again = 0;
+    days.forEach((d) => { done += log[d].done || 0; again += log[d].again || 0; });
+
+    const leeches = seen
+      .filter((c) => (srs[c.id].lapses || 0) >= LEECH)
+      .map((c) => ({ card: c, lapses: srs[c.id].lapses, box: srs[c.id].box || 0 }))
+      .sort((a, b) => b.lapses - a.lapses);
+
+    return {
+      boxes: boxes,
+      fresh: cards.length - seen.length,
+      forecast: forecast,
+      rate: { days: days.length, done: done, again: again, share: done ? again / done : null },
+      leeches: leeches
+    };
+  }
+
+  return {
+    INTERVALS, DEFAULTS, KEY, KEY_AUTO, KEY_LOG, LEECH, RATE_DAYS,
+    today, nextDue, settingsFrom, dailyFrom, plan,
+    autoCards, deck, noteMisses,
+    applyGrade, logGrade, stats
+  };
 })();

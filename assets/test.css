@@ -15,12 +15,6 @@ header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bott
   text-transform: uppercase; color: var(--accent); font-weight: 600;
 }
 
-/* отметка «угадала» под вариантами */
-.unsure {
-  margin: 8px 0 0 34px; font-size: 13px; color: var(--muted);
-  display: inline-flex; gap: 7px; cursor: pointer;
-}
-
 /* липкая панель с прогрессом и кнопкой проверки;
    запаса снизу у .wrap (100px) хватает, чтобы она не перекрывала текст */
 .bar {

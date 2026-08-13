@@ -40,6 +40,30 @@ a.row:hover { border-color: var(--accent); }
 .row-sub { color: var(--muted); font-size: 14px; }
 .row-score { flex: none; font-variant-numeric: tabular-nums; font-size: 15px; color: var(--muted); text-align: right; }
 .row-score b { color: var(--fg); }
+.row-guessed { color: var(--accent); font-size: 13px; }
+
+/* --- аналитика повторений: коробки, прогноз, залипшие карточки --- */
+.srs-block { margin: 24px 0 0; }
+.srs-title {
+  font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 10px;
+}
+.bar-row { display: flex; align-items: center; gap: 12px; margin: 5px 0; font-size: 14px; }
+.bar-label { flex: none; width: 190px; color: var(--muted); }
+.bar-track { flex: 1 1 auto; height: 10px; border-radius: 5px; background: var(--codebg); overflow: hidden; }
+.bar-fill { display: block; height: 100%; background: var(--accent); border-radius: 5px; }
+.bar-fill.soon-fill { opacity: .55; }
+.bar-fill.muted-fill { background: var(--line); }
+.bar-num { flex: none; width: 34px; text-align: right; font-variant-numeric: tabular-nums; }
+
+#leech-box { margin-top: 36px; }
+#leech-box h3 { margin-bottom: 4px; }
+.row.leech { display: flex; align-items: center; gap: 14px; border-color: var(--bad); }
+.row.leech .row-score b { color: var(--bad); }
+
+@media (max-width: 560px) {
+  .bar-label { width: 120px; font-size: 13px; }
+}
 
 /* полоса общего прогресса */
 .meter { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; margin: 14px 0 6px; }

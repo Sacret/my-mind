@@ -64,6 +64,20 @@
   <p class="cal-legend" id="cal-legend"></p>
 
   <hr>
+  <h2>Как идут повторения</h2>
+  <p class="lead sm">Не по симуляции, а по фактам из хранилища: где сейчас лежат карточки,
+    сколько их созреет в ближайшие дни и как часто ответ не вспоминается.</p>
+  <div id="srs-stats"></div>
+
+  <div id="leech-box" class="hidden">
+    <h3>Залипшие карточки</h3>
+    <p class="lead sm">Карточка, которая уже трижды вернулась в нулевую коробку, — это сигнал,
+      что не понят урок, а не что её надо показать ещё раз. Такие стоит разбирать через урок,
+      а не через повторение.</p>
+    <div id="leech-list"></div>
+  </div>
+
+  <hr>
   <h2>Тесты</h2>
   <p>Входные тесты можно перепройти позже, чтобы сравнить результат с первым разом.</p>
   <ul>
@@ -191,6 +205,13 @@ function build() {
         b.textContent = st.lastScore + " / " + l.total;
         score.append(b, document.createElement("br"),
           Object.assign(document.createElement("span"), { textContent: fmtDate(st.date) }));
+        // максимум с отметками «угадала» — не закрытая тема, и это должно быть видно
+        if (st.unsure) {
+          score.append(document.createElement("br"),
+            Object.assign(document.createElement("span"), {
+              className: "row-guessed", textContent: "угадано " + st.unsure
+            }));
+        }
       } else {
         score.textContent = "—";
       }
@@ -221,7 +242,8 @@ function build() {
     const srs = Store.get("srs:v1") || {};
     const settings = SRS.settingsFrom(Store.get("srs:settings"));
     const daily = SRS.dailyFrom(Store.get("srs:daily"));
-    const open = CARDS.filter(c => { const st = readState(c.lesson); return st && st.completed; });
+    // в колоде и рукописные карточки, и сделанные из промахов в уроках
+    const open = SRS.deck(CARDS).filter(c => { const st = readState(c.lesson); return st && st.completed; });
     const p = SRS.plan(open, srs, settings, daily);
 
     const a = document.createElement("a");
@@ -261,8 +283,11 @@ function build() {
     a.textContent = next.title;
     body.append(a);
     body.append(document.createTextNode(
-      st && st.completed ? " — пройден на " + st.lastScore + " из " + next.total + ", стоит перечитать разделы по ошибкам и повторить."
-                         : " — ещё не начат."));
+      !st || !st.completed ? " — ещё не начат."
+      : st.unsure && st.lastScore === next.total
+        ? " — " + st.lastScore + " из " + next.total + ", но " + st.unsure +
+          " отмечено как угаданное: тема закроется, когда пройдёшь без отметок."
+        : " — пройден на " + st.lastScore + " из " + next.total + ", стоит перечитать разделы по ошибкам и повторить."));
     nb.classList.remove("hidden");
   } else {
     body.textContent = "Все уроки закрыты. Попроси Claude сделать следующую партию по очереди из README.";
@@ -270,8 +295,157 @@ function build() {
   }
 
   buildCalendar();
+  buildSrsStats();
 
   return { done };
+}
+
+// ——— аналитика повторений: коробки, прогноз, доля «не вспомнила», залипшие ———
+
+const WD_SHORT = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+
+/** Подпись коробки: через сколько дней карточка из неё вернётся. */
+function boxLabel(b) {
+  // в нулевой коробке лежит то, что не вспомнилось: такая карточка возвращается в тот же день
+  if (b.box === 0) return "коробка 0 · сегодня";
+  return "коробка " + b.box + " · " + b.days + " " + plural(b.days, "день", "дня", "дней");
+}
+
+/** Строка «подпись — полоса — число». Полоса относительна самому большому значению. */
+function barRow(label, count, max, cls) {
+  const row = document.createElement("div");
+  row.className = "bar-row";
+  row.append(Object.assign(document.createElement("span"), { className: "bar-label", textContent: label }));
+  const track = document.createElement("span");
+  track.className = "bar-track";
+  const fill = document.createElement("span");
+  fill.className = "bar-fill" + (cls ? " " + cls : "");
+  fill.style.width = (max ? Math.round(count / max * 100) : 0) + "%";
+  track.append(fill);
+  row.append(track);
+  row.append(Object.assign(document.createElement("span"), { className: "bar-num", textContent: count }));
+  return row;
+}
+
+function buildSrsStats() {
+  const host = document.getElementById("srs-stats");
+  if (!host || !window.CARDS || !window.SRS) return;
+  host.textContent = "";
+
+  const srs = Store.get(SRS.KEY) || {};
+  const log = Store.get(SRS.KEY_LOG) || {};
+  const open = SRS.deck(CARDS).filter(c => { const st = readState(c.lesson); return st && st.completed; });
+  const s = SRS.stats(open, srs, log);
+
+  if (!open.length) {
+    host.append(Object.assign(document.createElement("p"), {
+      className: "lead sm", textContent: "Карточки откроются после первого пройденного урока."
+    }));
+    document.getElementById("leech-box").classList.add("hidden");
+    return;
+  }
+
+  // где лежат карточки
+  const boxes = document.createElement("div");
+  boxes.className = "srs-block";
+  boxes.append(Object.assign(document.createElement("div"), {
+    className: "srs-title", textContent: "По коробкам"
+  }));
+  const maxBox = Math.max(s.fresh, ...s.boxes.map(b => b.count));
+  s.boxes.forEach(b => boxes.append(barRow(boxLabel(b), b.count, maxBox)));
+  boxes.append(barRow("ещё не показывались", s.fresh, maxBox, "muted-fill"));
+  host.append(boxes);
+
+  // сколько созреет в ближайшие дни
+  const fc = document.createElement("div");
+  fc.className = "srs-block";
+  fc.append(Object.assign(document.createElement("div"), {
+    className: "srs-title", textContent: "Созреет в ближайшие 7 дней"
+  }));
+  const maxDay = Math.max(1, ...s.forecast.map(d => d.count));
+  s.forecast.forEach((d, i) => {
+    const [y, m, day] = d.date.split("-").map(Number);
+    const label = i === 0 ? "сегодня" : WD_SHORT[new Date(y, m - 1, day).getDay()] + " " + day + "." + m;
+    fc.append(barRow(label, d.count, maxDay, i === 0 ? "" : "soon-fill"));
+  });
+  const settings = SRS.settingsFrom(Store.get("srs:settings"));
+  fc.append(Object.assign(document.createElement("p"), {
+    className: "footnote",
+    textContent: "Столбец «сегодня» включает всё просроченное. Дневной потолок — " +
+                 settings.maxPerDay + " карточек, так что пик может растянуться на пару дней."
+  }));
+  host.append(fc);
+
+  // доля «не вспомнила»
+  const rate = document.createElement("div");
+  rate.className = "srs-block";
+  rate.append(Object.assign(document.createElement("div"), {
+    className: "srs-title", textContent: "Доля «не вспомнила»"
+  }));
+  const p = document.createElement("p");
+  p.className = "lead sm";
+  if (!s.rate.done) {
+    p.textContent = "Пока не из чего считать: доля берётся из журнала оценок, а он начинает " +
+                    "заполняться с первой сессии карточек после обновления.";
+  } else {
+    const pct = Math.round(s.rate.share * 100);
+    p.append(Object.assign(document.createElement("b"), { className: "tnum", textContent: pct + "%" }));
+    p.append(document.createTextNode(
+      " за " + s.rate.days + " " + plural(s.rate.days, "день", "дня", "дней") +
+      ": " + s.rate.again + " из " + s.rate.done + " оценок. "));
+    p.append(Object.assign(document.createElement("span"), {
+      className: "row-sub",
+      textContent: pct > 20 ? "Больше пятой части — интервалы великоваты, стоит снизить приток новых."
+                 : pct < 5 ? "Почти всё вспоминается — можно поднять число новых карточек в день."
+                           : "Нормальный режим: материал держится, а нагрузка не растёт."
+    }));
+  }
+  rate.append(p);
+  host.append(rate);
+
+  buildLeeches(s.leeches);
+}
+
+function buildLeeches(leeches) {
+  const box = document.getElementById("leech-box");
+  const list = document.getElementById("leech-list");
+  box.classList.toggle("hidden", !leeches.length);
+  if (!leeches.length) return;
+
+  list.textContent = "";
+  leeches.forEach(({ card, lapses }) => {
+    const lesson = Lessons.get(card.lesson);
+    const row = document.createElement("div");
+    row.className = "panel row leech";
+
+    const main = document.createElement("span");
+    main.className = "row-main";
+    main.append(Object.assign(document.createElement("div"), {
+      className: "row-title", textContent: card.front.split("\n")[0]
+    }));
+    const sub = document.createElement("div");
+    sub.className = "row-sub";
+    if (lesson) {
+      const a = document.createElement("a");
+      a.href = lesson.href;
+      a.textContent = lesson.title;
+      sub.append(document.createTextNode("Разобрать заново: "), a);
+    } else {
+      sub.textContent = "Урок: " + card.lesson;
+    }
+    main.append(sub);
+
+    const n = document.createElement("span");
+    n.className = "row-score";
+    n.append(Object.assign(document.createElement("b"), { textContent: lapses }),
+             document.createElement("br"),
+             Object.assign(document.createElement("span"), {
+               textContent: plural(lapses, "провал", "провала", "провалов")
+             }));
+
+    row.append(main, n);
+    list.append(row);
+  });
 }
 
 // ——— календарь прохождения: год по дням, как на гитхабе ———

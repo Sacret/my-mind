@@ -74,13 +74,14 @@ window.Lessons = (function () {
   const byId = new Map(LESSONS.map((l) => [l.id, l]));
 
   /**
-   * Урок закрыт = пройден на максимум. Планка одна и та же везде:
-   * и для галочки в оглавлении, и для открытия следующего урока темы.
+   * Урок закрыт = пройден на максимум и без отметок «угадала». Планка одна и та же
+   * везде: и для галочки в оглавлении, и для открытия следующего урока темы.
+   * Угаданный правильный ответ — не знание, поэтому он тему не закрывает.
    */
   function isDone(id) {
     const l = byId.get(id);
     const st = window.Store ? Store.get("lesson:" + id) : null;
-    return !!(l && st && st.completed && st.lastScore === l.total);
+    return !!(l && st && st.completed && st.lastScore === l.total && !st.unsure);
   }
 
   /** Урок, который надо закрыть раньше этого, — если он ещё не закрыт. Иначе null. */

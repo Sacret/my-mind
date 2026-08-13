@@ -3,7 +3,7 @@ title: React: состояние, поднятие и Context
 out: work/react/lesson-01-state-context.html
 crumb: · Работа · React · Урок 1
 body: track-work
-js: storage, lesson
+js: storage, srs, lessons, lesson
 ---
 <div class="wrap">
 
@@ -144,14 +144,12 @@ initQuiz("work-react-state-context", [
   },
   {
     t: "setCount(count + 1);\nsetCount(count + 1);\nНа сколько увеличится count?",
-    code: true,
     o: ["на 2", "на 1", "на 0", "зависит от версии React"],
     a: 1,
     e: "Оба вызова видят одно и то же захваченное замыканием значение. Нужна функциональная форма: setCount(c => c + 1)."
   },
   {
     t: "Что произойдёт при <Ctx.Provider value={{ user, setUser }}>?",
-    code: true,
     o: [
       "ничего особенного, обычная запись",
       "на каждый рендер создаётся новый объект, и все потребители перерисовываются впустую",

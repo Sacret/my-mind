@@ -14,7 +14,7 @@
  */
 window.Store = (function () {
   const API = "/api/state";
-  const PREFIXES = ["lesson:", "quiz:", "srs:"];
+  const PREFIXES = ["lesson:", "quiz:", "srs:", "cards:"];
   const overHttp = location.protocol === "http:" || location.protocol === "https:";
 
   let cache = {};

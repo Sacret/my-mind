@@ -15,6 +15,9 @@
   color: var(--muted); margin-bottom: 12px;
 }
 .card .tag .new { color: var(--accent); font-weight: 700; }
+.card .tag .from-miss { color: var(--bad); font-weight: 700; }
+/* вопрос с кодом приехал из урока — держим моноширинным */
+.card .side.code { font-family: ui-monospace, Menlo, monospace; font-size: 16px; }
 .divider { border: 0; border-top: 1px dashed var(--line); margin: 20px 0; }
 
 /* три кнопки оценки */
