@@ -76,6 +76,7 @@
 <script src="../assets/storage.js"></script>
 <script src="../assets/srs.js"></script>
 <script src="../assets/lessons.js"></script>
+<script src="../assets/text.js"></script>
 <script src="cards.js"></script>
 <script>
 const KEY = SRS.KEY;
@@ -157,7 +158,9 @@ function showEmpty() {
 
   const parts = [];
   if (plan && plan.deferredDue > 0) {
-    parts.push("Дневной лимит исчерпан: " + plan.deferredDue + " карточек перенесено на завтра.");
+    parts.push("Дневной лимит исчерпан: " + plan.deferredDue + " " +
+               plural(plan.deferredDue, "карточка", "карточки", "карточек") + " " +
+               plural(plan.deferredDue, "перенесена", "перенесены", "перенесено") + " на завтра.");
   } else if (plan && plan.waitingNew > 0) {
     parts.push("Новые открываются порциями по " + settings.newPerDay + " в день, в очереди ещё " + plan.waitingNew + ".");
   } else {

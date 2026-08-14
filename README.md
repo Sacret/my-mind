@@ -76,7 +76,7 @@ npm run check      # ничего не писать, только провери
 ```
 my-mind/
 ├── src/layout.html              # общий каркас страниц — правится здесь
-├── src/pages/                   # источники страниц (32 файла)
+├── src/pages/                   # источники страниц (56 файлов)
 ├── build.mjs                    # сборщик, без зависимостей
 ├── server.mjs                   # локальный сервер, без зависимостей
 ├── data/state.json              # ВЕСЬ прогресс (создаётся при первом запуске)
@@ -86,35 +86,44 @@ my-mind/
 ├── assets/                      # стили, движок вопросов, слой хранения, иконка
 │   ├── lessons.js               # реестр уроков: порядок, баллы, зависимости между уроками
 │   ├── srs.js                   # интервалы, карточки из промахов, сводка для оглавления
+│   ├── text.js                  # plural(): согласование существительного с числом
 │   ├── photos/                  # снимки для урока по фотографии (общественное достояние)
 │   ├── lesson.css               # общая база: палитра, типографика, вопросы, .panel
 │   ├── dashboard.css            # оглавление
 │   ├── review.css               # карточки
 │   └── test.css                 # страницы входных тестов
-├── general/                     # общее развитие, 18 уроков
+├── general/                     # общее развитие, 34 урока
 │   ├── test-01-baseline.html    # входной тест, 50 вопросов
 │   ├── results/                 # архив: отчёт о входном тесте
 │   ├── logic/  math/            # уроки по областям
 │   ├── statistics/  chemistry/
+│   ├── physics/                 # единицы СИ и порядки величин
 │   ├── music/  cinema/
+│   ├── art/  architecture/      # живопись, чтение зданий
 │   ├── finance/  brain/
 │   ├── anatomy/  biology/
-│   ├── astronomy/  religion/
+│   ├── medicine/                # доказательная медицина
+│   ├── astronomy/  geography/
+│   ├── religion/
 │   ├── photography/             # величайшие снимки
 │   ├── literature/              # феномен Пушкина
+│   ├── linguistics/             # откуда берутся языки
 │   └── russian/  english/
-└── work/                        # профессия, 10 уроков
+└── work/                        # профессия, 17 уроков
     ├── test-01-baseline.html
     ├── results/                 # архив: отчёт о входном тесте
-    ├── fundamentals/            # сложность, структуры данных
-    ├── javascript/              # event loop, мутации, типы
-    ├── web/  css/  react/
+    ├── fundamentals/            # сложность, структуры данных, сортировки
+    ├── javascript/              # event loop, типы, промисы, регулярки
+    ├── web/                     # HTTP и REST, безопасность
+    ├── databases/               # SQL: join, индексы, нормализация
+    ├── tools/                   # Git
+    ├── css/  react/
     └── history/                 # как появлялись абстракции
 ```
 
 ## Уроки
 
-Сделано 28 уроков, из них пройдено на максимум 19.
+Сделано 51 урок, из них пройдено на максимум 27.
 
 **Общее развитие**
 
@@ -122,22 +131,38 @@ my-mind/
 |------|------|--------------------------|---------|
 | [general/logic/lesson-01-syllogisms.html](general/logic/lesson-01-syllogisms.html) | Кванторы и силлогизмы | #48 | ✅ 04.08 — 8/8 |
 | [general/logic/lesson-02-word-problems.html](general/logic/lesson-02-word-problems.html) | Задачи в словах: перевод в уравнения | #50 | ✅ 05.08 — 8/8 |
+| [general/logic/lesson-03-fallacies.html](general/logic/lesson-03-fallacies.html) | Ошибки рассуждения и подмена тезиса | слабая категория: логика | — |
 | [general/math/lesson-01-probability.html](general/math/lesson-01-probability.html) | Вероятность, «хотя бы один» | #5 | ✅ 04.08 — 7/7 |
 | [general/math/lesson-02-quadratic.html](general/math/lesson-02-quadratic.html) | Квадратные уравнения и знаки корней | #7 | ✅ 05.08 — 8/8 |
+| [general/math/lesson-03-complex.html](general/math/lesson-03-complex.html) | Комплексные числа и тождество Эйлера | #8 | — |
 | [general/statistics/lesson-01-averages.html](general/statistics/lesson-01-averages.html) | Среднее, медиана и обман выборки | новая область | ✅ 06.08 — 8/8 |
+| [general/statistics/lesson-02-bayes.html](general/statistics/lesson-02-bayes.html) | Байесовское мышление и ошибка базовой ставки | продолжение урока 1 | — |
 | [general/chemistry/lesson-01-everyday.html](general/chemistry/lesson-01-everyday.html) | Химия вокруг: почему мыло моет | новая область | ✅ 05.08 — 8/8 |
+| [general/physics/lesson-01-si-units.html](general/physics/lesson-01-si-units.html) | Единицы СИ и порядки величин | #14 | — |
 | [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | ✅ 05.08 — 8/8 |
 | [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | ✅ 06.08 — 8/8 |
+| [general/cinema/lesson-02-history.html](general/cinema/lesson-02-history.html) | История кино: от немого к звуковому | #40 | — |
+| [general/art/lesson-01-looking-at-painting.html](general/art/lesson-01-looking-at-painting.html) | Как смотреть картину | новая область | — |
+| [general/architecture/lesson-01-reading-buildings.html](general/architecture/lesson-01-reading-buildings.html) | Как смотреть на здание и читать эпоху | новая область | — |
 | [general/finance/lesson-01-money-basics.html](general/finance/lesson-01-money-basics.html) | Сложный процент, риск и инфляция | новая область | ✅ 07.08 — 8/8 |
+| [general/finance/lesson-02-taxes-credit.html](general/finance/lesson-02-taxes-credit.html) | Налоги, кредит и как читать договор | продолжение урока 1 | — |
 | [general/brain/lesson-01-memory-sleep.html](general/brain/lesson-01-memory-sleep.html) | Память, сон и внимание | новая область | ✅ 07.08 — 8/8 |
+| [general/brain/lesson-02-attention-habits.html](general/brain/lesson-02-attention-habits.html) | Внимание, привычки и прокрастинация | продолжение урока 1 | — |
+| [general/brain/lesson-03-biases.html](general/brain/lesson-03-biases.html) | Когнитивные искажения | продолжение урока 2 | 🔒 закрыт |
 | [general/anatomy/lesson-01-body.html](general/anatomy/lesson-01-body.html) | Как устроено тело: кровь, дыхание, пищеварение | новая область | ✅ 09.08 — 8/8 |
-| [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
+| [general/medicine/lesson-01-evidence.html](general/medicine/lesson-01-evidence.html) | Доказательная медицина: как читать исследование | новая область | — |
 | [general/biology/lesson-01-evolution.html](general/biology/lesson-01-evolution.html) | Эволюция как алгоритм | #15 | ✅ 10.08 — 8/8 |
-| [general/religion/lesson-01-history.html](general/religion/lesson-01-history.html) | Как возникали и расходились религии | новая область | — |
-| [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | — |
-| [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | пробел из очереди | — |
+| [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
+| [general/astronomy/lesson-02-stars.html](general/astronomy/lesson-02-stars.html) | Жизнь звёзд и чёрные дыры | продолжение урока 1 | — |
+| [general/geography/lesson-01-climate.html](general/geography/lesson-01-climate.html) | География и климат: почему где что растёт | новая область | — |
+| [general/religion/lesson-01-history.html](general/religion/lesson-01-history.html) | Как возникали и расходились религии | новая область | ✅ 12.08 — 8/8 |
+| [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | ✅ 13.08 — 8/8 |
+| [general/russian/lesson-02-dash-colon.html](general/russian/lesson-02-dash-colon.html) | Тире, двоеточие и согласование | продолжение урока 1 | — |
+| [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | пробел из очереди | ✅ 14.08 — 8/8 |
+| [general/english/lesson-02-conditionals.html](general/english/lesson-02-conditionals.html) | Условные предложения и модальные глаголы | продолжение урока 1 | — |
+| [general/linguistics/lesson-01-language-change.html](general/linguistics/lesson-01-language-change.html) | Откуда берутся языки и как они меняются | новая область | — |
 | [general/photography/lesson-01-great-photographs.html](general/photography/lesson-01-great-photographs.html) | Величайшие фотографии: как кадр становится документом | новая область | — |
-| [general/literature/lesson-01-pushkin.html](general/literature/lesson-01-pushkin.html) | Феномен Пушкина: язык, охват и канонизация | новая область | — |
+| [general/literature/lesson-01-pushkin.html](general/literature/lesson-01-pushkin.html) | Феномен Пушкина: язык, охват и канонизация | новая область | ✅ 12.08 — 8/8 |
 
 **Профессия**
 
@@ -145,14 +170,21 @@ my-mind/
 |------|------|--------------------------|---------|
 | [work/fundamentals/lesson-01-big-o.html](work/fundamentals/lesson-01-big-o.html) | Сложность алгоритмов, O-нотация | #1, #3, #5, #12 | ✅ 04.08 — 8/8 |
 | [work/fundamentals/lesson-02-data-structures.html](work/fundamentals/lesson-02-data-structures.html) | Структуры данных: что выбрать под задачу | #2, #6 | ✅ 06.08 — 8/8 |
+| [work/fundamentals/lesson-03-sorting.html](work/fundamentals/lesson-03-sorting.html) | Сортировки: merge, quick и почему O(n log n) | #5 | — |
 | [work/javascript/lesson-01-event-loop.html](work/javascript/lesson-01-event-loop.html) | Event loop, микро- и макрозадачи | #16 | ✅ 04.08 — 7/7 |
 | [work/javascript/lesson-02-arrays-mutation.html](work/javascript/lesson-02-arrays-mutation.html) | Мутации, ссылки и иммутабельность | #20, #40 | ✅ 07.08 — 8/8 |
 | [work/javascript/lesson-03-types-coercion.html](work/javascript/lesson-03-types-coercion.html) | Типы, приведение и тихие потери данных | #13, #21, #27 | ✅ 08.08 — 8/8 |
+| [work/javascript/lesson-04-promises.html](work/javascript/lesson-04-promises.html) | Промисы: all, allSettled, race и async/await | #23 | — |
+| [work/javascript/lesson-05-debounce-throttle.html](work/javascript/lesson-05-debounce-throttle.html) | debounce и throttle | #25 | — |
+| [work/javascript/lesson-06-regexp.html](work/javascript/lesson-06-regexp.html) | Регулярные выражения | новая область | — |
 | [work/web/lesson-01-http-rest.html](work/web/lesson-01-http-rest.html) | HTTP и REST: методы, коды, CORS | #4, #10 | ✅ 09.08 — 8/8 |
-| [work/css/lesson-01-flexbox-specificity.html](work/css/lesson-01-flexbox-specificity.html) | Оси флексбокса и специфичность | #28, #29 | — |
-| [work/react/lesson-01-state-context.html](work/react/lesson-01-state-context.html) | React: состояние, поднятие и Context | #47 | — |
-| [work/react/lesson-02-effects-memo.html](work/react/lesson-02-effects-memo.html) | React: эффекты, зависимости и мемоизация | продолжение урока 1 | 🔒 закрыт |
-| [work/history/lesson-01-programming.html](work/history/lesson-01-programming.html) | История программирования: откуда взялись абстракции | новая область | — |
+| [work/web/lesson-02-security.html](work/web/lesson-02-security.html) | Безопасность веба: XSS, CSRF, CSP, токены | продолжение урока 1 | — |
+| [work/databases/lesson-01-sql.html](work/databases/lesson-01-sql.html) | SQL: join, индексы, нормализация | новая область | — |
+| [work/css/lesson-01-flexbox-specificity.html](work/css/lesson-01-flexbox-specificity.html) | Оси флексбокса и специфичность | #28, #29 | ✅ 11.08 — 8/8 |
+| [work/react/lesson-01-state-context.html](work/react/lesson-01-state-context.html) | React: состояние, поднятие и Context | #47 | ✅ 12.08 — 8/8 |
+| [work/react/lesson-02-effects-memo.html](work/react/lesson-02-effects-memo.html) | React: эффекты, зависимости и мемоизация | продолжение урока 1 | ✅ 13.08 — 8/8 |
+| [work/tools/lesson-01-git.html](work/tools/lesson-01-git.html) | Git: merge против rebase, конфликты, история | новая область | — |
+| [work/history/lesson-01-programming.html](work/history/lesson-01-programming.html) | История программирования: откуда взялись абстракции | новая область | ✅ 14.08 — 8/8 |
 
 Каждый урок — одна HTML-страница: разбор темы, затем блок «Проверь себя».
 Ответы и результат сохраняются в `data/state.json` (или в localStorage, если сервер не запущен),
@@ -201,26 +233,48 @@ my-mind/
 
 ## Очередь следующих уроков
 
-Сначала — то, что уже написано, но ещё не пройдено: история религий, русский, английский,
-фотография, литература, CSS, React, история программирования. Второй урок по React открыт не будет,
-пока не закрыт первый, — он в очереди сразу за ним.
-Новые уроки имеет смысл заказывать, когда эти восемь закрыты.
+Написано 24 непройденных урока — сначала они, новые заказывать смысла нет.
+Порядок внутри очереди задаёт `assets/lessons.js`, подсказка «Следующий шаг» в оглавлении
+идёт по нему же и пропускает закрытые продолжения.
 
-Дальше по величине пробела во входном тесте.
+Разумный порядок — по величине пробела во входном тесте.
 
-**Работа**
-1. debounce и throttle
-2. Сборка: бандлеры, tree shaking, code splitting
+**Сначала: закрывают провал или «угадала» в тесте**
 
-**Общее**
-1. Байесовское мышление: как обновлять убеждения, ошибка базовой ставки
-2. Архитектура: как смотреть на здание и читать эпоху
-3. Единицы СИ: что измеряется в ньютонах, джоулях, ваттах, паскалях
+| Урок | Вопрос теста |
+|------|--------------|
+| Сортировки: merge, quick и почему O(n log n) | #5, провален |
+| debounce и throttle | #25, провален |
+| История кино: от немого к звуковому | #40, провален |
+| Промисы: all, allSettled, race | #23, угадан |
+| Единицы СИ и порядки величин | #14, угадан |
+| Комплексные числа и тождество Эйлера | #8, угадан |
+| Ошибки рассуждения и подмена тезиса | логика — 1/3, слабейшая категория |
+| Величайшие фотографии | единственный неначатый урок из прежних |
+
+**Дальше: продолжения начатых тем**
+
+Байесовское мышление · Налоги и кредит · Внимание и привычки · Когнитивные искажения (после
+предыдущего) · Тире и двоеточие · Условные и модальные · Жизнь звёзд и чёрные дыры ·
+Безопасность веба.
+
+**И новые области**
+
+Живопись · Архитектура · Доказательная медицина · География и климат · Лингвистика ·
+Регулярные выражения · SQL · Git.
+
+**Не написано, кандидаты на будущее**
+
+1. Сборка: бандлеры, tree shaking, code splitting (#49 теста)
+2. Процессы, потоки и конкурентность (#11 теста, угадан)
+3. CSS: box model, position, stacking context (#30, #33, #34 — угаданы)
+4. React: refs, controlled/uncontrolled, StrictMode (#38, #42, #45 — угаданы)
+5. ДНК и наследственность (#15 теста, угадан)
 
 ## Повторение карточками
 
-`review/index.html` — интервальные повторения по уже пройденным темам: 229 написанных карточек
-на 28 уроков плюс те, что добавляются сами из промахов. Открыто 157 — остальные ждут,
+`review/index.html` — интервальные повторения по уже пройденным темам: 400 написанных карточек
+на 51 урок плюс те, что добавляются сами из промахов. Открыта 221 — остальные ждут,
 пока будут пройдены их уроки.
 
 - Карточка открывается только после прохождения соответствующего урока.

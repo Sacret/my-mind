@@ -3,7 +3,7 @@ title: Повторение
 out: review/index.html
 css: assets/review.css
 crumb: · повторение
-js: storage, srs, lessons
+js: storage, srs, lessons, text
 ---
 <div class="wrap">
 
@@ -148,7 +148,9 @@ function showEmpty() {
 
   const parts = [];
   if (plan && plan.deferredDue > 0) {
-    parts.push("Дневной лимит исчерпан: " + plan.deferredDue + " карточек перенесено на завтра.");
+    parts.push("Дневной лимит исчерпан: " + plan.deferredDue + " " +
+               plural(plan.deferredDue, "карточка", "карточки", "карточек") + " " +
+               plural(plan.deferredDue, "перенесена", "перенесены", "перенесено") + " на завтра.");
   } else if (plan && plan.waitingNew > 0) {
     parts.push("Новые открываются порциями по " + settings.newPerDay + " в день, в очереди ещё " + plan.waitingNew + ".");
   } else {

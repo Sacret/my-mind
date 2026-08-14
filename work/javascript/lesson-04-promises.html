@@ -1,0 +1,191 @@
+<!doctype html>
+<!-- Файл собран автоматически из src/pages/work-javascript-promises.html
+     Правьте источник и запускайте npm run build — здешние правки затрутся. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Промисы: all, allSettled, race и async/await</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/icon.svg">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<link rel="stylesheet" href="../../assets/lesson.css">
+</head>
+<body class="track-work">
+<div class="wrap">
+
+<div class="crumb"><a class="home" href="../../index.html"><img class="mark" src="../../assets/icon.svg" alt="">my-mind</a><span>· Работа · JavaScript · Урок 4</span></div>
+<h1>Промисы: all, allSettled, race и async/await</h1>
+<p class="lead">Вопрос #23 про Promise.allSettled был отмечен «угадала». Урок про event loop объяснил, <em>когда</em> выполняется отложенный код. Этот — про то, <em>чем</em> его принято выражать: какие есть комбинаторы, где async/await молча теряет ошибки и почему последовательный await в цикле бывает в разы медленнее нужного.</p>
+
+<hr>
+
+<h2>Промис — это значение, которого пока нет</h2>
+<p>У промиса три состояния: <strong>pending</strong>, затем ровно один переход — либо в <strong>fulfilled</strong> со значением, либо в <strong>rejected</strong> с причиной. Переход необратим, повторные вызовы resolve или reject игнорируются.</p>
+<p>Два свойства, из которых следует почти всё остальное:</p>
+<ul>
+  <li><strong>Промис запускает работу сразу при создании</strong>, а не при вызове <code>.then</code>. Функция внутри <code>new Promise</code> выполняется синхронно.</li>
+  <li><strong>Обработчики всегда асинхронны.</strong> Даже у уже разрешённого промиса <code>.then</code> попадёт в очередь микрозадач, а не выполнится тут же.</li>
+</ul>
+<pre><code>console.log("A");
+Promise.resolve().then(() => console.log("B"));
+console.log("C");
+// A C B — даже при готовом значении then ждёт микрозадачу</code></pre>
+
+<h2>Четыре комбинатора</h2>
+<p>Разница между ними — единственное, что нужно помнить твёрдо.</p>
+<table>
+  <tr><th>Метод</th><th>Разрешается</th><th>Отклоняется</th><th>Результат</th></tr>
+  <tr><td><code>all</code></td><td>когда выполнены все</td><td>на первой же ошибке</td><td>массив значений</td></tr>
+  <tr><td><code>allSettled</code></td><td>когда все завершились любым образом</td><td><strong>никогда</strong></td><td>массив <code>{status, value|reason}</code></td></tr>
+  <tr><td><code>race</code></td><td colspan="2">на первом <em>завершившемся</em> — успех или ошибка</td><td>его значение или ошибка</td></tr>
+  <tr><td><code>any</code></td><td>на первом успешном</td><td>если провалились все</td><td>первое значение</td></tr>
+</table>
+
+<h3>all — fail-fast</h3>
+<pre><code>const [user, posts] = await Promise.all([fetchUser(), fetchPosts()]);</code></pre>
+<p>Запросы идут параллельно, общее время равно самому долгому. Но <strong>первая же ошибка отклоняет весь Promise.all</strong>, и результаты успевших получить нельзя — они потеряны. При этом остальные запросы не отменяются: они продолжают выполняться, просто их результат уже некуда деть.</p>
+
+<h3>allSettled — нужны все ответы</h3>
+<pre><code>const results = await Promise.allSettled([a(), b(), c()]);
+
+const ok   = results.filter(r => r.status === "fulfilled").map(r => r.value);
+const bad  = results.filter(r => r.status === "rejected").map(r => r.reason);</code></pre>
+<p>Подходит там, где частичный результат имеет смысл: загрузка виджетов на дашборде, пакетная отправка, опрос нескольких источников. <strong>allSettled не отклоняется никогда</strong> — соответственно, <code>catch</code> после него не сработает, и статус каждого элемента нужно проверять вручную.</p>
+
+<h3>race и any</h3>
+<p><code>race</code> реагирует на первое <em>завершение</em>, включая ошибку. Типичное применение — таймаут:</p>
+<pre><code>const withTimeout = (p, ms) => Promise.race([
+  p,
+  new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms))
+]);</code></pre>
+<p><code>any</code> реагирует на первый <em>успех</em> и игнорирует ошибки, пока есть надежда: запрос к нескольким зеркалам, где нужен любой ответивший. Если провалились все, он отклоняется с <code>AggregateError</code>, в котором лежит массив причин.</p>
+<div class="note err">
+  <b>Частая ошибка выбора.</b> Взять <code>race</code> там, где нужен <code>any</code>: первый же упавший запрос завалит всю конструкцию, хотя остальные зеркала ответили бы нормально.
+</div>
+
+<h2>async/await</h2>
+<p><code>async</code>-функция <strong>всегда возвращает промис</strong>, даже если внутри обычный <code>return 1</code>. <code>await</code> ждёт разрешения и разворачивает значение, а при отклонении бросает исключение — поэтому обработка ошибок становится обычным <code>try/catch</code>.</p>
+<pre><code>async function load(id) {
+  try {
+    const res = await fetch(`/api/items/${id}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);   // fetch НЕ падает на 404
+    return await res.json();
+  } catch (e) {
+    log(e);
+    throw e;              // проглотить или пробросить — но решить осознанно
+  }
+}</code></pre>
+
+<h3>Главная ошибка производительности</h3>
+<pre><code>// последовательно: сумма всех задержек
+for (const id of ids) {
+  results.push(await fetchItem(id));
+}
+
+// параллельно: время самого долгого
+const results = await Promise.all(ids.map(id => fetchItem(id)));</code></pre>
+<p>В первом варианте каждый следующий запрос ждёт предыдущий. Для десяти запросов по 300 мс это 3 секунды против 300 мс. <strong>Последовательный await оправдан, только когда следующий шаг зависит от предыдущего.</strong></p>
+<p class="note"><b>Про <code>forEach</code>.</b> <code>arr.forEach(async x => { await f(x) })</code> не ждёт ничего: forEach игнорирует возвращаемые промисы и завершается мгновенно. Нужен <code>for...of</code> с await или <code>Promise.all(arr.map(...))</code>.</p>
+
+<h3>Тихая потеря ошибок</h3>
+<p>Три способа потерять ошибку, все встречаются в реальном коде:</p>
+<ul>
+  <li><strong>Забытый await.</strong> <code>doWork()</code> без await внутри try/catch — исключение возникнет позже, когда блок уже покинут, и превратится в необработанное отклонение.</li>
+  <li><strong>Промис создан, но нигде не обработан.</strong> Отклонение всплывает как <code>unhandledrejection</code> и в Node по умолчанию гасит процесс.</li>
+  <li><strong>return вместо return await внутри try.</strong> При <code>return p</code> функция возвращает промис до его разрешения, и <code>catch</code> этой же функции ошибку уже не поймает.</li>
+</ul>
+<pre><code>try {
+  return getData();        // ошибка НЕ попадёт в catch ниже
+  // return await getData(); ← поймается
+} catch (e) { handle(e); }</code></pre>
+
+<h2>Порядок выполнения</h2>
+<p>Связь с уроком про event loop: <strong>каждый await — это микрозадача</strong>, код после него продолжается не сразу.</p>
+<pre><code>async function f() {
+  console.log("1");
+  await null;              // await любого значения тоже даёт микрозадачу
+  console.log("3");
+}
+f();
+console.log("2");
+// 1 2 3</code></pre>
+<p>До первого await тело async-функции выполняется синхронно — это часто удивляет.</p>
+
+<h2>Практические правила</h2>
+<ul>
+  <li>Независимые операции — <code>Promise.all</code>, зависимые — последовательный await.</li>
+  <li>Нужны все ответы вместе с ошибками — <code>allSettled</code> и разбор статусов.</li>
+  <li>Нужен любой успешный — <code>any</code>, нужен первый завершившийся — <code>race</code>.</li>
+  <li>Смешивать <code>.then</code> и <code>await</code> в одной функции не стоит: порядок становится трудно читаемым.</li>
+  <li>Отмену промис не поддерживает — для этого нужен <code>AbortController</code>, который передаётся в fetch сигналом.</li>
+</ul>
+
+<div class="note">
+  <b>Что уносим с собой.</b> Промис стартует при создании, обработчики всегда через микрозадачу. all падает на первой ошибке, allSettled не падает никогда, race ждёт первого завершения, any — первого успеха. async-функция всегда возвращает промис. await в цикле последователен — это главная причина медленного кода. return без await внутри try теряет ошибку.
+</div>
+
+<h2 class="quiz-head">Проверь себя</h2>
+<div id="quiz"></div>
+
+<div class="back"><a href="../../index.html">← Назад</a></div>
+
+</div>
+<script src="../../assets/storage.js"></script>
+<script src="../../assets/srs.js"></script>
+<script src="../../assets/lessons.js"></script>
+<script src="../../assets/lesson.js"></script>
+<script>
+initQuiz("work-js-promises", [
+  {
+    t: "Чем Promise.allSettled отличается от Promise.all?",
+    o: ["работает быстрее", "не отклоняется при ошибке одного из промисов, а возвращает статусы всех", "принимает максимум два промиса", "возвращает первый выполнившийся"],
+    a: 1,
+    e: "Promise.all падает целиком на первой ошибке (fail-fast), и результаты успевших теряются."
+  },
+  {
+    t: "Нужен ответ от любого из трёх зеркал, ошибки остальных не важны. Что взять?",
+    o: ["Promise.race", "Promise.any", "Promise.all", "Promise.allSettled"],
+    a: 1,
+    e: "race завершится на первом ЗАВЕРШИВШЕМСЯ, включая упавший. any ждёт первый успех и падает только если провалились все."
+  },
+  {
+    t: "Что выведет код?\n\nasync function f() { console.log('1'); await null; console.log('3'); }\nf();\nconsole.log('2');",
+    code: true,
+    o: ["1 2 3", "1 3 2", "2 1 3", "3 2 1"],
+    a: 0,
+    e: "До первого await тело выполняется синхронно, после await — микрозадача, то есть уже после синхронного кода."
+  },
+  {
+    t: "Десять независимых запросов по 300 мс собраны через await в цикле for. Сколько это займёт?",
+    o: ["около 300 мс", "около 3 секунд: каждый запрос ждёт предыдущий", "зависит от сервера", "около 600 мс"],
+    a: 1,
+    e: "Нужен Promise.all(ids.map(fetchItem)) — тогда время равно самому долгому запросу."
+  },
+  {
+    t: "arr.forEach(async x => { await save(x) }) — когда завершится этот код?",
+    o: ["после того как сохранятся все элементы", "мгновенно: forEach игнорирует возвращённые промисы и ничего не ждёт", "после первого сохранения", "выбросит ошибку"],
+    a: 1,
+    e: "Нужен for...of с await или Promise.all(arr.map(...))."
+  },
+  {
+    t: "Внутри try стоит «return getData()» без await. Что произойдёт с ошибкой из getData?",
+    o: ["попадёт в catch этой функции", "не попадёт: функция вернёт промис до его разрешения, и catch уже не сработает", "приведёт к синхронному исключению", "будет проглочена без следа"],
+    a: 1,
+    e: "Нужно «return await getData()», если ошибку должен ловить catch этой же функции."
+  },
+  {
+    t: "Первый из промисов в Promise.all отклонился. Что происходит с остальными запросами?",
+    o: ["они отменяются", "они продолжают выполняться, но их результат уже некуда деть", "они ставятся в очередь повторно", "их результаты попадут в catch"],
+    a: 1,
+    e: "Промисы не поддерживают отмену — для этого нужен AbortController."
+  },
+  {
+    t: "Когда выполняется функция, переданная в new Promise(fn)?",
+    o: ["при первом вызове .then", "сразу и синхронно при создании промиса", "в следующей микрозадаче", "в следующей макрозадаче"],
+    a: 1,
+    e: "Промис запускает работу при создании; асинхронны только обработчики."
+  }
+]);
+</script>
+</body>
+</html>

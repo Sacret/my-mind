@@ -2,7 +2,7 @@
 title: my-mind — программа обучения
 out: index.html
 css: assets/dashboard.css
-js: storage, srs, lessons
+js: storage, srs, lessons, text
 ---
 <div class="wrap">
 
@@ -92,26 +92,40 @@ const AREAS = {
   "general/math": "Математика",
   "general/statistics": "Статистика",
   "general/chemistry": "Химия",
+  "general/physics": "Физика",
   "general/music": "Музыка",
   "general/cinema": "Кино",
+  "general/art": "Живопись",
+  "general/architecture": "Архитектура",
   "general/finance": "Финансы",
   "general/brain": "Мозг",
   "general/anatomy": "Анатомия",
+  "general/medicine": "Медицина",
   "general/biology": "Биология",
   "general/astronomy": "Астрономия",
+  "general/geography": "География",
   "general/religion": "Религии",
   "general/russian": "Русский язык",
   "general/english": "Английский язык",
+  "general/linguistics": "Лингвистика",
   "general/photography": "Фотография",
   "general/literature": "Литература",
   "work/fundamentals": "Основы",
   "work/javascript": "JavaScript",
   "work/web": "Веб",
+  "work/databases": "Базы данных",
   "work/css": "CSS",
   "work/react": "React",
+  "work/tools": "Инструменты",
   "work/history": "История"
 };
-const areaOf = (href) => AREAS[href.split("/").slice(0, 2).join("/")] || "";
+// Новая папка урока = новая строка выше. Без неё область просто не покажется,
+// поэтому о пропуске сообщаем в консоль, а не молчим.
+const areaOf = (href) => {
+  const dir = href.split("/").slice(0, 2).join("/");
+  if (!(dir in AREAS)) console.warn("нет названия области для папки " + dir + " — допиши AREAS");
+  return AREAS[dir] || "";
+};
 
 function readState(id) {
   return Store.get("lesson:" + id);
@@ -246,13 +260,17 @@ function build() {
       rbody.append(document.createTextNode("На сегодня: "));
       rbody.append(Object.assign(document.createElement("b"), { textContent: p.session.length }));
       rbody.append(document.createTextNode(
-        " карточек — " + p.due.length + " на повторение, " + p.fresh.length + " новых. "), a);
+        " " + plural(p.session.length, "карточка", "карточки", "карточек") +
+        " — " + p.due.length + " на повторение, " +
+        p.fresh.length + " " + plural(p.fresh.length, "новая", "новые", "новых") + ". "), a);
       if (p.deferredDue + p.waitingNew > 0) {
         rbody.append(document.createElement("br"));
         rbody.append(Object.assign(document.createElement("span"), {
           className: "row-sub",
           textContent: "В очереди на следующие дни: " + (p.deferredDue + p.waitingNew) +
-                       " · лимиты " + settings.newPerDay + " новых и " + settings.maxPerDay + " всего в день"
+                       " · лимиты " + settings.newPerDay + " " +
+                       plural(settings.newPerDay, "новая", "новые", "новых") +
+                       " и " + settings.maxPerDay + " всего в день"
         }));
       }
     } else {
@@ -354,15 +372,20 @@ function buildSrsStats() {
   }));
   const maxDay = Math.max(1, ...s.forecast.map(d => d.count));
   s.forecast.forEach((d, i) => {
-    const [y, m, day] = d.date.split("-").map(Number);
-    const label = i === 0 ? "сегодня" : WD_SHORT[new Date(y, m - 1, day).getDay()] + " " + day + "." + m;
+    // части оставляем строками: в ISO они уже с ведущим нулём, а Number его съедает
+    const [y, m, day] = d.date.split("-");
+    const label = i === 0
+      ? "сегодня"
+      : WD_SHORT[new Date(+y, +m - 1, +day).getDay()] + " " + day + "." + m;
     fc.append(barRow(label, d.count, maxDay, i === 0 ? "" : "soon-fill"));
   });
   const settings = SRS.settingsFrom(Store.get("srs:settings"));
   fc.append(Object.assign(document.createElement("p"), {
     className: "footnote",
     textContent: "Столбец «сегодня» включает всё просроченное. Дневной потолок — " +
-                 settings.maxPerDay + " карточек, так что пик может растянуться на пару дней."
+                 settings.maxPerDay + " " +
+                 plural(settings.maxPerDay, "карточка", "карточки", "карточек") +
+                 ", так что пик может растянуться на пару дней."
   }));
   host.append(fc);
 
@@ -455,13 +478,6 @@ const isoOf = (d) => d.getFullYear() + "-" +
 
 const addDays = (d, n) => { const c = new Date(d); c.setDate(c.getDate() + n); return c; };
 const mondayIndex = (d) => (d.getDay() + 6) % 7;   // 0 — понедельник, 6 — воскресенье
-
-function plural(n, one, few, many) {
-  const t = n % 10, h = n % 100;
-  if (t === 1 && h !== 11) return one;
-  if (t >= 2 && t <= 4 && (h < 12 || h > 14)) return few;
-  return many;
-}
 
 function humanDate(iso) {
   const [y, m, d] = iso.split("-").map(Number);
