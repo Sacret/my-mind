@@ -216,16 +216,32 @@ function startQuiz(lessonId, questions) {
     state.attempts = log.slice(-20);
   }
 
+  /**
+   * Вопрос на выбор из списка («В каком предложении…», «Какое из слов…») без самих
+   * вариантов нерешаем: отвечать не на что, а ответ вроде «Он известен [?] как
+   * переводчик» ни на что не опирается. Такие вопросы едут на карточку вместе с
+   * вариантами, остальные остаются вопросами на припоминание.
+   */
+  const CHOICE = /\[\?\]|^(в как|как(ое|ой|ая|ие) из |что из |какое утверждение|где из )/i;
+  function needsOptions(q) {
+    return CHOICE.test(q.t.trim()) || CHOICE.test(q.o[q.a]);
+  }
+
   /** Промахи и угаданное уходят карточками в повторение — каждый вопрос своей. */
   function makeCards() {
     if (!window.SRS || !SRS.noteMisses) return;
     SRS.noteMisses(misses().map((i) => {
       const q = questions[i];
+      const withOptions = needsOptions(q);
+      const front = withOptions
+        ? q.t + "\n\n" + q.o.map((o, n) => n + 1 + ". " + o).join("\n")
+        : q.t;
+      const answer = (withOptions ? q.a + 1 + ". " : "") + q.o[q.a];
       return {
         id: "auto:" + lessonId + ":q" + i,
         lesson: lessonId,
-        front: q.t,
-        back: q.o[q.a] + (q.e ? "\n\n" + q.e : ""),
+        front: front,
+        back: answer + (q.e ? "\n\n" + q.e : ""),
         code: !!q.code,
         src: isRight(i) ? "unsure" : "wrong"
       };
