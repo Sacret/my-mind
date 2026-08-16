@@ -190,20 +190,18 @@
       "due": "2026-08-24"
     },
     "syl-1": {
-      "box": 5,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-23"
+      "box": 3,
+      "due": "2026-08-15"
     },
     "prob-2": {
       "box": 4,
       "due": "2026-08-24"
     },
     "syl-4": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-02"
+      "due": "2026-08-16"
     },
     "syl-3": {
       "box": 4,
@@ -214,16 +212,14 @@
       "due": "2026-08-17"
     },
     "syl-2": {
-      "box": 5,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-19"
+      "box": 3,
+      "due": "2026-08-15"
     },
     "prob-1": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-03"
+      "due": "2026-08-16"
     },
     "syl-5": {
       "box": 4,
@@ -288,10 +284,8 @@
       "due": "2026-08-28"
     },
     "loop-1": {
-      "box": 5,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-22"
+      "box": 3,
+      "due": "2026-08-15"
     },
     "bigo-6": {
       "box": 4,
@@ -308,10 +302,8 @@
       "due": "2026-09-16"
     },
     "bigo-5": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-29"
+      "box": 3,
+      "due": "2026-08-15"
     },
     "bigo-10": {
       "box": 4,
@@ -336,16 +328,12 @@
       "due": "2026-08-27"
     },
     "loop-6": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-02"
+      "box": 3,
+      "due": "2026-08-16"
     },
     "loop-9": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-17"
+      "box": 3,
+      "due": "2026-08-16"
     },
     "ds-1": {
       "box": 5,
@@ -402,10 +390,8 @@
       "due": "2026-08-20"
     },
     "ds-8": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-01"
+      "box": 3,
+      "due": "2026-08-16"
     },
     "mut-5": {
       "box": 4,
@@ -482,10 +468,10 @@
       "due": "2026-08-27"
     },
     "sq-4": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-01"
+      "due": "2026-08-16"
     },
     "sq-5": {
       "box": 3,
@@ -564,10 +550,8 @@
       "due": "2026-08-19"
     },
     "ch-4": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-29"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "ch-8": {
       "box": 3,
@@ -576,10 +560,8 @@
       "due": "2026-08-20"
     },
     "mu-5": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-31"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "mu-4": {
       "box": 3,
@@ -588,10 +570,8 @@
       "due": "2026-08-19"
     },
     "mu-3": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-31"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "mu-2": {
       "box": 3,
@@ -600,16 +580,12 @@
       "due": "2026-08-20"
     },
     "ch-7": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-31"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "ch-5": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-01"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "ch-6": {
       "box": 3,
@@ -618,28 +594,26 @@
       "due": "2026-08-20"
     },
     "mu-1": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-31"
+      "box": 2,
+      "due": "2026-08-15"
     },
     "ci-7": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-30"
+      "due": "2026-08-16"
     },
     "mu-7": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-02"
+      "due": "2026-08-16"
     },
     "mu-6": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-30"
+      "due": "2026-08-16"
     },
     "ci-1": {
       "box": 3,
@@ -654,34 +628,34 @@
       "due": "2026-08-22"
     },
     "ci-4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-30"
+      "due": "2026-08-16"
     },
     "ci-3": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-03"
+      "due": "2026-08-16"
     },
     "ci-2": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-31"
+      "due": "2026-08-16"
     },
     "ci-5": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-03"
+      "due": "2026-08-16"
     },
     "ci-6": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-01"
+      "due": "2026-08-16"
     },
     "auto:general-russian-commas:q1": {
       "box": 2,
@@ -696,10 +670,10 @@
       "due": "2026-08-17"
     },
     "auto:general-russian-commas:q3": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-22"
+      "due": "2026-08-15"
     },
     "auto:general-russian-commas:q4": {
       "box": 2,
@@ -720,16 +694,16 @@
       "due": "2026-08-17"
     },
     "typ-8": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-18"
+      "due": "2026-08-15"
     },
     "typ-6": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-23"
+      "due": "2026-08-15"
     },
     "typ-1": {
       "box": 2,
@@ -750,16 +724,16 @@
       "due": "2026-08-17"
     },
     "typ-7": {
-      "box": 2,
-      "seen": 4,
-      "lapses": 1,
-      "due": "2026-08-19"
+      "box": 1,
+      "seen": 1,
+      "lapses": 0,
+      "due": "2026-08-15"
     },
     "typ-2": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-21"
+      "due": "2026-08-15"
     },
     "typ-3": {
       "box": 2,
@@ -780,143 +754,13 @@
       "due": "2026-08-17"
     },
     "auto:work-history-programming:q0": {
-      "box": 3,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-24"
-    },
-    "http-6": {
-      "box": 3,
-      "seen": 2,
-      "lapses": 0,
-      "due": "2026-08-22"
-    },
-    "http-4": {
-      "box": 2,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-19"
-    },
-    "http-3": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "css-3": {
-      "box": 3,
-      "seen": 2,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "http-8": {
-      "box": 2,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-19"
-    },
-    "http-5": {
-      "box": 2,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-18"
-    },
-    "css-1": {
-      "box": 3,
-      "seen": 2,
-      "lapses": 0,
-      "due": "2026-08-22"
-    },
-    "http-2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "css-2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "http-7": {
-      "box": 3,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-24"
-    },
-    "re-4": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-19"
-    },
-    "css-5": {
-      "box": 2,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-19"
-    },
-    "css-7": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-17"
-    },
-    "css-4": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-19"
-    },
-    "css-8": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-19"
-    },
-    "re-2": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-08-17"
-    },
-    "css-6": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-17"
-    },
-    "re-5": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-17"
-    },
-    "re-1": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-17"
-    },
-    "re-3": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-17"
-    },
-    "auto:general-logic-fallacies:q0": {
       "box": 0,
-      "due": "2026-08-16"
-    },
-    "auto:general-physics-si:q3": {
-      "box": 0,
-      "due": "2026-08-16"
+      "due": "2026-08-14"
     }
   },
   "srs:daily": {
-    "date": "2026-08-16",
-    "done": 32,
+    "date": "2026-08-14",
+    "done": 28,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -1174,14 +1018,6 @@
     "2026-08-14": {
       "done": 32,
       "again": 5
-    },
-    "2026-08-15": {
-      "done": 32,
-      "again": 6
-    },
-    "2026-08-16": {
-      "done": 37,
-      "again": 5
     }
   },
   "lesson:general-russian-commas": {
@@ -1284,22 +1120,6 @@
       "code": false,
       "src": "unsure",
       "date": "2026-08-14"
-    },
-    "auto:general-logic-fallacies:q0": {
-      "lesson": "general-logic-fallacies",
-      "front": "«Ты говоришь, что в статье есть неточность, — значит, по-твоему, наука вообще ничего не может?» Какая это ошибка?",
-      "back": "подмена тезиса (соломенное чучело)\n\nУтверждение оппонента заменили на утрированное и опровергли уже его.",
-      "code": false,
-      "src": "wrong",
-      "date": "2026-08-16"
-    },
-    "auto:general-physics-si:q3": {
-      "lesson": "general-physics-si",
-      "front": "Прибор мощностью 2 кВт работал полчаса. Сколько энергии он потребил?",
-      "back": "1 кВт·ч\n\n2 кВт × 0,5 ч = 1 кВт·ч ≈ 3,6 МДж. Ответ обязан быть в единицах энергии.",
-      "code": false,
-      "src": "wrong",
-      "date": "2026-08-16"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -1379,138 +1199,5 @@
       }
     ],
     "a0": 1
-  },
-  "lesson:general-arch-buildings": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-15",
-    "attempts": [
-      {
-        "date": "2026-08-15",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-photo-greatest": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 3,
-    "a4": 1,
-    "a5": 0,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-15",
-    "attempts": [
-      {
-        "date": "2026-08-15",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:work-fundamentals-sorting": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-16",
-    "attempts": [
-      {
-        "date": "2026-08-16",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-logic-fallacies": {
-    "a1": 1,
-    "a2": 0,
-    "a3": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-16",
-    "attempts": [
-      {
-        "date": "2026-08-16",
-        "score": 7,
-        "total": 8,
-        "wrong": [
-          0
-        ],
-        "unsure": []
-      },
-      {
-        "date": "2026-08-16",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ],
-    "a0": 1
-  },
-  "lesson:general-physics-si": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 2,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-16",
-    "attempts": [
-      {
-        "date": "2026-08-16",
-        "score": 7,
-        "total": 8,
-        "wrong": [
-          3
-        ],
-        "unsure": []
-      },
-      {
-        "date": "2026-08-16",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ],
-    "a3": 1
   }
 }
