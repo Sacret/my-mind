@@ -210,10 +210,8 @@
       "due": "2026-08-22"
     },
     "syl-6": {
-      "box": 5,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-25"
+      "box": 3,
+      "due": "2026-08-17"
     },
     "syl-2": {
       "box": 5,
@@ -344,10 +342,10 @@
       "due": "2026-09-02"
     },
     "loop-9": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-25"
+      "due": "2026-08-17"
     },
     "ds-1": {
       "box": 5,
@@ -422,10 +420,8 @@
       "due": "2026-08-26"
     },
     "mut-9": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-08-18"
+      "box": 3,
+      "due": "2026-08-17"
     },
     "wp-6": {
       "box": 4,
@@ -452,10 +448,8 @@
       "due": "2026-08-30"
     },
     "wp-3": {
-      "box": 4,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-31"
+      "box": 3,
+      "due": "2026-08-17"
     },
     "mut-8": {
       "box": 4,
@@ -690,16 +684,16 @@
       "due": "2026-09-01"
     },
     "auto:general-russian-commas:q1": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-03"
+      "due": "2026-08-17"
     },
     "auto:general-russian-commas:q2": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-02"
+      "due": "2026-08-17"
     },
     "auto:general-russian-commas:q3": {
       "box": 3,
@@ -708,22 +702,22 @@
       "due": "2026-08-22"
     },
     "auto:general-russian-commas:q4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-03"
+      "due": "2026-08-17"
     },
     "auto:general-russian-commas:q5": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-01"
+      "due": "2026-08-17"
     },
     "auto:general-russian-commas:q6": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-31"
+      "due": "2026-08-17"
     },
     "typ-8": {
       "box": 2,
@@ -738,22 +732,22 @@
       "due": "2026-08-23"
     },
     "typ-1": {
-      "box": 1,
-      "seen": 4,
-      "lapses": 2,
-      "due": "2026-08-18"
+      "box": 2,
+      "seen": 2,
+      "lapses": 1,
+      "due": "2026-08-17"
     },
     "typ-4": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-03"
+      "due": "2026-08-17"
     },
     "typ-5": {
-      "box": 1,
-      "seen": 4,
-      "lapses": 2,
-      "due": "2026-08-18"
+      "box": 2,
+      "seen": 2,
+      "lapses": 1,
+      "due": "2026-08-17"
     },
     "typ-7": {
       "box": 2,
@@ -768,22 +762,22 @@
       "due": "2026-08-21"
     },
     "typ-3": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-18"
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "due": "2026-08-17"
     },
     "ci-8": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-03"
+      "due": "2026-08-17"
     },
     "http-1": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-31"
+      "due": "2026-08-17"
     },
     "auto:work-history-programming:q0": {
       "box": 3,
@@ -864,10 +858,10 @@
       "due": "2026-08-19"
     },
     "css-7": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-20"
+      "due": "2026-08-17"
     },
     "css-4": {
       "box": 2,
@@ -882,115 +876,47 @@
       "due": "2026-08-19"
     },
     "re-2": {
-      "box": 2,
-      "seen": 4,
+      "box": 1,
+      "seen": 3,
       "lapses": 2,
-      "due": "2026-08-20"
+      "due": "2026-08-17"
     },
     "css-6": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-20"
+      "due": "2026-08-17"
     },
     "re-5": {
       "box": 1,
-      "seen": 4,
-      "lapses": 2,
-      "due": "2026-08-18"
+      "seen": 2,
+      "lapses": 1,
+      "due": "2026-08-17"
     },
     "re-1": {
       "box": 1,
-      "seen": 3,
-      "lapses": 1,
-      "due": "2026-08-18"
+      "seen": 1,
+      "lapses": 0,
+      "due": "2026-08-17"
     },
     "re-3": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-20"
+      "due": "2026-08-17"
     },
     "auto:general-logic-fallacies:q0": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
+      "box": 0,
+      "due": "2026-08-16"
     },
     "auto:general-physics-si:q3": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-20"
-    },
-    "re2-6": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "re-7": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-20"
-    },
-    "re-6": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "re2-4": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "re-8": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-20"
-    },
-    "re2-1": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-18"
-    },
-    "re2-7": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "re2-5": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-20"
-    },
-    "re2-2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-20"
-    },
-    "re2-3": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-18"
-    },
-    "auto:general-math-complex:q4": {
       "box": 0,
-      "due": "2026-08-17"
+      "due": "2026-08-16"
     }
   },
   "srs:daily": {
-    "date": "2026-08-17",
-    "done": 33,
+    "date": "2026-08-16",
+    "done": 32,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -1256,10 +1182,6 @@
     "2026-08-16": {
       "done": 37,
       "again": 5
-    },
-    "2026-08-17": {
-      "done": 41,
-      "again": 8
     }
   },
   "lesson:general-russian-commas": {
@@ -1378,14 +1300,6 @@
       "code": false,
       "src": "wrong",
       "date": "2026-08-16"
-    },
-    "auto:general-math-complex:q4": {
-      "lesson": "general-math-complex",
-      "front": "Чему равен модуль числа 3 + 4i?",
-      "back": "5\n\n√(3² + 4²) = √25 = 5 — то же расстояние по теореме Пифагора.",
-      "code": false,
-      "src": "unsure",
-      "date": "2026-08-17"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -1598,61 +1512,5 @@
       }
     ],
     "a3": 1
-  },
-  "lesson:general-math-complex": {
-    "a0": 0,
-    "a1": 1,
-    "a2": 0,
-    "a3": 1,
-    "a4": 1,
-    "u4": false,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-17",
-    "attempts": [
-      {
-        "date": "2026-08-17",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": [
-          4
-        ]
-      },
-      {
-        "date": "2026-08-17",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-astro-stars": {
-    "a0": 1,
-    "a1": 1,
-    "a2": 1,
-    "a3": 1,
-    "a4": 1,
-    "a5": 1,
-    "a6": 1,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-17",
-    "attempts": [
-      {
-        "date": "2026-08-17",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
   }
 }
