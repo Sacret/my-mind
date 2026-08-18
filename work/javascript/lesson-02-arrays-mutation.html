@@ -115,8 +115,8 @@ setUser({ ...user, address: { ...user.address, city } });</code></pre>
 initQuiz("work-js-arrays-mutation", [
   {
     t: "Метод Array.prototype.map:",
-    o: ["изменяет исходный массив", "возвращает новый массив той же длины, не трогая исходный", "возвращает первый подходящий элемент", "сортирует массив"],
-    a: 1,
+    o: ["изменяет исходный массив", "возвращает первый подходящий элемент", "сортирует массив", "возвращает новый массив той же длины, не трогая исходный"],
+    a: 3,
     e: "map, filter, slice, concat — «возвращающие». Мутируют push, splice, sort, reverse."
   },
   {
@@ -128,15 +128,15 @@ initQuiz("work-js-arrays-mutation", [
   },
   {
     t: "Почему setItems(items) после items.push(x) не перерисовывает компонент?",
-    o: ["массивы в JS иммутабельны", "React сравнивает состояние по ссылке, а она не изменилась", "push работает асинхронно", "нужно вызывать setItems дважды"],
-    a: 1,
+    o: ["массивы в JS иммутабельны", "push работает асинхронно", "React сравнивает состояние по ссылке, а она не изменилась", "нужно вызывать setItems дважды"],
+    a: 2,
     e: "Мутация меняет содержимое, но не адрес. Object.is(prev, next) даёт true — рендера нет."
   },
   {
     t: "const arr = [1, 2, 3]; arr.push(4); — что произойдёт?",
     code: true,
-    o: ["TypeError: Assignment to constant variable", "массив станет [1, 2, 3, 4]", "создастся новый массив", "ничего не изменится"],
-    a: 1,
+    o: ["массив станет [1, 2, 3, 4]", "TypeError: Assignment to constant variable", "создастся новый массив", "ничего не изменится"],
+    a: 0,
     e: "const запрещает переприсваивать ссылку. Мутировать содержимое он не мешает."
   },
   {
@@ -149,14 +149,14 @@ initQuiz("work-js-arrays-mutation", [
   {
     t: "const copy = { ...user }; copy.address.city = 'Казань';\nЧто станет с user.address.city?",
     code: true,
-    o: ["останется прежним", "тоже станет 'Казань'", "станет undefined", "будет ошибка"],
-    a: 1,
+    o: ["останется прежним", "станет undefined", "тоже станет 'Казань'", "будет ошибка"],
+    a: 2,
     e: "Spread копирует только верхний уровень: вложенный объект address остался общим."
   },
   {
     t: "Как иммутабельно пометить элемент с нужным id как выполненный?",
-    o: ["items.find(i => i.id === id).done = true", "items.map(i => i.id === id ? { ...i, done: true } : i)", "items.filter(i => i.id === id)", "items.splice(index, 1, { done: true })"],
-    a: 1,
+    o: ["items.find(i => i.id === id).done = true", "items.filter(i => i.id === id)", "items.splice(index, 1, { done: true })", "items.map(i => i.id === id ? { ...i, done: true } : i)"],
+    a: 3,
     e: "map строит новый массив, а spread — новый объект только для изменённого элемента."
   },
   {

@@ -76,7 +76,7 @@ npm run check      # ничего не писать, только провери
 ```
 my-mind/
 ├── src/layout.html              # общий каркас страниц — правится здесь
-├── src/pages/                   # источники страниц (56 файлов)
+├── src/pages/                   # источники страниц (57 файлов)
 ├── build.mjs                    # сборщик, без зависимостей
 ├── server.mjs                   # локальный сервер, без зависимостей
 ├── data/state.json              # ВЕСЬ прогресс (создаётся при первом запуске)
@@ -154,6 +154,7 @@ my-mind/
 | [general/biology/lesson-01-evolution.html](general/biology/lesson-01-evolution.html) | Эволюция как алгоритм | #15 | ✅ 10.08 — 8/8 |
 | [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
 | [general/astronomy/lesson-02-stars.html](general/astronomy/lesson-02-stars.html) | Жизнь звёзд и чёрные дыры | продолжение урока 1 | — |
+| [general/astronomy/lesson-03-moon.html](general/astronomy/lesson-03-moon.html) | Луна: фазы, затмения и синхронное вращение | продолжение урока 1 | — |
 | [general/geography/lesson-01-climate.html](general/geography/lesson-01-climate.html) | География и климат: почему где что растёт | новая область | — |
 | [general/religion/lesson-01-history.html](general/religion/lesson-01-history.html) | Как возникали и расходились религии | новая область | ✅ 12.08 — 8/8 |
 | [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | ✅ 13.08 — 8/8 |

@@ -136,8 +136,8 @@ JSON.stringify({ big: 10n })             // TypeError — BigInt не сериа
 initQuiz("work-js-types-coercion", [
   {
     t: "Что вернёт typeof null?",
-    o: ['"null"', '"object"', '"undefined"', 'TypeError'],
-    a: 1,
+    o: ['"null"', '"undefined"', 'TypeError', '"object"'],
+    a: 3,
     e: "Ошибка первой реализации языка: null представлялся нулевым указателем, а тег объекта — нулями. Исправить нельзя из-за обратной совместимости."
   },
   {
@@ -150,22 +150,22 @@ initQuiz("work-js-types-coercion", [
   {
     t: "Что вернёт JSON.stringify({ a: undefined, b: 1 })?",
     code: true,
-    o: ['{"a":undefined,"b":1}', '{"a":null,"b":1}', '{"b":1}', 'TypeError'],
-    a: 2,
+    o: ['{"b":1}', '{"a":undefined,"b":1}', '{"a":null,"b":1}', 'TypeError'],
+    a: 0,
     e: "undefined и функции выбрасываются из объекта целиком, вместе с ключом. А вот в массиве на их месте появился бы null."
   },
   {
     t: "Что вернёт JSON.stringify([1, undefined, 2])?",
     code: true,
-    o: ["[1,2]", "[1,null,2]", "[1,undefined,2]", "TypeError"],
-    a: 1,
+    o: ["[1,2]", "[1,undefined,2]", "[1,null,2]", "TypeError"],
+    a: 2,
     e: "В массиве позиции нумерованные: выкинуть элемент нельзя, не сдвинув остальные, поэтому дыру закрывает null."
   },
   {
     t: "props.count равен 0. Что запишется в count при const count = props.count || 10?",
     code: true,
-    o: ["0", "10", "undefined", "NaN"],
-    a: 1,
+    o: ["0", "undefined", "10", "NaN"],
+    a: 2,
     e: "Ноль — ложное значение, || отдаёт правый операнд. Для значений по умолчанию нужен ??, который срабатывает только на null и undefined."
   },
   {
@@ -177,19 +177,19 @@ initQuiz("work-js-types-coercion", [
   {
     t: "Какое выражение вернёт false?",
     code: true,
-    o: ["null == undefined", "0 == \"0\"", "null == 0", "\"\" == false"],
-    a: 2,
+    o: ["null == undefined", "0 == \"0\"", "\"\" == false", "null == 0"],
+    a: 3,
     e: "null нестрого равен только undefined — специальное правило без приведения к числу. Остальные три приводятся к 0 и совпадают."
   },
   {
     t: "Почему JSON.parse(JSON.stringify(obj)) — ненадёжное глубокое копирование?",
     o: [
-      "работает медленно на больших объектах",
       "теряет undefined, функции, Map и превращает Date в строку",
+      "работает медленно на больших объектах",
       "копирует только верхний уровень",
       "меняет порядок ключей"
     ],
-    a: 1,
+    a: 0,
     e: "Копия проходит через формат беднее объектной модели JS. Циклическая ссылка вдобавок бросит TypeError. Честная копия — structuredClone(obj)."
   }
 ]);
