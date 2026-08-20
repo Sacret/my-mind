@@ -41,6 +41,8 @@ window.LESSONS = [
     sub: "закрывает вопрос #40 теста", href: "general/cinema/lesson-02-history.html", total: 8 },
   { track: "general", id: "general-art-painting",     title: "Как смотреть картину", short: "Как смотреть картину",
     sub: "новая область: живопись", href: "general/art/lesson-01-looking-at-painting.html", total: 8 },
+  { track: "general", id: "general-art-icons",       title: "Икона: Византия, Русь и как её читать", short: "Иконопись",
+    sub: "вторая тема в живописи: икона", href: "general/art/lesson-02-icons.html", total: 8 },
   { track: "general", id: "general-arch-buildings",   title: "Как смотреть на здание и читать эпоху", short: "Архитектура",
     sub: "новая область: архитектура", href: "general/architecture/lesson-01-reading-buildings.html", total: 8 },
   { track: "general", id: "general-finance-basics",   title: "Сложный процент, риск и инфляция", short: "Финансы",

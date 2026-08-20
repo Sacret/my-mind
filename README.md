@@ -76,7 +76,7 @@ npm run check      # ничего не писать, только провери
 ```
 my-mind/
 ├── src/layout.html              # общий каркас страниц — правится здесь
-├── src/pages/                   # источники страниц (57 файлов)
+├── src/pages/                   # источники страниц (58 файлов)
 ├── build.mjs                    # сборщик, без зависимостей
 ├── server.mjs                   # локальный сервер, без зависимостей
 ├── data/state.json              # ВЕСЬ прогресс (создаётся при первом запуске)
@@ -92,14 +92,14 @@ my-mind/
 │   ├── dashboard.css            # оглавление
 │   ├── review.css               # карточки
 │   └── test.css                 # страницы входных тестов
-├── general/                     # общее развитие, 34 урока
+├── general/                     # общее развитие, 35 уроков
 │   ├── test-01-baseline.html    # входной тест, 50 вопросов
 │   ├── results/                 # архив: отчёт о входном тесте
 │   ├── logic/  math/            # уроки по областям
 │   ├── statistics/  chemistry/
 │   ├── physics/                 # единицы СИ и порядки величин
 │   ├── music/  cinema/
-│   ├── art/  architecture/      # живопись, чтение зданий
+│   ├── art/  architecture/      # живопись и икона, чтение зданий
 │   ├── finance/  brain/
 │   ├── anatomy/  biology/
 │   ├── medicine/                # доказательная медицина
@@ -123,7 +123,7 @@ my-mind/
 
 ## Уроки
 
-Сделано 51 урок, из них пройдено на максимум 27.
+Сделано 52 урока, из них пройдено на максимум 27.
 
 **Общее развитие**
 
@@ -143,6 +143,7 @@ my-mind/
 | [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | ✅ 06.08 — 8/8 |
 | [general/cinema/lesson-02-history.html](general/cinema/lesson-02-history.html) | История кино: от немого к звуковому | #40 | — |
 | [general/art/lesson-01-looking-at-painting.html](general/art/lesson-01-looking-at-painting.html) | Как смотреть картину | новая область | — |
+| [general/art/lesson-02-icons.html](general/art/lesson-02-icons.html) | Икона: Византия, Русь и как её читать | иконопись | — |
 | [general/architecture/lesson-01-reading-buildings.html](general/architecture/lesson-01-reading-buildings.html) | Как смотреть на здание и читать эпоху | новая область | — |
 | [general/finance/lesson-01-money-basics.html](general/finance/lesson-01-money-basics.html) | Сложный процент, риск и инфляция | новая область | ✅ 07.08 — 8/8 |
 | [general/finance/lesson-02-taxes-credit.html](general/finance/lesson-02-taxes-credit.html) | Налоги, кредит и как читать договор | продолжение урока 1 | — |
@@ -234,7 +235,7 @@ my-mind/
 
 ## Очередь следующих уроков
 
-Написано 24 непройденных урока — сначала они, новые заказывать смысла нет.
+Написано 25 непройденных уроков — сначала они, новые заказывать смысла нет.
 Порядок внутри очереди задаёт `assets/lessons.js`, подсказка «Следующий шаг» в оглавлении
 идёт по нему же и пропускает закрытые продолжения.
 
@@ -261,8 +262,8 @@ my-mind/
 
 **И новые области**
 
-Живопись · Архитектура · Доказательная медицина · География и климат · Лингвистика ·
-Регулярные выражения · SQL · Git.
+Живопись · Иконопись · Архитектура · Доказательная медицина · География и климат ·
+Лингвистика · Регулярные выражения · SQL · Git.
 
 **Не написано, кандидаты на будущее**
 
