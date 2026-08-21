@@ -510,10 +510,10 @@
       "due": "2026-09-01"
     },
     "sq-5": {
-      "box": 4,
-      "seen": 2,
+      "box": 3,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-06"
+      "due": "2026-08-21"
     },
     "wp-7": {
       "box": 4,
@@ -672,10 +672,10 @@
       "due": "2026-08-30"
     },
     "ci-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-09-22"
+      "due": "2026-08-21"
     },
     "mu-8": {
       "box": 3,
@@ -786,10 +786,10 @@
       "due": "2026-09-05"
     },
     "typ-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-09-22"
+      "due": "2026-08-21"
     },
     "typ-3": {
       "box": 3,
@@ -918,16 +918,16 @@
       "due": "2026-08-26"
     },
     "re-5": {
-      "box": 4,
-      "seen": 6,
+      "box": 2,
+      "seen": 5,
       "lapses": 2,
-      "due": "2026-09-05"
+      "due": "2026-08-21"
     },
     "re-1": {
-      "box": 4,
-      "seen": 5,
+      "box": 2,
+      "seen": 4,
       "lapses": 1,
-      "due": "2026-09-04"
+      "due": "2026-08-21"
     },
     "re-3": {
       "box": 4,
@@ -990,10 +990,10 @@
       "due": "2026-08-26"
     },
     "re2-5": {
-      "box": 3,
-      "seen": 4,
+      "box": 1,
+      "seen": 3,
       "lapses": 1,
-      "due": "2026-08-28"
+      "due": "2026-08-21"
     },
     "re2-2": {
       "box": 4,
@@ -1008,22 +1008,22 @@
       "due": "2026-08-26"
     },
     "auto:general-math-complex:q4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-05"
+      "due": "2026-08-21"
     },
     "fin-5": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-05"
+      "due": "2026-08-21"
     },
     "fin-3": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-08"
+      "due": "2026-08-21"
     },
     "fin-8": {
       "box": 2,
@@ -1032,28 +1032,28 @@
       "due": "2026-08-22"
     },
     "fin-6": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-06"
+      "due": "2026-08-21"
     },
     "fin-1": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-07"
+      "due": "2026-08-21"
     },
     "fin-4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-07"
+      "due": "2026-08-21"
     },
     "fin-7": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-05"
+      "due": "2026-08-21"
     },
     "re2-8": {
       "box": 2,
@@ -1062,10 +1062,10 @@
       "due": "2026-08-23"
     },
     "fin-2": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-09-06"
+      "due": "2026-08-21"
     },
     "br-1": {
       "box": 3,
@@ -1123,9 +1123,9 @@
     },
     "ev-1": {
       "box": 1,
-      "seen": 8,
-      "lapses": 5,
-      "due": "2026-08-22"
+      "seen": 6,
+      "lapses": 4,
+      "due": "2026-08-21"
     },
     "ev-3": {
       "box": 3,
@@ -1140,22 +1140,22 @@
       "due": "2026-08-22"
     },
     "auto:work-js-debounce-throttle:q6": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-28"
+      "due": "2026-08-21"
     },
     "as-3": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-28"
+      "due": "2026-08-21"
     },
     "ev-7": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-08-28"
+      "due": "2026-08-21"
     },
     "ev-5": {
       "box": 2,
@@ -1170,10 +1170,10 @@
       "due": "2026-08-23"
     },
     "as-5": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-28"
+      "due": "2026-08-21"
     },
     "as-4": {
       "box": 2,
@@ -1182,10 +1182,10 @@
       "due": "2026-08-23"
     },
     "ev-8": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-08-27"
+      "due": "2026-08-21"
     },
     "as-2": {
       "box": 2,
@@ -1206,79 +1206,13 @@
       "due": "2026-08-23"
     },
     "auto:work-js-regexp:q2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "ru-4": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "ru-2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "as-6": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "ru-3": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-22"
-    },
-    "ru-7": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-22"
-    },
-    "ru-5": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "as-8": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-24"
-    },
-    "ru-6": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-08-22"
-    },
-    "ru-1": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-08-22"
-    },
-    "as-7": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-08-22"
-    },
-    "auto:work-web-security:q4": {
       "box": 0,
-      "due": "2026-08-21"
+      "due": "2026-08-20"
     }
   },
   "srs:daily": {
-    "date": "2026-08-21",
-    "done": 31,
+    "date": "2026-08-20",
+    "done": 34,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -1560,10 +1494,6 @@
     "2026-08-20": {
       "done": 41,
       "again": 7
-    },
-    "2026-08-21": {
-      "done": 36,
-      "again": 5
     }
   },
   "lesson:general-russian-commas": {
@@ -1714,14 +1644,6 @@
       "code": true,
       "src": "wrong",
       "date": "2026-08-20"
-    },
-    "auto:work-web-security:q4": {
-      "lesson": "work-web-security",
-      "front": "Какая настройка куки сегодня закрывает основную часть CSRF?",
-      "back": "SameSite=Lax\n\nSameSite=Lax не отправляет куки при межсайтовых POST. HttpOnly защищает от другой атаки — кражи через XSS.",
-      "code": false,
-      "src": "unsure",
-      "date": "2026-08-21"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -2178,70 +2100,5 @@
       }
     ],
     "a2": 0
-  },
-  "lesson:general-brain-attention": {
-    "a0": 3,
-    "a1": 1,
-    "a2": 2,
-    "a3": 0,
-    "a4": 2,
-    "a5": 0,
-    "a6": 3,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-21",
-    "attempts": [
-      {
-        "date": "2026-08-21",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:work-web-security": {
-    "a0": 2,
-    "a1": 0,
-    "a2": 1,
-    "a3": 3,
-    "a5": 1,
-    "a6": 2,
-    "a7": 0,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-08-21",
-    "attempts": [
-      {
-        "date": "2026-08-21",
-        "score": 7,
-        "total": 8,
-        "wrong": [
-          4
-        ],
-        "unsure": []
-      },
-      {
-        "date": "2026-08-21",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": [
-          4
-        ]
-      },
-      {
-        "date": "2026-08-21",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ],
-    "a4": 3,
-    "u4": false
   }
 }
