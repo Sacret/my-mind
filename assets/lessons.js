@@ -31,6 +31,8 @@ window.LESSONS = [
     needs: "general-stats-averages" },
   { track: "general", id: "general-chem-everyday",    title: "Химия вокруг: почему мыло моет", short: "Химия вокруг",
     sub: "новая область: химия", href: "general/chemistry/lesson-01-everyday.html", total: 8 },
+  { track: "general", id: "general-safety-home",     title: "Бытовая безопасность: огонь, газ, ток, первая помощь", short: "Бытовая безопасность",
+    sub: "новая область: безопасность", href: "general/safety/lesson-01-home-safety.html", total: 8 },
   { track: "general", id: "general-physics-si",       title: "Единицы СИ и порядки величин", short: "Единицы СИ",
     sub: "закрывает вопрос #14 теста", href: "general/physics/lesson-01-si-units.html", total: 8 },
   { track: "general", id: "general-music-basics",     title: "Музыка изнутри: из чего она сделана", short: "Музыка",
