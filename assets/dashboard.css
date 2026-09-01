@@ -128,3 +128,8 @@ a.row:hover { border-color: var(--accent); }
 /* блоки «Повторение» и «Следующий шаг» */
 .next { border: 1px dashed var(--line); border-radius: 10px; padding: 14px 16px; margin: 24px 0 0; }
 .next .crumb { font-size: 12px; }
+/* по строке на дорожку: подпись дорожки слева, как область в строке урока;
+   цвет берётся из --accent, у строки профессии он свой из .track-work */
+.next-row + .next-row { margin-top: 6px; }
+.next-track { color: var(--accent); font-weight: 600; }
+.next-track::after { content: " · "; color: var(--muted); font-weight: 400; }

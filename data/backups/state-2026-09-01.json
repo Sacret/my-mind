@@ -354,10 +354,10 @@
       "due": "2026-10-05"
     },
     "bigo-7": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-01"
     },
     "loop-3": {
       "box": 5,
@@ -468,10 +468,10 @@
       "due": "2026-09-06"
     },
     "ds-8": {
-      "box": 5,
-      "seen": 2,
+      "box": 4,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-10-02"
+      "due": "2026-09-01"
     },
     "mut-5": {
       "box": 5,
@@ -576,10 +576,10 @@
       "due": "2026-09-30"
     },
     "sq-4": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-01"
     },
     "sq-5": {
       "box": 4,
@@ -630,10 +630,10 @@
       "due": "2026-10-03"
     },
     "st-5": {
-      "box": 5,
-      "seen": 2,
+      "box": 4,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-10-09"
+      "due": "2026-09-01"
     },
     "ch-1": {
       "box": 5,
@@ -708,10 +708,10 @@
       "due": "2026-10-03"
     },
     "ch-5": {
-      "box": 5,
-      "seen": 2,
+      "box": 4,
+      "seen": 1,
       "lapses": 0,
-      "due": "2026-10-01"
+      "due": "2026-09-01"
     },
     "ch-6": {
       "box": 5,
@@ -780,10 +780,10 @@
       "due": "2026-09-03"
     },
     "ci-6": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-10-08"
+      "due": "2026-09-01"
     },
     "auto:general-russian-commas:q1": {
       "box": 4,
@@ -810,10 +810,10 @@
       "due": "2026-09-03"
     },
     "auto:general-russian-commas:q5": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 1,
-      "due": "2026-10-08"
+      "due": "2026-09-01"
     },
     "auto:general-russian-commas:q6": {
       "box": 5,
@@ -1416,10 +1416,10 @@
       "due": "2026-09-13"
     },
     "anat-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-10-01"
+      "due": "2026-09-01"
     },
     "anat-3": {
       "box": 4,
@@ -1518,16 +1518,16 @@
       "due": "2026-09-02"
     },
     "rel-4": {
-      "box": 1,
-      "seen": 7,
-      "lapses": 4,
-      "due": "2026-09-02"
+      "box": 3,
+      "seen": 4,
+      "lapses": 2,
+      "due": "2026-09-01"
     },
     "rel-6": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "due": "2026-10-04"
+      "due": "2026-09-01"
     },
     "push-1": {
       "box": 4,
@@ -1536,10 +1536,10 @@
       "due": "2026-09-12"
     },
     "push-6": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-10-11"
+      "due": "2026-09-01"
     },
     "photo-6": {
       "box": 4,
@@ -1759,9 +1759,9 @@
     },
     "auto:work-css-box-model-stacking:q7": {
       "box": 1,
-      "seen": 4,
-      "lapses": 2,
-      "due": "2026-09-02"
+      "seen": 2,
+      "lapses": 1,
+      "due": "2026-09-01"
     },
     "fal-7": {
       "box": 2,
@@ -1776,127 +1776,61 @@
       "due": "2026-09-03"
     },
     "cpx-7": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-08"
+      "due": "2026-09-01"
     },
     "cpx-5": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-04"
+      "due": "2026-09-01"
     },
     "cpx-4": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-04"
+      "due": "2026-09-01"
     },
     "fal-8": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-08"
+      "due": "2026-09-01"
     },
     "cpx-3": {
-      "box": 2,
-      "seen": 4,
+      "box": 1,
+      "seen": 3,
       "lapses": 2,
-      "due": "2026-09-04"
+      "due": "2026-09-01"
     },
     "cpx-2": {
       "box": 1,
-      "seen": 4,
-      "lapses": 2,
-      "due": "2026-09-02"
+      "seen": 2,
+      "lapses": 1,
+      "due": "2026-09-01"
     },
     "bay-1": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-09"
+      "due": "2026-09-01"
     },
     "cpx-1": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "due": "2026-09-04"
+      "due": "2026-09-01"
     },
     "auto:general-philosophy-questions:q5": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-09-02"
-    },
-    "si-1": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-09-02"
-    },
-    "bay-3": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-09-02"
-    },
-    "bay-5": {
-      "box": 1,
-      "seen": 4,
-      "lapses": 3,
-      "due": "2026-09-02"
-    },
-    "bay-6": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-09-02"
-    },
-    "bay-2": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-09-02"
-    },
-    "bay-7": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-09-02"
-    },
-    "bay-4": {
-      "box": 1,
-      "seen": 4,
-      "lapses": 3,
-      "due": "2026-09-02"
-    },
-    "si-3": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 2,
-      "due": "2026-09-02"
-    },
-    "si-2": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "due": "2026-09-02"
-    },
-    "si-4": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "due": "2026-09-02"
-    },
-    "auto:work-fundamentals-concurrency:q1": {
       "box": 0,
-      "due": "2026-09-01"
+      "due": "2026-08-31"
     }
   },
   "srs:daily": {
-    "date": "2026-09-01",
-    "done": 31,
+    "date": "2026-08-31",
+    "done": 37,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -2218,10 +2152,6 @@
     "2026-08-31": {
       "done": 47,
       "again": 10
-    },
-    "2026-09-01": {
-      "done": 52,
-      "again": 21
     }
   },
   "lesson:general-russian-commas": {
@@ -2404,14 +2334,6 @@
       "code": false,
       "src": "unsure",
       "date": "2026-08-31"
-    },
-    "auto:work-fundamentals-concurrency:q1": {
-      "lesson": "work-fundamentals-concurrency",
-      "front": "Что у потока всё-таки своё, а не общее с соседями?",
-      "back": "стек вызовов и регистры\n\nСтек хранит цепочку вызовов и локальные переменные — у каждого хода исполнения она своя. Куча и файлы общие.",
-      "code": false,
-      "src": "unsure",
-      "date": "2026-09-01"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -3305,37 +3227,5 @@
       }
     ],
     "a5": 0
-  },
-  "lesson:work-fundamentals-concurrency": {
-    "a0": 1,
-    "a2": 0,
-    "a3": 1,
-    "a4": 2,
-    "a5": 0,
-    "a6": 1,
-    "a7": 2,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-01",
-    "attempts": [
-      {
-        "date": "2026-09-01",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": [
-          1
-        ]
-      },
-      {
-        "date": "2026-09-01",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ],
-    "a1": 3
   }
 }

@@ -283,28 +283,38 @@ function build() {
     rb.classList.remove("hidden");
   }
 
-  // подсказка со следующим уроком: заблокированные пропускаем, до них очередь не дошла
-  const next = LESSONS.find(l => !Lessons.isDone(l.id) && !Lessons.lockOf(l.id));
+  // подсказка со следующим уроком: по одной строке на дорожку, иначе длинная
+  // очередь общего развития закрывает собой профессию. Заблокированные пропускаем.
   const nb = document.getElementById("next-box");
   const body = document.getElementById("next-body");
   body.textContent = "";
-  if (next) {
-    const st = readState(next.id);
-    const a = document.createElement("a");
-    a.href = next.href;
-    a.textContent = next.title;
-    body.append(a);
-    body.append(document.createTextNode(
-      !st || !st.completed ? " — ещё не начат."
-      : st.unsure && st.lastScore === next.total
-        ? " — " + st.lastScore + " из " + next.total + ", но " + st.unsure +
-          " отмечено как угаданное: тема закроется, когда пройдёшь без отметок."
-        : " — пройден на " + st.lastScore + " из " + next.total + ", стоит перечитать разделы по ошибкам и повторить."));
-    nb.classList.remove("hidden");
+  const nexts = Object.keys(TRACK_NAMES)
+    .map(tr => ({ tr, l: LESSONS.find(l => l.track === tr && !Lessons.isDone(l.id) && !Lessons.lockOf(l.id)) }))
+    .filter(x => x.l);
+  if (nexts.length) {
+    nexts.forEach(({ tr, l }) => {
+      const st = readState(l.id);
+      const row = document.createElement("div");
+      row.className = "next-row" + (tr === "work" ? " track-work" : "");
+      row.append(Object.assign(document.createElement("span"), {
+        className: "next-track", textContent: TRACK_NAMES[tr]
+      }));
+      const a = document.createElement("a");
+      a.href = l.href;
+      a.textContent = l.title;
+      row.append(a);
+      row.append(document.createTextNode(
+        !st || !st.completed ? " — ещё не начат."
+        : st.unsure && st.lastScore === l.total
+          ? " — " + st.lastScore + " из " + l.total + ", но " + st.unsure +
+            " отмечено как угаданное: тема закроется, когда пройдёшь без отметок."
+          : " — пройден на " + st.lastScore + " из " + l.total + ", стоит перечитать разделы по ошибкам и повторить."));
+      body.append(row);
+    });
   } else {
     body.textContent = "Все уроки закрыты. Попроси Claude сделать следующую партию по очереди из README.";
-    nb.classList.remove("hidden");
   }
+  nb.classList.remove("hidden");
 
   buildCalendar();
   buildSrsStats();
