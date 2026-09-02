@@ -227,6 +227,15 @@ function startQuiz(lessonId, questions) {
     return CHOICE.test(q.t.trim()) || CHOICE.test(q.o[q.a]);
   }
 
+  /**
+   * На карточке ответ читается отдельной фразой, поэтому начинается с заглавной.
+   * Трогаем только кириллицу: код, формулы, числа и латинские термины
+   * (requestAnimationFrame, SameSite=Lax, if + Past Perfect) остаются как есть.
+   */
+  function asAnswer(text) {
+    return /^[а-яё]/.test(text) ? text[0].toUpperCase() + text.slice(1) : text;
+  }
+
   /** Промахи и угаданное уходят карточками в повторение — каждый вопрос своей. */
   function makeCards() {
     if (!window.SRS || !SRS.noteMisses) return;
@@ -236,7 +245,10 @@ function startQuiz(lessonId, questions) {
       const front = withOptions
         ? q.t + "\n\n" + q.o.map((o, n) => n + 1 + ". " + o).join("\n")
         : q.t;
-      const answer = (withOptions ? q.a + 1 + ". " : "") + q.o[q.a];
+      // ответ-цитата варианта оставляем дословно, как он выписан в вопросе
+      const answer = withOptions
+        ? q.a + 1 + ". " + q.o[q.a]
+        : (q.code ? q.o[q.a] : asAnswer(q.o[q.a]));
       return {
         id: "auto:" + lessonId + ":q" + i,
         lesson: lessonId,
