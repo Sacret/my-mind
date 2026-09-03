@@ -26,6 +26,7 @@
       <div class="side" id="card-front"></div>
       <div id="back-wrap" class="hidden">
         <div class="side back" id="card-back"></div>
+        <div class="side note hidden" id="card-note"></div>
       </div>
     </div>
 
@@ -197,6 +198,10 @@ function next() {
   front.textContent = current.front;
   front.classList.toggle("code", !!current.code);   // вопрос с кодом остаётся моноширинным
   document.getElementById("card-back").textContent = current.back;
+  // пояснение из урока — это контекст, а не то, что нужно вспомнить
+  const note = document.getElementById("card-note");
+  note.textContent = current.note || "";
+  note.classList.toggle("hidden", !current.note);
   document.getElementById("back-wrap").classList.add("hidden");
   document.getElementById("grade-row").classList.add("hidden");
   document.getElementById("show-row").classList.remove("hidden");
@@ -208,14 +213,17 @@ function grade(kind) {
   const wasNew = !srs[card.id];
   const st = srs[card.id] || { box: 0 };
 
-  if (!countedToday.has(card.id)) {
+  // карточка уже проходила сегодня и вернулась в конец очереди: в дневной лимит
+  // и в счётчик провалов такой повтор не идёт
+  const repeat = countedToday.has(card.id);
+  if (!repeat) {
     countedToday.add(card.id);
     daily.done += 1;
     if (wasNew) daily.fresh += 1;
   }
 
   // коробки, интервал с разбросом ±15% и счётчики провалов — всё в SRS.applyGrade
-  srs[card.id] = SRS.applyGrade(st, kind);
+  srs[card.id] = SRS.applyGrade(st, kind, repeat);
   queue.shift();
   if (kind === "again") queue.push(card);   // вернётся в конце этой же сессии
 
@@ -263,8 +271,9 @@ document.getElementById("save-limits").addEventListener("click", (ev) => {
 });
 
 document.getElementById("export").addEventListener("click", async (ev) => {
+  // в Anki поля note нет — подклеиваем пояснение к ответу, чтобы не потерялось
   const rows = deck().map(c =>
-    [c.front, c.back, lessonTitle(c.lesson).replace(/\s+/g, "_")]
+    [c.front, c.back + (c.note ? "\n\n" + c.note : ""), lessonTitle(c.lesson).replace(/\s+/g, "_")]
       .map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")
   );
   const text = rows.join("\n");

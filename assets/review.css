@@ -10,6 +10,11 @@
 }
 .card .side { white-space: pre-wrap; font-size: 19px; line-height: 1.6; }
 .card .side.back { font-size: 17px; }
+/* пояснение из урока: читается как сноска, чтобы не путалось с ответом */
+.card .side.note {
+  font-size: 15px; color: var(--muted); margin-top: 14px;
+  padding-top: 12px; border-top: 1px dashed var(--line);
+}
 .card .tag {
   font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 12px;

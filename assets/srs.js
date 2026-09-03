@@ -11,6 +11,7 @@ window.SRS = (function () {
   const KEY_LOG = "srs:log";      // по дням: сколько оценок и сколько из них «не вспомнила»
 
   const LEECH = 3;                // столько провалов — и карточка считается залипшей
+  const LEECH_CLEAR = 2;          // столько успехов подряд — и метка снимается
   const LOG_DAYS = 60;            // столько дней держим в журнале
   const RATE_DAYS = 14;           // за столько дней считаем долю «не вспомнила»
   const FORECAST_DAYS = 7;        // на столько дней вперёд строим прогноз нагрузки
@@ -107,7 +108,7 @@ window.SRS = (function () {
     const boxes = Store.get(KEY) || {};
     cards.forEach((c) => {
       auto[c.id] = {
-        lesson: c.lesson, front: c.front, back: c.back,
+        lesson: c.lesson, front: c.front, back: c.back, note: c.note || "",
         code: !!c.code, src: c.src, date: today()
       };
       boxes[c.id] = { box: 0, due: today() };
@@ -118,17 +119,23 @@ window.SRS = (function () {
 
   /**
    * Оценка карточки: куда её двигать. Здесь же копятся счётчики, по которым
-   * дашборд считает залипшие карточки, — seen (сколько раз спрашивали)
-   * и lapses (сколько раз не вспомнилась).
+   * дашборд считает залипшие карточки: seen — сколько раз спрашивали,
+   * lapses — в скольких РАЗНЫХ сессиях не вспомнилась, streak — сколько
+   * успехов подряд после последнего провала.
+   * repeat — карточку уже оценивали сегодня и она вернулась в конец сессии.
+   * Такой повтор не идёт в lapses: иначе один плохой вечер набирает порог
+   * залипания сам по себе, без всякого забывания через интервал.
    */
-  function applyGrade(entry, kind) {
-    const st = Object.assign({ box: 0, seen: 0, lapses: 0 }, entry || {});
+  function applyGrade(entry, kind, repeat) {
+    const st = Object.assign({ box: 0, seen: 0, lapses: 0, streak: 0 }, entry || {});
     st.seen = (st.seen || 0) + 1;
     if (kind === "again") {
-      st.lapses = (st.lapses || 0) + 1;
+      if (!repeat) st.lapses = (st.lapses || 0) + 1;
+      st.streak = 0;
       st.box = 0;
       st.due = today();
     } else {
+      st.streak = (st.streak || 0) + 1;
       st.box = Math.min(INTERVALS.length - 1, st.box + (kind === "easy" ? 2 : 1));
       st.due = nextDue(st.box);
     }
@@ -185,9 +192,15 @@ window.SRS = (function () {
     let done = 0, again = 0;
     days.forEach((d) => { done += log[d].done || 0; again += log[d].again || 0; });
 
+    // Залипание — не приговор: карточка выходит из списка, когда после последнего
+    // провала подряд идут LEECH_CLEAR успехов. Они всегда на разных днях, потому что
+    // успех переводит карточку минимум в коробку 1.
     const leeches = seen
-      .filter((c) => (srs[c.id].lapses || 0) >= LEECH)
-      .map((c) => ({ card: c, lapses: srs[c.id].lapses, box: srs[c.id].box || 0 }))
+      .filter((c) => (srs[c.id].lapses || 0) >= LEECH && (srs[c.id].streak || 0) < LEECH_CLEAR)
+      .map((c) => ({
+        card: c, lapses: srs[c.id].lapses,
+        box: srs[c.id].box || 0, streak: srs[c.id].streak || 0
+      }))
       .sort((a, b) => b.lapses - a.lapses);
 
     return {
@@ -200,7 +213,7 @@ window.SRS = (function () {
   }
 
   return {
-    INTERVALS, DEFAULTS, KEY, KEY_AUTO, KEY_LOG, LEECH, RATE_DAYS,
+    INTERVALS, DEFAULTS, KEY, KEY_AUTO, KEY_LOG, LEECH, LEECH_CLEAR, RATE_DAYS,
     today, nextDue, settingsFrom, dailyFrom, plan,
     autoCards, deck, noteMisses,
     applyGrade, logGrade, stats

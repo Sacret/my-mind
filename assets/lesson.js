@@ -253,7 +253,11 @@ function startQuiz(lessonId, questions) {
         id: "auto:" + lessonId + ":q" + i,
         lesson: lessonId,
         front: front,
-        back: answer + (q.e ? "\n\n" + q.e : ""),
+        // на карточке вспоминают ответ; объяснение едет отдельным полем и
+        // показывается под ним как контекст, иначе карточка спрашивает одно,
+        // а показывает три — и от этого залипает
+        back: answer,
+        note: q.e || "",
         code: !!q.code,
         src: isRight(i) ? "unsure" : "wrong"
       };

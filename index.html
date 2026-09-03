@@ -71,9 +71,10 @@
 
   <div id="leech-box" class="hidden">
     <h3>Залипшие карточки</h3>
-    <p class="lead sm">Карточка, которая уже трижды вернулась в нулевую коробку, — это сигнал,
+    <p class="lead sm">Карточка, которая уже трижды забывалась в разные дни, — это сигнал,
       что не понят урок, а не что её надо показать ещё раз. Такие стоит разбирать через урок,
-      а не через повторение.</p>
+      а не через повторение. Из списка карточка уходит сама, когда после последнего провала
+      вспомнится два раза подряд.</p>
     <div id="leech-list"></div>
   </div>
 
@@ -451,7 +452,7 @@ function buildLeeches(leeches) {
   if (!leeches.length) return;
 
   list.textContent = "";
-  leeches.forEach(({ card, lapses }) => {
+  leeches.forEach(({ card, lapses, streak }) => {
     const lesson = Lessons.get(card.lesson);
     const row = document.createElement("div");
     row.className = "panel row leech";
@@ -472,6 +473,18 @@ function buildLeeches(leeches) {
       sub.textContent = "Урок: " + card.lesson;
     }
     main.append(sub);
+
+    // сколько успешных повторений подряд осталось до снятия метки
+    const left = SRS.LEECH_CLEAR - (streak || 0);
+    main.append(Object.assign(document.createElement("div"), {
+      className: "row-sub",
+      textContent: streak
+        ? "Вспомнилась " + streak + " " + plural(streak, "раз", "раза", "раз") +
+          " подряд — осталось " + left + " " +
+          plural(left, "успешное повторение", "успешных повторения", "успешных повторений")
+        : "Снимется после " + left + " " +
+          plural(left, "успешного повторения", "успешных повторений", "успешных повторений") + " подряд"
+    }));
 
     const n = document.createElement("span");
     n.className = "row-score";
