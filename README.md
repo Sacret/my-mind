@@ -126,7 +126,8 @@ my-mind/
 
 ## Уроки
 
-Сделано 61 урок, из них пройдено на максимум 54: все написанные ранее уроки закрыты, непройденными остались только семь новых.
+Сделано 73 урока, из них пройдено на максимум 61: закрыто всё, что было написано до 04.09.2026.
+Непройденными остались двенадцать новых — партия от 04.09, семь в общем развитии и пять в профессии.
 
 **Общее развитие**
 
@@ -144,6 +145,7 @@ my-mind/
 | [general/safety/lesson-01-home-safety.html](general/safety/lesson-01-home-safety.html) | Бытовая безопасность: огонь, газ, ток, первая помощь | новая область | ✅ 25.08 — 8/8 |
 | [general/physics/lesson-01-si-units.html](general/physics/lesson-01-si-units.html) | Единицы СИ и порядки величин | #14 | ✅ 16.08 — 8/8 |
 | [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | ✅ 05.08 — 8/8 |
+| [general/music/lesson-02-history.html](general/music/lesson-02-history.html) | История музыки: от хорала до студии | продолжение урока 1 | — |
 | [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | ✅ 06.08 — 8/8 |
 | [general/cinema/lesson-02-history.html](general/cinema/lesson-02-history.html) | История кино: от немого к звуковому | #40 | ✅ 19.08 — 8/8 |
 | [general/art/lesson-01-looking-at-painting.html](general/art/lesson-01-looking-at-painting.html) | Как смотреть картину | новая область | ✅ 20.08 — 8/8 |
@@ -151,20 +153,22 @@ my-mind/
 | [general/architecture/lesson-01-reading-buildings.html](general/architecture/lesson-01-reading-buildings.html) | Как смотреть на здание и читать эпоху | новая область | ✅ 15.08 — 8/8 |
 | [general/finance/lesson-01-money-basics.html](general/finance/lesson-01-money-basics.html) | Сложный процент, риск и инфляция | новая область | ✅ 07.08 — 8/8 |
 | [general/finance/lesson-02-taxes-credit.html](general/finance/lesson-02-taxes-credit.html) | Налоги, кредит и как читать договор | продолжение урока 1 | ✅ 22.08 — 8/8 |
-| [general/law/lesson-01-everyday.html](general/law/lesson-01-everyday.html) | Право в быту: договор, права потребителя, спор | продолжение финансов | — |
+| [general/law/lesson-01-everyday.html](general/law/lesson-01-everyday.html) | Право в быту: договор, права потребителя, спор | продолжение финансов | ✅ 27.08 — 8/8 |
 | [general/brain/lesson-01-memory-sleep.html](general/brain/lesson-01-memory-sleep.html) | Память, сон и внимание | новая область | ✅ 07.08 — 8/8 |
 | [general/brain/lesson-02-attention-habits.html](general/brain/lesson-02-attention-habits.html) | Внимание, привычки и прокрастинация | продолжение урока 1 | ✅ 21.08 — 8/8 |
 | [general/brain/lesson-03-biases.html](general/brain/lesson-03-biases.html) | Когнитивные искажения | продолжение урока 2 | ✅ 22.08 — 8/8 |
 | [general/anatomy/lesson-01-body.html](general/anatomy/lesson-01-body.html) | Как устроено тело: кровь, дыхание, пищеварение | новая область | ✅ 09.08 — 8/8 |
 | [general/medicine/lesson-01-evidence.html](general/medicine/lesson-01-evidence.html) | Доказательная медицина: как читать исследование | новая область | ✅ 23.08 — 8/8 |
+| [general/medicine/lesson-02-nutrition.html](general/medicine/lesson-02-nutrition.html) | Питание и движение: что подтверждено, а что придумано | продолжение урока 1 | — |
 | [general/biology/lesson-01-evolution.html](general/biology/lesson-01-evolution.html) | Эволюция как алгоритм | #15 | ✅ 10.08 — 8/8 |
-| [general/biology/lesson-02-dna.html](general/biology/lesson-02-dna.html) | ДНК, гены и наследственность | #15 — угадан | — |
+| [general/biology/lesson-02-dna.html](general/biology/lesson-02-dna.html) | ДНК, гены и наследственность | #15 — угадан | ✅ 28.08 — 8/8 |
+| [general/biology/lesson-03-immunity.html](general/biology/lesson-03-immunity.html) | Как работает иммунитет | третья тема в биологии | — |
 | [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
 | [general/astronomy/lesson-02-stars.html](general/astronomy/lesson-02-stars.html) | Жизнь звёзд и чёрные дыры | продолжение урока 1 | ✅ 17.08 — 8/8 |
 | [general/astronomy/lesson-03-moon.html](general/astronomy/lesson-03-moon.html) | Луна: фазы, затмения и синхронное вращение | продолжение урока 1 | ✅ 18.08 — 8/8 |
 | [general/geography/lesson-01-climate.html](general/geography/lesson-01-climate.html) | География и климат: почему где что растёт | новая область | ✅ 25.08 — 8/8 |
 | [general/religion/lesson-01-history.html](general/religion/lesson-01-history.html) | Как возникали и расходились религии | новая область | ✅ 12.08 — 8/8 |
-| [general/philosophy/lesson-01-big-questions.html](general/philosophy/lesson-01-big-questions.html) | Философия: главные вопросы | новая область | — |
+| [general/philosophy/lesson-01-big-questions.html](general/philosophy/lesson-01-big-questions.html) | Философия: главные вопросы | новая область | ✅ 31.08 — 8/8 |
 | [general/russian/lesson-01-commas.html](general/russian/lesson-01-commas.html) | Запятая: где обязательна, а где лишняя | новая область | ✅ 13.08 — 8/8 |
 | [general/russian/lesson-02-dash-colon.html](general/russian/lesson-02-dash-colon.html) | Тире, двоеточие и согласование | продолжение урока 1 | ✅ 24.08 — 8/8 |
 | [general/english/lesson-01-present-perfect.html](general/english/lesson-01-present-perfect.html) | Present Perfect против Past Simple | пробел из очереди | ✅ 14.08 — 8/8 |
@@ -172,6 +176,10 @@ my-mind/
 | [general/linguistics/lesson-01-language-change.html](general/linguistics/lesson-01-language-change.html) | Откуда берутся языки и как они меняются | новая область | ✅ 26.08 — 8/8 |
 | [general/photography/lesson-01-great-photographs.html](general/photography/lesson-01-great-photographs.html) | Величайшие фотографии: как кадр становится документом | новая область | ✅ 15.08 — 8/8 |
 | [general/literature/lesson-01-pushkin.html](general/literature/lesson-01-pushkin.html) | Феномен Пушкина: язык, охват и канонизация | новая область | ✅ 12.08 — 8/8 |
+| [general/archaeology/lesson-01-birth.html](general/archaeology/lesson-01-birth.html) | Как появилась археология | новая область | — |
+| [general/archaeology/lesson-02-discoveries.html](general/archaeology/lesson-02-discoveries.html) | Главные открытия археологии | продолжение урока 1 | — |
+| [general/history/lesson-01-divergence.html](general/history/lesson-01-divergence.html) | Всемирная история как система | новая область | — |
+| [general/economics/lesson-01-prices.html](general/economics/lesson-01-prices.html) | Экономика: откуда берутся цены, инфляция и кризисы | новая область | — |
 
 **Профессия**
 
@@ -180,7 +188,7 @@ my-mind/
 | [work/fundamentals/lesson-01-big-o.html](work/fundamentals/lesson-01-big-o.html) | Сложность алгоритмов, O-нотация | #1, #3, #5, #12 | ✅ 04.08 — 8/8 |
 | [work/fundamentals/lesson-02-data-structures.html](work/fundamentals/lesson-02-data-structures.html) | Структуры данных: что выбрать под задачу | #2, #6 | ✅ 06.08 — 8/8 |
 | [work/fundamentals/lesson-03-sorting.html](work/fundamentals/lesson-03-sorting.html) | Сортировки: merge, quick и почему O(n log n) | #5 | ✅ 16.08 — 8/8 |
-| [work/fundamentals/lesson-04-concurrency.html](work/fundamentals/lesson-04-concurrency.html) | Процессы, потоки и конкурентность | #11 — угадан | — |
+| [work/fundamentals/lesson-04-concurrency.html](work/fundamentals/lesson-04-concurrency.html) | Процессы, потоки и конкурентность | #11 — угадан | ✅ 01.09 — 8/8 |
 | [work/javascript/lesson-01-event-loop.html](work/javascript/lesson-01-event-loop.html) | Event loop, микро- и макрозадачи | #16 | ✅ 04.08 — 7/7 |
 | [work/javascript/lesson-02-arrays-mutation.html](work/javascript/lesson-02-arrays-mutation.html) | Мутации, ссылки и иммутабельность | #20, #40 | ✅ 07.08 — 8/8 |
 | [work/javascript/lesson-03-types-coercion.html](work/javascript/lesson-03-types-coercion.html) | Типы, приведение и тихие потери данных | #13, #21, #27 | ✅ 08.08 — 8/8 |
@@ -189,15 +197,20 @@ my-mind/
 | [work/javascript/lesson-06-regexp.html](work/javascript/lesson-06-regexp.html) | Регулярные выражения | новая область | ✅ 20.08 — 8/8 |
 | [work/web/lesson-01-http-rest.html](work/web/lesson-01-http-rest.html) | HTTP и REST: методы, коды, CORS | #4, #10 | ✅ 09.08 — 8/8 |
 | [work/web/lesson-02-security.html](work/web/lesson-02-security.html) | Безопасность веба: XSS, CSRF, CSP, токены | продолжение урока 1 | ✅ 21.08 — 8/8 |
+| [work/web/lesson-03-performance.html](work/web/lesson-03-performance.html) | Производительность фронтенда: рендеринг и Core Web Vitals | новая тема | — |
+| [work/web/lesson-04-accessibility.html](work/web/lesson-04-accessibility.html) | Доступность: семантика, клавиатура, ARIA | новая тема | — |
 | [work/databases/lesson-01-sql.html](work/databases/lesson-01-sql.html) | SQL: join, индексы, нормализация | новая область | ✅ 24.08 — 8/8 |
 | [work/css/lesson-01-flexbox-specificity.html](work/css/lesson-01-flexbox-specificity.html) | Оси флексбокса и специфичность | #28, #29 | ✅ 11.08 — 8/8 |
-| [work/css/lesson-02-box-model-stacking.html](work/css/lesson-02-box-model-stacking.html) | Box model, position и контекст наложения | #30, #33 — угаданы | — |
+| [work/css/lesson-02-box-model-stacking.html](work/css/lesson-02-box-model-stacking.html) | Box model, position и контекст наложения | #30, #33 — угаданы | ✅ 30.08 — 8/8 |
 | [work/react/lesson-01-state-context.html](work/react/lesson-01-state-context.html) | React: состояние, поднятие и Context | #47 | ✅ 12.08 — 8/8 |
 | [work/react/lesson-02-effects-memo.html](work/react/lesson-02-effects-memo.html) | React: эффекты, зависимости и мемоизация | продолжение урока 1 | ✅ 13.08 — 8/8 |
-| [work/react/lesson-03-refs-forms.html](work/react/lesson-03-refs-forms.html) | React: refs, формы и StrictMode | #34, #38, #45 — угаданы | — |
+| [work/react/lesson-03-refs-forms.html](work/react/lesson-03-refs-forms.html) | React: refs, формы и StrictMode | #34, #38, #45 — угаданы | ✅ 02.09 — 8/8 |
 | [work/tools/lesson-01-git.html](work/tools/lesson-01-git.html) | Git: merge против rebase, конфликты, история | новая область | ✅ 26.08 — 8/8 |
-| [work/build/lesson-01-bundlers.html](work/build/lesson-01-bundlers.html) | Сборка: бандлеры, tree shaking, code splitting | #49 | — |
+| [work/tools/lesson-02-debugging.html](work/tools/lesson-02-debugging.html) | Отладка: как искать причину, а не симптом | продолжение урока 1 | — |
+| [work/build/lesson-01-bundlers.html](work/build/lesson-01-bundlers.html) | Сборка: бандлеры, tree shaking, code splitting | #49 | ✅ 03.09 — 8/8 |
 | [work/history/lesson-01-programming.html](work/history/lesson-01-programming.html) | История программирования: откуда взялись абстракции | новая область | ✅ 14.08 — 8/8 |
+| [work/typescript/lesson-01-basics.html](work/typescript/lesson-01-basics.html) | TypeScript: структурная типизация, сужение, дженерики | новая область | — |
+| [work/testing/lesson-01-pyramid.html](work/testing/lesson-01-pyramid.html) | Тестирование: пирамида, моки и хрупкие тесты | новая область | — |
 
 Каждый урок — одна HTML-страница: разбор темы, затем блок «Проверь себя».
 Ответы и результат сохраняются в `data/state.json` (или в localStorage, если сервер не запущен),
@@ -246,36 +259,43 @@ my-mind/
 
 ## Очередь следующих уроков
 
-Написано 7 непройденных уроков — сначала они, новые заказывать смысла нет.
+Написано 12 непройденных уроков — сначала они, новые заказывать смысла нет.
 Порядок внутри очереди задаёт `assets/lessons.js`, подсказка «Следующий шаг» в оглавлении
 идёт по нему же и пропускает закрытые продолжения.
 
-Партия от 26.08 закрывает последние угаданные вопросы обоих входных тестов: после неё
-в тестах не остаётся ни одного вопроса, по которому нет своего урока.
+Партия от 26.08 закрыла последние угаданные вопросы обоих входных тестов, и с 03.09 в тестах
+не осталось ни одного вопроса без своего урока. Дальше уроки идут не от пробелов теста, а от тем:
+партия от 04.09 добавляет три новые области в общем развитии, две в профессии и продолжает пять
+уже начатых тем.
 
 | Урок | Почему в очереди |
 |------|------------------|
-| Право в быту: договор, права потребителя, спор | продолжение урока про кредит и договоры |
-| ДНК, гены и наследственность | #15 — единственный вопрос, который и провален, и угадан |
-| Философия: главные вопросы | новая область |
-| Процессы, потоки и конкурентность | #11 угадан; под этим лежат `await` и воркеры |
-| Box model, position и контекст наложения | #30 и #33 угаданы; продолжение урока по CSS |
-| React: refs, формы и StrictMode | #34, #38, #45 угаданы; продолжение уроков по React |
-| Сборка: бандлеры, tree shaking, code splitting | #49 провален, новая область |
+| Как появилась археология | новая область: как из кладоискательства выросла наука о контексте |
+| Главные открытия археологии | продолжение урока 1: находки, после которых переписывали учебник |
+| Всемирная история как система | новая область: чем объясняют разрыв между обществами и как проверять такие объяснения |
+| Экономика: цены, инфляция и кризисы | новая область: цена как сигнал, ставка, кредитный цикл |
+| Как работает иммунитет | третья тема в биологии; объясняет вакцины, аллергию и аутоиммунные болезни |
+| Питание и движение | продолжение доказательной медицины на самом зашумлённом материале |
+| История музыки | продолжение урока про устройство музыки: откуда взялись её правила |
+| TypeScript | новая область: структурная типизация, сужение, дженерики |
+| Тестирование | новая область: пирамида, что мокать, почему тесты становятся хрупкими |
+| Производительность фронтенда | новая тема в вебе: путь кадра и Core Web Vitals |
+| Доступность | новая тема в вебе: семантика, клавиатура, ARIA |
+| Отладка | продолжение инструментов: половинное деление, bisect, точки останова |
 
 **Не написано, кандидаты на будущее**
 
-1. TypeScript: структурная типизация, сужение типов, дженерики
-2. Тестирование: пирамида тестов, что мокать и что нет
-3. Производительность фронтенда: layout/paint/composite, Core Web Vitals
-4. Всемирная история как система: почему одни общества обгоняли другие
-5. Экономика: откуда берутся цены, кризисы и безработица
-6. Питание и физическая нагрузка с точки зрения доказательной медицины
+1. Node.js и серверная сторона: событийный цикл на сервере, потоки, процессы
+2. Архитектура фронтенда: слои, границы модулей, работа с легаси
+3. Docker и деплой: образы, окружения, что происходит после git push
+4. Психология влияния и переговоры
+5. Театр и его язык: от античности до режиссёрского театра
+6. Право интеллектуальной собственности: лицензии, авторство, open source
 
 ## Повторение карточками
 
-`review/index.html` — интервальные повторения по уже пройденным темам: 468 написанных карточек
-на 59 уроков плюс те, что добавляются сами из промахов. Открыто 412 — остальные ждут,
+`review/index.html` — интервальные повторения по уже пройденным темам: 591 написанная карточка
+на все 73 урока плюс те, что добавляются сами из промахов. Открыто 490 — остальные 101 ждут,
 пока будут пройдены их уроки.
 
 - Карточка открывается только после прохождения соответствующего урока.
@@ -412,6 +432,16 @@ my-mind/
 | 2026-08-25 | бытовая безопасность, география и климат | 2 × 8/8 | 51 из 54 |
 | 2026-08-26 | условные предложения, лингвистика, Git | 3 × 8/8 | очередь опустела: все 54 написанных урока закрыты на максимум, без единой отметки «угадала» |
 | 2026-08-26 | новая партия | — | добавлено 7 уроков: 61 всего. Закрывают последние угаданные вопросы обоих тестов — #11, #15, #30, #33, #34, #38, #45, #49. Карточек стало 468 |
+| 2026-08-27 | право в быту | 8/8 | 55 из 61 |
+| 2026-08-28 | ДНК и наследственность | 8/8 | 56 из 61 |
+| 2026-08-30 | box model и z-index | 8/8 | со второй попытки: 7, затем 8; 57 из 61 |
+| 2026-08-31 | философия: главные вопросы | 8/8 | первая сдача с одной отметкой «угадала», после работы над ошибками — чисто; 58 из 61 |
+| 2026-09-01 | процессы и потоки | 8/8 | тоже со второго захода после отметки «угадала»; 59 из 61 |
+| 2026-09-02 | React: refs и формы | 8/8 | 60 из 61 |
+| 2026-09-03 | сборка: бандлеры | 8/8 | все 61 написанный урок закрыт на максимум, очередь опустела второй раз |
+| 2026-09-04 | новая партия | — | добавлена археология: 2 урока, 63 всего. Первая партия не от пробелов теста, а по теме. Карточек стало 492 |
+| 2026-09-04 | вторая партия | — | ещё 10 уроков: 73 всего. Общее развитие — всемирная история, экономика, иммунитет, питание и движение, история музыки. Профессия — TypeScript, тестирование, производительность, доступность, отладка. Карточек стало 572 |
+| 2026-09-04 | добор карточек | — | дописаны карточки к «Иконе» и «Луне» — единственным урокам, у которых их не было. Всего 591, из них открыто 490 |
 
 Таблицу «Пройден» выше и этот журнал заполняет Claude по данным из `data/state.json` —
 специально ничего сохранять и присылать не нужно.
