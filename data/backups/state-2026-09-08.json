@@ -312,11 +312,10 @@
       "due": "2026-09-26"
     },
     "loop-2": {
-      "box": 4,
-      "seen": 8,
+      "box": 3,
+      "seen": 7,
       "lapses": 3,
-      "streak": 1,
-      "due": "2026-09-25"
+      "due": "2026-09-07"
     },
     "loop-1": {
       "box": 5,
@@ -725,11 +724,10 @@
       "due": "2026-10-01"
     },
     "ci-7": {
-      "box": 5,
-      "seen": 7,
+      "box": 3,
+      "seen": 6,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-07"
     },
     "mu-7": {
       "box": 5,
@@ -1090,11 +1088,10 @@
       "due": "2026-09-26"
     },
     "auto:general-math-complex:q4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-05"
     },
     "fin-5": {
       "box": 5,
@@ -1104,11 +1101,10 @@
       "due": "2026-10-09"
     },
     "fin-3": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "due": "2026-09-08"
     },
     "fin-8": {
       "box": 5,
@@ -1124,18 +1120,16 @@
       "due": "2026-10-11"
     },
     "fin-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-14"
+      "due": "2026-09-07"
     },
     "fin-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-16"
+      "due": "2026-09-07"
     },
     "fin-7": {
       "box": 5,
@@ -1145,11 +1139,10 @@
       "due": "2026-10-08"
     },
     "re2-8": {
-      "box": 5,
-      "seen": 7,
+      "box": 4,
+      "seen": 6,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-07"
     },
     "fin-2": {
       "box": 5,
@@ -1183,11 +1176,10 @@
       "due": "2026-09-14"
     },
     "br-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-15"
+      "due": "2026-09-07"
     },
     "br-4": {
       "box": 5,
@@ -1215,11 +1207,10 @@
       "due": "2026-09-27"
     },
     "ev-1": {
-      "box": 5,
-      "seen": 13,
+      "box": 3,
+      "seen": 12,
       "lapses": 6,
-      "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-07"
     },
     "ev-3": {
       "box": 5,
@@ -1228,18 +1219,16 @@
       "due": "2026-09-30"
     },
     "br-3": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-08"
     },
     "auto:work-js-debounce-throttle:q6": {
-      "box": 5,
-      "seen": 7,
+      "box": 3,
+      "seen": 6,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-07"
     },
     "as-3": {
       "box": 5,
@@ -1254,18 +1243,16 @@
       "due": "2026-10-03"
     },
     "ev-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-10"
+      "due": "2026-09-08"
     },
     "as-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-12"
+      "due": "2026-09-08"
     },
     "as-5": {
       "box": 5,
@@ -1274,11 +1261,10 @@
       "due": "2026-09-30"
     },
     "as-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-08"
     },
     "ev-8": {
       "box": 5,
@@ -1287,25 +1273,22 @@
       "due": "2026-10-02"
     },
     "as-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "due": "2026-09-08"
     },
     "ev-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-07"
     },
     "ev-6": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "due": "2026-09-07"
     },
     "auto:work-js-regexp:q2": {
       "box": 4,
@@ -1314,11 +1297,10 @@
       "due": "2026-09-10"
     },
     "ru-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-16"
+      "due": "2026-09-07"
     },
     "ru-2": {
       "box": 4,
@@ -1345,11 +1327,10 @@
       "due": "2026-10-05"
     },
     "ru-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-12"
+      "due": "2026-09-08"
     },
     "as-8": {
       "box": 4,
@@ -1406,11 +1387,10 @@
       "due": "2026-09-10"
     },
     "en-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-08"
     },
     "en-5": {
       "box": 5,
@@ -1551,11 +1531,11 @@
       "due": "2026-09-18"
     },
     "rel-4": {
-      "box": 2,
-      "seen": 11,
+      "box": 1,
+      "seen": 10,
       "lapses": 5,
-      "streak": 2,
-      "due": "2026-09-11"
+      "streak": 1,
+      "due": "2026-09-07"
     },
     "rel-6": {
       "box": 5,
@@ -1678,11 +1658,10 @@
       "due": "2026-09-15"
     },
     "auto:general-english-conditionals:q2": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-09-04"
     },
     "saf-11": {
       "box": 4,
@@ -1731,18 +1710,16 @@
       "due": "2026-09-21"
     },
     "fal-1": {
-      "box": 5,
-      "seen": 5,
+      "box": 3,
+      "seen": 4,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-16"
+      "due": "2026-09-08"
     },
     "fal-3": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-08"
+      "due": "2026-09-07"
     },
     "fal-6": {
       "box": 3,
@@ -1770,18 +1747,16 @@
       "due": "2026-09-19"
     },
     "fal-5": {
-      "box": 4,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-25"
+      "due": "2026-09-08"
     },
     "hist-8": {
-      "box": 1,
-      "seen": 8,
-      "lapses": 4,
-      "streak": 1,
-      "due": "2026-09-09"
+      "box": 3,
+      "seen": 6,
+      "lapses": 3,
+      "due": "2026-09-08"
     },
     "hist-6": {
       "box": 5,
@@ -1791,11 +1766,10 @@
       "due": "2026-10-13"
     },
     "auto:work-css-box-model-stacking:q7": {
-      "box": 3,
-      "seen": 6,
+      "box": 2,
+      "seen": 5,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-09-15"
+      "due": "2026-09-05"
     },
     "fal-7": {
       "box": 4,
@@ -1810,11 +1784,10 @@
       "due": "2026-09-19"
     },
     "cpx-7": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-11"
+      "due": "2026-09-08"
     },
     "cpx-5": {
       "box": 4,
@@ -1831,11 +1804,10 @@
       "due": "2026-09-23"
     },
     "fal-8": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-16"
+      "due": "2026-09-08"
     },
     "cpx-3": {
       "box": 3,
@@ -1845,11 +1817,10 @@
       "due": "2026-09-14"
     },
     "cpx-2": {
-      "box": 5,
-      "seen": 6,
+      "box": 3,
+      "seen": 5,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-11"
+      "due": "2026-09-08"
     },
     "bay-1": {
       "box": 3,
@@ -1858,18 +1829,17 @@
       "due": "2026-09-09"
     },
     "cpx-1": {
-      "box": 3,
-      "seen": 6,
+      "box": 1,
+      "seen": 5,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-09-16"
+      "streak": 1,
+      "due": "2026-09-07"
     },
     "auto:general-philosophy-questions:q5": {
-      "box": 4,
-      "seen": 8,
+      "box": 2,
+      "seen": 7,
       "lapses": 4,
-      "streak": 1,
-      "due": "2026-09-23"
+      "due": "2026-09-06"
     },
     "si-1": {
       "box": 3,
@@ -1878,11 +1848,11 @@
       "due": "2026-09-09"
     },
     "bay-3": {
-      "box": 2,
-      "seen": 7,
+      "box": 1,
+      "seen": 6,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-09-11"
+      "streak": 1,
+      "due": "2026-09-07"
     },
     "bay-6": {
       "box": 4,
@@ -1918,18 +1888,16 @@
       "due": "2026-09-21"
     },
     "si-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-10"
+      "due": "2026-09-08"
     },
     "auto:work-fundamentals-concurrency:q1": {
       "box": 1,
-      "seen": 7,
-      "lapses": 4,
-      "streak": 1,
-      "due": "2026-09-09"
+      "seen": 5,
+      "lapses": 3,
+      "due": "2026-09-04"
     },
     "si-5": {
       "box": 4,
@@ -1958,25 +1926,22 @@
       "due": "2026-09-10"
     },
     "auto:work-react-refs-forms:q4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-26"
+      "due": "2026-09-06"
     },
     "art-1": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-11"
+      "due": "2026-09-04"
     },
     "cih-6": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-14"
+      "due": "2026-09-04"
     },
     "cih-1": {
       "box": 3,
@@ -1986,11 +1951,10 @@
       "due": "2026-09-14"
     },
     "cih-7": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-15"
+      "due": "2026-09-04"
     },
     "si-7": {
       "box": 2,
@@ -2012,19 +1976,12 @@
       "lapses": 0,
       "streak": 1,
       "due": "2026-09-12"
-    },
-    "loop-11": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-09"
     }
   },
   "srs:daily": {
-    "date": "2026-09-08",
+    "date": "2026-09-06",
     "done": 40,
-    "fresh": 1
+    "fresh": 0
   },
   "lesson:general-chem-everyday": {
     "a0": 1,
@@ -2361,10 +2318,6 @@
     "2026-09-06": {
       "done": 44,
       "again": 4
-    },
-    "2026-09-08": {
-      "done": 43,
-      "again": 3
     }
   },
   "lesson:general-russian-commas": {
@@ -3579,52 +3532,6 @@
     "attempts": [
       {
         "date": "2026-09-06",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-music-history": {
-    "a0": 1,
-    "a1": 3,
-    "a2": 2,
-    "a3": 0,
-    "a4": 1,
-    "a5": 2,
-    "a6": 3,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-08",
-    "attempts": [
-      {
-        "date": "2026-09-08",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-archaeo-discoveries": {
-    "a0": 1,
-    "a1": 2,
-    "a2": 3,
-    "a3": 0,
-    "a4": 1,
-    "a5": 2,
-    "a6": 3,
-    "a7": 1,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-08",
-    "attempts": [
-      {
-        "date": "2026-09-08",
         "score": 8,
         "total": 8,
         "wrong": [],
