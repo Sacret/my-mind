@@ -133,3 +133,62 @@ a.row:hover { border-color: var(--accent); }
 .next-row + .next-row { margin-top: 6px; }
 .next-track { color: var(--accent); font-weight: 600; }
 .next-track::after { content: " · "; color: var(--muted); font-weight: 400; }
+
+/* --- липкая шапка оглавления: лого, прогресс и ссылки на блоки страницы --- */
+/* якорные переходы уводят заголовок под шапку — компенсируем отступом прокрутки.
+   Отступ задаём только здесь: scroll-padding у страницы и scroll-margin у цели
+   сложились бы, и заголовок вставал бы вдвое ниже линии подсветки. */
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  /* полупрозрачность с размытием, где color-mix поддержан; иначе останется плотный фон */
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-in {
+  max-width: 720px; margin: 0 auto; padding: 8px 20px;
+  display: flex; align-items: center; gap: 14px;
+}
+
+.topbar-home {
+  flex: none; display: inline-flex; align-items: center; gap: .45em;
+  color: var(--accent); text-decoration: none; font-weight: 600;
+  font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+}
+.topbar-home .mark { width: 1.6em; height: 1.6em; flex: none; }
+.topbar-home:hover { opacity: .7; }
+.topbar-home:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* тот же прогресс, что в большой полосе, только в одну строку */
+.topbar-progress { flex: none; display: flex; align-items: center; gap: 7px; }
+.topbar-meter {
+  display: block; width: 54px; height: 5px; border-radius: 99px;
+  background: var(--line); overflow: hidden;
+}
+.topbar-meter span { display: block; width: 0; height: 100%; background: var(--ok); transition: width .4s; }
+.topbar-num { font-size: 12px; color: var(--muted); }
+
+/* ссылки прижаты вправо; на узком экране полоса прокручивается вбок */
+.topbar-nav {
+  flex: 1 1 auto; min-width: 0; display: flex; justify-content: flex-end;
+  gap: 2px; overflow-x: auto; scrollbar-width: none;
+}
+.topbar-nav::-webkit-scrollbar { display: none; }
+.topbar-nav a {
+  flex: none; padding: 5px 8px; border-radius: 7px; white-space: nowrap;
+  font-size: 13px; color: var(--muted); text-decoration: none;
+}
+.topbar-nav a:hover { background: rgba(127,127,127,.12); color: var(--fg); }
+.topbar-nav a.on { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 700px) {
+  .topbar-in { gap: 10px; padding: 7px 14px; }
+  .topbar-name { display: none; }
+  .topbar-nav { justify-content: flex-start; }
+}
+@media (max-width: 480px) {
+  .topbar-num { display: none; }
+}

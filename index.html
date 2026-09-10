@@ -12,9 +12,29 @@
 <link rel="stylesheet" href="assets/dashboard.css">
 </head>
 <body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="topbar-home" href="index.html">
+      <img class="mark" src="assets/icon.svg" alt="">
+      <span class="topbar-name">my-mind</span>
+    </a>
+    <div class="topbar-progress" id="top-progress" title="Уроков закрыто полностью">
+      <span class="topbar-meter"><span id="top-meter-fill"></span></span>
+      <span class="topbar-num tnum" id="top-num">—</span>
+    </div>
+    <nav class="topbar-nav" id="topbar-nav">
+      <a href="#review-box">Карточки</a>
+      <a href="#track-general" title="Общее развитие">Общее</a>
+      <a href="#track-work">Профессия</a>
+      <a href="#calendar">Календарь</a>
+      <a href="#srs">Повторения</a>
+      <a href="#tests">Тесты</a>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
 
-  <div class="crumb"><a class="home" href="index.html"><img class="mark" src="assets/icon.svg" alt="">my-mind</a></div>
   <h1>Программа обучения</h1>
   <p class="lead">Оглавление и прогресс. Статусы читаются из того же хранилища, куда уроки пишут результаты.</p>
 
@@ -47,7 +67,7 @@
   </div>
 
   <hr>
-  <h2>Календарь</h2>
+  <h2 id="calendar">Календарь</h2>
   <p class="lead sm">Год по дням: чем темнее клетка, тем больше уроков закрыто в этот день.</p>
   <div class="cal" id="cal">
     <div class="cal-scroll">
@@ -64,7 +84,7 @@
   <p class="cal-legend" id="cal-legend"></p>
 
   <hr>
-  <h2>Как идут повторения</h2>
+  <h2 id="srs">Как идут повторения</h2>
   <p class="lead sm">Не по симуляции, а по фактам из хранилища: где сейчас лежат карточки,
     сколько их созреет в ближайшие дни и как часто ответ не вспоминается.</p>
   <div id="srs-stats"></div>
@@ -79,7 +99,7 @@
   </div>
 
   <hr>
-  <h2>Тесты</h2>
+  <h2 id="tests">Тесты</h2>
   <p>Входные тесты можно перепройти позже, чтобы сравнить результат с первым разом.</p>
   <ul>
     <li><a href="general/test-01-baseline.html">Общая эрудиция — входной тест</a> (пройден 04.08.2026: 40/50)</li>
@@ -176,6 +196,7 @@ function build() {
 
     const box = document.createElement("div");
     box.className = "track" + (tr === "work" ? " track-work" : "");
+    box.id = "track-" + tr;
     const h = document.createElement("h2");
     h.textContent = TRACK_NAMES[tr];
     box.append(h);
@@ -250,6 +271,8 @@ function build() {
 
   const pct = Math.round(done / LESSONS.length * 100);
   document.getElementById("meter-fill").style.width = pct + "%";
+  document.getElementById("top-meter-fill").style.width = pct + "%";
+  document.getElementById("top-num").textContent = done + "/" + LESSONS.length;
   const sum = document.getElementById("summary");
   sum.textContent = "";
   sum.append(Object.assign(document.createElement("b"), { textContent: done + " из " + LESSONS.length }),
@@ -335,6 +358,7 @@ function build() {
 
   buildCalendar();
   buildSrsStats();
+  if (window.navSpyRefresh) window.navSpyRefresh();
 
   return { done };
 }
@@ -691,6 +715,57 @@ document.getElementById("save").addEventListener("click", async (ev) => {
   URL.revokeObjectURL(url);
   btn.textContent = "Скачано в «Загрузки» ✓";
 });
+
+// ——— подсветка текущего раздела в липкой шапке ———
+(function navSpy() {
+  const nav = document.getElementById("topbar-nav");
+  if (!nav) return;
+  const links = [...nav.querySelectorAll("a")];
+  // после клика по ссылке подсвечена именно она — до тех пор, пока не прокрутишь сам
+  let picked = null, raf = 0;
+
+  const target = (a) => {
+    const el = document.getElementById(a.getAttribute("href").slice(1));
+    // блок повторения скрыт, пока карточек нет, — такую ссылку пропускаем
+    return el && !el.classList.contains("hidden") ? el : null;
+  };
+
+  function current() {
+    // у конца страницы последние разделы уже не поднимутся под шапку,
+    // поэтому там подсвечиваем последний, до которого вообще доскроллили
+    const bottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    const line = bottom ? window.innerHeight : 90;
+    let active = null;
+    links.forEach(a => {
+      const el = target(a);
+      if (el && el.getBoundingClientRect().top <= line) active = a;
+    });
+    return active;
+  }
+
+  function mark() {
+    raf = 0;
+    const active = picked || current();
+    links.forEach(a => a.classList.toggle("on", a === active));
+  }
+
+  const schedule = () => { if (!raf) raf = requestAnimationFrame(mark); };
+
+  nav.addEventListener("click", (ev) => {
+    const a = ev.target.closest("a");
+    if (a && target(a)) { picked = a; mark(); }
+  });
+  // собственная прокрутка пользователя снимает фиксацию; плавный переход по якорю
+  // этих событий не даёт, поэтому клик остаётся подсвеченным до конца прокрутки
+  ["wheel", "touchmove", "keydown"].forEach(type =>
+    window.addEventListener(type, () => { picked = null; schedule(); }, { passive: true }));
+
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
+  mark();
+  // после отрисовки оглавления высоты меняются — пересчитываем
+  window.navSpyRefresh = schedule;
+})();
 
 document.getElementById("refresh").addEventListener("click", () => build());
 window.addEventListener("focus", () => build());
