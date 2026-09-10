@@ -9,7 +9,7 @@
  *
  * Доступные подстановки внутри источника:
  *   {{root}}     — путь к корню проекта относительно страницы ("", "../", "../../")
- *   {{crumb}}    — строка навигации с иконкой и ссылкой на оглавление
+ *   {{crumb}}    — липкая шапка: лого, ссылка на оглавление и путь до урока
  *   {{back}}     — кнопка «Назад» на оглавление внизу страницы
  *   {{scripts}}  — теги <script> из параметра js
  */
@@ -45,11 +45,28 @@ function rootPrefix(out) {
   return "../".repeat(depth);
 }
 
+/**
+ * Липкая шапка страницы: лого со ссылкой на оглавление и путь до текущего урока.
+ * Путь приходит из параметра crumb строкой вида «· Работа · JavaScript · Урок 4»;
+ * каждое звено выносим в свой <span> — на узком экране остаётся только последнее.
+ */
 function crumbHtml(root, tail) {
-  const link =
-    '<a class="home" href="' + root + 'index.html">' +
-    '<img class="mark" src="' + root + 'assets/icon.svg" alt="">my-mind</a>';
-  return '<div class="crumb">' + link + (tail ? "<span>" + tail + "</span>" : "") + "</div>";
+  const segments = tail
+    .split("·")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => "<span>" + s + "</span>")
+    .join("");
+  return (
+    '<header class="topbar">\n' +
+    '  <div class="topbar-in">\n' +
+    '    <a class="topbar-home" href="' + root + 'index.html">' +
+    '<img class="mark" src="' + root + 'assets/icon.svg" alt="">' +
+    '<span class="topbar-name">my-mind</span></a>\n' +
+    (segments ? '    <div class="topbar-crumb">' + segments + "</div>\n" : "") +
+    "  </div>\n" +
+    "</header>"
+  );
 }
 
 function backHtml(root) {

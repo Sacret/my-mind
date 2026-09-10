@@ -27,18 +27,62 @@ body {
 }
 .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 100px; }
 
+/* подпись раздела внутри страницы — тем же кеглем, что и путь в шапке */
 .crumb {
   font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
   color: var(--accent); font-weight: 600;
   display: flex; align-items: center; gap: .5em;
 }
-.crumb .mark { width: 1.6em; height: 1.6em; flex: none; border: 0; background: none; margin-top: -5px; }
-.crumb a.home {
-  color: inherit; text-decoration: none;
-  display: inline-flex; align-items: center; gap: .5em;
+
+/* --- липкая шапка: лого со ссылкой на оглавление и путь до страницы --- */
+/* якорные переходы уводят заголовок под шапку — компенсируем отступом прокрутки */
+html { scroll-padding-top: 64px; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  /* полупрозрачность с размытием, где color-mix поддержан; иначе останется плотный фон */
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
 }
-.crumb a.home:hover { opacity: .7; }
-.crumb a.home:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.topbar-in {
+  height: 50px; max-width: 720px; margin: 0 auto; padding: 8px 20px;
+  display: flex; align-items: center; gap: 14px;
+}
+
+.topbar-home {
+  flex: none; display: inline-flex; align-items: center; gap: .45em;
+  color: var(--accent); text-decoration: none; font-weight: 600;
+  font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+}
+.topbar-home .mark { width: 1.6em; height: 1.6em; flex: none; margin-top: -5px; }
+.topbar-home:hover { opacity: .7; }
+.topbar-home:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* путь до страницы: звенья разделяет точка, добавленная стилями — но только между
+   ними: перед первым звеном её нет, от лого он и так отделён отступом полосы */
+.topbar-crumb {
+  flex: 1 1 auto; min-width: 0; display: flex; align-items: center;
+  font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+  font-weight: 600; color: var(--muted);
+}
+.topbar-crumb span { flex: none; }
+.topbar-crumb span + span::before { content: "·"; margin: 0 .5em; }
+/* последнее звено — сама страница: оно и длиннее прочих, и важнее */
+.topbar-crumb span:last-child {
+  flex: 0 1 auto; min-width: 0; color: var(--fg);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+@media (max-width: 700px) {
+  .topbar-in { gap: 10px; padding: 7px 14px; }
+  .topbar-name { display: none; }
+  /* места на все звенья нет — оставляем то, где страница находится сейчас;
+     оно осталось первым видимым, поэтому точку перед ним тоже убираем */
+  .topbar-crumb span:not(:last-child) { display: none; }
+  .topbar-crumb span:last-child::before { content: none; }
+}
 h1 { font-size: 30px; line-height: 1.25; margin: 6px 0 10px; letter-spacing: -0.02em; }
 h2 { font-size: 21px; margin: 40px 0 10px; letter-spacing: -0.01em; }
 h3 { font-size: 17px; margin: 26px 0 6px; }

@@ -25,9 +25,9 @@ function initQuiz(lessonId, questions) {
   });
 }
 
-/** Путь к корню проекта берём из крошки — она есть на каждой странице. */
+/** Путь к корню проекта берём из шапки — она есть на каждой странице. */
 function pageRoot() {
-  const home = document.querySelector(".crumb a.home");
+  const home = document.querySelector(".topbar-home");
   const href = home ? home.getAttribute("href") : "";
   return href.replace(/index\.html$/, "");
 }
