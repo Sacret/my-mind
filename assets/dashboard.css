@@ -192,3 +192,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 @media (max-width: 480px) {
   .topbar-num { display: none; }
 }
+
+/* карточка входного теста: заголовок, подпись и таблица попыток */
+.test-box + .test-box { margin-top: 10px; }
+.test-box .row-title a { color: inherit; }
+.test-box .att-table { margin-bottom: 6px; }

@@ -27,8 +27,10 @@ header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bott
 /* блок результата */
 #result { margin-top: 28px; }
 .score { font-size: 40px; font-weight: 700; letter-spacing: -.03em; }
-#result td { padding: 6px 0; }
-#result td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+/* только таблица баллов по категориям — она лежит в #result напрямую;
+   таблицы истории попыток внутри .att оформляет lesson.css */
+#result > table td { padding: 6px 0; }
+#result > table td:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
 
 .btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 details.raw { margin-top: 16px; }

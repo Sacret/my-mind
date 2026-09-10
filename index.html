@@ -100,15 +100,14 @@
 
   <hr>
   <h2 id="tests">Тесты</h2>
-  <p>Входные тесты можно перепройти позже, чтобы сравнить результат с первым разом.</p>
-  <ul>
-    <li><a href="general/test-01-baseline.html">Общая эрудиция — входной тест</a> (пройден 04.08.2026: 40/50)</li>
-    <li><a href="work/test-01-baseline.html">Разработка и React — входной тест</a> (пройден 04.08.2026: 34/50)</li>
-  </ul>
+  <p class="lead sm">Входной тест можно перепройти: результат каждой проверки остаётся в истории,
+    так что видно не «сколько сейчас», а насколько сдвинулось с первого раза.</p>
+  <div id="tests-box"></div>
 
 </div>
 
 <script src="assets/storage.js"></script>
+<script src="assets/attempts.js"></script>
 <script src="assets/srs.js"></script>
 <script src="assets/lessons.js"></script>
 <script src="assets/text.js"></script>
@@ -167,6 +166,55 @@ const areaOf = (href) => {
   if (!(dir in AREAS)) console.warn("нет названия области для папки " + dir + " — допиши AREAS");
   return AREAS[dir] || "";
 };
+
+// Входные тесты: id совпадает с TEST_ID на странице теста — по нему лежит история попыток.
+const TESTS = [
+  { id: "general-baseline-01", href: "general/test-01-baseline.html",
+    title: "Общая эрудиция", sub: "50 вопросов: наука, языки, искусство, логика" },
+  { id: "work-baseline-01", href: "work/test-01-baseline.html", track: "work",
+    title: "Разработка и React", sub: "50 вопросов: основы, JavaScript, вёрстка, React" }
+];
+
+function buildTests() {
+  const host = document.getElementById("tests-box");
+  if (!host) return;
+  host.textContent = "";
+
+  TESTS.forEach(t => {
+    const box = document.createElement("div");
+    box.className = "panel test-box" + (t.track === "work" ? " track-work" : "");
+
+    const head = document.createElement("div");
+    head.className = "row-title";
+    const a = document.createElement("a");
+    a.href = t.href;
+    a.textContent = t.title;
+    head.append(a);
+    box.append(head, Object.assign(document.createElement("div"), {
+      className: "row-sub", textContent: t.sub
+    }));
+
+    const table = Attempts.table(t.id);
+    if (table) {
+      box.append(table);
+      const all = Attempts.list(t.id);
+      if (all.length > 1) {
+        const d = all[all.length - 1].score - all[0].score;
+        box.append(Object.assign(document.createElement("div"), {
+          className: "row-sub",
+          textContent: "От первой попытки: " + (d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "без изменений") +
+                       " · " + all.length + " " + plural(all.length, "попытка", "попытки", "попыток")
+        }));
+      }
+    } else {
+      box.append(Object.assign(document.createElement("div"), {
+        className: "row-sub", textContent: "Ещё не проходился."
+      }));
+    }
+
+    host.append(box);
+  });
+}
 
 function readState(id) {
   return Store.get("lesson:" + id);
@@ -358,6 +406,7 @@ function build() {
 
   buildCalendar();
   buildSrsStats();
+  buildTests();
   if (window.navSpyRefresh) window.navSpyRefresh();
 
   return { done };

@@ -4,7 +4,7 @@ out: work/test-01-baseline.html
 crumb: · тест
 body: track-work
 css: assets/test.css
-js: storage
+js: storage, attempts
 ---
 <div class="wrap">
   <header>
@@ -14,6 +14,7 @@ js: storage
     Не гугли и не запускай код — смысл в честном срезе. Не знаешь — угадай и отметь «не уверен».</p>
   </header>
 
+  <div id="history"></div>
   <div id="quiz"></div>
   <div id="result"></div>
 </div>
@@ -181,20 +182,48 @@ function render() {
 
 function grade() {
   const cats = {};
-  const wrong = [], unsure = [];
+  const wrong = [], unsure = [], wrongIdx = [], unsureIdx = [];
   let score = 0;
   Q.forEach((q, i) => {
     cats[q.c] = cats[q.c] || { ok: 0, total: 0 };
     cats[q.c].total++;
     if (state["a" + i] === q.a) { score++; cats[q.c].ok++; }
-    else wrong.push({ n: i + 1, c: q.c, t: q.t });
-    if (state["u" + i]) unsure.push(i + 1);
+    else { wrong.push({ n: i + 1, c: q.c, t: q.t }); wrongIdx.push(i); }
+    if (state["u" + i]) { unsure.push(i + 1); unsureIdx.push(i); }
   });
-  return { score, cats, wrong, unsure };
+  return { score, cats, wrong, unsure, wrongIdx, unsureIdx };
+}
+
+/** Запись попытки для истории: то, что переживёт пересдачу и правку ответов. */
+function attemptOf(r) {
+  const cats = {};
+  Object.keys(r.cats).forEach(c => { cats[c] = [r.cats[c].ok, r.cats[c].total]; });
+  return {
+    date: Attempts.today(), score: r.score, total: Q.length,
+    wrong: r.wrongIdx, unsure: r.unsureIdx, cats
+  };
+}
+
+/** Попытки над тестом — чтобы до пересдачи было видно, с чем сравнивать. */
+function showHistory() {
+  const host = document.getElementById("history");
+  host.textContent = "";
+  const t = Attempts.table(TEST_ID);
+  if (!t) return;
+  host.append(Object.assign(document.createElement("h2"), { textContent: "Попытки" }));
+  host.append(t);
+  host.append(Object.assign(document.createElement("p"), {
+    className: "lead sm",
+    textContent: "Ответы при пересдаче перезаписываются, а эти строки — нет: " +
+                 "«Сбросить» стирает только ответы."
+  }));
 }
 
 function showResult() {
   const r = grade();
+  // пишем до отрисовки: таблица ниже показывает уже и эту попытку
+  Attempts.add(TEST_ID, attemptOf(r));
+  showHistory();
   resultEl.textContent = "";
 
   const s = document.createElement("div");
@@ -211,6 +240,12 @@ function showResult() {
     table.appendChild(tr);
   });
   resultEl.appendChild(table);
+
+  const cmp = Attempts.compare(TEST_ID);
+  if (cmp) {
+    resultEl.append(Object.assign(document.createElement("h2"), { textContent: "Сравнение с прошлым разом" }));
+    resultEl.append(cmp);
+  }
 
   const hint = document.createElement("p");
   hint.className = "lead xs";
@@ -303,7 +338,7 @@ submitEl.addEventListener("click", () => {
 });
 
 document.getElementById("reset").addEventListener("click", () => {
-  if (!confirm("Стереть все ответы?")) return;
+  if (!confirm("Стереть все ответы? История попыток останется.")) return;
   state = {};
   checked = false;
   save();
@@ -313,5 +348,5 @@ document.getElementById("reset").addEventListener("click", () => {
 });
 
 // поднимаем сохранённые ответы (с сервера или из localStorage), затем рисуем
-Store.ready().then(() => { state = Store.get(KEY) || {}; render(); });
+Store.ready().then(() => { state = Store.get(KEY) || {}; render(); showHistory(); });
 </script>

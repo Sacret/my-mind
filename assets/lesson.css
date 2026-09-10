@@ -92,6 +92,18 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--lin
 th { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
 td.num { font-variant-numeric: tabular-nums; text-align: right; }
 
+/* --- история попыток: и на странице теста, и в оглавлении --- */
+.att-table { margin: 8px 0 14px; }
+.att-table th { white-space: nowrap; }
+.att-table td { padding: 7px 10px 7px 0; }
+.att-table td.num { text-align: right; width: 1%; white-space: nowrap; }
+/* последняя попытка выделена: с ней сравнивают всё остальное */
+.att-last td { font-weight: 600; }
+.att-delta.up { color: var(--ok); }
+.att-delta.down { color: var(--bad); }
+.att-delta.flat { color: var(--muted); }
+.att-cats { font-size: 14px; }
+
 /* --- квиз --- */
 .quiz-head { margin: 48px 0 0; }
 .q {
