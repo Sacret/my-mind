@@ -177,11 +177,10 @@
       "due": "2026-09-23"
     },
     "syl-4": {
-      "box": 5,
-      "seen": 7,
+      "box": 3,
+      "seen": 6,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-21"
+      "due": "2026-09-11"
     },
     "syl-3": {
       "box": 5,
@@ -766,11 +765,10 @@
       "due": "2026-10-07"
     },
     "auto:general-russian-commas:q2": {
-      "box": 5,
-      "seen": 6,
+      "box": 3,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-15"
+      "due": "2026-09-11"
     },
     "auto:general-russian-commas:q3": {
       "box": 5,
@@ -965,11 +963,11 @@
       "due": "2026-10-01"
     },
     "css-6": {
-      "box": 3,
-      "seen": 7,
+      "box": 1,
+      "seen": 6,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-18"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "re-5": {
       "box": 5,
@@ -1332,11 +1330,10 @@
       "due": "2026-10-12"
     },
     "as-8": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-11"
     },
     "ru-6": {
       "box": 5,
@@ -1410,11 +1407,10 @@
       "due": "2026-10-16"
     },
     "anat-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-20"
+      "due": "2026-09-11"
     },
     "en-4": {
       "box": 5,
@@ -1424,11 +1420,10 @@
       "due": "2026-10-12"
     },
     "ru-8": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-22"
+      "due": "2026-09-11"
     },
     "anat-5": {
       "box": 4,
@@ -1443,11 +1438,10 @@
       "due": "2026-10-01"
     },
     "anat-3": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-11"
     },
     "rel-3": {
       "box": 5,
@@ -1480,46 +1474,40 @@
       "due": "2026-09-14"
     },
     "anat-8": {
-      "box": 5,
-      "seen": 5,
+      "box": 4,
+      "seen": 4,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-20"
+      "due": "2026-09-12"
     },
     "anat-2": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-11"
     },
     "rel-8": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-12"
     },
     "photo-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-12"
     },
     "photo-3": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-11"
     },
     "photo-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "due": "2026-09-11"
     },
     "rel-5": {
       "box": 4,
@@ -1547,10 +1535,10 @@
     },
     "rel-4": {
       "box": 2,
-      "seen": 13,
-      "lapses": 6,
-      "streak": 1,
-      "due": "2026-09-15"
+      "seen": 11,
+      "lapses": 5,
+      "streak": 2,
+      "due": "2026-09-11"
     },
     "rel-6": {
       "box": 5,
@@ -1559,11 +1547,10 @@
       "due": "2026-10-04"
     },
     "push-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "due": "2026-09-12"
     },
     "push-6": {
       "box": 5,
@@ -1590,11 +1577,10 @@
       "due": "2026-09-15"
     },
     "push-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "due": "2026-09-11"
     },
     "push-5": {
       "box": 5,
@@ -1878,11 +1864,11 @@
       "due": "2026-09-24"
     },
     "bay-3": {
-      "box": 4,
-      "seen": 8,
+      "box": 2,
+      "seen": 7,
       "lapses": 2,
-      "streak": 3,
-      "due": "2026-09-27"
+      "streak": 2,
+      "due": "2026-09-11"
     },
     "bay-6": {
       "box": 4,
@@ -1899,11 +1885,10 @@
       "due": "2026-09-21"
     },
     "bay-7": {
-      "box": 5,
-      "seen": 7,
+      "box": 3,
+      "seen": 6,
       "lapses": 3,
-      "streak": 1,
-      "due": "2026-10-14"
+      "due": "2026-09-11"
     },
     "si-3": {
       "box": 5,
@@ -1969,11 +1954,11 @@
       "due": "2026-09-26"
     },
     "art-1": {
-      "box": 4,
-      "seen": 4,
+      "box": 2,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-28"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "cih-6": {
       "box": 3,
@@ -2011,11 +1996,11 @@
       "due": "2026-09-24"
     },
     "si-6": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-18"
+      "streak": 1,
+      "due": "2026-09-12"
     },
     "loop-11": {
       "box": 3,
@@ -2032,18 +2017,18 @@
       "due": "2026-09-13"
     },
     "hist-5b": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-18"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "art-3": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-20"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "art-4": {
       "box": 2,
@@ -2074,18 +2059,18 @@
       "due": "2026-09-13"
     },
     "hist-5a": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-15"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "bay-4a": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-15"
+      "streak": 1,
+      "due": "2026-09-11"
     },
     "push-3b": {
       "box": 2,
@@ -2093,81 +2078,11 @@
       "lapses": 0,
       "streak": 1,
       "due": "2026-09-13"
-    },
-    "arch-7": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "arch-3": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "arch-2": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-13"
-    },
-    "art-7": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "art-5": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "arch-6": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-13"
-    },
-    "art-6": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "arch-5": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
-    },
-    "arch-4": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-13"
-    },
-    "arch-1": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-15"
     }
   },
   "srs:daily": {
-    "date": "2026-09-12",
-    "done": 34,
+    "date": "2026-09-10",
+    "done": 30,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -2512,10 +2427,6 @@
     },
     "2026-09-10": {
       "done": 32,
-      "again": 2
-    },
-    "2026-09-12": {
-      "done": 36,
       "again": 2
     }
   },
@@ -4019,28 +3930,5 @@
         ]
       }
     }
-  ],
-  "lesson:general-medicine-nutrition": {
-    "a0": 2,
-    "a1": 1,
-    "a2": 0,
-    "a3": 3,
-    "a4": 1,
-    "a5": 2,
-    "a6": 0,
-    "a7": 3,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-12",
-    "attempts": [
-      {
-        "date": "2026-09-12",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  }
+  ]
 }
