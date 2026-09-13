@@ -1431,11 +1431,10 @@
       "due": "2026-10-22"
     },
     "anat-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-19"
+      "due": "2026-09-13"
     },
     "anat-7": {
       "box": 5,
@@ -1457,11 +1456,10 @@
       "due": "2026-10-12"
     },
     "rel-2": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-22"
+      "due": "2026-09-13"
     },
     "anat-6": {
       "box": 4,
@@ -1470,11 +1468,10 @@
       "due": "2026-09-17"
     },
     "anat-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-17"
+      "due": "2026-09-13"
     },
     "rel-1": {
       "box": 4,
@@ -1575,11 +1572,10 @@
       "due": "2026-10-11"
     },
     "photo-6": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-13"
     },
     "photo-8": {
       "box": 4,
@@ -1637,11 +1633,10 @@
       "due": "2026-09-15"
     },
     "saf-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-20"
+      "due": "2026-09-13"
     },
     "saf-9": {
       "box": 4,
@@ -1932,11 +1927,11 @@
       "due": "2026-10-10"
     },
     "auto:work-fundamentals-concurrency:q1": {
-      "box": 4,
-      "seen": 9,
+      "box": 2,
+      "seen": 8,
       "lapses": 4,
-      "streak": 3,
-      "due": "2026-09-29"
+      "streak": 2,
+      "due": "2026-09-13"
     },
     "si-5": {
       "box": 4,
@@ -2030,11 +2025,11 @@
       "due": "2026-09-17"
     },
     "push-3a": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-29"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "hist-5b": {
       "box": 3,
@@ -2051,32 +2046,32 @@
       "due": "2026-09-20"
     },
     "art-4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-29"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "art-2": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-27"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "sq-1a": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-29"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "sq-1b": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-01"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "hist-5a": {
       "box": 2,
@@ -2093,11 +2088,11 @@
       "due": "2026-09-15"
     },
     "push-3b": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-30"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "arch-7": {
       "box": 2,
@@ -2114,11 +2109,11 @@
       "due": "2026-09-15"
     },
     "arch-2": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-19"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "art-7": {
       "box": 2,
@@ -2135,11 +2130,11 @@
       "due": "2026-09-15"
     },
     "arch-6": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-16"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "art-6": {
       "box": 2,
@@ -2156,11 +2151,11 @@
       "due": "2026-09-15"
     },
     "arch-4": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-20"
+      "streak": 1,
+      "due": "2026-09-13"
     },
     "arch-1": {
       "box": 2,
@@ -2168,81 +2163,11 @@
       "lapses": 0,
       "streak": 1,
       "due": "2026-09-15"
-    },
-    "tax-8": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-14"
-    },
-    "tax-5": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-14"
-    },
-    "tax-4": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
-    },
-    "tax-7": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
-    },
-    "tax-6": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
-    },
-    "att-2": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-14"
-    },
-    "tax-2": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-14"
-    },
-    "tax-3": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
-    },
-    "att-1": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
-    },
-    "tax-1": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-09-16"
     }
   },
   "srs:daily": {
-    "date": "2026-09-13",
-    "done": 25,
+    "date": "2026-09-12",
+    "done": 34,
     "fresh": 10
   },
   "lesson:general-chem-everyday": {
@@ -2591,10 +2516,6 @@
     },
     "2026-09-12": {
       "done": 36,
-      "again": 2
-    },
-    "2026-09-13": {
-      "done": 27,
       "again": 2
     }
   },
@@ -4115,29 +4036,6 @@
     "attempts": [
       {
         "date": "2026-09-12",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-bio-immunity": {
-    "a0": 3,
-    "a1": 1,
-    "a2": 2,
-    "a3": 3,
-    "a4": 0,
-    "a5": 1,
-    "a6": 2,
-    "a7": 2,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-13",
-    "attempts": [
-      {
-        "date": "2026-09-13",
         "score": 8,
         "total": 8,
         "wrong": [],
