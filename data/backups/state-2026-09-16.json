@@ -312,10 +312,9 @@
     },
     "bigo-9": {
       "box": 5,
-      "seen": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-26"
+      "due": "2026-09-16"
     },
     "bigo-5": {
       "box": 5,
@@ -1048,11 +1047,10 @@
       "due": "2026-09-30"
     },
     "re2-5": {
-      "box": 5,
-      "seen": 6,
+      "box": 4,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-19"
+      "due": "2026-09-14"
     },
     "re2-2": {
       "box": 5,
@@ -1155,11 +1153,10 @@
       "due": "2026-09-26"
     },
     "ev-2": {
-      "box": 5,
-      "seen": 4,
+      "box": 4,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-24"
+      "due": "2026-09-14"
     },
     "br-2": {
       "box": 5,
@@ -1316,11 +1313,10 @@
       "due": "2026-10-17"
     },
     "ru-3": {
-      "box": 1,
-      "seen": 6,
-      "lapses": 2,
-      "streak": 1,
-      "due": "2026-09-17"
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "due": "2026-09-15"
     },
     "ru-7": {
       "box": 5,
@@ -1481,11 +1477,10 @@
       "due": "2026-10-17"
     },
     "rel-1": {
-      "box": 5,
-      "seen": 5,
+      "box": 4,
+      "seen": 4,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-23"
+      "due": "2026-09-14"
     },
     "anat-8": {
       "box": 5,
@@ -1530,18 +1525,16 @@
       "due": "2026-10-13"
     },
     "rel-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-20"
+      "due": "2026-09-14"
     },
     "photo-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-25"
+      "due": "2026-09-14"
     },
     "rel-7": {
       "box": 5,
@@ -1556,11 +1549,11 @@
       "due": "2026-09-18"
     },
     "rel-4": {
-      "box": 4,
-      "seen": 14,
+      "box": 2,
+      "seen": 13,
       "lapses": 6,
-      "streak": 2,
-      "due": "2026-10-03"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "rel-6": {
       "box": 5,
@@ -1589,18 +1582,16 @@
       "due": "2026-10-18"
     },
     "photo-8": {
-      "box": 5,
-      "seen": 5,
+      "box": 4,
+      "seen": 4,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-24"
+      "due": "2026-09-14"
     },
     "push-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-22"
+      "due": "2026-09-15"
     },
     "push-2": {
       "box": 5,
@@ -1634,18 +1625,16 @@
       "due": "2026-09-17"
     },
     "saf-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-18"
+      "due": "2026-09-14"
     },
     "saf-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-24"
+      "due": "2026-09-15"
     },
     "saf-1": {
       "box": 5,
@@ -1667,11 +1656,10 @@
       "due": "2026-10-06"
     },
     "saf-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-23"
+      "due": "2026-09-14"
     },
     "saf-3": {
       "box": 5,
@@ -1686,11 +1674,10 @@
       "due": "2026-10-05"
     },
     "saf-8": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-22"
+      "due": "2026-09-15"
     },
     "auto:general-english-conditionals:q2": {
       "box": 5,
@@ -1700,11 +1687,10 @@
       "due": "2026-10-09"
     },
     "saf-11": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-20"
+      "due": "2026-09-14"
     },
     "hist-2": {
       "box": 4,
@@ -1721,18 +1707,16 @@
       "due": "2026-09-20"
     },
     "hist-1": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-26"
+      "due": "2026-09-15"
     },
     "saf-12": {
-      "box": 2,
-      "seen": 4,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-09-19"
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "due": "2026-09-14"
     },
     "push-8": {
       "box": 4,
@@ -1770,11 +1754,10 @@
       "due": "2026-09-27"
     },
     "hist-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-26"
+      "due": "2026-09-16"
     },
     "fal-4": {
       "box": 5,
@@ -1797,11 +1780,11 @@
       "due": "2026-09-25"
     },
     "hist-8": {
-      "box": 5,
-      "seen": 10,
+      "box": 3,
+      "seen": 9,
       "lapses": 4,
-      "streak": 3,
-      "due": "2026-10-20"
+      "streak": 2,
+      "due": "2026-09-16"
     },
     "hist-6": {
       "box": 5,
@@ -1858,11 +1841,11 @@
       "due": "2026-10-16"
     },
     "cpx-3": {
-      "box": 5,
-      "seen": 6,
+      "box": 3,
+      "seen": 5,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-17"
+      "streak": 1,
+      "due": "2026-09-14"
     },
     "cpx-2": {
       "box": 5,
@@ -1879,11 +1862,11 @@
       "due": "2026-09-27"
     },
     "cpx-1": {
-      "box": 4,
-      "seen": 7,
+      "box": 3,
+      "seen": 6,
       "lapses": 2,
-      "streak": 3,
-      "due": "2026-10-03"
+      "streak": 2,
+      "due": "2026-09-16"
     },
     "auto:general-philosophy-questions:q5": {
       "box": 4,
@@ -1998,25 +1981,25 @@
       "due": "2026-09-28"
     },
     "cih-6": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-19"
+      "streak": 1,
+      "due": "2026-09-14"
     },
     "cih-1": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-25"
+      "streak": 1,
+      "due": "2026-09-14"
     },
     "cih-7": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-17"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "si-7": {
       "box": 3,
@@ -2096,18 +2079,18 @@
       "due": "2026-10-01"
     },
     "hist-5a": {
-      "box": 4,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-10-03"
+      "streak": 2,
+      "due": "2026-09-15"
     },
     "bay-4a": {
-      "box": 3,
-      "seen": 3,
+      "box": 2,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-09-23"
+      "streak": 2,
+      "due": "2026-09-15"
     },
     "push-3b": {
       "box": 4,
@@ -2117,18 +2100,18 @@
       "due": "2026-09-30"
     },
     "arch-7": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-02"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "arch-3": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-02"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "arch-2": {
       "box": 3,
@@ -2138,39 +2121,39 @@
       "due": "2026-09-19"
     },
     "art-7": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-02"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "art-5": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-02"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "arch-6": {
-      "box": 3,
-      "seen": 4,
+      "box": 2,
+      "seen": 3,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-09-23"
+      "streak": 2,
+      "due": "2026-09-16"
     },
     "art-6": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-30"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "arch-5": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-30"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "arch-4": {
       "box": 3,
@@ -2180,11 +2163,11 @@
       "due": "2026-09-20"
     },
     "arch-1": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-03"
+      "streak": 1,
+      "due": "2026-09-15"
     },
     "tax-8": {
       "box": 1,
@@ -2194,18 +2177,18 @@
       "due": "2026-09-14"
     },
     "tax-5": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-24"
+      "streak": 1,
+      "due": "2026-09-14"
     },
     "tax-4": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-30"
+      "streak": 1,
+      "due": "2026-09-16"
     },
     "tax-7": {
       "box": 2,
@@ -2215,11 +2198,11 @@
       "due": "2026-09-16"
     },
     "tax-6": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-03"
+      "streak": 1,
+      "due": "2026-09-16"
     },
     "att-2": {
       "box": 1,
@@ -2229,18 +2212,18 @@
       "due": "2026-09-14"
     },
     "tax-2": {
-      "box": 2,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-09-19"
+      "streak": 1,
+      "due": "2026-09-14"
     },
     "tax-3": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-01"
+      "streak": 1,
+      "due": "2026-09-16"
     },
     "att-1": {
       "box": 2,
@@ -2250,17 +2233,17 @@
       "due": "2026-09-16"
     },
     "tax-1": {
-      "box": 4,
-      "seen": 2,
+      "box": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-03"
+      "streak": 1,
+      "due": "2026-09-16"
     }
   },
   "srs:daily": {
-    "date": "2026-09-16",
-    "done": 40,
-    "fresh": 0
+    "date": "2026-09-13",
+    "done": 25,
+    "fresh": 10
   },
   "lesson:general-chem-everyday": {
     "a0": 1,
@@ -2612,10 +2595,6 @@
     },
     "2026-09-13": {
       "done": 27,
-      "again": 2
-    },
-    "2026-09-16": {
-      "done": 42,
       "again": 2
     }
   },
@@ -4159,29 +4138,6 @@
     "attempts": [
       {
         "date": "2026-09-13",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ]
-  },
-  "lesson:general-history-divergence": {
-    "a0": 3,
-    "a1": 2,
-    "a2": 1,
-    "a3": 2,
-    "a4": 0,
-    "a5": 1,
-    "a6": 2,
-    "a7": 3,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-09-16",
-    "attempts": [
-      {
-        "date": "2026-09-16",
         "score": 8,
         "total": 8,
         "wrong": [],
