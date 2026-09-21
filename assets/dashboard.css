@@ -72,6 +72,11 @@ a.row:hover { border-color: var(--accent); }
 .summary { font-size: 15px; color: var(--muted); }
 .summary b { color: var(--fg); font-size: 17px; }
 #storage-mode { font-size: 13px; }
+/* выгрузка и загрузка прогресса файлом */
+.storage-actions { margin: 14px 0 0; gap: 10px; }
+.storage-actions button { font-size: 14px; padding: 6px 14px; }
+#storage-status { margin-top: 10px; }
+#storage-status:empty { display: none; }
 
 /* календарь прохождения: столбец — неделя, строка — день недели */
 /* шкала заливки одна на календарь и на легенду под ним */

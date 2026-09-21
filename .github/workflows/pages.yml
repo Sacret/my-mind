@@ -1,0 +1,72 @@
+# Публикация сайта на GitHub Pages.
+#
+# В артефакт попадают только собранные страницы и ассеты. Личный прогресс
+# (data/state.json и бэкапы), исходники сборки и локальный сервер остаются
+# в репозитории, но на сайт не выкладываются: посетитель начинает с чистого
+# листа, его прогресс живёт в localStorage его браузера.
+name: pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# параллельные публикации не нужны: важна последняя
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # собранные страницы лежат в репозитории; пересобираем, чтобы сайт
+      # наверняка соответствовал src/pages
+      - name: Собрать страницы
+        run: node build.mjs
+
+      - name: Отобрать файлы для сайта
+        run: |
+          rsync -a ./ _site/ \
+            --exclude .git \
+            --exclude .github \
+            --exclude .claude \
+            --exclude _site \
+            --exclude data \
+            --exclude src \
+            --exclude node_modules \
+            --exclude server.mjs \
+            --exclude build.mjs \
+            --exclude migrate.html \
+            --exclude package.json \
+            --exclude package-lock.json \
+            --exclude README.md \
+            --exclude '.DS_Store'
+          # страховка: если прогресс всё же просочился, публикацию лучше уронить
+          test ! -e _site/data
+          ls _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,8 +1,9 @@
 /**
  * Слой хранения. Один и тот же код работает в двух режимах:
  *
- *   через сервер (http://localhost:4173) → данные в data/state.json, общие для всех браузеров
+ *   через свой сервер (localhost:4173)   → данные в data/state.json, общие для всех браузеров
  *   открыт файлом (file://)              → данные в localStorage этого браузера, как раньше
+ *   чужой хост (GitHub Pages и прочее)   → тоже localStorage: у каждого посетителя свой прогресс
  *
  * При первом запуске через сервер накопленный localStorage переносится в файл,
  * так что прогресс не теряется.
@@ -15,7 +16,12 @@
 window.Store = (function () {
   const API = "/api/state";
   const PREFIXES = ["lesson:", "quiz:", "srs:", "cards:"];
-  const overHttp = location.protocol === "http:" || location.protocol === "https:";
+  // Сервер бывает только свой: localhost или эта же машина в домашней сети (npm run lan).
+  // На чужом хосте — например на GitHub Pages — эндпоинта нет, и ходить за ним незачем:
+  // там прогресс всегда живёт в браузере посетителя.
+  const LOCAL_HOST = /^(localhost|127\.0\.0\.1|\[::1\]|0\.0\.0\.0|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/;
+  const overHttp =
+    (location.protocol === "http:" || location.protocol === "https:") && LOCAL_HOST.test(location.hostname);
 
   let cache = {};
   let mode = "local";        // "server" | "local"
@@ -107,6 +113,44 @@ window.Store = (function () {
     }
   }
 
+  /**
+   * Где открыта страница: "file" — двойным кликом по файлу, "own" — на своей
+   * машине (есть шанс на сервер), "foreign" — чужой хост, публичная копия.
+   */
+  function place() {
+    if (location.protocol === "file:") return "file";
+    return overHttp ? "own" : "foreign";
+  }
+
+  /** Весь прогресс одним объектом — для выгрузки в файл. */
+  function exportAll() {
+    return JSON.parse(JSON.stringify(cache));
+  }
+
+  /**
+   * Приём прогресса из файла. how = "merge" (по умолчанию) — записи из файла
+   * добавляются к своим и перекрывают одноимённые; how = "replace" — прежний
+   * прогресс стирается целиком. Возвращает, сколько записей принято.
+   */
+  async function importAll(data, how) {
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      throw new Error("файл не похож на выгрузку прогресса");
+    }
+    const incoming = {};
+    Object.keys(data).forEach((k) => {
+      if (PREFIXES.some((p) => k.startsWith(p))) incoming[k] = data[k];
+    });
+    const keys = Object.keys(incoming);
+    if (!keys.length) throw new Error("в файле нет записей прогресса");
+
+    if (how === "replace") {
+      Object.keys(cache).forEach((k) => { if (!(k in incoming)) remove(k); });
+    }
+    keys.forEach((k) => set(k, incoming[k]));
+    if (mode === "server" && !(await flush(true))) throw new Error("не удалось записать на сервер");
+    return keys.length;
+  }
+
   // страховка: успеть отправить несохранённое при закрытии вкладки
   window.addEventListener("pagehide", () => {
     if (mode === "server" && pending && navigator.sendBeacon) {
@@ -117,6 +161,7 @@ window.Store = (function () {
 
   return {
     ready, get, set, remove, flush,
+    exportAll, importAll, place,
     keys: () => Object.keys(cache),
     mode: () => mode
   };
