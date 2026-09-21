@@ -8,6 +8,8 @@
     "build": "node build.mjs",
     "check": "node build.mjs --check",
     "start": "node build.mjs && node server.mjs",
-    "lan": "node build.mjs && node server.mjs --lan"
+    "lan": "node build.mjs && node server.mjs --lan",
+    "serve": "node build.mjs && PORT=${PORT:-4173} sh -c 'if lsof -ti :$PORT >/dev/null 2>&1; then echo \"  порт $PORT уже занят — сначала npm run stop\"; exit 1; fi; nohup node server.mjs >/tmp/my-mind.log 2>&1 & echo \"  сервер висит фоном: http://localhost:$PORT\"; echo \"  логи: /tmp/my-mind.log, остановить: npm run stop\"'",
+    "stop": "PORT=${PORT:-4173} sh -c 'pids=$(lsof -ti :$PORT); if [ -z \"$pids\" ]; then echo \"  на порту $PORT никого нет\"; else kill $pids && echo \"  остановлен сервер на порту $PORT\"; fi'"
   }
 }
