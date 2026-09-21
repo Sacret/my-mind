@@ -100,7 +100,7 @@ my-mind/
 │   ├── dashboard.css            # оглавление
 │   ├── review.css               # карточки
 │   └── test.css                 # страницы входных тестов
-├── general/                     # общее развитие, 40 уроков
+├── general/                     # общее развитие, 42 урока
 │   ├── test-01-baseline.html    # входной тест, 50 вопросов
 │   ├── results/                 # архив: отчёт о входном тесте
 │   ├── logic/  math/            # уроки по областям
@@ -117,6 +117,7 @@ my-mind/
 │   ├── law/                     # право в быту: договор и спор
 │   ├── photography/             # величайшие снимки
 │   ├── literature/              # феномен Пушкина
+│   ├── ai/                      # нейросети и языковые модели
 │   ├── linguistics/             # откуда берутся языки
 │   └── russian/  english/
 └── work/                        # профессия, 21 урок
@@ -134,8 +135,8 @@ my-mind/
 
 ## Уроки
 
-Сделано 73 урока, из них пройдено на максимум 61: закрыто всё, что было написано до 04.09.2026.
-Непройденными остались двенадцать новых — партия от 04.09, семь в общем развитии и пять в профессии.
+Сделано 75 уроков, из них пройдено на максимум 70: от партии 04.09.2026 остались незакрытыми
+экономика, TypeScript и тестирование, а партия 21.09 (нейросети и LLM) ещё не начата.
 
 **Общее развитие**
 
@@ -153,7 +154,7 @@ my-mind/
 | [general/safety/lesson-01-home-safety.html](general/safety/lesson-01-home-safety.html) | Бытовая безопасность: огонь, газ, ток, первая помощь | новая область | ✅ 25.08 — 8/8 |
 | [general/physics/lesson-01-si-units.html](general/physics/lesson-01-si-units.html) | Единицы СИ и порядки величин | #14 | ✅ 16.08 — 8/8 |
 | [general/music/lesson-01-how-music-works.html](general/music/lesson-01-how-music-works.html) | Музыка изнутри: из чего она сделана | новая область | ✅ 05.08 — 8/8 |
-| [general/music/lesson-02-history.html](general/music/lesson-02-history.html) | История музыки: от хорала до студии | продолжение урока 1 | — |
+| [general/music/lesson-02-history.html](general/music/lesson-02-history.html) | История музыки: от хорала до студии | продолжение урока 1 | ✅ 08.09 — 8/8 |
 | [general/cinema/lesson-01-film-language.html](general/cinema/lesson-01-film-language.html) | Кино как язык: монтаж, кадр, свет | новая область | ✅ 06.08 — 8/8 |
 | [general/cinema/lesson-02-history.html](general/cinema/lesson-02-history.html) | История кино: от немого к звуковому | #40 | ✅ 19.08 — 8/8 |
 | [general/art/lesson-01-looking-at-painting.html](general/art/lesson-01-looking-at-painting.html) | Как смотреть картину | новая область | ✅ 20.08 — 8/8 |
@@ -167,10 +168,10 @@ my-mind/
 | [general/brain/lesson-03-biases.html](general/brain/lesson-03-biases.html) | Когнитивные искажения | продолжение урока 2 | ✅ 22.08 — 8/8 |
 | [general/anatomy/lesson-01-body.html](general/anatomy/lesson-01-body.html) | Как устроено тело: кровь, дыхание, пищеварение | новая область | ✅ 09.08 — 8/8 |
 | [general/medicine/lesson-01-evidence.html](general/medicine/lesson-01-evidence.html) | Доказательная медицина: как читать исследование | новая область | ✅ 23.08 — 8/8 |
-| [general/medicine/lesson-02-nutrition.html](general/medicine/lesson-02-nutrition.html) | Питание и движение: что подтверждено, а что придумано | продолжение урока 1 | — |
+| [general/medicine/lesson-02-nutrition.html](general/medicine/lesson-02-nutrition.html) | Питание и движение: что подтверждено, а что придумано | продолжение урока 1 | ✅ 12.09 — 8/8 |
 | [general/biology/lesson-01-evolution.html](general/biology/lesson-01-evolution.html) | Эволюция как алгоритм | #15 | ✅ 10.08 — 8/8 |
 | [general/biology/lesson-02-dna.html](general/biology/lesson-02-dna.html) | ДНК, гены и наследственность | #15 — угадан | ✅ 28.08 — 8/8 |
-| [general/biology/lesson-03-immunity.html](general/biology/lesson-03-immunity.html) | Как работает иммунитет | третья тема в биологии | — |
+| [general/biology/lesson-03-immunity.html](general/biology/lesson-03-immunity.html) | Как работает иммунитет | третья тема в биологии | ✅ 13.09 — 8/8 |
 | [general/astronomy/lesson-01-scale.html](general/astronomy/lesson-01-scale.html) | Астрономия: масштабы и ближайшие соседи | #10 | ✅ 08.08 — 8/8 |
 | [general/astronomy/lesson-02-stars.html](general/astronomy/lesson-02-stars.html) | Жизнь звёзд и чёрные дыры | продолжение урока 1 | ✅ 17.08 — 8/8 |
 | [general/astronomy/lesson-03-moon.html](general/astronomy/lesson-03-moon.html) | Луна: фазы, затмения и синхронное вращение | продолжение урока 1 | ✅ 18.08 — 8/8 |
@@ -184,10 +185,12 @@ my-mind/
 | [general/linguistics/lesson-01-language-change.html](general/linguistics/lesson-01-language-change.html) | Откуда берутся языки и как они меняются | новая область | ✅ 26.08 — 8/8 |
 | [general/photography/lesson-01-great-photographs.html](general/photography/lesson-01-great-photographs.html) | Величайшие фотографии: как кадр становится документом | новая область | ✅ 15.08 — 8/8 |
 | [general/literature/lesson-01-pushkin.html](general/literature/lesson-01-pushkin.html) | Феномен Пушкина: язык, охват и канонизация | новая область | ✅ 12.08 — 8/8 |
-| [general/archaeology/lesson-01-birth.html](general/archaeology/lesson-01-birth.html) | Как появилась археология | новая область | — |
-| [general/archaeology/lesson-02-discoveries.html](general/archaeology/lesson-02-discoveries.html) | Главные открытия археологии | продолжение урока 1 | — |
-| [general/history/lesson-01-divergence.html](general/history/lesson-01-divergence.html) | Всемирная история как система | новая область | — |
+| [general/archaeology/lesson-01-birth.html](general/archaeology/lesson-01-birth.html) | Как появилась археология | новая область | ✅ 06.09 — 8/8 |
+| [general/archaeology/lesson-02-discoveries.html](general/archaeology/lesson-02-discoveries.html) | Главные открытия археологии | продолжение урока 1 | ✅ 08.09 — 8/8 |
+| [general/history/lesson-01-divergence.html](general/history/lesson-01-divergence.html) | Всемирная история как система | новая область | ✅ 16.09 — 8/8 |
 | [general/economics/lesson-01-prices.html](general/economics/lesson-01-prices.html) | Экономика: откуда берутся цены, инфляция и кризисы | новая область | — |
+| [general/ai/lesson-01-neural-nets.html](general/ai/lesson-01-neural-nets.html) | Нейросети: как машина учится на примерах | новая область | — |
+| [general/ai/lesson-02-llm.html](general/ai/lesson-02-llm.html) | LLM изнутри: токены, контекст и почему модель уверенно врёт | продолжение урока 1 | — |
 
 **Профессия**
 
@@ -205,8 +208,8 @@ my-mind/
 | [work/javascript/lesson-06-regexp.html](work/javascript/lesson-06-regexp.html) | Регулярные выражения | новая область | ✅ 20.08 — 8/8 |
 | [work/web/lesson-01-http-rest.html](work/web/lesson-01-http-rest.html) | HTTP и REST: методы, коды, CORS | #4, #10 | ✅ 09.08 — 8/8 |
 | [work/web/lesson-02-security.html](work/web/lesson-02-security.html) | Безопасность веба: XSS, CSRF, CSP, токены | продолжение урока 1 | ✅ 21.08 — 8/8 |
-| [work/web/lesson-03-performance.html](work/web/lesson-03-performance.html) | Производительность фронтенда: рендеринг и Core Web Vitals | новая тема | — |
-| [work/web/lesson-04-accessibility.html](work/web/lesson-04-accessibility.html) | Доступность: семантика, клавиатура, ARIA | новая тема | — |
+| [work/web/lesson-03-performance.html](work/web/lesson-03-performance.html) | Производительность фронтенда: рендеринг и Core Web Vitals | новая тема | ✅ 10.09 — 8/8 |
+| [work/web/lesson-04-accessibility.html](work/web/lesson-04-accessibility.html) | Доступность: семантика, клавиатура, ARIA | новая тема | ✅ 18.09 — 8/8 |
 | [work/databases/lesson-01-sql.html](work/databases/lesson-01-sql.html) | SQL: join, индексы, нормализация | новая область | ✅ 24.08 — 8/8 |
 | [work/css/lesson-01-flexbox-specificity.html](work/css/lesson-01-flexbox-specificity.html) | Оси флексбокса и специфичность | #28, #29 | ✅ 11.08 — 8/8 |
 | [work/css/lesson-02-box-model-stacking.html](work/css/lesson-02-box-model-stacking.html) | Box model, position и контекст наложения | #30, #33 — угаданы | ✅ 30.08 — 8/8 |
@@ -214,7 +217,7 @@ my-mind/
 | [work/react/lesson-02-effects-memo.html](work/react/lesson-02-effects-memo.html) | React: эффекты, зависимости и мемоизация | продолжение урока 1 | ✅ 13.08 — 8/8 |
 | [work/react/lesson-03-refs-forms.html](work/react/lesson-03-refs-forms.html) | React: refs, формы и StrictMode | #34, #38, #45 — угаданы | ✅ 02.09 — 8/8 |
 | [work/tools/lesson-01-git.html](work/tools/lesson-01-git.html) | Git: merge против rebase, конфликты, история | новая область | ✅ 26.08 — 8/8 |
-| [work/tools/lesson-02-debugging.html](work/tools/lesson-02-debugging.html) | Отладка: как искать причину, а не симптом | продолжение урока 1 | — |
+| [work/tools/lesson-02-debugging.html](work/tools/lesson-02-debugging.html) | Отладка: как искать причину, а не симптом | продолжение урока 1 | ✅ 21.09 — 8/8 |
 | [work/build/lesson-01-bundlers.html](work/build/lesson-01-bundlers.html) | Сборка: бандлеры, tree shaking, code splitting | #49 | ✅ 03.09 — 8/8 |
 | [work/history/lesson-01-programming.html](work/history/lesson-01-programming.html) | История программирования: откуда взялись абстракции | новая область | ✅ 14.08 — 8/8 |
 | [work/typescript/lesson-01-basics.html](work/typescript/lesson-01-basics.html) | TypeScript: структурная типизация, сужение, дженерики | новая область | — |
@@ -267,29 +270,21 @@ my-mind/
 
 ## Очередь следующих уроков
 
-Написано 12 непройденных уроков — сначала они, новые заказывать смысла нет.
+Написано 5 непройденных уроков — сначала они, новые заказывать смысла нет.
 Порядок внутри очереди задаёт `assets/lessons.js`, подсказка «Следующий шаг» в оглавлении
 идёт по нему же и пропускает закрытые продолжения.
 
 Партия от 26.08 закрыла последние угаданные вопросы обоих входных тестов, и с 03.09 в тестах
 не осталось ни одного вопроса без своего урока. Дальше уроки идут не от пробелов теста, а от тем:
-партия от 04.09 добавляет три новые области в общем развитии, две в профессии и продолжает пять
-уже начатых тем.
+от партии 04.09 осталось три урока, партия 21.09 добавила новую область — искусственный интеллект.
 
 | Урок | Почему в очереди |
 |------|------------------|
-| Как появилась археология | новая область: как из кладоискательства выросла наука о контексте |
-| Главные открытия археологии | продолжение урока 1: находки, после которых переписывали учебник |
-| Всемирная история как система | новая область: чем объясняют разрыв между обществами и как проверять такие объяснения |
 | Экономика: цены, инфляция и кризисы | новая область: цена как сигнал, ставка, кредитный цикл |
-| Как работает иммунитет | третья тема в биологии; объясняет вакцины, аллергию и аутоиммунные болезни |
-| Питание и движение | продолжение доказательной медицины на самом зашумлённом материале |
-| История музыки | продолжение урока про устройство музыки: откуда взялись её правила |
+| Нейросети: как машина учится на примерах | новая область: на чём стоит всё остальное про ИИ — веса, обучение, архитектуры |
+| LLM изнутри: токены, контекст и галлюцинации | продолжение урока 1: как из предсказания токена получается собеседник |
 | TypeScript | новая область: структурная типизация, сужение, дженерики |
 | Тестирование | новая область: пирамида, что мокать, почему тесты становятся хрупкими |
-| Производительность фронтенда | новая тема в вебе: путь кадра и Core Web Vitals |
-| Доступность | новая тема в вебе: семантика, клавиатура, ARIA |
-| Отладка | продолжение инструментов: половинное деление, bisect, точки останова |
 
 **Не написано, кандидаты на будущее**
 
@@ -302,8 +297,8 @@ my-mind/
 
 ## Повторение карточками
 
-`review/index.html` — интервальные повторения по уже пройденным темам: 591 написанная карточка
-на все 73 урока плюс те, что добавляются сами из промахов. Открыто 490 — остальные 101 ждут,
+`review/index.html` — интервальные повторения по уже пройденным темам: 613 написанных карточек
+на все 75 уроков плюс те, что добавляются сами из промахов. Открыто 567 — остальные 46 ждут,
 пока будут пройдены их уроки.
 
 - Карточка открывается только после прохождения соответствующего урока.
@@ -492,6 +487,15 @@ deployment → Source** выбрать **GitHub Actions**. Если репози
 | 2026-09-04 | новая партия | — | добавлена археология: 2 урока, 63 всего. Первая партия не от пробелов теста, а по теме. Карточек стало 492 |
 | 2026-09-04 | вторая партия | — | ещё 10 уроков: 73 всего. Общее развитие — всемирная история, экономика, иммунитет, питание и движение, история музыки. Профессия — TypeScript, тестирование, производительность, доступность, отладка. Карточек стало 572 |
 | 2026-09-04 | добор карточек | — | дописаны карточки к «Иконе» и «Луне» — единственным урокам, у которых их не было. Всего 591, из них открыто 490 |
+| 2026-09-06 | как появилась археология | 8/8 | 62 из 73 |
+| 2026-09-08 | история музыки, открытия археологии | 2 × 8/8 | 64 из 73 |
+| 2026-09-10 | производительность фронтенда | 8/8 | 65 из 73 |
+| 2026-09-12 | питание и движение | 8/8 | 66 из 73 |
+| 2026-09-13 | иммунитет | 8/8 | 67 из 73 |
+| 2026-09-16 | всемирная история | 8/8 | 68 из 73 |
+| 2026-09-18 | доступность | 8/8 | 69 из 73 |
+| 2026-09-21 | отладка | 8/8 | 70 из 73; вся партия от 04.09 сдана с первого захода |
+| 2026-09-21 | новая партия | — | добавлена область «Искусственный интеллект»: нейросети и LLM, 75 уроков всего. Карточек стало 613, из них открыто 567 |
 
 Таблицу «Пройден» выше и этот журнал заполняет Claude по данным из `data/state.json` —
 специально ничего сохранять и присылать не нужно.
