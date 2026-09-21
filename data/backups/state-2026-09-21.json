@@ -430,10 +430,9 @@
     },
     "mut-6": {
       "box": 5,
-      "seen": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-24"
+      "due": "2026-09-21"
     },
     "mut-4": {
       "box": 5,
@@ -1632,11 +1631,11 @@
       "due": "2026-10-07"
     },
     "saf-10": {
-      "box": 4,
-      "seen": 7,
+      "box": 2,
+      "seen": 6,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-05"
+      "streak": 1,
+      "due": "2026-09-21"
     },
     "saf-4": {
       "box": 5,
@@ -1734,11 +1733,11 @@
       "due": "2026-10-26"
     },
     "saf-12": {
-      "box": 3,
-      "seen": 5,
+      "box": 2,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-09-28"
+      "streak": 1,
+      "due": "2026-09-19"
     },
     "push-8": {
       "box": 4,
@@ -1962,11 +1961,11 @@
       "due": "2026-09-29"
     },
     "si-5": {
-      "box": 0,
-      "seen": 3,
-      "lapses": 1,
-      "streak": 0,
-      "due": "2026-09-21"
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-09-20"
     },
     "cih-3": {
       "box": 4,
@@ -2137,11 +2136,11 @@
       "due": "2026-10-02"
     },
     "arch-2": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-10-30"
+      "streak": 2,
+      "due": "2026-09-19"
     },
     "art-7": {
       "box": 4,
@@ -2179,11 +2178,11 @@
       "due": "2026-09-30"
     },
     "arch-4": {
-      "box": 5,
-      "seen": 3,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-10-24"
+      "streak": 2,
+      "due": "2026-09-20"
     },
     "arch-1": {
       "box": 4,
@@ -2334,9 +2333,9 @@
     }
   },
   "srs:daily": {
-    "date": "2026-09-21",
-    "done": 6,
-    "fresh": 0
+    "date": "2026-09-18",
+    "done": 25,
+    "fresh": 10
   },
   "lesson:general-chem-everyday": {
     "a0": 1,
@@ -2697,10 +2696,6 @@
     "2026-09-18": {
       "done": 39,
       "again": 14
-    },
-    "2026-09-21": {
-      "done": 6,
-      "again": 1
     }
   },
   "lesson:general-russian-commas": {
