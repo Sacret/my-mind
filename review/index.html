@@ -29,6 +29,7 @@
     <div class="card">
       <div class="tag" id="card-tag"></div>
       <div class="side" id="card-front"></div>
+      <pre class="card-code hidden" id="card-code"><code></code></pre>
       <div id="back-wrap" class="hidden">
         <div class="side back" id="card-back"></div>
         <div class="side note hidden" id="card-note"></div>
@@ -91,6 +92,17 @@ const KEY_DAILY = "srs:daily";
 
 // Имя урока для тега на карточке берём из общего реестра assets/lessons.js
 const lessonTitle = (id) => Lessons.title(id);
+
+// `код` внутри вопроса или ответа печатаем настоящим <code>, а не с кавычками
+function renderText(el, text) {
+  el.textContent = "";
+  String(text || "").split(/`([^`]+)`/).forEach((part, i) => {
+    if (!part) return;
+    el.append(i % 2
+      ? Object.assign(document.createElement("code"), { textContent: part })
+      : document.createTextNode(part));
+  });
+}
 
 let srs = {};
 let settings = SRS.DEFAULTS;
@@ -200,9 +212,15 @@ function next() {
   }
 
   const front = document.getElementById("card-front");
-  front.textContent = current.front;
-  front.classList.toggle("code", !!current.code);   // вопрос с кодом остаётся моноширинным
-  document.getElementById("card-back").textContent = current.back;
+  renderText(front, current.front);
+  // code === true — весь вопрос приехал из урока кодом, держим моноширинным;
+  // code — строка — это листинг под вопросом, он идёт отдельным блоком
+  front.classList.toggle("code", current.code === true);
+  const codeBox = document.getElementById("card-code");
+  const snippet = typeof current.code === "string" ? current.code : "";
+  codeBox.querySelector("code").textContent = snippet;
+  codeBox.classList.toggle("hidden", !snippet);
+  renderText(document.getElementById("card-back"), current.back);
   // пояснение из урока — это контекст, а не то, что нужно вспомнить
   const note = document.getElementById("card-note");
   note.textContent = current.note || "";
@@ -278,7 +296,7 @@ document.getElementById("save-limits").addEventListener("click", (ev) => {
 document.getElementById("export").addEventListener("click", async (ev) => {
   // в Anki поля note нет — подклеиваем пояснение к ответу, чтобы не потерялось
   const rows = deck().map(c =>
-    [c.front, c.back + (c.note ? "\n\n" + c.note : ""), lessonTitle(c.lesson).replace(/\s+/g, "_")]
+    [c.front.replace(/`/g, "") + (typeof c.code === "string" ? "\n\n" + c.code : ""), c.back + (c.note ? "\n\n" + c.note : ""), lessonTitle(c.lesson).replace(/\s+/g, "_")]
       .map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")
   );
   const text = rows.join("\n");

@@ -23,6 +23,8 @@
 .card .tag .from-miss { color: var(--bad); font-weight: 700; }
 /* вопрос с кодом приехал из урока — держим моноширинным */
 .card .side.code { font-family: ui-monospace, Menlo, monospace; font-size: 16px; }
+/* листинг под вопросом: та же плашка, что и в уроках, — видно, что это код */
+.card .card-code { margin: 14px 0 0; white-space: pre; overflow-x: auto; }
 .divider { border: 0; border-top: 1px dashed var(--line); margin: 20px 0; }
 
 /* три кнопки оценки */

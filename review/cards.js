@@ -2,6 +2,8 @@
  * Карточки для повторения.
  * lesson — id урока: карточка попадает в оборот только после его прохождения.
  * Формулировки намеренно спрашивают «что произойдёт» и «почему», а не определения.
+ * code — необязательный листинг: показывается под вопросом отдельной плашкой,
+ * чтобы код было видно кодом. Сам вопрос при этом остаётся обычным текстом.
  */
 window.CARDS = [
 
@@ -77,7 +79,8 @@ window.CARDS = [
   front: "Как записать 4n² + 1000n + 50 000 в O-нотации?",
   back: "O(n²).\nКонстанты и младшие слагаемые отбрасываются: при большом n всё решает n²." },
 { id: "bigo-7", lesson: "work-fundamentals-big-o",
-  front: "Сложность: items.filter(i => other.includes(i))",
+  front: "Какая сложность у выражения?",
+  code: "items.filter(i => other.includes(i))",
   back: "O(n²) — includes делает свой проход внутри каждой итерации filter.\nЛечится: new Set(other) и .has() → O(n)." },
 { id: "bigo-8", lesson: "work-fundamentals-big-o",
   front: "Данных стало в 1000 раз больше. Что будет со временем при O(n²)?",
@@ -91,7 +94,8 @@ window.CARDS = [
 
 // ── Event loop ─────────────────────────────────────────────────────
 { id: "loop-1", lesson: "work-js-event-loop",
-  front: "Что выведет?\n\nsetTimeout(() => log('A'), 0);\nPromise.resolve().then(() => log('B'));\nlog('C');",
+  front: "Что выведет?",
+  code: "setTimeout(() => log('A'), 0);\nPromise.resolve().then(() => log('B'));\nlog('C');",
   back: "C B A.\nСинхронный код → все микрозадачи (промисы) → макрозадачи (таймеры)." },
 { id: "loop-11", lesson: "work-js-event-loop",
   front: "По какому признаку задача попадает в микроочередь, а не в макро?",
@@ -118,7 +122,8 @@ window.CARDS = [
   front: "Почему тяжёлый синхронный цикл замораживает интерфейс?",
   back: "Стек вызовов не пустеет, а отрисовка и обработка событий возможны только между задачами.\nЛечение: разбить работу или вынести в Web Worker." },
 { id: "loop-9", lesson: "work-js-event-loop",
-  front: "Что выведет?\n\nasync function go() { log('1'); await null; log('3'); }\ngo();\nlog('2');",
+  front: "Что выведет?",
+  code: "async function go() { log('1'); await null; log('3'); }\ngo();\nlog('2');",
   back: "1, 2, 3.\nawait над не-промисом всё равно ставит паузу и уводит остаток в микрозадачу." },
 { id: "loop-10", lesson: "work-js-event-loop",
   front: "Порядок: таймер против промиса, который внутри себя создаёт ещё промис",
@@ -144,7 +149,8 @@ window.CARDS = [
   front: "Как убрать дубликаты из массива за O(n)?",
   back: "[...new Set(items)]" },
 { id: "ds-7", lesson: "work-fundamentals-data-structures",
-  front: "Соединить два списка по id: почему плохо users.map(u => orders.find(...))?",
+  front: "Соединить два списка по id — почему так плохо?",
+  code: "users.map(u => orders.find(...))",
   back: "O(n × m): find — полный проход по orders для каждого пользователя.\nХорошо: const byUser = new Map(orders.map(o => [o.userId, o])) → O(n + m)." },
 { id: "ds-8", lesson: "work-fundamentals-data-structures",
   front: "Массив против связного списка: где что быстрее?",
@@ -161,7 +167,8 @@ window.CARDS = [
   front: "Что делает map с исходным массивом?",
   back: "Ничего. Создаёт НОВЫЙ массив той же длины." },
 { id: "mut-4", lesson: "work-js-arrays-mutation",
-  front: "const arr = [1,2,3]; arr.push(4) — что произойдёт?",
+  front: "Что произойдёт?",
+  code: "const arr = [1, 2, 3];\narr.push(4);",
   back: "Массив станет [1,2,3,4].\nconst защищает ССЫЛКУ, а не содержимое. Упадёт только arr = []." },
 { id: "mut-5", lesson: "work-js-arrays-mutation",
   front: "Почему setItems(items) после items.push(x) не перерисовывает компонент?",
@@ -179,7 +186,8 @@ window.CARDS = [
   front: "Как иммутабельно изменить один элемент массива в state?",
   back: "setItems(items.map(i => i.id === id ? { ...i, done: true } : i))" },
 { id: "mut-10", lesson: "work-js-arrays-mutation",
-  front: "Что не так с const sorted = props.items.sort(...)?",
+  front: "Что не так?",
+  code: "const sorted = props.items.sort(...);",
   back: "sort мутирует чужой массив из пропсов.\nПравильно: [...props.items].sort(...) или props.items.toSorted(...)." },
 
 // ── Задачи в словах ────────────────────────────────────────────────
@@ -381,7 +389,8 @@ window.CARDS = [
   front: "Что вернёт typeof null и почему?",
   back: '"object".\nБаг первой реализации: null был нулевым указателем, а тег объекта — нулями.\nПроверять надо напрямую: x === null.' },
 { id: "typ-2", lesson: "work-js-types-coercion",
-  front: "const a = null;  Что вернёт a?.b?.c ?",
+  front: "Что вернёт?",
+  code: "const a = null;\na?.b?.c",
   back: "undefined, не null.\nОтсутствие свойства язык всегда обозначает через undefined." },
 { id: "typ-3", lesson: "work-js-types-coercion",
   front: "Как отличить массив от обычного объекта?",
@@ -1218,7 +1227,8 @@ window.CARDS = [
   front: "await в цикле for по десяти запросам — что не так?",
   back: "Запросы идут последовательно: 10 × 300 мс = 3 с вместо 300 мс.\nНужен Promise.all(ids.map(fetchItem)), если операции независимы." },
 { id: "prm-4", lesson: "work-js-promises",
-  front: "arr.forEach(async x => { await save(x) }) — когда завершится?",
+  front: "Когда завершится?",
+  code: "arr.forEach(async x => { await save(x) });",
   back: "Мгновенно: forEach игнорирует возвращённые промисы.\nНужен for...of с await или Promise.all(arr.map(...))." },
 { id: "prm-5", lesson: "work-js-promises",
   front: "«return getData()» без await внутри try — что с ошибкой?",
@@ -1227,7 +1237,8 @@ window.CARDS = [
   front: "Первый промис в Promise.all упал. Что с остальными запросами?",
   back: "Они продолжают выполняться — просто результат некуда деть.\nПромисы не поддерживают отмену, для этого нужен AbortController." },
 { id: "prm-7", lesson: "work-js-promises",
-  front: "Что выведет: console.log('1'); await null; console.log('3'); — и '2' снаружи?",
+  front: "Что выведет?",
+  code: "async function go() { console.log('1'); await null; console.log('3'); }\ngo();\nconsole.log('2');",
   back: "1 2 3.\nДо первого await тело async-функции выполняется синхронно, после — микрозадача." },
 
 // ── debounce и throttle ────────────────────────────────────────────
@@ -1244,7 +1255,8 @@ window.CARDS = [
   front: "Почему в реализации нужно fn.apply(this, args), а не fn()?",
   back: "Иначе теряются аргументы события и контекст.\nПо той же причине внешняя обёртка не должна быть стрелочной." },
 { id: "deb-5", lesson: "work-js-debounce-throttle",
-  front: "const onChange = debounce(save, 500) в теле React-компонента",
+  front: "Что будет с этим в теле React-компонента?",
+  code: "const onChange = debounce(save, 500);",
   back: "Сломано: обёртка пересоздаётся на каждом рендере вместе с таймером.\nНужен useMemo(() => debounce(save, 500), []) и cancel при размонтировании." },
 { id: "deb-6", lesson: "work-js-debounce-throttle",
   front: "Что лучше throttle(16) для перерисовки?",
@@ -1264,7 +1276,8 @@ window.CARDS = [
   front: "Жадность: что найдёт /<.+>/ в \"<b>bold</b>\"?",
   back: "Всю строку целиком.\nЛенивый /<.+?>/ или явный запрет /<[^>]+>/ дадут \"<b>\" — второе надёжнее и быстрее." },
 { id: "rgx-4", lesson: "work-js-regexp",
-  front: "const re = /\\d/g; re.test(\"a1\") дважды подряд",
+  front: "Что вернут два вызова подряд?",
+  code: "const re = /\\d/g;\nre.test('a1');\nre.test('a1');",
   back: "true, затем false: с флагом g регулярка хранит lastIndex.\nДля проверки флаг g не нужен; такую регулярку нельзя держать на уровне модуля." },
 { id: "rgx-5", lesson: "work-js-regexp",
   front: "Что на самом деле означает /^cat|dog$/?",
@@ -1715,7 +1728,7 @@ window.CARDS = [
   front: "Что делает git bisect и сколько шагов занимает?",
   back: "Половинным делением по истории находит коммит, сломавший поведение, — примерно за log₂ n проверок.\nС автопроверкой: git bisect run npm test." },
 { id: "dbg-3", lesson: "work-tools-debugging",
-  front: "Почему console.log(obj) может показать не то состояние?",
+  front: "Почему `console.log(obj)` может показать не то состояние?",
   back: "Консоль печатает ссылку: при раскрытии виден объект в текущем виде, а не в момент вызова.\nДля снимка — structuredClone или JSON.stringify." },
 { id: "dbg-4", lesson: "work-tools-debugging",
   front: "Функция вызывается тысячу раз, ломается на одном элементе. Что делать?",

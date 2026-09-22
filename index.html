@@ -589,6 +589,10 @@ function buildSrsStats() {
 }
 
 function buildLeeches(leeches) {
+  // вопрос карточки с листингом короткий («Что выведет?») — дотягиваем первой строкой кода
+  const cardTitle = (c) => c.front.replace(/`/g, "").split("\n")[0] +
+    (typeof c.code === "string" ? "   " + c.code.split("\n")[0] : "");
+
   const box = document.getElementById("leech-box");
   const list = document.getElementById("leech-list");
   box.classList.toggle("hidden", !leeches.length);
@@ -603,7 +607,7 @@ function buildLeeches(leeches) {
     const main = document.createElement("span");
     main.className = "row-main";
     main.append(Object.assign(document.createElement("div"), {
-      className: "row-title", textContent: card.front.split("\n")[0]
+      className: "row-title", textContent: cardTitle(card)
     }));
     const sub = document.createElement("div");
     sub.className = "row-sub";
