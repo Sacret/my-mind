@@ -5152,5 +5152,28 @@
         ]
       }
     }
-  ]
+  ],
+  "lesson:general-theatre-language": {
+    "a0": 2,
+    "a1": 1,
+    "a2": 0,
+    "a3": 3,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-30",
+    "attempts": [
+      {
+        "date": "2026-09-30",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  }
 }
