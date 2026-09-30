@@ -35,8 +35,20 @@ a.row:hover { border-color: var(--accent); }
 .row-main { flex: 1 1 auto; min-width: 0; }
 .row-title { font-weight: 600; }
 /* название области перед заголовком урока */
-.row-area { color: var(--accent); }
-.row-area::after { content: " · "; color: var(--muted); font-weight: 400; }
+
+/* область знания: раскрывающийся список уроков */
+details.area > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  cursor: pointer; list-style: none; padding: 10px 2px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600; color: var(--accent);
+}
+details.area > summary::-webkit-details-marker { display: none; }
+details.area > summary::before { content: "▸"; margin-right: 8px; display: inline-block; transition: transform .15s; }
+details.area[open] > summary::before { transform: rotate(90deg); }
+details.area > summary .area-name { flex: 1 1 auto; }
+details.area > summary .area-count { flex: none; min-width: 4.5em; text-align: right; font-weight: 400; font-size: 14px; color: var(--muted); }
+details.area[open] > summary { margin-bottom: 8px; }
 .row-sub { color: var(--muted); font-size: 14px; }
 .row-score { flex: none; font-variant-numeric: tabular-nums; font-size: 15px; color: var(--muted); text-align: right; }
 .row-score b { color: var(--fg); }

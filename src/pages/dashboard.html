@@ -294,6 +294,9 @@ function fmtDate(iso) {
   return d + "." + m + "." + y.slice(2);
 }
 
+// какие области раскрыты — переживает перерисовку оглавления
+const openAreas = new Set();
+
 function build() {
   const tracks = document.getElementById("tracks");
   tracks.textContent = "";
@@ -310,7 +313,36 @@ function build() {
     h.textContent = TRACK_NAMES[tr];
     box.append(h);
 
+    // области по алфавиту, каждая — раскрывающийся список; внутри порядок реестра
+    const groups = new Map();
     items.forEach(l => {
+      const name = areaOf(l.href) || "Без области";
+      if (!groups.has(name)) groups.set(name, []);
+      groups.get(name).push(l);
+    });
+    const names = [...groups.keys()].sort((x, y) => x.localeCompare(y, "ru"));
+
+    names.forEach(name => {
+    const list = groups.get(name);
+    const key = tr + "/" + name;
+    const det = document.createElement("details");
+    det.className = "area";
+    det.open = openAreas.has(key);
+    det.addEventListener("toggle", () => {
+      if (det.open) openAreas.add(key); else openAreas.delete(key);
+    });
+    const sm = document.createElement("summary");
+    const doneInArea = list.filter(l => Lessons.isDone(l.id)).length;
+    sm.append(Object.assign(document.createElement("span"), { className: "area-name", textContent: name }),
+              Object.assign(document.createElement("span"), {
+                className: "area-count tnum", textContent: doneInArea + " / " + list.length }),
+              Object.assign(document.createElement("span"), {
+                className: "tick" + (doneInArea === list.length ? " done" : ""),
+                textContent: doneInArea === list.length ? "✓" : "" }));
+    det.append(sm);
+    const target = det;
+
+    list.forEach(l => {
       const st = readState(l.id);
       if (st) anyState = true;
       const complete = Lessons.isDone(l.id);
@@ -331,12 +363,6 @@ function build() {
       main.className = "row-main";
       const t = document.createElement("div");
       t.className = "row-title";
-      const area = areaOf(l.href);
-      if (area) {
-        t.append(Object.assign(document.createElement("span"), {
-          className: "row-area", textContent: area
-        }));
-      }
       t.append(document.createTextNode(l.title));
       const s = document.createElement("div");
       s.className = "row-sub";
@@ -372,7 +398,9 @@ function build() {
       }
       a.append(score);
 
-      box.append(a);
+      target.append(a);
+    });
+    box.append(det);
     });
 
     tracks.append(box);
@@ -438,8 +466,13 @@ function build() {
   const nb = document.getElementById("next-box");
   const body = document.getElementById("next-body");
   body.textContent = "";
+  // берём самый свежий по дате добавления; при равных датах — позже в реестре
+  const freshest = (tr) => LESSONS
+    .map((l, i) => ({ l, i }))
+    .filter(x => x.l.track === tr && !Lessons.isDone(x.l.id) && !Lessons.lockOf(x.l.id))
+    .sort((a, b) => (b.l.added || "").localeCompare(a.l.added || "") || b.i - a.i)[0];
   const nexts = Object.keys(TRACK_NAMES)
-    .map(tr => ({ tr, l: LESSONS.find(l => l.track === tr && !Lessons.isDone(l.id) && !Lessons.lockOf(l.id)) }))
+    .map(tr => ({ tr, l: (freshest(tr) || {}).l }))
     .filter(x => x.l);
   if (nexts.length) {
     nexts.forEach(({ tr, l }) => {
