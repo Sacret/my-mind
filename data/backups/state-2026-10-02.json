@@ -234,11 +234,10 @@
       "due": "2026-10-27"
     },
     "prob-7": {
-      "box": 1,
-      "seen": 3,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
+      "box": 5,
+      "seen": 1,
+      "lapses": 0,
+      "due": "2026-10-02"
     },
     "prob-5": {
       "box": 5,
@@ -263,10 +262,9 @@
     },
     "bigo-3": {
       "box": 5,
-      "seen": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-11-05"
+      "due": "2026-10-02"
     },
     "bigo-1": {
       "box": 5,
@@ -476,10 +474,9 @@
     },
     "ds-8": {
       "box": 5,
-      "seen": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-11-08"
+      "due": "2026-10-02"
     },
     "mut-5": {
       "box": 5,
@@ -490,10 +487,9 @@
     },
     "ds-5": {
       "box": 5,
-      "seen": 2,
+      "seen": 1,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-11-05"
+      "due": "2026-10-02"
     },
     "mut-7": {
       "box": 5,
@@ -659,10 +655,9 @@
     },
     "st-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-11-05"
+      "due": "2026-10-02"
     },
     "st-2": {
       "box": 5,
@@ -786,10 +781,9 @@
     },
     "ci-4": {
       "box": 5,
-      "seen": 4,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-11-03"
+      "due": "2026-10-02"
     },
     "ci-3": {
       "box": 5,
@@ -882,11 +876,11 @@
       "due": "2026-10-13"
     },
     "typ-5": {
-      "box": 3,
-      "seen": 9,
+      "box": 1,
+      "seen": 8,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "typ-7": {
       "box": 5,
@@ -1002,11 +996,11 @@
       "due": "2026-10-03"
     },
     "css-5": {
-      "box": 3,
-      "seen": 9,
+      "box": 1,
+      "seen": 8,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "css-7": {
       "box": 5,
@@ -1029,11 +1023,11 @@
       "due": "2026-10-08"
     },
     "re-2": {
-      "box": 2,
-      "seen": 10,
+      "box": 1,
+      "seen": 9,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-05"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "css-6": {
       "box": 5,
@@ -1215,10 +1209,9 @@
     },
     "br-1": {
       "box": 5,
-      "seen": 5,
+      "seen": 4,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-11-05"
+      "due": "2026-10-02"
     },
     "auto:work-js-promises:q7": {
       "box": 5,
@@ -1345,11 +1338,10 @@
       "due": "2026-10-09"
     },
     "ev-8": {
-      "box": 1,
-      "seen": 6,
-      "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-03"
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "due": "2026-10-02"
     },
     "as-2": {
       "box": 5,
@@ -1429,10 +1421,9 @@
     },
     "ru-6": {
       "box": 5,
-      "seen": 6,
+      "seen": 5,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-11-06"
+      "due": "2026-10-02"
     },
     "ru-1": {
       "box": 5,
@@ -2213,18 +2204,18 @@
       "due": "2026-11-02"
     },
     "arch-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-11-03"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "arch-3": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-11-09"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "arch-2": {
       "box": 5,
@@ -2234,18 +2225,18 @@
       "due": "2026-10-30"
     },
     "art-7": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-11-09"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "art-5": {
-      "box": 5,
-      "seen": 3,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 3,
-      "due": "2026-11-02"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "arch-6": {
       "box": 4,
@@ -2430,11 +2421,11 @@
       "due": "2026-10-13"
     },
     "bias-5": {
-      "box": 4,
-      "seen": 5,
+      "box": 3,
+      "seen": 4,
       "lapses": 1,
-      "streak": 4,
-      "due": "2026-10-19"
+      "streak": 3,
+      "due": "2026-10-02"
     },
     "bias-7": {
       "box": 4,
@@ -2472,11 +2463,11 @@
       "due": "2026-10-03"
     },
     "med-2": {
-      "box": 4,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-17"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "star-2": {
       "box": 4,
@@ -2493,11 +2484,11 @@
       "due": "2026-10-08"
     },
     "med-6": {
-      "box": 5,
-      "seen": 4,
+      "box": 3,
+      "seen": 3,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-11-08"
+      "streak": 2,
+      "due": "2026-10-02"
     },
     "med-3": {
       "box": 4,
@@ -2703,32 +2694,32 @@
       "due": "2026-10-08"
     },
     "ling-2": {
-      "box": 3,
-      "seen": 4,
+      "box": 1,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "cond-6": {
       "box": 1,
-      "seen": 5,
-      "lapses": 3,
+      "seen": 3,
+      "lapses": 2,
       "streak": 1,
-      "due": "2026-10-03"
+      "due": "2026-10-02"
     },
     "cond-8": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "cond-5": {
-      "box": 3,
-      "seen": 5,
+      "box": 1,
+      "seen": 4,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "ling-7": {
       "box": 2,
@@ -2738,25 +2729,25 @@
       "due": "2026-10-04"
     },
     "ling-4": {
-      "box": 2,
-      "seen": 4,
+      "box": 1,
+      "seen": 3,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-05"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "sort-2": {
-      "box": 2,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-05"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "sort-1": {
-      "box": 3,
-      "seen": 3,
+      "box": 1,
+      "seen": 2,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "ling-6": {
       "box": 2,
@@ -2766,98 +2757,24 @@
       "due": "2026-10-04"
     },
     "ling-3": {
-      "box": 3,
-      "seen": 2,
+      "box": 1,
+      "seen": 1,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-10-02"
     },
     "ling-5": {
-      "box": 3,
-      "seen": 3,
-      "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
-    },
-    "prm-2": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-05"
-    },
-    "sort-4": {
       "box": 1,
       "seen": 2,
       "lapses": 1,
       "streak": 1,
-      "due": "2026-10-03"
-    },
-    "prm-5": {
-      "box": 1,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "prm-4": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "sort-7": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "prm-3": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "prm-1": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "sort-3": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "sort-5": {
-      "box": 2,
-      "seen": 1,
-      "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-05"
-    },
-    "sort-6": {
-      "box": 1,
-      "seen": 2,
-      "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
-    },
-    "auto:general-politics-state:q4": {
-      "box": 0,
       "due": "2026-10-02"
     }
   },
   "srs:daily": {
-    "date": "2026-10-02",
-    "done": 38,
-    "fresh": 10
+    "date": "2026-10-01",
+    "done": 40,
+    "fresh": 7
   },
   "lesson:general-chem-everyday": {
     "a0": 1,
@@ -3250,10 +3167,6 @@
     "2026-10-01": {
       "done": 53,
       "again": 13
-    },
-    "2026-10-02": {
-      "done": 48,
-      "again": 10
     }
   },
   "lesson:general-russian-commas": {
@@ -3471,15 +3384,6 @@
       "src": "unsure",
       "date": "2026-09-02",
       "note": "Запись в ref не перерисовывает компонент, и число на экране не изменится. Обычная переменная вдобавок пересоздаётся на каждом рендере."
-    },
-    "auto:general-politics-state:q4": {
-      "lesson": "general-politics-state",
-      "front": "Чем парламентская республика отличается от президентской?",
-      "back": "В парламентской правительство формирует парламент, и оно отвечает перед ним",
-      "note": "Примеры: Германия — парламентская, США — президентская, Франция — полупрезидентская. Главное различие в том, кто формирует правительство и перед кем оно отвечает.",
-      "code": false,
-      "src": "wrong",
-      "date": "2026-10-02"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -5360,37 +5264,5 @@
         "unsure": []
       }
     ]
-  },
-  "lesson:general-politics-state": {
-    "a0": 3,
-    "a1": 2,
-    "a2": 1,
-    "a3": 0,
-    "a5": 2,
-    "a6": 0,
-    "a7": 3,
-    "lastScore": 8,
-    "unsure": 0,
-    "completed": true,
-    "date": "2026-10-02",
-    "attempts": [
-      {
-        "date": "2026-10-02",
-        "score": 7,
-        "total": 8,
-        "wrong": [
-          4
-        ],
-        "unsure": []
-      },
-      {
-        "date": "2026-10-02",
-        "score": 8,
-        "total": 8,
-        "wrong": [],
-        "unsure": []
-      }
-    ],
-    "a4": 3
   }
 }
