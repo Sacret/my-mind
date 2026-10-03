@@ -12,7 +12,7 @@ window.SRS = (function () {
 
   const LEECH = 3;                // столько провалов — и карточка считается залипшей
   const LEECH_CLEAR = 2;          // столько успехов подряд — и метка снимается
-  const LOG_DAYS = 60;            // столько дней держим в журнале
+  const LOG_DAYS = 400;           // столько дней держим в журнале — календарю на дашборде нужен год
   const RATE_DAYS = 14;           // за столько дней считаем долю «не вспомнила»
   const FORECAST_DAYS = 7;        // на столько дней вперёд строим прогноз нагрузки
 
@@ -146,7 +146,8 @@ window.SRS = (function () {
   function logGrade(kind) {
     if (!window.Store) return;
     const log = Store.get(KEY_LOG) || {};
-    const day = log[today()] || { done: 0, again: 0 };
+    // cleared: false — день начат, но очередь ещё не пройдена до конца (см. logCleared)
+    const day = log[today()] || { done: 0, again: 0, cleared: false };
     day.done += 1;
     if (kind === "again") day.again += 1;
     log[today()] = day;
@@ -156,6 +157,22 @@ window.SRS = (function () {
     keep.forEach((d) => { trimmed[d] = log[d]; });
     Store.set(KEY_LOG, trimmed);
   }
+
+  /** Очередь на сегодня пройдена до конца — в календаре дашборда это +1 урок. */
+  function logCleared() {
+    if (!window.Store) return;
+    const log = Store.get(KEY_LOG) || {};
+    const day = log[today()];
+    if (!day || !day.done || day.cleared === true) return;
+    day.cleared = true;
+    Store.set(KEY_LOG, log);
+  }
+
+  /**
+   * Закрыты ли карточки дня. В записях, сделанных до появления флага cleared,
+   * его нет — такие дни считаем закрытыми: отметка о неполной сессии тогда не велась.
+   */
+  const dayCleared = (day) => !!(day && day.done && day.cleared !== false);
 
   const addDays = (iso, n) => {
     const [y, m, d] = iso.split("-").map(Number);
@@ -216,6 +233,6 @@ window.SRS = (function () {
     INTERVALS, DEFAULTS, KEY, KEY_AUTO, KEY_LOG, LEECH, LEECH_CLEAR, RATE_DAYS,
     today, nextDue, settingsFrom, dailyFrom, plan,
     autoCards, deck, noteMisses,
-    applyGrade, logGrade, stats
+    applyGrade, logGrade, logCleared, dayCleared, stats
   };
 })();

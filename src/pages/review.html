@@ -178,7 +178,11 @@ function showEmpty() {
 
 function next() {
   renderStats();
-  if (!queue.length) { showEmpty(); return; }
+  if (!queue.length) {
+    if (daily.done > 0) SRS.logCleared();   // все карточки дня пройдены — календарь засчитает урок
+    showEmpty();
+    return;
+  }
   current = queue[0];
 
   const tag = document.getElementById("card-tag");

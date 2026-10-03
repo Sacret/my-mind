@@ -75,7 +75,8 @@
 
   <hr>
   <h2 id="calendar">Календарь</h2>
-  <p class="lead sm">Год по дням: чем темнее клетка, тем больше уроков закрыто в этот день.</p>
+  <p class="lead sm">Год по дням: чем темнее клетка, тем больше уроков закрыто в этот день.
+    Все карточки дня, пройденные до конца, считаются ещё одним уроком.</p>
   <div class="cal" id="cal">
     <div class="cal-scroll">
       <div class="cal-inner">
@@ -717,12 +718,19 @@ function calLevel(n) {
   return Math.min(n, 4);
 }
 
+// по дням: { n — всего в зачёт, cards — закрыты ли карточки дня }
 function lessonsPerDay() {
   const counts = {};
+  const at = (d) => counts[d] || (counts[d] = { n: 0, cards: false });
   LESSONS.forEach(l => {
     const st = readState(l.id);
     // в хранилище лежит только дата последнего прохождения — по ней и считаем
-    if (st && st.completed && st.date) counts[st.date] = (counts[st.date] || 0) + 1;
+    if (st && st.completed && st.date) at(st.date).n++;
+  });
+  // все карточки дня = ещё один урок
+  const log = Store.get(SRS.KEY_LOG) || {};
+  Object.keys(log).forEach(d => {
+    if (SRS.dayCleared(log[d])) { const c = at(d); c.n++; c.cards = true; }
   });
   return counts;
 }
@@ -756,12 +764,13 @@ function buildCalendar() {
   for (let d = new Date(start); d <= end; d = addDays(d, 1)) {
     const iso = isoOf(d);
     const future = d > today;
-    const n = future ? 0 : (counts[iso] || 0);
+    const day = future ? null : counts[iso];
+    const n = day ? day.n : 0;
     if (n) { total += n; activeDays++; }
 
     const cell = document.createElement("div");
     cell.className = "cal-cell" + (future ? " cal-empty" : " lvl-" + calLevel(n));
-    if (!future) { cell.dataset.d = iso; cell.dataset.n = n; }
+    if (!future) { cell.dataset.d = iso; cell.dataset.n = n; if (day && day.cards) cell.dataset.cards = "1"; }
     grid.append(cell);
 
     // подпись месяца ставим над той неделей, где месяц сменился, но не теснее чем раз в три столбца
@@ -809,6 +818,7 @@ function buildCalendar() {
   function show(cell) {
     const n = Number(cell.dataset.n) || 0;
     tip.textContent = (n ? n + " " + plural(n, "урок", "урока", "уроков") : "уроков нет") +
+                      (cell.dataset.cards ? " (с карточками)" : "") +
                       " · " + humanDate(cell.dataset.d);
     tip.classList.add("on");
     const r = cell.getBoundingClientRect();
