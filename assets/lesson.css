@@ -207,3 +207,13 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .back a:hover { background: var(--accent); color: #fff; }
 .back a:active { background: var(--accent); color: #fff; filter: var(--press-active); }
 .back a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* подпись внизу каждой страницы — из общего каркаса src/layout.html */
+.site-footer {
+  max-width: 720px; margin: -60px auto 0; padding: 0 20px 32px;
+  color: var(--muted); font-size: 13px; text-align: center;
+}
+.site-footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.site-footer a:hover { color: var(--accent); }
+/* на тестах внизу висит липкая панель .bar — подпись не должна уходить под неё */
+body:has(.bar) .site-footer { padding-bottom: 90px; }

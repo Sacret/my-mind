@@ -362,5 +362,8 @@ document.getElementById("reset").addEventListener("click", () => {
 // поднимаем сохранённые ответы (с сервера или из localStorage), затем рисуем
 Store.ready().then(() => { state = Store.get(KEY) || {}; render(); showHistory(); });
 </script>
+<footer class="site-footer">
+  Автор — <a href="https://sacret.ru/">Анастасия Абакумова</a> · сайт сделан вместе с <a href="https://claude.com/claude-code">Claude Code</a>
+</footer>
 </body>
 </html>
