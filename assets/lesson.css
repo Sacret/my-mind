@@ -135,6 +135,14 @@ table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 15px;
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
 th { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
 td.num { font-variant-numeric: tabular-nums; text-align: right; }
+/* на телефоне таблица в три-четыре столбца шире экрана и растягивала всю страницу
+   вбок: длинные слова в ячейках переносим по слогам, а что всё равно не влезло —
+   прокручивается внутри самой таблицы. Только на узком экране: display: block
+   не даёт короткой таблице растянуться на всю колонку */
+@media (max-width: 600px) {
+  table { display: block; overflow-x: auto; }
+  th, td { -webkit-hyphens: auto; hyphens: auto; }
+}
 
 /* --- история попыток: и на странице теста, и в оглавлении --- */
 .att-table { margin: 8px 0 14px; }
