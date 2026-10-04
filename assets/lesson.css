@@ -226,11 +226,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 /* на тестах внизу висит липкая панель .bar — подпись не должна уходить под неё */
 body:has(.bar) .site-footer { padding-bottom: 90px; }
 
-/* уголок со ссылкой на репозиторий — из общего каркаса; цвет акцента трека,
-   осьминог цвета фона. Поверх липкой шапки, а на узком экране шапка
-   отодвигает содержимое от правого края, чтобы уголок его не закрывал */
+/* уголок со ссылкой на репозиторий — в правом краю липкой шапки и её высотой,
+   так что при прокрутке остаётся на месте; цвет акцента трека, осьминог цвета
+   фона. Там, где колонка шапки доходит до края окна, содержимое отодвигается */
 .github-corner svg {
-  position: absolute; top: 0; right: 0; z-index: 30; border: 0;
+  position: absolute; top: 0; right: 0; width: 50px; height: 50px; border: 0;
   fill: var(--accent); color: var(--bg);
 }
 .github-corner:hover .octo-arm { animation: octocat-wave 560ms ease-in-out; }
@@ -239,8 +239,8 @@ body:has(.bar) .site-footer { padding-bottom: 90px; }
   20%, 60% { transform: rotate(-25deg); }
   40%, 80% { transform: rotate(10deg); }
 }
-@media (max-width: 860px) {
-  .topbar-in { padding-right: 64px; }
+@media (max-width: 820px) {
+  .topbar-in { padding-right: 56px; }
 }
 @media (max-width: 500px) {
   .github-corner:hover .octo-arm { animation: none; }
