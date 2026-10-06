@@ -24,6 +24,15 @@ const PAGES = path.join(ROOT, "src", "pages");
 const LAYOUT = path.join(ROOT, "src", "layout.html");
 const CHECK = process.argv.includes("--check");
 
+/** Адрес сайта для Open Graph: превью в мессенджерах требуют абсолютных ссылок. */
+const SITE_URL = "https://sacret.github.io/my-mind/";
+const DESCRIPTION = "Личная программа обучения: уроки, тесты и карточки для повторения";
+
+/** Значение для атрибута в двойных кавычках. */
+function attr(s) {
+  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
 /** Разбирает шапку вида ---\nkey: value\n--- в начале файла. */
 function parseSource(raw, file) {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -126,6 +135,9 @@ function render(layout, source, file) {
     text: layout
       .replace("{{source}}", file)
       .replace("{{title}}", meta.title)
+      .replace(/\{\{ogTitle\}\}/g, () => attr(meta.title))
+      .replace(/\{\{description\}\}/g, () => attr(meta.description || DESCRIPTION))
+      .replace("{{url}}", () => SITE_URL + (meta.out === "index.html" ? "" : meta.out))
       .replace("{{css}}", cssHtml(root, meta.css))
       .replace("{{style}}", style)
       .replace("{{bodyClass}}", meta.body ? ' class="' + meta.body + '"' : "")
