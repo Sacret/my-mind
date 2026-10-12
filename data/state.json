@@ -209,9 +209,10 @@
     },
     "prob-1": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-12"
+      "streak": 1,
+      "due": "2026-11-19"
     },
     "syl-5": {
       "box": 5,
@@ -235,11 +236,11 @@
       "due": "2026-10-27"
     },
     "prob-7": {
-      "box": 3,
-      "seen": 4,
+      "box": 5,
+      "seen": 5,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-12"
+      "streak": 3,
+      "due": "2026-11-13"
     },
     "prob-5": {
       "box": 5,
@@ -355,9 +356,10 @@
     },
     "bigo-7": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-17"
     },
     "loop-3": {
       "box": 5,
@@ -374,17 +376,18 @@
       "due": "2026-10-31"
     },
     "loop-8": {
-      "box": 2,
-      "seen": 5,
+      "box": 3,
+      "seen": 6,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-10-17"
     },
     "loop-6": {
-      "box": 5,
-      "seen": 2,
-      "lapses": 0,
-      "due": "2026-10-11"
+      "box": 1,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-13"
     },
     "loop-9": {
       "box": 5,
@@ -436,11 +439,11 @@
       "due": "2026-10-29"
     },
     "mut-3": {
-      "box": 1,
-      "seen": 3,
+      "box": 3,
+      "seen": 4,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-10-18"
     },
     "ds-6": {
       "box": 5,
@@ -478,11 +481,11 @@
       "due": "2026-11-09"
     },
     "ds-7": {
-      "box": 5,
-      "seen": 2,
-      "lapses": 0,
+      "box": 1,
+      "seen": 4,
+      "lapses": 1,
       "streak": 1,
-      "due": "2026-10-12"
+      "due": "2026-10-13"
     },
     "ds-8": {
       "box": 5,
@@ -528,15 +531,17 @@
     },
     "wp-1": {
       "box": 5,
-      "seen": 1,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-15"
     },
     "wp-4": {
       "box": 5,
-      "seen": 1,
+      "seen": 2,
       "lapses": 0,
-      "due": "2026-10-07"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "wp-2": {
       "box": 5,
@@ -603,9 +608,10 @@
     },
     "sq-4": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-11"
     },
     "sq-5": {
       "box": 5,
@@ -665,9 +671,10 @@
     },
     "st-5": {
       "box": 5,
-      "seen": 2,
+      "seen": 3,
       "lapses": 0,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-17"
     },
     "ch-1": {
       "box": 5,
@@ -685,9 +692,10 @@
     },
     "st-2": {
       "box": 5,
-      "seen": 2,
+      "seen": 3,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-14"
     },
     "st-4": {
       "box": 5,
@@ -719,9 +727,10 @@
     },
     "mu-5": {
       "box": 5,
-      "seen": 2,
+      "seen": 3,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-11"
     },
     "mu-4": {
       "box": 5,
@@ -731,11 +740,11 @@
       "due": "2026-11-01"
     },
     "mu-3": {
-      "box": 1,
-      "seen": 4,
+      "box": 2,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-10-13"
     },
     "mu-2": {
       "box": 5,
@@ -781,9 +790,10 @@
     },
     "mu-7": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "mu-6": {
       "box": 5,
@@ -815,9 +825,10 @@
     },
     "ci-3": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-10"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "ci-2": {
       "box": 5,
@@ -834,9 +845,10 @@
     },
     "ci-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "auto:general-russian-commas:q1": {
       "box": 5,
@@ -904,18 +916,18 @@
       "due": "2026-10-13"
     },
     "typ-5": {
-      "box": 3,
-      "seen": 9,
+      "box": 5,
+      "seen": 10,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 3,
+      "due": "2026-11-13"
     },
     "typ-7": {
       "box": 5,
-      "seen": 6,
+      "seen": 7,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-11"
     },
     "typ-2": {
       "box": 5,
@@ -933,15 +945,17 @@
     },
     "ci-8": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-07"
+      "streak": 1,
+      "due": "2026-11-13"
     },
     "http-1": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "auto:work-history-programming:q0": {
       "box": 5,
@@ -966,10 +980,10 @@
     },
     "http-3": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-17"
     },
     "css-3": {
       "box": 5,
@@ -980,16 +994,17 @@
     },
     "http-8": {
       "box": 5,
-      "seen": 8,
+      "seen": 9,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-08"
+      "streak": 2,
+      "due": "2026-11-19"
     },
     "http-5": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-10"
     },
     "css-1": {
       "box": 5,
@@ -1007,9 +1022,10 @@
     },
     "css-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-12"
+      "streak": 1,
+      "due": "2026-11-21"
     },
     "http-7": {
       "box": 5,
@@ -1026,17 +1042,18 @@
       "due": "2026-11-09"
     },
     "css-5": {
-      "box": 3,
-      "seen": 9,
+      "box": 5,
+      "seen": 10,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-11-15"
     },
     "css-7": {
-      "box": 5,
-      "seen": 4,
-      "lapses": 0,
-      "due": "2026-10-08"
+      "box": 2,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-13"
     },
     "css-4": {
       "box": 5,
@@ -1047,17 +1064,17 @@
     },
     "css-8": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-08"
+      "streak": 2,
+      "due": "2026-11-19"
     },
     "re-2": {
-      "box": 1,
-      "seen": 13,
+      "box": 3,
+      "seen": 14,
       "lapses": 4,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "css-6": {
       "box": 5,
@@ -1068,10 +1085,10 @@
     },
     "re-5": {
       "box": 5,
-      "seen": 7,
+      "seen": 8,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-18"
     },
     "re-1": {
       "box": 5,
@@ -1082,9 +1099,10 @@
     },
     "re-3": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 0,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-13"
     },
     "auto:general-logic-fallacies:q0": {
       "box": 5,
@@ -1108,10 +1126,10 @@
     },
     "re-7": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-13"
     },
     "re-6": {
       "box": 5,
@@ -1122,15 +1140,17 @@
     },
     "re2-4": {
       "box": 5,
-      "seen": 6,
+      "seen": 7,
       "lapses": 1,
-      "due": "2026-10-11"
+      "streak": 1,
+      "due": "2026-11-21"
     },
     "re-8": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-14"
     },
     "re2-1": {
       "box": 5,
@@ -1176,17 +1196,17 @@
     },
     "fin-5": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-10"
     },
     "fin-3": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-12"
     },
     "fin-8": {
       "box": 5,
@@ -1197,10 +1217,10 @@
     },
     "fin-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-11"
     },
     "fin-1": {
       "box": 5,
@@ -1218,10 +1238,10 @@
     },
     "fin-7": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-08"
+      "streak": 2,
+      "due": "2026-11-16"
     },
     "re2-8": {
       "box": 5,
@@ -1232,10 +1252,10 @@
     },
     "fin-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-16"
     },
     "br-1": {
       "box": 5,
@@ -1273,10 +1293,10 @@
     },
     "br-4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "br-7": {
       "box": 5,
@@ -1301,10 +1321,10 @@
     },
     "ev-1": {
       "box": 5,
-      "seen": 13,
+      "seen": 14,
       "lapses": 6,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-11"
     },
     "ev-3": {
       "box": 5,
@@ -1343,17 +1363,17 @@
     },
     "ev-5": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-10"
+      "streak": 2,
+      "due": "2026-11-15"
     },
     "as-1": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-18"
     },
     "as-5": {
       "box": 5,
@@ -1364,24 +1384,24 @@
     },
     "as-4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-12"
     },
     "ev-8": {
-      "box": 2,
-      "seen": 7,
+      "box": 4,
+      "seen": 8,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-07"
+      "streak": 3,
+      "due": "2026-10-25"
     },
     "as-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-17"
     },
     "ev-4": {
       "box": 5,
@@ -1440,11 +1460,11 @@
       "due": "2026-11-09"
     },
     "ru-5": {
-      "box": 5,
-      "seen": 3,
-      "lapses": 0,
+      "box": 1,
+      "seen": 5,
+      "lapses": 1,
       "streak": 1,
-      "due": "2026-10-12"
+      "due": "2026-10-13"
     },
     "as-8": {
       "box": 5,
@@ -1482,10 +1502,10 @@
     },
     "en-8": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "en-2": {
       "box": 5,
@@ -1496,9 +1516,10 @@
     },
     "en-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-11"
     },
     "en-3": {
       "box": 5,
@@ -1509,16 +1530,17 @@
     },
     "en-7": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "en-5": {
-      "box": 5,
-      "seen": 4,
-      "lapses": 1,
-      "due": "2026-10-07"
+      "box": 2,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-13"
     },
     "en-1": {
       "box": 5,
@@ -1536,10 +1558,10 @@
     },
     "en-4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "ru-8": {
       "box": 5,
@@ -1571,9 +1593,10 @@
     },
     "rel-3": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-12"
+      "streak": 1,
+      "due": "2026-11-11"
     },
     "rel-2": {
       "box": 5,
@@ -1661,9 +1684,10 @@
     },
     "rel-7": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-09"
+      "streak": 1,
+      "due": "2026-11-10"
     },
     "photo-1": {
       "box": 5,
@@ -1673,11 +1697,11 @@
       "due": "2026-10-20"
     },
     "rel-4": {
-      "box": 3,
-      "seen": 17,
+      "box": 4,
+      "seen": 18,
       "lapses": 7,
-      "streak": 2,
-      "due": "2026-10-12"
+      "streak": 3,
+      "due": "2026-10-28"
     },
     "rel-6": {
       "box": 5,
@@ -1695,9 +1719,10 @@
     },
     "push-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-11"
+      "streak": 1,
+      "due": "2026-11-17"
     },
     "photo-6": {
       "box": 5,
@@ -1736,15 +1761,17 @@
     },
     "photo-7": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-07"
+      "streak": 1,
+      "due": "2026-11-11"
     },
     "push-4": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-07"
+      "streak": 1,
+      "due": "2026-11-16"
     },
     "saf-10": {
       "box": 5,
@@ -1797,9 +1824,10 @@
     },
     "saf-3": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-14"
     },
     "saf-7": {
       "box": 5,
@@ -1880,10 +1908,10 @@
     },
     "fal-3": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-08"
+      "streak": 2,
+      "due": "2026-11-18"
     },
     "fal-6": {
       "box": 4,
@@ -1901,10 +1929,10 @@
     },
     "fal-4": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-19"
     },
     "fal-2": {
       "box": 5,
@@ -1957,10 +1985,10 @@
     },
     "cpx-7": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-12"
     },
     "cpx-5": {
       "box": 5,
@@ -1992,10 +2020,10 @@
     },
     "cpx-2": {
       "box": 5,
-      "seen": 6,
+      "seen": 7,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-11"
+      "streak": 2,
+      "due": "2026-11-19"
     },
     "bay-1": {
       "box": 5,
@@ -2019,11 +2047,11 @@
       "due": "2026-10-03"
     },
     "si-1": {
-      "box": 2,
-      "seen": 11,
+      "box": 4,
+      "seen": 12,
       "lapses": 4,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-10-25"
     },
     "bay-3": {
       "box": 5,
@@ -2055,24 +2083,24 @@
     },
     "si-3": {
       "box": 5,
-      "seen": 5,
+      "seen": 6,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-12"
+      "streak": 2,
+      "due": "2026-11-13"
     },
     "si-2": {
-      "box": 3,
-      "seen": 10,
+      "box": 5,
+      "seen": 11,
       "lapses": 3,
-      "streak": 2,
-      "due": "2026-10-07"
+      "streak": 3,
+      "due": "2026-11-11"
     },
     "si-4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-10"
+      "streak": 2,
+      "due": "2026-11-09"
     },
     "auto:work-fundamentals-concurrency:q1": {
       "box": 5,
@@ -2229,11 +2257,11 @@
       "due": "2026-11-04"
     },
     "bay-4a": {
-      "box": 4,
-      "seen": 4,
-      "lapses": 0,
-      "streak": 4,
-      "due": "2026-10-10"
+      "box": 1,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-13"
     },
     "push-3b": {
       "box": 5,
@@ -2390,11 +2418,11 @@
       "due": "2026-11-01"
     },
     "att-4": {
-      "box": 4,
-      "seen": 5,
+      "box": 5,
+      "seen": 6,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-11"
+      "streak": 4,
+      "due": "2026-11-19"
     },
     "att-7": {
       "box": 5,
@@ -2467,11 +2495,11 @@
       "due": "2026-10-19"
     },
     "bias-7": {
-      "box": 4,
-      "seen": 4,
-      "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-09"
+      "box": 1,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-13"
     },
     "bias-6": {
       "box": 5,
@@ -2516,11 +2544,11 @@
       "due": "2026-10-13"
     },
     "med-5": {
-      "box": 3,
-      "seen": 7,
+      "box": 4,
+      "seen": 8,
       "lapses": 2,
-      "streak": 3,
-      "due": "2026-10-08"
+      "streak": 4,
+      "due": "2026-10-29"
     },
     "med-6": {
       "box": 5,
@@ -2579,11 +2607,11 @@
       "due": "2026-11-10"
     },
     "star-8": {
-      "box": 3,
-      "seen": 4,
+      "box": 5,
+      "seen": 5,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-07"
+      "streak": 4,
+      "due": "2026-11-19"
     },
     "geo-1": {
       "box": 4,
@@ -2705,60 +2733,60 @@
       "due": "2026-10-14"
     },
     "cond-7": {
-      "box": 3,
-      "seen": 3,
+      "box": 5,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-07"
+      "streak": 3,
+      "due": "2026-11-12"
     },
     "cond-4": {
-      "box": 3,
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 4,
+      "due": "2026-11-16"
+    },
+    "cond-3": {
+      "box": 5,
       "seen": 3,
       "lapses": 0,
       "streak": 3,
-      "due": "2026-10-12"
-    },
-    "cond-3": {
-      "box": 3,
-      "seen": 2,
-      "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-07"
+      "due": "2026-11-18"
     },
     "ling-1": {
-      "box": 3,
-      "seen": 2,
+      "box": 5,
+      "seen": 3,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-08"
+      "streak": 3,
+      "due": "2026-11-19"
     },
     "ling-2": {
-      "box": 3,
-      "seen": 4,
+      "box": 5,
+      "seen": 5,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 3,
+      "due": "2026-11-14"
     },
     "cond-6": {
       "box": 1,
-      "seen": 8,
-      "lapses": 4,
+      "seen": 10,
+      "lapses": 5,
       "streak": 1,
-      "due": "2026-10-07"
+      "due": "2026-10-13"
     },
     "cond-8": {
-      "box": 3,
-      "seen": 3,
+      "box": 5,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-11-14"
     },
     "cond-5": {
-      "box": 3,
-      "seen": 5,
+      "box": 5,
+      "seen": 6,
       "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-10"
+      "streak": 3,
+      "due": "2026-11-13"
     },
     "ling-7": {
       "box": 4,
@@ -2782,11 +2810,11 @@
       "due": "2026-10-13"
     },
     "sort-1": {
-      "box": 3,
-      "seen": 3,
+      "box": 5,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-08"
+      "streak": 3,
+      "due": "2026-11-16"
     },
     "ling-6": {
       "box": 4,
@@ -2796,18 +2824,18 @@
       "due": "2026-10-22"
     },
     "ling-3": {
-      "box": 3,
-      "seen": 2,
+      "box": 5,
+      "seen": 3,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-11-11"
     },
     "ling-5": {
-      "box": 3,
-      "seen": 3,
+      "box": 4,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-10-28"
     },
     "prm-2": {
       "box": 2,
@@ -2859,11 +2887,11 @@
       "due": "2026-10-09"
     },
     "sort-3": {
-      "box": 3,
-      "seen": 3,
+      "box": 5,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-12"
+      "streak": 3,
+      "due": "2026-11-17"
     },
     "sort-5": {
       "box": 4,
@@ -2882,10 +2910,14 @@
     "auto:general-politics-state:q4": {
       "box": 0,
       "due": "2026-10-02"
+    },
+    "auto:general-crypto-basics:q4": {
+      "box": 0,
+      "due": "2026-10-10"
     }
   },
   "srs:daily": {
-    "date": "2026-10-06",
+    "date": "2026-10-12",
     "done": 40,
     "fresh": 0
   },
@@ -3294,6 +3326,21 @@
       "done": 47,
       "again": 7,
       "cleared": true
+    },
+    "2026-10-08": {
+      "done": 5,
+      "again": 0,
+      "cleared": false
+    },
+    "2026-10-10": {
+      "done": 43,
+      "again": 3,
+      "cleared": true
+    },
+    "2026-10-12": {
+      "done": 46,
+      "again": 6,
+      "cleared": true
     }
   },
   "lesson:general-russian-commas": {
@@ -3520,6 +3567,15 @@
       "code": false,
       "src": "wrong",
       "date": "2026-10-02"
+    },
+    "auto:general-crypto-basics:q4": {
+      "lesson": "general-crypto-basics",
+      "front": "Главная проблема симметричного шифрования:",
+      "back": "Как безопасно передать общий ключ по прослушиваемому каналу",
+      "note": "Поэтому и придумали пару ключей. Быстрота — как раз преимущество симметричных алгоритмов вроде AES.",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-10-10"
     }
   },
   "lesson:work-react-effects-memo": {
@@ -5432,5 +5488,60 @@
       }
     ],
     "a4": 3
+  },
+  "lesson:general-crypto-basics": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 2,
+    "a3": 0,
+    "a5": 3,
+    "a6": 0,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-10",
+    "attempts": [
+      {
+        "date": "2026-10-10",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          4
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-10-10",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a4": 1
+  },
+  "lesson:work-devops-docker-cicd": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 0,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-12",
+    "attempts": [
+      {
+        "date": "2026-10-12",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
   }
 }
