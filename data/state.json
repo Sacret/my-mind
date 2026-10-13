@@ -383,11 +383,11 @@
       "due": "2026-10-17"
     },
     "loop-6": {
-      "box": 1,
-      "seen": 4,
+      "box": 3,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-21"
     },
     "loop-9": {
       "box": 5,
@@ -461,10 +461,10 @@
     },
     "mut-2": {
       "box": 5,
-      "seen": 2,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "mut-6": {
       "box": 5,
@@ -481,11 +481,11 @@
       "due": "2026-11-09"
     },
     "ds-7": {
-      "box": 1,
-      "seen": 4,
+      "box": 2,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "ds-8": {
       "box": 5,
@@ -740,11 +740,11 @@
       "due": "2026-11-01"
     },
     "mu-3": {
-      "box": 2,
-      "seen": 5,
+      "box": 4,
+      "seen": 6,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-13"
+      "streak": 3,
+      "due": "2026-10-30"
     },
     "mu-2": {
       "box": 5,
@@ -839,9 +839,10 @@
     },
     "ci-5": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-13"
+      "streak": 1,
+      "due": "2026-11-15"
     },
     "ci-6": {
       "box": 5,
@@ -852,9 +853,10 @@
     },
     "auto:general-russian-commas:q1": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-07"
+      "streak": 1,
+      "due": "2026-11-21"
     },
     "auto:general-russian-commas:q2": {
       "box": 5,
@@ -872,21 +874,24 @@
     },
     "auto:general-russian-commas:q4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-12"
+      "streak": 1,
+      "due": "2026-11-18"
     },
     "auto:general-russian-commas:q5": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-08"
+      "streak": 1,
+      "due": "2026-11-14"
     },
     "auto:general-russian-commas:q6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-06"
+      "streak": 1,
+      "due": "2026-11-17"
     },
     "typ-8": {
       "box": 5,
@@ -911,9 +916,10 @@
     },
     "typ-4": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-13"
+      "streak": 1,
+      "due": "2026-11-18"
     },
     "typ-5": {
       "box": 5,
@@ -1049,11 +1055,11 @@
       "due": "2026-11-15"
     },
     "css-7": {
-      "box": 2,
-      "seen": 6,
+      "box": 4,
+      "seen": 7,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-31"
     },
     "css-4": {
       "box": 5,
@@ -1106,9 +1112,10 @@
     },
     "auto:general-logic-fallacies:q0": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "due": "2026-10-03"
+      "streak": 1,
+      "due": "2026-11-15"
     },
     "auto:general-physics-si:q3": {
       "box": 5,
@@ -1189,10 +1196,10 @@
     },
     "auto:general-math-complex:q4": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-09"
+      "streak": 2,
+      "due": "2026-11-16"
     },
     "fin-5": {
       "box": 5,
@@ -1266,9 +1273,10 @@
     },
     "auto:work-js-promises:q7": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "due": "2026-10-04"
+      "streak": 1,
+      "due": "2026-11-18"
     },
     "br-8": {
       "box": 5,
@@ -1307,10 +1315,10 @@
     },
     "br-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-16"
     },
     "br-5": {
       "box": 5,
@@ -1412,10 +1420,10 @@
     },
     "ev-6": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-21"
     },
     "auto:work-js-regexp:q2": {
       "box": 5,
@@ -1460,11 +1468,11 @@
       "due": "2026-11-09"
     },
     "ru-5": {
-      "box": 1,
-      "seen": 5,
+      "box": 3,
+      "seen": 6,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-19"
     },
     "as-8": {
       "box": 5,
@@ -1495,10 +1503,11 @@
       "due": "2026-10-31"
     },
     "auto:work-web-security:q4": {
-      "box": 5,
-      "seen": 4,
-      "lapses": 1,
-      "due": "2026-10-03"
+      "box": 1,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-14"
     },
     "en-8": {
       "box": 5,
@@ -1509,10 +1518,10 @@
     },
     "en-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-13"
     },
     "en-6": {
       "box": 5,
@@ -1536,11 +1545,11 @@
       "due": "2026-11-14"
     },
     "en-5": {
-      "box": 2,
-      "seen": 6,
+      "box": 4,
+      "seen": 7,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-30"
     },
     "en-1": {
       "box": 5,
@@ -1663,10 +1672,10 @@
     },
     "photo-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-12"
     },
     "rel-5": {
       "box": 5,
@@ -1712,10 +1721,10 @@
     },
     "push-1": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-21"
     },
     "push-6": {
       "box": 5,
@@ -1747,10 +1756,10 @@
     },
     "push-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-14"
     },
     "push-5": {
       "box": 5,
@@ -1844,11 +1853,11 @@
       "due": "2026-10-22"
     },
     "auto:general-english-conditionals:q2": {
-      "box": 5,
-      "seen": 4,
-      "lapses": 1,
+      "box": 1,
+      "seen": 6,
+      "lapses": 2,
       "streak": 1,
-      "due": "2026-10-09"
+      "due": "2026-10-14"
     },
     "saf-11": {
       "box": 5,
@@ -1957,17 +1966,17 @@
     },
     "hist-6": {
       "box": 5,
-      "seen": 4,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-11-20"
     },
     "auto:work-css-box-model-stacking:q7": {
-      "box": 4,
-      "seen": 7,
-      "lapses": 2,
-      "streak": 2,
-      "due": "2026-10-04"
+      "box": 1,
+      "seen": 9,
+      "lapses": 3,
+      "streak": 1,
+      "due": "2026-10-14"
     },
     "fal-7": {
       "box": 5,
@@ -2040,11 +2049,11 @@
       "due": "2026-11-10"
     },
     "auto:general-philosophy-questions:q5": {
-      "box": 3,
-      "seen": 12,
+      "box": 5,
+      "seen": 13,
       "lapses": 5,
-      "streak": 2,
-      "due": "2026-10-03"
+      "streak": 3,
+      "due": "2026-11-20"
     },
     "si-1": {
       "box": 4,
@@ -2257,11 +2266,11 @@
       "due": "2026-11-04"
     },
     "bay-4a": {
-      "box": 1,
-      "seen": 8,
+      "box": 2,
+      "seen": 9,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "push-3b": {
       "box": 5,
@@ -2481,11 +2490,11 @@
       "due": "2026-11-03"
     },
     "bias-8": {
-      "box": 4,
-      "seen": 6,
+      "box": 5,
+      "seen": 7,
       "lapses": 2,
-      "streak": 3,
-      "due": "2026-10-13"
+      "streak": 4,
+      "due": "2026-11-16"
     },
     "bias-5": {
       "box": 4,
@@ -2495,11 +2504,11 @@
       "due": "2026-10-19"
     },
     "bias-7": {
-      "box": 1,
-      "seen": 6,
+      "box": 2,
+      "seen": 7,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "bias-6": {
       "box": 5,
@@ -2537,11 +2546,11 @@
       "due": "2026-10-17"
     },
     "star-2": {
-      "box": 4,
-      "seen": 2,
+      "box": 5,
+      "seen": 3,
       "lapses": 0,
-      "streak": 2,
-      "due": "2026-10-13"
+      "streak": 3,
+      "due": "2026-11-20"
     },
     "med-5": {
       "box": 4,
@@ -2768,11 +2777,11 @@
       "due": "2026-11-14"
     },
     "cond-6": {
-      "box": 1,
-      "seen": 10,
+      "box": 3,
+      "seen": 11,
       "lapses": 5,
-      "streak": 1,
-      "due": "2026-10-13"
+      "streak": 2,
+      "due": "2026-10-20"
     },
     "cond-8": {
       "box": 5,
@@ -2796,18 +2805,18 @@
       "due": "2026-10-20"
     },
     "ling-4": {
-      "box": 3,
-      "seen": 5,
+      "box": 5,
+      "seen": 6,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-13"
+      "streak": 4,
+      "due": "2026-11-19"
     },
     "sort-2": {
-      "box": 3,
-      "seen": 4,
+      "box": 5,
+      "seen": 5,
       "lapses": 1,
-      "streak": 3,
-      "due": "2026-10-13"
+      "streak": 4,
+      "due": "2026-11-13"
     },
     "sort-1": {
       "box": 5,
@@ -2838,11 +2847,11 @@
       "due": "2026-10-28"
     },
     "prm-2": {
-      "box": 2,
-      "seen": 1,
+      "box": 4,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-05"
+      "streak": 2,
+      "due": "2026-10-28"
     },
     "sort-4": {
       "box": 3,
@@ -2852,18 +2861,18 @@
       "due": "2026-10-14"
     },
     "prm-5": {
-      "box": 1,
-      "seen": 1,
+      "box": 3,
+      "seen": 2,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-03"
+      "streak": 2,
+      "due": "2026-10-20"
     },
     "prm-4": {
-      "box": 1,
-      "seen": 2,
+      "box": 2,
+      "seen": 3,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-03"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "sort-7": {
       "box": 3,
@@ -2874,17 +2883,17 @@
     },
     "prm-3": {
       "box": 1,
-      "seen": 2,
-      "lapses": 1,
+      "seen": 4,
+      "lapses": 2,
       "streak": 1,
-      "due": "2026-10-03"
+      "due": "2026-10-14"
     },
     "prm-1": {
-      "box": 2,
-      "seen": 3,
+      "box": 4,
+      "seen": 4,
       "lapses": 1,
-      "streak": 2,
-      "due": "2026-10-09"
+      "streak": 3,
+      "due": "2026-10-29"
     },
     "sort-3": {
       "box": 5,
@@ -2901,11 +2910,11 @@
       "due": "2026-10-24"
     },
     "sort-6": {
-      "box": 1,
-      "seen": 4,
+      "box": 2,
+      "seen": 5,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-07"
+      "streak": 2,
+      "due": "2026-10-16"
     },
     "auto:general-politics-state:q4": {
       "box": 0,
@@ -2917,7 +2926,7 @@
     }
   },
   "srs:daily": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "done": 40,
     "fresh": 0
   },
@@ -3340,6 +3349,11 @@
     "2026-10-12": {
       "done": 46,
       "again": 6,
+      "cleared": true
+    },
+    "2026-10-13": {
+      "done": 44,
+      "again": 4,
       "cleared": true
     }
   },
@@ -5537,6 +5551,29 @@
     "attempts": [
       {
         "date": "2026-10-12",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-architecture-solid-patterns": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 0,
+    "a4": 3,
+    "a5": 1,
+    "a6": 0,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-13",
+    "attempts": [
+      {
+        "date": "2026-10-13",
         "score": 8,
         "total": 8,
         "wrong": [],
