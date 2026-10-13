@@ -8,6 +8,7 @@
   margin-bottom: 4px; color: var(--accent);
   font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
 }
+.track h2 .track-count { letter-spacing: normal; color: var(--muted); font-weight: 400; }
 
 /* строка урока: .panel даёт фон и рамку, .row — раскладку */
 a.row {

@@ -340,7 +340,10 @@ function build() {
     box.className = "track" + (tr === "work" ? " track-work" : "");
     box.id = "track-" + tr;
     const h = document.createElement("h2");
-    h.textContent = TRACK_NAMES[tr];
+    const doneInTrack = items.filter(l => Lessons.isDone(l.id)).length;
+    h.append(TRACK_NAMES[tr] + " ",
+             Object.assign(document.createElement("span"), {
+               className: "track-count tnum", textContent: "(" + doneInTrack + " / " + items.length + ")" }));
     box.append(h);
 
     // области по алфавиту, каждая — раскрывающийся список; внутри порядок реестра
