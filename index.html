@@ -131,6 +131,8 @@
 
 </div>
 
+<a class="to-top" id="to-top" href="#" aria-label="Наверх" title="Наверх">↑</a>
+
 <script src="assets/storage.js"></script>
 <script src="assets/attempts.js"></script>
 <script src="assets/srs.js"></script>
@@ -385,6 +387,7 @@ function build() {
 
       const a = document.createElement(locked ? "div" : "a");
       a.className = "panel row" + (locked ? " locked" : "");
+      a.id = "lesson-" + l.id;
       if (!locked) a.href = l.href;
 
       const mark = document.createElement("span");
@@ -525,6 +528,24 @@ function build() {
           ? " — " + st.lastScore + " из " + l.total + ", но " + st.unsure +
             " отмечено как угаданное: тема закроется, когда пройдёшь без отметок."
           : " — пройден на " + st.lastScore + " из " + l.total + ", стоит перечитать разделы по ошибкам и повторить."));
+      // якорь на строку урока в оглавлении: область свёрнута, поэтому сначала раскрываем её
+      const area = areaOf(l.href) || "Без области";
+      const jump = document.createElement("a");
+      jump.className = "next-jump";
+      jump.href = "#lesson-" + l.id;
+      jump.textContent = "в разделе «" + area + "» ↓";
+      jump.addEventListener("click", e => {
+        const target = document.getElementById("lesson-" + l.id);
+        if (!target) return;
+        e.preventDefault();
+        openAreas.add(tr + "/" + area);
+        target.closest("details").open = true;
+        target.scrollIntoView({ block: "center" });
+        target.classList.remove("flash");
+        void target.offsetWidth;
+        target.classList.add("flash");
+      });
+      row.append(" ", jump);
       body.append(row);
     });
   } else {
@@ -955,6 +976,20 @@ document.getElementById("save").addEventListener("click", async (ev) => {
   mark();
   // после отрисовки оглавления высоты меняются — пересчитываем
   window.navSpyRefresh = schedule;
+})();
+
+// ——— кнопка «наверх»: видна, когда первый экран уже прокручен ———
+(function toTop() {
+  const btn = document.getElementById("to-top");
+  const sync = () => btn.classList.toggle("on", window.scrollY > window.innerHeight);
+  btn.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    window.scrollTo({ top: 0 });
+    // убираем хеш, чтобы обновление страницы не возвращало к старому якорю
+    history.replaceState(null, "", location.pathname + location.search);
+  });
+  window.addEventListener("scroll", sync, { passive: true });
+  sync();
 })();
 
 document.getElementById("refresh").addEventListener("click", () => build());

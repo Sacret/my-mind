@@ -151,6 +151,24 @@ details.area[open] > summary { margin-bottom: 8px; }
 .next-row + .next-row { margin-top: 6px; }
 .next-track { color: var(--accent); font-weight: 600; }
 .next-track::after { content: " · "; color: var(--muted); font-weight: 400; }
+.next-jump { color: var(--muted); font-size: 13px; white-space: nowrap; }
+/* строка урока, к которой перешли из «Следующего шага», коротко подсвечивается */
+.row.flash { animation: row-flash 1.6s ease-out; }
+@keyframes row-flash { from { box-shadow: 0 0 0 2px var(--accent); } to { box-shadow: 0 0 0 2px transparent; } }
+
+/* кнопка «наверх»: появляется после первого экрана, в углу над содержимым */
+.to-top {
+  position: fixed; right: 16px; bottom: 16px; z-index: 15;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--card); color: var(--accent); border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+  font-size: 20px; text-decoration: none;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.to-top.on { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { border-color: var(--accent); }
 
 /* --- прогресс и ссылки на блоки в липкой шапке оглавления --- */
 /* сама шапка описана в lesson.css: она одинакова на всех страницах.
