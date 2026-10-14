@@ -1,0 +1,5584 @@
+{
+  "lesson:general-logic-syllogisms": {
+    "completed": true,
+    "lastScore": 8,
+    "date": "2026-08-04",
+    "a0": 3,
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 3,
+    "a7": 0
+  },
+  "lesson:general-math-probability": {
+    "completed": true,
+    "lastScore": 7,
+    "date": "2026-08-04",
+    "a0": 3,
+    "a1": 2,
+    "a2": 2,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 1
+  },
+  "lesson:work-fundamentals-big-o": {
+    "completed": true,
+    "lastScore": 8,
+    "date": "2026-08-04",
+    "a0": 0,
+    "a1": 1,
+    "a2": 3,
+    "a3": 0,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 2
+  },
+  "lesson:work-js-event-loop": {
+    "completed": true,
+    "lastScore": 7,
+    "date": "2026-08-04",
+    "a0": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 0,
+    "a4": 0,
+    "a5": 2,
+    "a6": 1
+  },
+  "quiz:general-baseline-01": {
+    "a0": 1,
+    "a1": 0,
+    "a2": 1,
+    "a3": 2,
+    "a4": 3,
+    "a5": 1,
+    "a6": 1,
+    "a7": 0,
+    "a8": 1,
+    "a9": 2,
+    "a10": 1,
+    "a11": 1,
+    "a12": 1,
+    "a13": 2,
+    "a14": 2,
+    "a15": 1,
+    "a16": 0,
+    "a17": 1,
+    "a18": 2,
+    "a19": 1,
+    "a20": 1,
+    "a21": 1,
+    "a22": 1,
+    "a23": 2,
+    "a24": 1,
+    "a25": 1,
+    "a26": 3,
+    "u26": true,
+    "a27": 1,
+    "a28": 1,
+    "a29": 2,
+    "a30": 0,
+    "a31": 1,
+    "a32": 1,
+    "a33": 1,
+    "a34": 1,
+    "a35": 1,
+    "a36": 1,
+    "a37": 1,
+    "a38": 1,
+    "a39": 0,
+    "a40": 1,
+    "a41": 1,
+    "a42": 1,
+    "a43": 1,
+    "a44": 2,
+    "a45": 1,
+    "a46": 1,
+    "a47": 3,
+    "a48": 2,
+    "a49": 2
+  },
+  "quiz:work-baseline-01": {
+    "a0": 1,
+    "a1": 1,
+    "a2": 0,
+    "a3": 3,
+    "a4": 1,
+    "u4": true,
+    "a5": 0,
+    "a6": 1,
+    "a7": 1,
+    "a8": 1,
+    "a9": 1,
+    "a10": 1,
+    "a11": 2,
+    "a12": 1,
+    "a13": 1,
+    "a14": 1,
+    "a15": 2,
+    "u15": true,
+    "a16": 1,
+    "a17": 1,
+    "a18": 1,
+    "a19": 1,
+    "a20": 1,
+    "u20": true,
+    "a21": 1,
+    "a22": 1,
+    "a23": 1,
+    "a24": 1,
+    "a25": 1,
+    "a26": 1,
+    "a27": 1,
+    "a28": 1,
+    "a29": 1,
+    "a30": 1,
+    "a31": 1,
+    "a32": 1,
+    "a33": 1,
+    "a34": 1,
+    "a35": 1,
+    "a36": 1,
+    "a37": 1,
+    "a38": 0,
+    "a39": 0,
+    "a40": 1,
+    "a41": 1,
+    "a42": 1,
+    "a43": 0,
+    "a44": 0,
+    "a45": 1,
+    "a46": 0,
+    "a47": 1,
+    "a48": 0,
+    "a49": 1
+  },
+  "srs:v1": {
+    "syl-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-12"
+    },
+    "syl-1": {
+      "box": 4,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-18"
+    },
+    "prob-2": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "syl-4": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-21"
+    },
+    "syl-3": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "syl-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "syl-2": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "prob-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-19"
+    },
+    "syl-5": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "syl-7": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "prob-3": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-27"
+    },
+    "prob-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-13"
+    },
+    "prob-5": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "prob-8": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "prob-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-23"
+    },
+    "bigo-3": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "bigo-1": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "prob-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "bigo-2": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-01"
+    },
+    "bigo-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "bigo-8": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-29"
+    },
+    "loop-2": {
+      "box": 5,
+      "seen": 9,
+      "lapses": 3,
+      "streak": 2,
+      "due": "2026-10-27"
+    },
+    "loop-1": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-29"
+    },
+    "bigo-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "loop-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "bigo-9": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "bigo-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "bigo-10": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "bigo-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-17"
+    },
+    "loop-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-12"
+    },
+    "ds-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "loop-8": {
+      "box": 3,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-17"
+    },
+    "loop-6": {
+      "box": 3,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-21"
+    },
+    "loop-9": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-13"
+    },
+    "ds-1": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "ds-2": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "loop-7": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "ds-3": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "loop-10": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "loop-5": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-29"
+    },
+    "mut-3": {
+      "box": 3,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "ds-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "mut-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-11"
+    },
+    "mut-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "mut-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "mut-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "ds-7": {
+      "box": 2,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "ds-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-08"
+    },
+    "mut-5": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "ds-5": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "mut-7": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-29"
+    },
+    "mut-9": {
+      "box": 5,
+      "seen": 9,
+      "lapses": 3,
+      "streak": 3,
+      "due": "2026-11-05"
+    },
+    "wp-6": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-06"
+    },
+    "wp-1": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-15"
+    },
+    "wp-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "wp-2": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "wp-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "mut-10": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-08"
+    },
+    "wp-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-13"
+    },
+    "mut-8": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "sq-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "st-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-15"
+    },
+    "sq-3": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "sq-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "sq-4": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "sq-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-12"
+    },
+    "wp-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-15"
+    },
+    "sq-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-04"
+    },
+    "sq-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-06"
+    },
+    "st-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-08"
+    },
+    "ch-2": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "st-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-14"
+    },
+    "ch-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-12"
+    },
+    "st-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-17"
+    },
+    "ch-1": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "st-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "st-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-14"
+    },
+    "st-4": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "st-8": {
+      "box": 5,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "ch-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "ch-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "mu-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "mu-4": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-01"
+    },
+    "mu-3": {
+      "box": 4,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-30"
+    },
+    "mu-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "ch-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "ch-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "ch-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "mu-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "ci-7": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "mu-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "mu-6": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "ci-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "mu-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "ci-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "ci-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "ci-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "ci-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-15"
+    },
+    "ci-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "auto:general-russian-commas:q1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-21"
+    },
+    "auto:general-russian-commas:q2": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-15"
+    },
+    "auto:general-russian-commas:q3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-25"
+    },
+    "auto:general-russian-commas:q4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-18"
+    },
+    "auto:general-russian-commas:q5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-14"
+    },
+    "auto:general-russian-commas:q6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-17"
+    },
+    "typ-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "typ-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "typ-1": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "typ-4": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-18"
+    },
+    "typ-5": {
+      "box": 5,
+      "seen": 10,
+      "lapses": 3,
+      "streak": 3,
+      "due": "2026-11-13"
+    },
+    "typ-7": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-11"
+    },
+    "typ-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "typ-3": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "ci-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-13"
+    },
+    "http-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "auto:work-history-programming:q0": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "http-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "http-4": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-02"
+    },
+    "http-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-17"
+    },
+    "css-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-06"
+    },
+    "http-8": {
+      "box": 5,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-11-19"
+    },
+    "http-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-10"
+    },
+    "css-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-25"
+    },
+    "http-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "css-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-21"
+    },
+    "http-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "re-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "css-5": {
+      "box": 5,
+      "seen": 10,
+      "lapses": 3,
+      "streak": 3,
+      "due": "2026-11-15"
+    },
+    "css-7": {
+      "box": 4,
+      "seen": 7,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-31"
+    },
+    "css-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-11"
+    },
+    "css-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-19"
+    },
+    "re-2": {
+      "box": 3,
+      "seen": 14,
+      "lapses": 4,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "css-6": {
+      "box": 5,
+      "seen": 11,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-10-30"
+    },
+    "re-5": {
+      "box": 5,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-11-18"
+    },
+    "re-1": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "re-3": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-13"
+    },
+    "auto:general-logic-fallacies:q0": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-15"
+    },
+    "auto:general-physics-si:q3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "re2-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "re-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-13"
+    },
+    "re-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "re2-4": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-21"
+    },
+    "re-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-14"
+    },
+    "re2-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-03"
+    },
+    "re2-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "re2-5": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-19"
+    },
+    "re2-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "re2-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "auto:general-math-complex:q4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-16"
+    },
+    "fin-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-10"
+    },
+    "fin-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-12"
+    },
+    "fin-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "fin-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-11"
+    },
+    "fin-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "fin-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "fin-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-16"
+    },
+    "re2-8": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "fin-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-16"
+    },
+    "br-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "auto:work-js-promises:q7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-18"
+    },
+    "br-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-28"
+    },
+    "ev-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "br-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-15"
+    },
+    "br-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "br-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "br-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-16"
+    },
+    "br-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-29"
+    },
+    "ev-1": {
+      "box": 5,
+      "seen": 14,
+      "lapses": 6,
+      "streak": 2,
+      "due": "2026-11-11"
+    },
+    "ev-3": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-30"
+    },
+    "br-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "auto:work-js-debounce-throttle:q6": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "as-3": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-07"
+    },
+    "ev-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "ev-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-15"
+    },
+    "as-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-18"
+    },
+    "as-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-08"
+    },
+    "as-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-12"
+    },
+    "ev-8": {
+      "box": 4,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-10-25"
+    },
+    "as-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-17"
+    },
+    "ev-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "ev-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-21"
+    },
+    "auto:work-js-regexp:q2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-19"
+    },
+    "ru-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "ru-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "as-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "ru-3": {
+      "box": 4,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-10-15"
+    },
+    "ru-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-09"
+    },
+    "ru-5": {
+      "box": 3,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-19"
+    },
+    "as-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "ru-6": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-11-06"
+    },
+    "ru-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-08"
+    },
+    "as-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-31"
+    },
+    "auto:work-web-security:q4": {
+      "box": 1,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "en-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "en-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-13"
+    },
+    "en-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "en-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "en-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "en-5": {
+      "box": 4,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-30"
+    },
+    "en-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "anat-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "en-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "ru-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "anat-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-19"
+    },
+    "anat-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-01"
+    },
+    "anat-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "rel-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "rel-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "anat-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-21"
+    },
+    "anat-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "rel-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-23"
+    },
+    "anat-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "anat-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "rel-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "photo-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "photo-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-17"
+    },
+    "photo-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-12"
+    },
+    "rel-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "photo-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-25"
+    },
+    "rel-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-10"
+    },
+    "photo-1": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "rel-4": {
+      "box": 4,
+      "seen": 18,
+      "lapses": 7,
+      "streak": 3,
+      "due": "2026-10-28"
+    },
+    "rel-6": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-05"
+    },
+    "push-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-21"
+    },
+    "push-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-17"
+    },
+    "photo-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "photo-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "push-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "push-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-14"
+    },
+    "push-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "photo-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-11"
+    },
+    "push-4": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-11-16"
+    },
+    "saf-10": {
+      "box": 5,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-11-09"
+    },
+    "saf-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "saf-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "saf-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "saf-9": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "saf-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-13"
+    },
+    "saf-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-23"
+    },
+    "saf-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-14"
+    },
+    "saf-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-11-06"
+    },
+    "saf-8": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "auto:general-english-conditionals:q2": {
+      "box": 1,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "saf-11": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-20"
+    },
+    "hist-2": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-24"
+    },
+    "hist-4": {
+      "box": 5,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-11-04"
+    },
+    "hist-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "saf-12": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-02"
+    },
+    "push-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-24"
+    },
+    "hist-3": {
+      "box": 5,
+      "seen": 11,
+      "lapses": 3,
+      "streak": 3,
+      "due": "2026-11-05"
+    },
+    "fal-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "fal-3": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-18"
+    },
+    "fal-6": {
+      "box": 4,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-15"
+    },
+    "hist-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "fal-4": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-19"
+    },
+    "fal-2": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-27"
+    },
+    "fal-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-25"
+    },
+    "hist-8": {
+      "box": 5,
+      "seen": 10,
+      "lapses": 4,
+      "streak": 3,
+      "due": "2026-10-20"
+    },
+    "hist-6": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-20"
+    },
+    "auto:work-css-box-model-stacking:q7": {
+      "box": 1,
+      "seen": 9,
+      "lapses": 3,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "fal-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "cpx-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-22"
+    },
+    "cpx-7": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-12"
+    },
+    "cpx-5": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-25"
+    },
+    "cpx-4": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-27"
+    },
+    "fal-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-16"
+    },
+    "cpx-3": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-17"
+    },
+    "cpx-2": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-11-19"
+    },
+    "bay-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-11-06"
+    },
+    "cpx-1": {
+      "box": 5,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-11-10"
+    },
+    "auto:general-philosophy-questions:q5": {
+      "box": 5,
+      "seen": 13,
+      "lapses": 5,
+      "streak": 3,
+      "due": "2026-11-20"
+    },
+    "si-1": {
+      "box": 4,
+      "seen": 12,
+      "lapses": 4,
+      "streak": 2,
+      "due": "2026-10-25"
+    },
+    "bay-3": {
+      "box": 5,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-11-02"
+    },
+    "bay-6": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-24"
+    },
+    "bay-2": {
+      "box": 4,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-10-21"
+    },
+    "bay-7": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 3,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "si-3": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-11-13"
+    },
+    "si-2": {
+      "box": 5,
+      "seen": 11,
+      "lapses": 3,
+      "streak": 3,
+      "due": "2026-11-11"
+    },
+    "si-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-09"
+    },
+    "auto:work-fundamentals-concurrency:q1": {
+      "box": 5,
+      "seen": 10,
+      "lapses": 4,
+      "streak": 4,
+      "due": "2026-11-01"
+    },
+    "si-5": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-02"
+    },
+    "cih-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-24"
+    },
+    "cih-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-01"
+    },
+    "cih-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-18"
+    },
+    "auto:work-react-refs-forms:q4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-30"
+    },
+    "art-1": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-07"
+    },
+    "cih-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-19"
+    },
+    "cih-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-25"
+    },
+    "cih-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-17"
+    },
+    "si-7": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-07"
+    },
+    "cih-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-11-01"
+    },
+    "si-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "loop-11": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-25"
+    },
+    "push-3a": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-07"
+    },
+    "hist-5b": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-20"
+    },
+    "art-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-24"
+    },
+    "art-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-07"
+    },
+    "art-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-04"
+    },
+    "sq-1a": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-30"
+    },
+    "sq-1b": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-01"
+    },
+    "hist-5a": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 4,
+      "due": "2026-11-04"
+    },
+    "bay-4a": {
+      "box": 2,
+      "seen": 9,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "push-3b": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-02"
+    },
+    "arch-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-03"
+    },
+    "arch-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-09"
+    },
+    "arch-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-30"
+    },
+    "art-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-09"
+    },
+    "art-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-02"
+    },
+    "arch-6": {
+      "box": 4,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-10-14"
+    },
+    "art-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-04"
+    },
+    "arch-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-30"
+    },
+    "arch-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-24"
+    },
+    "arch-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-06"
+    },
+    "tax-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-26"
+    },
+    "tax-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-28"
+    },
+    "tax-4": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-08"
+    },
+    "tax-7": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-12"
+    },
+    "tax-6": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-08"
+    },
+    "att-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-25"
+    },
+    "tax-2": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 4,
+      "due": "2026-11-03"
+    },
+    "tax-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-08"
+    },
+    "att-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-06"
+    },
+    "tax-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-10"
+    },
+    "bias-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-01"
+    },
+    "att-4": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-19"
+    },
+    "att-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-29"
+    },
+    "att-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-04"
+    },
+    "bias-4": {
+      "box": 4,
+      "seen": 9,
+      "lapses": 3,
+      "streak": 4,
+      "due": "2026-10-20"
+    },
+    "bias-1": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 4,
+      "due": "2026-10-17"
+    },
+    "bias-2": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-11-14"
+    },
+    "att-6": {
+      "box": 4,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-18"
+    },
+    "att-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-06"
+    },
+    "att-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-03"
+    },
+    "bias-8": {
+      "box": 5,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-11-16"
+    },
+    "bias-5": {
+      "box": 4,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-10-19"
+    },
+    "bias-7": {
+      "box": 2,
+      "seen": 7,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "bias-6": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-08"
+    },
+    "star-1": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-15"
+    },
+    "med-4": {
+      "box": 4,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-10-20"
+    },
+    "med-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-12"
+    },
+    "med-2": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-17"
+    },
+    "star-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-20"
+    },
+    "med-5": {
+      "box": 4,
+      "seen": 8,
+      "lapses": 2,
+      "streak": 4,
+      "due": "2026-10-29"
+    },
+    "med-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-08"
+    },
+    "med-3": {
+      "box": 4,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-15"
+    },
+    "star-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-11"
+    },
+    "med-7": {
+      "box": 4,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-10-15"
+    },
+    "geo-4": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "star-7": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "star-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-13"
+    },
+    "star-5": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-10"
+    },
+    "star-8": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-19"
+    },
+    "geo-1": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-17"
+    },
+    "star-6": {
+      "box": 4,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-18"
+    },
+    "geo-3": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-14"
+    },
+    "geo-5": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-04"
+    },
+    "geo-2": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-07"
+    },
+    "dash-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-07"
+    },
+    "dash-2": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-20"
+    },
+    "dash-5": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "dash-7": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "geo-6": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-11"
+    },
+    "geo-7": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "dash-1": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-24"
+    },
+    "dash-6": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "dash-8": {
+      "box": 4,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-17"
+    },
+    "dash-4": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-18"
+    },
+    "cond-1": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-21"
+    },
+    "cond-2": {
+      "box": 3,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-10-14"
+    },
+    "cond-7": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-12"
+    },
+    "cond-4": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 0,
+      "streak": 4,
+      "due": "2026-11-16"
+    },
+    "cond-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-18"
+    },
+    "ling-1": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-19"
+    },
+    "ling-2": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-14"
+    },
+    "cond-6": {
+      "box": 3,
+      "seen": 11,
+      "lapses": 5,
+      "streak": 2,
+      "due": "2026-10-20"
+    },
+    "cond-8": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-14"
+    },
+    "cond-5": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 2,
+      "streak": 3,
+      "due": "2026-11-13"
+    },
+    "ling-7": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-20"
+    },
+    "ling-4": {
+      "box": 5,
+      "seen": 6,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-19"
+    },
+    "sort-2": {
+      "box": 5,
+      "seen": 5,
+      "lapses": 1,
+      "streak": 4,
+      "due": "2026-11-13"
+    },
+    "sort-1": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-16"
+    },
+    "ling-6": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-22"
+    },
+    "ling-3": {
+      "box": 5,
+      "seen": 3,
+      "lapses": 0,
+      "streak": 3,
+      "due": "2026-11-11"
+    },
+    "ling-5": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-28"
+    },
+    "prm-2": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-28"
+    },
+    "sort-4": {
+      "box": 3,
+      "seen": 3,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-14"
+    },
+    "prm-5": {
+      "box": 3,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-20"
+    },
+    "prm-4": {
+      "box": 2,
+      "seen": 3,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "sort-7": {
+      "box": 3,
+      "seen": 3,
+      "lapses": 1,
+      "streak": 2,
+      "due": "2026-10-14"
+    },
+    "prm-3": {
+      "box": 1,
+      "seen": 4,
+      "lapses": 2,
+      "streak": 1,
+      "due": "2026-10-14"
+    },
+    "prm-1": {
+      "box": 4,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-10-29"
+    },
+    "sort-3": {
+      "box": 5,
+      "seen": 4,
+      "lapses": 1,
+      "streak": 3,
+      "due": "2026-11-17"
+    },
+    "sort-5": {
+      "box": 4,
+      "seen": 2,
+      "lapses": 0,
+      "streak": 2,
+      "due": "2026-10-24"
+    },
+    "sort-6": {
+      "box": 2,
+      "seen": 5,
+      "lapses": 2,
+      "streak": 2,
+      "due": "2026-10-16"
+    },
+    "auto:general-politics-state:q4": {
+      "box": 0,
+      "due": "2026-10-02"
+    },
+    "auto:general-crypto-basics:q4": {
+      "box": 0,
+      "due": "2026-10-10"
+    }
+  },
+  "srs:daily": {
+    "date": "2026-10-13",
+    "done": 40,
+    "fresh": 0
+  },
+  "lesson:general-chem-everyday": {
+    "a0": 1,
+    "a1": 3,
+    "a2": 2,
+    "a3": 0,
+    "a4": 3,
+    "a5": 0,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-05"
+  },
+  "lesson:general-music-basics": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 1,
+    "a3": 2,
+    "a4": 3,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-05"
+  },
+  "lesson:general-logic-word-problems": {
+    "a0": 2,
+    "a1": 1,
+    "a2": 1,
+    "a3": 2,
+    "a4": 3,
+    "a5": 0,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-05"
+  },
+  "lesson:general-math-quadratic": {
+    "a0": 1,
+    "a1": 1,
+    "a2": 2,
+    "a3": 0,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-05"
+  },
+  "lesson:general-stats-averages": {
+    "a0": 0,
+    "a1": 1,
+    "a2": 3,
+    "a3": 2,
+    "a4": 3,
+    "a5": 0,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-06"
+  },
+  "lesson:work-fundamentals-data-structures": {
+    "a0": 1,
+    "a1": 3,
+    "a2": 0,
+    "a3": 2,
+    "a4": 3,
+    "a5": 2,
+    "a6": 1,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-06"
+  },
+  "lesson:general-cinema-language": {
+    "a0": 3,
+    "a1": 0,
+    "a2": 2,
+    "a3": 1,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-06"
+  },
+  "lesson:general-finance-basics": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a3": 1,
+    "a4": 0,
+    "a5": 2,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-07"
+  },
+  "lesson:work-js-arrays-mutation": {
+    "a0": 3,
+    "a1": 0,
+    "a2": 2,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-07"
+  },
+  "lesson:general-brain-memory": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a3": 1,
+    "a4": 1,
+    "a5": 3,
+    "a6": 0,
+    "a7": 2,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-07"
+  },
+  "lesson:general-astro-scale": {
+    "a0": 0,
+    "a1": 1,
+    "a2": 3,
+    "a3": 2,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-08"
+  },
+  "lesson:work-js-types-coercion": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 0,
+    "a3": 2,
+    "a4": 2,
+    "a5": 1,
+    "a6": 3,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-08"
+  },
+  "lesson:general-anatomy-body": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-09"
+  },
+  "lesson:work-web-http-rest": {
+    "a0": 0,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 3,
+    "a5": 0,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-09"
+  },
+  "lesson:general-bio-evolution": {
+    "a0": 3,
+    "a1": 0,
+    "a2": 1,
+    "a3": 2,
+    "a4": 2,
+    "a5": 1,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-10"
+  },
+  "lesson:work-css-layout-specificity": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 0,
+    "a3": 0,
+    "a4": 2,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-11"
+  },
+  "lesson:general-religion-history": {
+    "a0": 1,
+    "a1": 0,
+    "a2": 2,
+    "a3": 3,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-12"
+  },
+  "lesson:general-lit-pushkin": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 1,
+    "a3": 2,
+    "a4": 3,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-12"
+  },
+  "lesson:work-react-state-context": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 0,
+    "a3": 1,
+    "a4": 1,
+    "a5": 2,
+    "a6": 3,
+    "a7": 0,
+    "lastScore": 8,
+    "completed": true,
+    "date": "2026-08-12"
+  },
+  "srs:log": {
+    "2026-08-13": {
+      "done": 34,
+      "again": 7
+    },
+    "2026-08-14": {
+      "done": 32,
+      "again": 5
+    },
+    "2026-08-15": {
+      "done": 32,
+      "again": 6
+    },
+    "2026-08-16": {
+      "done": 37,
+      "again": 5
+    },
+    "2026-08-17": {
+      "done": 41,
+      "again": 8
+    },
+    "2026-08-18": {
+      "done": 37,
+      "again": 4
+    },
+    "2026-08-19": {
+      "done": 38,
+      "again": 8
+    },
+    "2026-08-20": {
+      "done": 41,
+      "again": 7
+    },
+    "2026-08-21": {
+      "done": 36,
+      "again": 5
+    },
+    "2026-08-22": {
+      "done": 33,
+      "again": 4
+    },
+    "2026-08-23": {
+      "done": 28,
+      "again": 3
+    },
+    "2026-08-24": {
+      "done": 38,
+      "again": 6
+    },
+    "2026-08-25": {
+      "done": 44,
+      "again": 7
+    },
+    "2026-08-26": {
+      "done": 37,
+      "again": 1
+    },
+    "2026-08-27": {
+      "done": 46,
+      "again": 6
+    },
+    "2026-08-28": {
+      "done": 50,
+      "again": 17
+    },
+    "2026-08-30": {
+      "done": 45,
+      "again": 5
+    },
+    "2026-08-31": {
+      "done": 47,
+      "again": 10
+    },
+    "2026-09-01": {
+      "done": 52,
+      "again": 21
+    },
+    "2026-09-02": {
+      "done": 42,
+      "again": 12
+    },
+    "2026-09-03": {
+      "done": 47,
+      "again": 7
+    },
+    "2026-09-06": {
+      "done": 44,
+      "again": 4
+    },
+    "2026-09-08": {
+      "done": 43,
+      "again": 3
+    },
+    "2026-09-10": {
+      "done": 32,
+      "again": 2
+    },
+    "2026-09-12": {
+      "done": 36,
+      "again": 2
+    },
+    "2026-09-13": {
+      "done": 27,
+      "again": 2
+    },
+    "2026-09-16": {
+      "done": 42,
+      "again": 2
+    },
+    "2026-09-18": {
+      "done": 39,
+      "again": 14
+    },
+    "2026-09-21": {
+      "done": 54,
+      "again": 14
+    },
+    "2026-09-22": {
+      "done": 41,
+      "again": 9
+    },
+    "2026-09-25": {
+      "done": 47,
+      "again": 7
+    },
+    "2026-09-26": {
+      "done": 39,
+      "again": 7
+    },
+    "2026-09-27": {
+      "done": 37,
+      "again": 6
+    },
+    "2026-09-28": {
+      "done": 39,
+      "again": 6
+    },
+    "2026-09-30": {
+      "done": 40,
+      "again": 0
+    },
+    "2026-10-01": {
+      "done": 53,
+      "again": 13
+    },
+    "2026-10-02": {
+      "done": 48,
+      "again": 10
+    },
+    "2026-10-04": {
+      "done": 44,
+      "again": 4,
+      "cleared": true
+    },
+    "2026-10-06": {
+      "done": 47,
+      "again": 7,
+      "cleared": true
+    },
+    "2026-10-08": {
+      "done": 5,
+      "again": 0,
+      "cleared": false
+    },
+    "2026-10-10": {
+      "done": 43,
+      "again": 3,
+      "cleared": true
+    },
+    "2026-10-12": {
+      "done": 46,
+      "again": 6,
+      "cleared": true
+    },
+    "2026-10-13": {
+      "done": 44,
+      "again": 4,
+      "cleared": true
+    }
+  },
+  "lesson:general-russian-commas": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 0,
+    "a3": 2,
+    "a4": 0,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-13",
+    "attempts": [
+      {
+        "date": "2026-08-13",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-13",
+        "score": 2,
+        "total": 8,
+        "wrong": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-13",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "cards:auto": {
+    "auto:general-russian-commas:q1": {
+      "lesson": "general-russian-commas",
+      "front": "В каком предложении «однако» выделяется запятыми? Знак [?] — место, где запятая под вопросом.\n\n1. Однако [?] дверь оказалась заперта.\n2. Однако [?] он всё же пришёл.\n3. Однако [?] времени уже не оставалось.\n4. Погода [?] однако [?] испортилась к вечеру.",
+      "back": "4. Погода [?] однако [?] испортилась к вечеру.",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "В начале предложения «однако» равно союзу «но» и запятой не требует. Вводным оно бывает только в середине или в конце: «Погода, однако, испортилась к вечеру»."
+    },
+    "auto:general-russian-commas:q2": {
+      "lesson": "general-russian-commas",
+      "front": "Где причастный оборот НЕ обособляется запятыми?",
+      "back": "Когда стоит перед определяемым словом и не значит причины",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "«Лежавшая на столе книга исчезла» — запятых нет. «Книга, лежавшая на столе, исчезла» — есть."
+    },
+    "auto:general-russian-commas:q3": {
+      "lesson": "general-russian-commas",
+      "front": "В каком случае деепричастный оборот запятыми не выделяется?\n\n1. когда стоит в конце предложения\n2. когда подлежащее выражено местоимением\n3. когда это фразеологизм: работал спустя рукава\n4. когда оборот длиннее трёх слов",
+      "back": "3. когда это фразеологизм: работал спустя рукава",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "Деепричастный оборот обособляется в любой позиции, кроме фразеологизмов и одиночных деепричастий-наречий: молча, стоя, не глядя."
+    },
+    "auto:general-russian-commas:q4": {
+      "lesson": "general-russian-commas",
+      "front": "Что не так с фразой «Подъезжая к станции, у меня слетела шляпа»?",
+      "back": "Деепричастие и сказуемое относятся к разным субъектам",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "Получается, что к станции подъезжала шляпа. Деепричастие обозначает добавочное действие того же подлежащего, что и сказуемое."
+    },
+    "auto:general-russian-commas:q5": {
+      "lesson": "general-russian-commas",
+      "front": "В каком предложении на месте [?] запятая НЕ нужна?\n\n1. Небо было спокойным [?] как море.\n2. Голос звучал [?] как в детстве.\n3. Он известен [?] как переводчик.\n4. Она посмотрела на него [?] как на чужого.",
+      "back": "3. Он известен [?] как переводчик.",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "«Он известен как переводчик»: «как» значит «в качестве», это роль, а не сравнение — запятой нет. В остальных трёх сравнение, запятая нужна."
+    },
+    "auto:general-russian-commas:q6": {
+      "lesson": "general-russian-commas",
+      "front": "В каком сочетании определения однородные и на месте [?] нужна запятая?\n\n1. новый [?] кирпичный дом\n2. старое [?] дубовое кресло\n3. тёплый [?] летний вечер\n4. трудный [?] запутанный вопрос",
+      "back": "4. трудный [?] запутанный вопрос",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-13",
+      "note": "«Трудный, запутанный вопрос» — оба определения про одно качество, вставка «и» и перестановка проходят свободно. В остальных парах признаки разных типов: возраст и материал, температура и время года."
+    },
+    "auto:work-history-programming:q0": {
+      "lesson": "work-history-programming",
+      "front": "Что главное в идее универсальной машины Тьюринга?",
+      "back": "Она принимает описание другой машины как данные и исполняет его",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-08-14",
+      "note": "Программа оказывается данными для другой программы. Отсюда компиляторы, интерпретаторы, виртуальные машины и эмуляторы."
+    },
+    "auto:general-logic-fallacies:q0": {
+      "lesson": "general-logic-fallacies",
+      "front": "«Ты говоришь, что в статье есть неточность, — значит, по-твоему, наука вообще ничего не может?» Какая это ошибка?",
+      "back": "Подмена тезиса (соломенное чучело)",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-16",
+      "note": "Утверждение оппонента заменили на утрированное и опровергли уже его."
+    },
+    "auto:general-physics-si:q3": {
+      "lesson": "general-physics-si",
+      "front": "Прибор мощностью 2 кВт работал полчаса. Сколько энергии он потребил?",
+      "back": "1 кВт·ч",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-16",
+      "note": "2 кВт × 0,5 ч = 1 кВт·ч ≈ 3,6 МДж. Ответ обязан быть в единицах энергии."
+    },
+    "auto:general-math-complex:q4": {
+      "lesson": "general-math-complex",
+      "front": "Чему равен модуль числа 3 + 4i?",
+      "back": "5",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-08-17",
+      "note": "√(3² + 4²) = √25 = 5 — то же расстояние по теореме Пифагора."
+    },
+    "auto:work-js-promises:q7": {
+      "lesson": "work-js-promises",
+      "front": "Когда выполняется функция, переданная в new Promise(fn)?",
+      "back": "Сразу и синхронно при создании промиса",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-18",
+      "note": "Промис запускает работу при создании; асинхронны только обработчики."
+    },
+    "auto:work-js-debounce-throttle:q6": {
+      "lesson": "work-js-debounce-throttle",
+      "front": "Для перерисовки при прокрутке лучше подходит:",
+      "back": "requestAnimationFrame: браузер сам синхронизирует с кадром и не вызывает в фоновой вкладке",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-19",
+      "note": "throttle по времени такой синхронизации не даёт и продолжает работать в невидимой вкладке."
+    },
+    "auto:work-js-regexp:q2": {
+      "lesson": "work-js-regexp",
+      "front": "На строке \"<b>bold</b>\" выражение /<.+>/ найдёт:",
+      "back": "Всю строку целиком: квантификатор жадный",
+      "code": true,
+      "src": "wrong",
+      "date": "2026-08-20",
+      "note": "Ленивый вариант /<.+?>/ или явный запрет /<[^>]+>/ дадут \"<b>\"."
+    },
+    "auto:work-web-security:q4": {
+      "lesson": "work-web-security",
+      "front": "Какая настройка куки сегодня закрывает основную часть CSRF?",
+      "back": "SameSite=Lax",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-08-21",
+      "note": "SameSite=Lax не отправляет куки при межсайтовых POST. HttpOnly защищает от другой атаки — кражи через XSS."
+    },
+    "auto:general-english-conditionals:q2": {
+      "lesson": "general-english-conditionals",
+      "front": "Событие в прошлом не случилось, и последствия тоже. Какая схема?",
+      "back": "if + Past Perfect, would have + причастие",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-08-26",
+      "note": "Third Conditional: «If it had rained, I would have stayed home» — дождя не было, и я вышел."
+    },
+    "auto:work-css-box-model-stacking:q7": {
+      "lesson": "work-css-box-model-stacking",
+      "front": "Какой побочный эффект даёт overflow: hidden кроме обрезки содержимого?",
+      "back": "Создаёт новый контекст форматирования блока: контейнер обнимает float и перестаёт схлопывать margin с детьми",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-08-30",
+      "note": "Любое значение overflow, кроме visible, создаёт BFC. Современная замена без обрезки — display: flow-root."
+    },
+    "auto:general-philosophy-questions:q5": {
+      "lesson": "general-philosophy-questions",
+      "front": "Чем деонтология отличается от утилитаризма?",
+      "back": "Деонтология судит поступок по правилу и долгу, утилитаризм — по последствиям",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-08-31",
+      "note": "По характеру судит третья система — этика добродетели Аристотеля. Слабое место утилитаризма — оправдание жертвы меньшинства, деонтологии — правда, сказанная убийце."
+    },
+    "auto:work-fundamentals-concurrency:q1": {
+      "lesson": "work-fundamentals-concurrency",
+      "front": "Что у потока всё-таки своё, а не общее с соседями?",
+      "back": "Стек вызовов и регистры",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-09-01",
+      "note": "Стек хранит цепочку вызовов и локальные переменные — у каждого хода исполнения она своя. Куча и файлы общие."
+    },
+    "auto:work-react-refs-forms:q4": {
+      "lesson": "work-react-refs-forms",
+      "front": "Компонент показывает счётчик кликов. Где хранить значение?",
+      "back": "В useState — значение видно на экране, оно должно вызывать рендер",
+      "code": false,
+      "src": "unsure",
+      "date": "2026-09-02",
+      "note": "Запись в ref не перерисовывает компонент, и число на экране не изменится. Обычная переменная вдобавок пересоздаётся на каждом рендере."
+    },
+    "auto:general-politics-state:q4": {
+      "lesson": "general-politics-state",
+      "front": "Чем парламентская республика отличается от президентской?",
+      "back": "В парламентской правительство формирует парламент, и оно отвечает перед ним",
+      "note": "Примеры: Германия — парламентская, США — президентская, Франция — полупрезидентская. Главное различие в том, кто формирует правительство и перед кем оно отвечает.",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-10-02"
+    },
+    "auto:general-crypto-basics:q4": {
+      "lesson": "general-crypto-basics",
+      "front": "Главная проблема симметричного шифрования:",
+      "back": "Как безопасно передать общий ключ по прослушиваемому каналу",
+      "note": "Поэтому и придумали пару ключей. Быстрота — как раз преимущество симметричных алгоритмов вроде AES.",
+      "code": false,
+      "src": "wrong",
+      "date": "2026-10-10"
+    }
+  },
+  "lesson:work-react-effects-memo": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-13",
+    "attempts": [
+      {
+        "date": "2026-08-13",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-english-present-perfect": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a3": 1,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-14",
+    "attempts": [
+      {
+        "date": "2026-08-14",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-history-programming": {
+    "a1": 0,
+    "a2": 1,
+    "a3": 2,
+    "a4": 1,
+    "a5": 0,
+    "a6": 3,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-14",
+    "attempts": [
+      {
+        "date": "2026-08-14",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          0
+        ]
+      },
+      {
+        "date": "2026-08-14",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a0": 3
+  },
+  "lesson:general-arch-buildings": {
+    "a0": 0,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 2,
+    "a5": 0,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-15",
+    "attempts": [
+      {
+        "date": "2026-08-15",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-photo-greatest": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a3": 1,
+    "a4": 0,
+    "a5": 1,
+    "a6": 3,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-15",
+    "attempts": [
+      {
+        "date": "2026-08-15",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-fundamentals-sorting": {
+    "a0": 2,
+    "a1": 1,
+    "a2": 3,
+    "a3": 0,
+    "a4": 3,
+    "a5": 0,
+    "a6": 2,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-16",
+    "attempts": [
+      {
+        "date": "2026-08-16",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-logic-fallacies": {
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 0,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-16",
+    "attempts": [
+      {
+        "date": "2026-08-16",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          0
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-16",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a0": 3
+  },
+  "lesson:general-physics-si": {
+    "a0": 0,
+    "a1": 3,
+    "a2": 2,
+    "a4": 3,
+    "a5": 0,
+    "a6": 2,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-16",
+    "attempts": [
+      {
+        "date": "2026-08-16",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          3
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-16",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a3": 1
+  },
+  "lesson:general-math-complex": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 0,
+    "a3": 0,
+    "a4": 1,
+    "u4": false,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-17",
+    "attempts": [
+      {
+        "date": "2026-08-17",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          4
+        ]
+      },
+      {
+        "date": "2026-08-17",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-astro-stars": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 1,
+    "a3": 0,
+    "a4": 0,
+    "a5": 2,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-17",
+    "attempts": [
+      {
+        "date": "2026-08-17",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-stats-bayes": {
+    "a0": 0,
+    "a1": 1,
+    "a2": 2,
+    "a3": 3,
+    "a4": 2,
+    "a5": 0,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-18",
+    "attempts": [
+      {
+        "date": "2026-08-18",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-js-promises": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 0,
+    "a3": 1,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-18",
+    "attempts": [
+      {
+        "date": "2026-08-18",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          7
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-18",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a7": 3
+  },
+  "lesson:general-astro-moon": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 2,
+    "a4": 0,
+    "a5": 3,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-18",
+    "attempts": [
+      {
+        "date": "2026-08-18",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-cinema-history": {
+    "a0": 1,
+    "a1": 3,
+    "a2": 2,
+    "a3": 0,
+    "a4": 2,
+    "a5": 3,
+    "a6": 1,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-19",
+    "attempts": [
+      {
+        "date": "2026-08-19",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-js-debounce-throttle": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 0,
+    "a5": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-19",
+    "attempts": [
+      {
+        "date": "2026-08-19",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          6
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-19",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a6": 2
+  },
+  "lesson:general-art-painting": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 0,
+    "a3": 2,
+    "a4": 0,
+    "a5": 1,
+    "a6": 3,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-20",
+    "attempts": [
+      {
+        "date": "2026-08-20",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-js-regexp": {
+    "a0": 2,
+    "a1": 3,
+    "a3": 1,
+    "a4": 1,
+    "a5": 0,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-20",
+    "attempts": [
+      {
+        "date": "2026-08-20",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          2
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-20",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a2": 0
+  },
+  "lesson:general-brain-attention": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 2,
+    "a3": 0,
+    "a4": 2,
+    "a5": 0,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-21",
+    "attempts": [
+      {
+        "date": "2026-08-21",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-web-security": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 1,
+    "a3": 3,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-21",
+    "attempts": [
+      {
+        "date": "2026-08-21",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          4
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-21",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          4
+        ]
+      },
+      {
+        "date": "2026-08-21",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a4": 3,
+    "u4": false
+  },
+  "lesson:general-finance-taxes": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 3,
+    "a5": 2,
+    "a6": 1,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-22",
+    "attempts": [
+      {
+        "date": "2026-08-22",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-brain-biases": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 3,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-22",
+    "attempts": [
+      {
+        "date": "2026-08-22",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-art-icons": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 3,
+    "a5": 0,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-23",
+    "attempts": [
+      {
+        "date": "2026-08-23",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-medicine-evidence": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 0,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-23",
+    "attempts": [
+      {
+        "date": "2026-08-23",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-russian-dash": {
+    "a0": 0,
+    "a1": 1,
+    "a2": 3,
+    "a3": 2,
+    "a4": 3,
+    "a5": 2,
+    "a6": 1,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-24",
+    "attempts": [
+      {
+        "date": "2026-08-24",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-db-sql": {
+    "a0": 1,
+    "a1": 0,
+    "a2": 3,
+    "a3": 2,
+    "a4": 3,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-24",
+    "attempts": [
+      {
+        "date": "2026-08-24",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-safety-home": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 3,
+    "a5": 2,
+    "a6": 0,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-25",
+    "attempts": [
+      {
+        "date": "2026-08-25",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-geo-climate": {
+    "a0": 1,
+    "a1": 0,
+    "a2": 3,
+    "a3": 2,
+    "a4": 0,
+    "a5": 2,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-25",
+    "attempts": [
+      {
+        "date": "2026-08-25",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-english-conditionals": {
+    "a0": 0,
+    "a1": 3,
+    "a3": 1,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-26",
+    "attempts": [
+      {
+        "date": "2026-08-26",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          2
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a2": 2
+  },
+  "lesson:general-linguistics-language": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 1,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 3,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-26",
+    "attempts": [
+      {
+        "date": "2026-08-26",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-tools-git": {
+    "a0": 2,
+    "a1": 3,
+    "a2": 1,
+    "a3": 0,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-26",
+    "attempts": [
+      {
+        "date": "2026-08-26",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-law-everyday": {
+    "a0": 1,
+    "a1": 1,
+    "a2": 0,
+    "a3": 2,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-27",
+    "attempts": [
+      {
+        "date": "2026-08-27",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-bio-dna": {
+    "a0": 3,
+    "a1": 0,
+    "a2": 2,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 1,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-28",
+    "attempts": [
+      {
+        "date": "2026-08-28",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-css-box-model-stacking": {
+    "a0": 0,
+    "a1": 2,
+    "a2": 1,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-30",
+    "attempts": [
+      {
+        "date": "2026-08-30",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          7
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-08-30",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a7": 0
+  },
+  "lesson:general-philosophy-questions": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 1,
+    "a3": 3,
+    "a4": 1,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-08-31",
+    "attempts": [
+      {
+        "date": "2026-08-31",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          5
+        ]
+      },
+      {
+        "date": "2026-08-31",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a5": 0
+  },
+  "lesson:work-fundamentals-concurrency": {
+    "a0": 1,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 0,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-01",
+    "attempts": [
+      {
+        "date": "2026-09-01",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          1
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a1": 3
+  },
+  "lesson:work-react-refs-forms": {
+    "a0": 1,
+    "a1": 1,
+    "a2": 2,
+    "a3": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-02",
+    "attempts": [
+      {
+        "date": "2026-09-02",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": [
+          4
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a4": 2
+  },
+  "lesson:work-build-bundlers": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 1,
+    "a5": 2,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-03",
+    "attempts": [
+      {
+        "date": "2026-09-03",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-archaeo-birth": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 1,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-06",
+    "attempts": [
+      {
+        "date": "2026-09-06",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-music-history": {
+    "a0": 1,
+    "a1": 3,
+    "a2": 2,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-08",
+    "attempts": [
+      {
+        "date": "2026-09-08",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-archaeo-discoveries": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 0,
+    "a4": 1,
+    "a5": 2,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-08",
+    "attempts": [
+      {
+        "date": "2026-09-08",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-web-performance": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 1,
+    "a6": 3,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-10",
+    "attempts": [
+      {
+        "date": "2026-09-10",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "quiz:general-baseline-01:attempts": [
+    {
+      "date": "2026-08-04",
+      "score": 40,
+      "total": 50,
+      "wrong": [
+        4,
+        6,
+        7,
+        9,
+        13,
+        14,
+        23,
+        39,
+        47,
+        49
+      ],
+      "unsure": [
+        7,
+        13,
+        14,
+        23,
+        26,
+        39
+      ],
+      "cats": {
+        "Математика": [
+          5,
+          8
+        ],
+        "Наука и астрономия": [
+          5,
+          8
+        ],
+        "Русский язык": [
+          6,
+          6
+        ],
+        "Английский язык": [
+          5,
+          6
+        ],
+        "Искусство": [
+          7,
+          7
+        ],
+        "Кино": [
+          4,
+          5
+        ],
+        "История и география": [
+          7,
+          7
+        ],
+        "Логика": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "score": 49,
+      "total": 50,
+      "wrong": [
+        26
+      ],
+      "unsure": [
+        26
+      ],
+      "cats": {
+        "Математика": [
+          8,
+          8
+        ],
+        "Наука и астрономия": [
+          8,
+          8
+        ],
+        "Русский язык": [
+          6,
+          6
+        ],
+        "Английский язык": [
+          5,
+          6
+        ],
+        "Искусство": [
+          7,
+          7
+        ],
+        "Кино": [
+          5,
+          5
+        ],
+        "История и география": [
+          7,
+          7
+        ],
+        "Логика": [
+          3,
+          3
+        ]
+      }
+    }
+  ],
+  "quiz:work-baseline-01:attempts": [
+    {
+      "date": "2026-08-04",
+      "score": 34,
+      "total": 50,
+      "wrong": [
+        0,
+        2,
+        3,
+        4,
+        9,
+        12,
+        15,
+        19,
+        20,
+        24,
+        26,
+        27,
+        28,
+        39,
+        46,
+        48
+      ],
+      "unsure": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        15,
+        19,
+        20,
+        22,
+        26,
+        27,
+        28,
+        29,
+        37,
+        39,
+        41,
+        45,
+        46,
+        47,
+        48
+      ],
+      "cats": {
+        "Основы программирования": [
+          7,
+          12
+        ],
+        "JavaScript": [
+          9,
+          15
+        ],
+        "HTML и CSS": [
+          4,
+          6
+        ],
+        "React": [
+          13,
+          15
+        ],
+        "Инструменты и веб": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "score": 50,
+      "total": 50,
+      "wrong": [],
+      "unsure": [
+        4,
+        15,
+        20
+      ],
+      "cats": {
+        "Основы программирования": [
+          12,
+          12
+        ],
+        "JavaScript": [
+          15,
+          15
+        ],
+        "HTML и CSS": [
+          6,
+          6
+        ],
+        "React": [
+          15,
+          15
+        ],
+        "Инструменты и веб": [
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "lesson:general-medicine-nutrition": {
+    "a0": 2,
+    "a1": 1,
+    "a2": 0,
+    "a3": 3,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-12",
+    "attempts": [
+      {
+        "date": "2026-09-12",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-bio-immunity": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 2,
+    "a3": 3,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-13",
+    "attempts": [
+      {
+        "date": "2026-09-13",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-history-divergence": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 2,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-16",
+    "attempts": [
+      {
+        "date": "2026-09-16",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-web-a11y": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-18",
+    "attempts": [
+      {
+        "date": "2026-09-18",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-tools-debugging": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 3,
+    "a6": 0,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-21",
+    "attempts": [
+      {
+        "date": "2026-09-21",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-ai-neural-nets": {
+    "a0": 1,
+    "a1": 3,
+    "a2": 0,
+    "a3": 1,
+    "a4": 2,
+    "a5": 3,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-22",
+    "attempts": [
+      {
+        "date": "2026-09-22",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-ai-llm": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 3,
+    "a5": 0,
+    "a6": 2,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-25",
+    "attempts": [
+      {
+        "date": "2026-09-25",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-econ-prices": {
+    "a0": 2,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-26",
+    "attempts": [
+      {
+        "date": "2026-09-26",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-ts-basics": {
+    "a0": 2,
+    "a1": 0,
+    "a2": 3,
+    "a3": 1,
+    "a4": 2,
+    "a5": 2,
+    "a6": 1,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-28",
+    "attempts": [
+      {
+        "date": "2026-09-28",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-testing-pyramid": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 0,
+    "a5": 1,
+    "a6": 2,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-28",
+    "attempts": [
+      {
+        "date": "2026-09-28",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "quiz:general-advanced-02": {
+    "a0": 2,
+    "u0": true,
+    "a1": 3,
+    "u1": true,
+    "a2": 2,
+    "a3": 1,
+    "u3": true,
+    "a4": 1,
+    "u4": true,
+    "a5": 3,
+    "u5": true,
+    "a6": 0,
+    "u6": true,
+    "a7": 1,
+    "a8": 0,
+    "a9": 0,
+    "a10": 0,
+    "a11": 0,
+    "a12": 2,
+    "a13": 3,
+    "a14": 0,
+    "a15": 0,
+    "a16": 1,
+    "a17": 2,
+    "a18": 1,
+    "a19": 1,
+    "u19": true,
+    "a20": 2,
+    "a21": 0,
+    "a22": 3,
+    "u22": true,
+    "a23": 2,
+    "a24": 0,
+    "a25": 2,
+    "u25": true,
+    "a26": 3,
+    "a27": 3,
+    "a28": 2,
+    "u28": true,
+    "a29": 0,
+    "a30": 1,
+    "u30": true,
+    "a31": 3,
+    "a32": 1,
+    "a33": 2,
+    "u33": true,
+    "a34": 2,
+    "u34": true,
+    "a35": 0,
+    "a36": 1,
+    "a37": 3,
+    "a38": 0,
+    "u38": true,
+    "a39": 0,
+    "a40": 2,
+    "a41": 1,
+    "a42": 3,
+    "u42": true,
+    "a43": 3,
+    "u43": true,
+    "a44": 0,
+    "a45": 0,
+    "a46": 0,
+    "a47": 2,
+    "a48": 2,
+    "a49": 2,
+    "u49": true
+  },
+  "quiz:general-advanced-02:attempts": [
+    {
+      "date": "2026-09-30",
+      "score": 41,
+      "total": 50,
+      "wrong": [
+        1,
+        4,
+        8,
+        9,
+        19,
+        32,
+        34,
+        45,
+        47
+      ],
+      "unsure": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        19,
+        22,
+        25,
+        28,
+        30,
+        33,
+        34,
+        38,
+        42,
+        43,
+        49
+      ],
+      "cats": {
+        "Математика и логика": [
+          3,
+          5
+        ],
+        "Статистика и данные": [
+          3,
+          4
+        ],
+        "Физика и астрономия": [
+          3,
+          4
+        ],
+        "Биология и медицина": [
+          4,
+          4
+        ],
+        "Язык и литература": [
+          3,
+          4
+        ],
+        "Искусство, кино, музыка": [
+          4,
+          4
+        ],
+        "История, религия, философия": [
+          5,
+          5
+        ],
+        "Геология и Земля · новая область": [
+          3,
+          4
+        ],
+        "Политика и государство · новая область": [
+          3,
+          4
+        ],
+        "Криптография и технологии · новая область": [
+          4,
+          4
+        ],
+        "Теория игр и решения · новая область": [
+          3,
+          4
+        ],
+        "Мифология и театр · новая область": [
+          3,
+          4
+        ]
+      }
+    }
+  ],
+  "quiz:work-advanced-02": {
+    "a0": 0,
+    "a1": 0,
+    "u1": true,
+    "a2": 0,
+    "u2": true,
+    "a3": 3,
+    "a4": 2,
+    "a5": 1,
+    "u5": true,
+    "a6": 0,
+    "u6": true,
+    "a7": 0,
+    "u7": true,
+    "a8": 3,
+    "a9": 2,
+    "u9": true,
+    "a10": 1,
+    "a11": 3,
+    "a12": 2,
+    "a13": 1,
+    "a14": 3,
+    "a15": 0,
+    "a16": 0,
+    "a17": 1,
+    "u17": true,
+    "a18": 2,
+    "a19": 0,
+    "a20": 0,
+    "a21": 2,
+    "u21": true,
+    "a22": 3,
+    "a23": 0,
+    "u23": true,
+    "a24": 1,
+    "u25": true,
+    "a25": 3,
+    "a26": 0,
+    "u26": true,
+    "a27": 1,
+    "u27": true,
+    "a28": 0,
+    "u28": true,
+    "a29": 0,
+    "u29": true,
+    "a30": 1,
+    "u30": true,
+    "a31": 0,
+    "u31": true,
+    "a32": 2,
+    "u32": true,
+    "a33": 2,
+    "u33": true,
+    "a34": 0,
+    "u34": true,
+    "a35": 1,
+    "a36": 2,
+    "a37": 0,
+    "a38": 2,
+    "a39": 3,
+    "a40": 0,
+    "u40": true,
+    "a41": 3,
+    "a42": 0,
+    "a43": 2,
+    "u43": true,
+    "a44": 1,
+    "u44": true,
+    "a45": 1,
+    "u45": true,
+    "a46": 2,
+    "a47": 2,
+    "a48": 2,
+    "a49": 1
+  },
+  "quiz:work-advanced-02:attempts": [
+    {
+      "date": "2026-09-30",
+      "score": 46,
+      "total": 50,
+      "wrong": [
+        1,
+        2,
+        6,
+        21
+      ],
+      "unsure": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        17,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        40,
+        43,
+        44,
+        45
+      ],
+      "cats": {
+        "Алгоритмы и структуры данных": [
+          3,
+          5
+        ],
+        "JavaScript в глубину": [
+          5,
+          6
+        ],
+        "TypeScript": [
+          4,
+          4
+        ],
+        "React продвинутый": [
+          5,
+          5
+        ],
+        "Веб-платформа и производительность": [
+          4,
+          5
+        ],
+        "CSS современный": [
+          3,
+          3
+        ],
+        "Базы данных": [
+          2,
+          2
+        ],
+        "Архитектура и паттерны · новая область": [
+          4,
+          4
+        ],
+        "Node.js и бэкенд · новая область": [
+          4,
+          4
+        ],
+        "DevOps: Docker и CI/CD · новая область": [
+          4,
+          4
+        ],
+        "Сети и протоколы · новая область": [
+          4,
+          4
+        ],
+        "Инженерная культура · новая область": [
+          4,
+          4
+        ]
+      }
+    }
+  ],
+  "lesson:general-theatre-language": {
+    "a0": 2,
+    "a1": 1,
+    "a2": 0,
+    "a3": 3,
+    "a4": 1,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-09-30",
+    "attempts": [
+      {
+        "date": "2026-09-30",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-mythology-myths": {
+    "a0": 0,
+    "a1": 2,
+    "a2": 1,
+    "a3": 3,
+    "a4": 2,
+    "a5": 0,
+    "a6": 3,
+    "a7": 1,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-01",
+    "attempts": [
+      {
+        "date": "2026-10-01",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:general-politics-state": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 0,
+    "a5": 2,
+    "a6": 0,
+    "a7": 3,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-02",
+    "attempts": [
+      {
+        "date": "2026-10-02",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          4
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-10-02",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a4": 3
+  },
+  "lesson:general-crypto-basics": {
+    "a0": 3,
+    "a1": 1,
+    "a2": 2,
+    "a3": 0,
+    "a5": 3,
+    "a6": 0,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-10",
+    "attempts": [
+      {
+        "date": "2026-10-10",
+        "score": 7,
+        "total": 8,
+        "wrong": [
+          4
+        ],
+        "unsure": []
+      },
+      {
+        "date": "2026-10-10",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ],
+    "a4": 1
+  },
+  "lesson:work-devops-docker-cicd": {
+    "a0": 3,
+    "a1": 2,
+    "a2": 1,
+    "a3": 0,
+    "a4": 1,
+    "a5": 3,
+    "a6": 2,
+    "a7": 0,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-12",
+    "attempts": [
+      {
+        "date": "2026-10-12",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  },
+  "lesson:work-architecture-solid-patterns": {
+    "a0": 1,
+    "a1": 2,
+    "a2": 3,
+    "a3": 0,
+    "a4": 3,
+    "a5": 1,
+    "a6": 0,
+    "a7": 2,
+    "lastScore": 8,
+    "unsure": 0,
+    "completed": true,
+    "date": "2026-10-13",
+    "attempts": [
+      {
+        "date": "2026-10-13",
+        "score": 8,
+        "total": 8,
+        "wrong": [],
+        "unsure": []
+      }
+    ]
+  }
+}
