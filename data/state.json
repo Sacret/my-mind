@@ -201,11 +201,11 @@
       "due": "2026-11-03"
     },
     "syl-2": {
-      "box": 1,
-      "seen": 4,
+      "box": 3,
+      "seen": 5,
       "lapses": 1,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-10-31"
     },
     "prob-1": {
       "box": 5,
@@ -258,10 +258,10 @@
     },
     "prob-6": {
       "box": 5,
-      "seen": 2,
+      "seen": 3,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-11-27"
     },
     "bigo-3": {
       "box": 5,
@@ -782,11 +782,11 @@
       "due": "2026-11-09"
     },
     "ci-7": {
-      "box": 2,
-      "seen": 9,
+      "box": 4,
+      "seen": 10,
       "lapses": 3,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-11-07"
     },
     "mu-7": {
       "box": 5,
@@ -1251,11 +1251,11 @@
       "due": "2026-11-16"
     },
     "re2-8": {
-      "box": 2,
-      "seen": 9,
+      "box": 4,
+      "seen": 10,
       "lapses": 3,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-11-08"
     },
     "fin-2": {
       "box": 5,
@@ -1629,11 +1629,11 @@
       "due": "2026-11-23"
     },
     "rel-1": {
-      "box": 5,
-      "seen": 5,
-      "lapses": 1,
+      "box": 1,
+      "seen": 7,
+      "lapses": 2,
       "streak": 1,
-      "due": "2026-10-23"
+      "due": "2026-10-24"
     },
     "anat-8": {
       "box": 5,
@@ -1826,10 +1826,10 @@
     },
     "saf-2": {
       "box": 5,
-      "seen": 3,
+      "seen": 4,
       "lapses": 0,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-11-23"
     },
     "saf-3": {
       "box": 5,
@@ -2266,11 +2266,11 @@
       "due": "2026-11-04"
     },
     "bay-4a": {
-      "box": 1,
-      "seen": 13,
+      "box": 2,
+      "seen": 14,
       "lapses": 4,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-10-26"
     },
     "push-3b": {
       "box": 5,
@@ -2917,11 +2917,11 @@
       "due": "2026-11-08"
     },
     "auto:general-politics-state:q4": {
-      "box": 1,
-      "seen": 4,
+      "box": 3,
+      "seen": 5,
       "lapses": 2,
-      "streak": 1,
-      "due": "2026-10-23"
+      "streak": 2,
+      "due": "2026-10-30"
     },
     "auto:general-crypto-basics:q4": {
       "box": 3,
@@ -3020,12 +3020,82 @@
       "lapses": 0,
       "streak": 1,
       "due": "2026-10-25"
+    },
+    "hygram-1": {
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "hyabc-7": {
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "hygram-3": {
+      "box": 1,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "hyabc-5": {
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "hygram-2": {
+      "box": 1,
+      "seen": 2,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "hyabc-4": {
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "hygram-4": {
+      "box": 1,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "hyabc-8": {
+      "box": 1,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-24"
+    },
+    "hyabc-6": {
+      "box": 2,
+      "seen": 1,
+      "lapses": 0,
+      "streak": 1,
+      "due": "2026-10-26"
+    },
+    "hyabc-9": {
+      "box": 1,
+      "seen": 2,
+      "lapses": 1,
+      "streak": 1,
+      "due": "2026-10-24"
     }
   },
   "srs:daily": {
-    "date": "2026-10-22",
-    "done": 40,
-    "fresh": 3
+    "date": "2026-10-23",
+    "done": 18,
+    "fresh": 10
   },
   "lesson:general-chem-everyday": {
     "a0": 1,
@@ -3470,6 +3540,11 @@
     },
     "2026-10-22": {
       "done": 43,
+      "again": 3,
+      "cleared": true
+    },
+    "2026-10-23": {
+      "done": 21,
       "again": 3,
       "cleared": true
     }
